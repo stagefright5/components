@@ -11,8 +11,8 @@ import {
   ComponentHarness,
   HarnessPredicate,
   TestElement,
-} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {SlideToggleHarnessFilters} from './slide-toggle-harness-filters';
 
 export abstract class _MatSlideToggleHarnessBase extends ComponentHarness {

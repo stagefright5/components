@@ -16,7 +16,7 @@ import {
   query,
   animateChild,
 } from '@angular/animations';
-import {AnimationCurves, AnimationDurations} from '@angular/material/core';
+import {AnimationCurves, AnimationDurations} from '@stagefright5/material/core';
 
 const SORT_ANIMATION_TRANSITION =
   AnimationDurations.ENTERING + ' ' + AnimationCurves.STANDARD_CURVE;

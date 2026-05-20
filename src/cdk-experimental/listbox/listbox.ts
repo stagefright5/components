@@ -22,15 +22,15 @@ import {
   Output,
   QueryList,
 } from '@angular/core';
-import {ActiveDescendantKeyManager, Highlightable, ListKeyManagerOption} from '@angular/cdk/a11y';
-import {DOWN_ARROW, ENTER, SPACE, UP_ARROW, LEFT_ARROW, RIGHT_ARROW} from '@angular/cdk/keycodes';
-import {BooleanInput, coerceBooleanProperty, coerceArray} from '@angular/cdk/coercion';
-import {SelectionChange, SelectionModel} from '@angular/cdk/collections';
+import {ActiveDescendantKeyManager, Highlightable, ListKeyManagerOption} from '@stagefright5/cdk/a11y';
+import {DOWN_ARROW, ENTER, SPACE, UP_ARROW, LEFT_ARROW, RIGHT_ARROW} from '@stagefright5/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty, coerceArray} from '@stagefright5/cdk/coercion';
+import {SelectionChange, SelectionModel} from '@stagefright5/cdk/collections';
 import {defer, merge, Observable, Subject} from 'rxjs';
 import {startWith, switchMap, takeUntil} from 'rxjs/operators';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {CdkComboboxPanel} from '@angular/cdk-experimental/combobox';
-import {Directionality} from '@angular/cdk/bidi';
+import {CdkComboboxPanel} from '@stagefright5/cdk-experimental/combobox';
+import {Directionality} from '@stagefright5/cdk/bidi';
 
 let nextId = 0;
 let listboxId = 0;
@@ -44,6 +44,7 @@ export const CDK_LISTBOX_VALUE_ACCESSOR: any = {
 export const PANEL = new InjectionToken<CdkComboboxPanel>('CdkComboboxPanel');
 
 @Directive({
+  standalone: false,
   selector: '[cdkOption]',
   exportAs: 'cdkOption',
   host: {
@@ -201,6 +202,7 @@ export class CdkOption<T = unknown> implements ListKeyManagerOption, Highlightab
 }
 
 @Directive({
+  standalone: false,
   selector: '[cdkListbox]',
   exportAs: 'cdkListbox',
   host: {

@@ -50,3 +50,6 @@ testem.log
 *.log
 .ng-dev.user*
 .husky/_
+
+# Stagefright migration build scratch files
+/.stagefright/tsconfig-src-*.json

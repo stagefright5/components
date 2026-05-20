@@ -45,6 +45,7 @@ export function _MAT_INK_BAR_POSITIONER_FACTORY(): _MatInkBarPositioner {
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-ink-bar',
   host: {
     'class': 'mat-ink-bar',

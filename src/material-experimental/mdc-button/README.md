@@ -6,10 +6,10 @@ experimental and should not be used in production.
 Assuming your application is already up and running using Angular Material, you can add this
 component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -31,7 +31,7 @@ component by following these steps:
 3. Import the experimental `MatButtonModule` and add it to the module that declares your component:
 
    ```ts
-   import {MatButtonModule} from '@angular/material-experimental/mdc-button';
+   import {MatButtonModule} from '@stagefright5/material-experimental/mdc-button';
 
    @NgModule({
      declarations: [MyComponent],
@@ -60,8 +60,8 @@ the button variants: standard buttons, icon buttons, and floating action buttons
 button variants you are using:
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $candy-app-primary: mat.define-palette(mat.$indigo-palette);
    $candy-app-accent:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -79,5 +79,5 @@ button variants you are using:
 
 ## API differences
 
-The API of the buttons matches the one from `@angular/material/button`. Simply replace imports to
-`@angular/material/button` with imports to `@angular/material-experimental/mdc-button`.
+The API of the buttons matches the one from `@stagefright5/material/button`. Simply replace imports to
+`@stagefright5/material/button` with imports to `@stagefright5/material-experimental/mdc-button`.

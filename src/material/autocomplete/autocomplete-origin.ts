@@ -22,6 +22,7 @@ export abstract class _MatAutocompleteOriginBase {
  * as a connection point for an autocomplete panel.
  */
 @Directive({
+  standalone: false,
   selector: '[matAutocompleteOrigin]',
   exportAs: 'matAutocompleteOrigin',
 })

@@ -8,7 +8,7 @@
 
 import {Subject} from 'rxjs';
 import {Directive, ElementRef, EventEmitter, OnDestroy, OnInit, Input} from '@angular/core';
-import {hasModifierKey} from '@angular/cdk/keycodes';
+import {hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {EDIT_PANE_SELECTOR} from './constants';
 import {closest} from './polyfill';
 import {EditRef} from './edit-ref';
@@ -23,6 +23,7 @@ export type PopoverEditClickOutBehavior = 'close' | 'submit' | 'noop';
  * out.
  */
 @Directive({
+  standalone: false,
   selector: 'form[cdkEditControl]',
   inputs: [
     'clickOutBehavior: cdkEditControlClickOutBehavior',
@@ -138,6 +139,7 @@ export class CdkEditControl<FormValue> implements OnDestroy, OnInit {
 
 /** Reverts the form to its initial or previously submitted state on click. */
 @Directive({
+  standalone: false,
   selector: 'button[cdkEditRevert]',
   host: {
     'type': 'button', // Prevents accidental form submits.
@@ -157,6 +159,7 @@ export class CdkEditRevert<FormValue> {
 
 /** Closes the lens on click. */
 @Directive({
+  standalone: false,
   selector: '[cdkEditClose]',
   host: {
     '(click)': 'closeEdit()',

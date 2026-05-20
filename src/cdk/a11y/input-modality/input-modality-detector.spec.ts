@@ -1,5 +1,5 @@
-import {A, ALT, B, C, CONTROL, MAC_META, META, SHIFT} from '@angular/cdk/keycodes';
-import {Platform} from '@angular/cdk/platform';
+import {A, ALT, B, C, CONTROL, MAC_META, META, SHIFT} from '@stagefright5/cdk/keycodes';
+import {Platform} from '@stagefright5/cdk/platform';
 
 import {
   createMouseEvent,

@@ -1,6 +1,6 @@
 import {animate, style, transition, trigger} from '@angular/animations';
-import {FocusKeyManager} from '@angular/cdk/a11y';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {FocusKeyManager} from '@stagefright5/cdk/a11y';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   A,
   BACKSPACE,
@@ -12,7 +12,7 @@ import {
   RIGHT_ARROW,
   SPACE,
   TAB,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   createKeyboardEvent,
   dispatchEvent,
@@ -43,7 +43,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
 import {By} from '@angular/platform-browser';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {Subject} from 'rxjs';
@@ -1535,6 +1535,7 @@ describe('MatChipList', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-list [tabIndex]="tabIndex" [selectable]="selectable">
       <mat-chip *ngFor="let i of chips" (select)="chipSelect(i)" (deselect)="chipDeselect(i)">
@@ -1552,6 +1553,7 @@ class StandardChipList {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-label>Add a chip</mat-label>
@@ -1575,6 +1577,7 @@ class FormFieldChipList {
 }
 
 @Component({
+  standalone: false,
   selector: 'basic-chip-list',
   template: `
     <mat-form-field>
@@ -1607,6 +1610,7 @@ class BasicChipList {
 }
 
 @Component({
+  standalone: false,
   selector: 'multi-selection-chip-list',
   template: `
     <mat-form-field>
@@ -1641,6 +1645,7 @@ class MultiSelectionChipList {
 }
 
 @Component({
+  standalone: false,
   selector: 'input-chip-list',
   template: `
     <mat-form-field>
@@ -1705,6 +1710,7 @@ class InputChipList {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-chip-list [formControl]="control">
@@ -1723,6 +1729,7 @@ class FalsyValueChipList {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-list>
         <mat-chip *ngFor="let food of foods" [value]="food.value" [selected]="food.selected">
@@ -1741,6 +1748,7 @@ class SelectedChipList {
 }
 
 @Component({
+  standalone: false,
   template: `
 <form #form="ngForm" novalidate>
   <mat-form-field>
@@ -1768,6 +1776,7 @@ class ChipListWithFormErrorMessages {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-list>
       <mat-chip *ngFor="let i of numbers" (removed)="remove(i)">{{i}}</mat-chip>
@@ -1793,6 +1802,7 @@ class StandardChipListWithAnimations {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-chip-list>
@@ -1813,6 +1823,7 @@ class ChipListWithRemove {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-chip-list [formControl]="control">
@@ -1828,6 +1839,7 @@ class PreselectedChipInsideOnPush {
 }
 
 @Component({
+  standalone: false,
   template: `
     <form [formGroup]="form">
       <mat-form-field>

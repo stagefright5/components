@@ -7,10 +7,10 @@
  */
 
 import {AfterViewInit, Directive, ElementRef, OnDestroy, NgZone} from '@angular/core';
-import {coerceCssPixelValue} from '@angular/cdk/coercion';
-import {Directionality} from '@angular/cdk/bidi';
-import {ESCAPE} from '@angular/cdk/keycodes';
-import {CdkColumnDef, _CoalescedStyleScheduler} from '@angular/cdk/table';
+import {coerceCssPixelValue} from '@stagefright5/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ESCAPE} from '@stagefright5/cdk/keycodes';
+import {CdkColumnDef, _CoalescedStyleScheduler} from '@stagefright5/cdk/table';
 import {fromEvent, Subject, merge} from 'rxjs';
 import {
   distinctUntilChanged,
@@ -22,7 +22,7 @@ import {
   takeUntil,
 } from 'rxjs/operators';
 
-import {_closest} from '@angular/cdk-experimental/popover-edit';
+import {_closest} from '@stagefright5/cdk-experimental/popover-edit';
 
 import {HEADER_CELL_SELECTOR} from './selectors';
 import {ColumnResizeNotifierSource} from './column-resize-notifier';

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {ListRange} from '@angular/cdk/collections';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ListRange} from '@stagefright5/cdk/collections';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -37,7 +37,7 @@ import {CdkScrollable, ExtendedScrollToOptions} from './scrollable';
 import {VIRTUAL_SCROLL_STRATEGY, VirtualScrollStrategy} from './virtual-scroll-strategy';
 import {ViewportRuler} from './viewport-ruler';
 import {CdkVirtualScrollRepeater} from './virtual-scroll-repeater';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 /** Checks if the given ranges are equal. */
 function rangesEqual(r1: ListRange, r2: ListRange): boolean {
@@ -54,9 +54,10 @@ const SCROLL_SCHEDULER =
 
 /** A viewport that virtualizes its scrolling with the help of `CdkVirtualForOf`. */
 @Component({
+  standalone: false,
   selector: 'cdk-virtual-scroll-viewport',
   templateUrl: 'virtual-scroll-viewport.html',
-  styleUrls: ['virtual-scroll-viewport.css'],
+  styleUrls: ['virtual-scroll-viewport.scss'],
   host: {
     'class': 'cdk-virtual-scroll-viewport',
     '[class.cdk-virtual-scroll-orientation-horizontal]': 'orientation === "horizontal"',

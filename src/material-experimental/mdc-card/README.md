@@ -6,10 +6,10 @@ experimental and should not be used in production.
 Assuming your application is already up and running using Angular Material, you can add this
 component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -31,7 +31,7 @@ component by following these steps:
 3. Import the experimental `MatCardModule` and add it to the module that declares your component:
 
    ```ts
-   import {MatCardModule} from '@angular/material-experimental/mdc-card';
+   import {MatCardModule} from '@stagefright5/material-experimental/mdc-card';
 
    @NgModule({
      declarations: [MyComponent],
@@ -58,8 +58,8 @@ component by following these steps:
 5. Add the theme and typography mixins to your Sass:
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $candy-app-primary: mat.define-palette(mat.$indigo-palette);
    $candy-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -76,5 +76,5 @@ component by following these steps:
 
 ## API differences
 
-The API of the card matches the one from `@angular/material/card`. Simply replace imports to
-`@angular/material/card` with imports to `@angular/material-experimental/mdc-card`.
+The API of the card matches the one from `@stagefright5/material/card`. Simply replace imports to
+`@stagefright5/material/card` with imports to `@stagefright5/material-experimental/mdc-card`.

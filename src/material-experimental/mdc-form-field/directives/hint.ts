@@ -12,6 +12,7 @@ let nextUniqueId = 0;
 
 /** Hint text to be shown underneath the form field control. */
 @Directive({
+  standalone: false,
   selector: 'mat-hint',
   host: {
     'class': 'mat-mdc-form-field-hint mat-mdc-form-field-bottom-align',

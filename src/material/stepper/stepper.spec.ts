@@ -1,4 +1,4 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   DOWN_ARROW,
   END,
@@ -8,13 +8,13 @@ import {
   RIGHT_ARROW,
   SPACE,
   UP_ARROW,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   StepperOrientation,
   STEPPER_GLOBAL_OPTIONS,
   STEP_STATE,
   CdkStep,
-} from '@angular/cdk/stepper';
+} from '@stagefright5/cdk/stepper';
 import {dispatchKeyboardEvent, createKeyboardEvent, dispatchEvent} from '../../cdk/testing/private';
 import {
   Component,
@@ -39,17 +39,17 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
-import {MatRipple, ThemePalette} from '@angular/material/core';
+import {MatRipple, ThemePalette} from '@stagefright5/material/core';
 import {By} from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {_supportsShadowDom} from '@angular/cdk/platform';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
 import {merge, Observable, Subject} from 'rxjs';
 import {map, take} from 'rxjs/operators';
 import {MatStepHeader, MatStepperModule} from './index';
 import {MatHorizontalStepper, MatStep, MatStepper, MatVerticalStepper} from './stepper';
 import {MatStepperNext, MatStepperPrevious} from './stepper-button';
 import {MatStepperIntl} from './stepper-intl';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
 import {MatInputModule} from '../input/input-module';
 
 const VALID_REGEX = /valid/;
@@ -1786,6 +1786,7 @@ function createComponent<T>(
 }
 
 @Component({
+  standalone: false,
   template: `
   <form [formGroup]="formGroup">
     <mat-stepper>
@@ -1828,6 +1829,7 @@ class MatHorizontalStepperWithErrorsApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper [disableRipple]="disableRipple" [color]="stepperTheme">
       <mat-step>
@@ -1865,6 +1867,7 @@ class SimpleMatHorizontalStepperApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical" [disableRipple]="disableRipple" [color]="stepperTheme">
       <mat-step>
@@ -1903,6 +1906,7 @@ class SimpleMatVerticalStepperApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical" linear>
       <mat-step [stepControl]="oneGroup">
@@ -1962,6 +1966,7 @@ class LinearMatVerticalStepperApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper [linear]="true" [selectedIndex]="index">
       <mat-step label="One"></mat-step>
@@ -1975,6 +1980,7 @@ class SimplePreselectedMatHorizontalStepperApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper linear>
       <mat-step
@@ -1993,6 +1999,7 @@ class SimpleStepperWithoutStepControl {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper linear>
       <mat-step
@@ -2012,6 +2019,7 @@ class SimpleStepperWithStepControlAndCompletedBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper>
       <ng-template matStepperIcon="edit">Custom edit</ng-template>
@@ -2045,6 +2053,7 @@ class IconOverridesStepper {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper>
       <ng-container [ngSwitch]="true">
@@ -2064,6 +2073,7 @@ class IconOverridesStepper {
 class IndirectDescendantIconOverridesStepper extends IconOverridesStepper {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper linear>
       <mat-step label="Step 1" [stepControl]="controls[0]"></mat-step>
@@ -2078,6 +2088,7 @@ class LinearStepperWithValidOptionalStep {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper>
       <mat-step [aria-label]="ariaLabel" [aria-labelledby]="ariaLabelledby" label="One"></mat-step>
@@ -2090,6 +2101,7 @@ class StepperWithAriaInputs {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical">
       <ng-container [ngSwitch]="true">
@@ -2103,6 +2115,7 @@ class StepperWithAriaInputs {
 class StepperWithIndirectDescendantSteps {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical">
       <mat-step>
@@ -2120,6 +2133,7 @@ class StepperWithNgIf {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical">
       <mat-step label="Step 1">Content 1</mat-step>
@@ -2138,6 +2152,7 @@ class NestedSteppers {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical" selectedIndex="1337">
       <mat-step label="Step 1">Content 1</mat-step>
@@ -2151,6 +2166,7 @@ class StepperWithStaticOutOfBoundsIndex {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical" [selectedIndex]="selectedIndex">
       <mat-step>
@@ -2173,6 +2189,7 @@ class StepperWithLazyContent {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper>
       <mat-step label="Step 1">Content 1</mat-step>

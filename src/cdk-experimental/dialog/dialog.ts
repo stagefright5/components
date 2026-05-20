@@ -17,14 +17,13 @@ import {
   OnDestroy,
   Type,
   StaticProvider,
-  InjectFlags,
 } from '@angular/core';
-import {ComponentPortal, TemplatePortal} from '@angular/cdk/portal';
+import {ComponentPortal, TemplatePortal} from '@stagefright5/cdk/portal';
 import {of as observableOf, Observable, Subject, defer} from 'rxjs';
 import {DialogRef} from './dialog-ref';
 import {Location} from '@angular/common';
 import {DialogConfig} from './dialog-config';
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {CdkDialogContainer} from './dialog-container';
 import {
   ComponentType,
@@ -32,7 +31,7 @@ import {
   OverlayRef,
   OverlayConfig,
   ScrollStrategy,
-} from '@angular/cdk/overlay';
+} from '@stagefright5/cdk/overlay';
 import {startWith} from 'rxjs/operators';
 
 import {
@@ -301,7 +300,7 @@ export class Dialog implements OnDestroy {
     if (
       config.direction &&
       (!userInjector ||
-        !userInjector.get<Directionality | null>(Directionality, null, InjectFlags.Optional))
+        !userInjector.get<Directionality | null>(Directionality, null, {optional: true}))
     ) {
       providers.push({
         provide: Directionality,

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {SymbolRemovalUpgradeData, TargetVersion, VersionChanges} from '@angular/cdk/schematics';
+import {SymbolRemovalUpgradeData, TargetVersion, VersionChanges} from '@stagefright5/cdk/schematics';
 
 export const symbolRemoval: VersionChanges<SymbolRemovalUpgradeData> = {
   [TargetVersion.V13]: [
@@ -21,7 +21,7 @@ export const symbolRemoval: VersionChanges<SymbolRemovalUpgradeData> = {
         'HasTabIndexCtor',
       ].map(name => ({
         name,
-        module: '@angular/material/core',
+        module: '@stagefright5/material/core',
         message: `\`${name}\` is no longer necessary and has been removed.`,
       })),
     },

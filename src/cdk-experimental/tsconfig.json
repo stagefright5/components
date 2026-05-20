@@ -5,8 +5,8 @@
     "rootDir": "..",
     "baseUrl": ".",
     "paths": {
-      "@angular/cdk/*": ["../cdk/*"],
-      "@angular/cdk-experimental/*": ["../cdk-experimental/*"]
+      "@stagefright5/cdk/*": ["../cdk/*"],
+      "@stagefright5/cdk-experimental/*": ["../cdk-experimental/*"]
     }
   },
   "include": ["./**/*.ts", "../dev-mode-types.d.ts"]

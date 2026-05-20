@@ -9,7 +9,7 @@
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable, NgZone, Optional} from '@angular/core';
 import {OverlayReference} from '../overlay-reference';
-import {Platform, _getEventTarget} from '@angular/cdk/platform';
+import {Platform, _getEventTarget} from '@stagefright5/cdk/platform';
 import {BaseOverlayDispatcher} from './base-overlay-dispatcher';
 
 /**

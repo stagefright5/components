@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {CollectionViewer, DataSource, isDataSource, ListRange} from '@angular/cdk/collections';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {CollectionViewer, DataSource, isDataSource, ListRange} from '@stagefright5/cdk/collections';
 import {
   AfterContentChecked,
   Directive,
@@ -30,6 +30,7 @@ import {SelectableWithIndex, SelectionChange, SelectionSet} from './selection-se
  * `cdkRowSelection` and `cdkSelectionColumn` are applied.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkSelection]',
   exportAs: 'cdkSelection',
 })

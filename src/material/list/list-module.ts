@@ -13,7 +13,7 @@ import {
   MatLineModule,
   MatPseudoCheckboxModule,
   MatRippleModule,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {
   MatList,
   MatNavList,
@@ -23,7 +23,7 @@ import {
   MatListSubheaderCssMatStyler,
 } from './list';
 import {MatListOption, MatSelectionList} from './selection-list';
-import {MatDividerModule} from '@angular/material/divider';
+import {MatDividerModule} from '@stagefright5/material/divider';
 
 @NgModule({
   imports: [MatLineModule, MatRippleModule, MatCommonModule, MatPseudoCheckboxModule, CommonModule],

@@ -247,7 +247,7 @@ it is not the only way to incorporate row selection in your table.
 
 ##### 1. Add a selection model
 
-Get started by setting up a `SelectionModel` from `@angular/cdk/collections` that will maintain the
+Get started by setting up a `SelectionModel` from `@stagefright5/cdk/collections` that will maintain the
 selection state.
 
 ```js
@@ -424,7 +424,7 @@ or have columns that resize themselves based on their content.
 ### Tables with `MatRipple`
 
 By default, `MatTable` does not set up Material Design ripples for rows. A ripple effect can be
-added to table rows by using the `MatRipple` directive from `@angular/material/core`. Due to
+added to table rows by using the `MatRipple` directive from `@stagefright5/material/core`. Due to
 limitations in browsers, ripples cannot be applied native `th` or `tr` elements. The recommended
 approach for setting up ripples is using the non-native `display: flex` variant of `MatTable`.
 

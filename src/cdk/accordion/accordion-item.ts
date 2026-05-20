@@ -17,9 +17,9 @@ import {
   SkipSelf,
   Inject,
 } from '@angular/core';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {CDK_ACCORDION, CdkAccordion} from './accordion';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {Subscription} from 'rxjs';
 
 /** Used to generate unique ID for each accordion item. */
@@ -30,6 +30,7 @@ let nextId = 0;
  * events and attributes needed to be managed by a CdkAccordion parent.
  */
 @Directive({
+  standalone: false,
   selector: 'cdk-accordion-item, [cdkAccordionItem]',
   exportAs: 'cdkAccordionItem',
   providers: [

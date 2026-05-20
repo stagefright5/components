@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Direction} from '@angular/cdk/bidi';
-import {ScrollStrategy} from '@angular/cdk/overlay';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {ScrollStrategy} from '@stagefright5/cdk/overlay';
 import {InjectionToken, ViewContainerRef} from '@angular/core';
 
 /** Options for where to set focus to automatically on dialog open */

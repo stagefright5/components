@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AsyncFactoryFn,
   BaseHarnessFilters,
@@ -14,7 +14,7 @@ import {
   ComponentHarnessConstructor,
   HarnessPredicate,
   TestElement,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {RadioButtonHarnessFilters, RadioGroupHarnessFilters} from './radio-harness-filters';
 
 export abstract class _MatRadioGroupHarnessBase<

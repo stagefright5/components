@@ -1,9 +1,9 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTooltipHarness} from '@angular/material/tooltip/testing/tooltip-harness';
+import {MatTooltipModule} from '@stagefright5/material/tooltip';
+import {MatTooltipHarness} from '@stagefright5/material/tooltip/testing/tooltip-harness';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 /** Shared tests to run on both the original and MDC-based tooltips. */
@@ -59,6 +59,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matTooltip]="message" id="one">Trigger 1</button>
     <button matTooltip="Static message" id="two">Trigger 2</button>

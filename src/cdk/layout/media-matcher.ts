@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import {Injectable} from '@angular/core';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 
 /** Global registry for all dynamically-created, injected media queries. */
 const mediaQueriesForWebkitCompatibility: Set<string> = new Set<string>();

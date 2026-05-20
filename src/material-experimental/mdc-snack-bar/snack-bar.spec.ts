@@ -1,5 +1,5 @@
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {OverlayContainer} from '@angular/cdk/overlay';
+import {LiveAnnouncer} from '@stagefright5/cdk/a11y';
+import {OverlayContainer} from '@stagefright5/cdk/overlay';
 import {CommonModule} from '@angular/common';
 import {
   Component,
@@ -21,7 +21,7 @@ import {
   MatSnackBarModule,
   MatSnackBarRef,
 } from './index';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 
 describe('MatSnackBar', () => {
   let snackBar: MatSnackBar;
@@ -1026,12 +1026,13 @@ describe('MatSnackBar Positioning', () => {
   }));
 });
 
-@Directive({selector: 'dir-with-view-container'})
+@Directive({standalone: false, selector: 'dir-with-view-container'})
 class DirectiveWithViewContainer {
   constructor(public viewContainerRef: ViewContainerRef) {}
 }
 
 @Component({
+  standalone: false,
   selector: 'arbitrary-component',
   template: `<dir-with-view-container *ngIf="childComponentExists"></dir-with-view-container>`,
 })
@@ -1046,6 +1047,7 @@ class ComponentWithChildViewContainer {
 }
 
 @Component({
+  standalone: false,
   selector: 'arbitrary-component-with-template-ref',
   template: `
     <ng-template let-data>
@@ -1059,7 +1061,7 @@ class ComponentWithTemplateRef {
 }
 
 /** Simple component for testing ComponentPortal. */
-@Component({template: '<p>Burritos are on the way.</p>'})
+@Component({standalone: false, template: '<p>Burritos are on the way.</p>'})
 class BurritosNotification {
   constructor(
     public snackBarRef: MatSnackBarRef<BurritosNotification>,
@@ -1068,6 +1070,7 @@ class BurritosNotification {
 }
 
 @Component({
+  standalone: false,
   template: '',
   providers: [MatSnackBar],
 })

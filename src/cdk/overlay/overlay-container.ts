@@ -8,7 +8,7 @@
 
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable, OnDestroy} from '@angular/core';
-import {Platform, _isTestEnvironment} from '@angular/cdk/platform';
+import {Platform, _isTestEnvironment} from '@stagefright5/cdk/platform';
 
 /** Container inside which all overlays will render. */
 @Injectable({providedIn: 'root'})

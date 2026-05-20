@@ -1,8 +1,8 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatOptionModule} from '@angular/material/core';
+import {MatOptionModule} from '@stagefright5/material/core';
 import {MatOptgroupHarness} from './optgroup-harness';
 
 /** Shared tests to run on both the original and MDC-based option groups. */
@@ -67,6 +67,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-optgroup label="Plain group">
       <mat-option>Option 1</mat-option>

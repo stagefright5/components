@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {DatepickerToggleHarnessFilters} from './datepicker-harness-filters';
 import {DatepickerTriggerHarnessBase} from './datepicker-trigger-harness-base';
 

@@ -20,13 +20,13 @@ import {
   AfterViewInit,
   OnDestroy,
 } from '@angular/core';
-import {CanColor, mixinColor} from '@angular/material-experimental/mdc-core';
+import {CanColor, mixinColor} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MatProgressBarDefaultOptions,
   MAT_PROGRESS_BAR_DEFAULT_OPTIONS,
   ProgressAnimationEnd,
-} from '@angular/material/progress-bar';
+} from '@stagefright5/material/progress-bar';
 import {
   MDCLinearProgressAdapter,
   MDCLinearProgressFoundation,
@@ -34,7 +34,7 @@ import {
 } from '@material/linear-progress';
 import {Subscription, fromEvent, Observable} from 'rxjs';
 import {filter} from 'rxjs/operators';
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 
 // Boilerplate for applying mixins to MatProgressBar.
 /** @docs-private */
@@ -48,6 +48,7 @@ const _MatProgressBarBase = mixinColor(
 export type ProgressBarMode = 'determinate' | 'indeterminate' | 'buffer' | 'query';
 
 @Component({
+  standalone: false,
   selector: 'mat-progress-bar',
   exportAs: 'matProgressBar',
   host: {
@@ -64,7 +65,7 @@ export type ProgressBarMode = 'determinate' | 'indeterminate' | 'buffer' | 'quer
   },
   inputs: ['color'],
   templateUrl: 'progress-bar.html',
-  styleUrls: ['progress-bar.css'],
+  styleUrls: ['progress-bar.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })

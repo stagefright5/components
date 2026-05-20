@@ -8,14 +8,14 @@
 
 import {Directive, ElementRef, Inject, OnDestroy, OnInit, Optional} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {Directionality} from '@angular/cdk/bidi';
-import {_getShadowRoot} from '@angular/cdk/platform';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {_getShadowRoot} from '@stagefright5/cdk/platform';
 import {
   STICKY_POSITIONING_LISTENER,
   StickyPositioningListener,
   StickySize,
   StickyUpdate,
-} from '@angular/cdk/table';
+} from '@stagefright5/cdk/table';
 
 let nextId = 0;
 
@@ -31,6 +31,7 @@ let nextId = 0;
  * and height for the scrollbar and thumb.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkTableScrollContainer]',
   host: {
     'class': 'cdk-table-scroll-container',

@@ -15,7 +15,7 @@ import {
   _RecycleViewRepeaterStrategy,
   _VIEW_REPEATER_STRATEGY,
   _ViewRepeaterItemInsertArgs,
-} from '@angular/cdk/collections';
+} from '@stagefright5/cdk/collections';
 import {
   Directive,
   DoCheck,
@@ -34,7 +34,7 @@ import {
   TrackByFunction,
   ViewContainerRef,
 } from '@angular/core';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {Observable, Subject, of as observableOf, isObservable} from 'rxjs';
 import {pairwise, shareReplay, startWith, switchMap, takeUntil} from 'rxjs/operators';
 import {CdkVirtualScrollRepeater} from './virtual-scroll-repeater';
@@ -80,6 +80,7 @@ function getOffset(orientation: 'horizontal' | 'vertical', direction: 'start' | 
  * container.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkVirtualFor][cdkVirtualForOf]',
   providers: [{provide: _VIEW_REPEATER_STRATEGY, useClass: _RecycleViewRepeaterStrategy}],
 })

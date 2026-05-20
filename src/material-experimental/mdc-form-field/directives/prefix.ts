@@ -17,6 +17,7 @@ export const MAT_PREFIX = new InjectionToken<MatPrefix>('MatPrefix');
 
 /** Prefix to be placed in front of the form field. */
 @Directive({
+  standalone: false,
   selector: '[matPrefix], [matIconPrefix], [matTextPrefix]',
   providers: [{provide: MAT_PREFIX, useExisting: MatPrefix}],
 })

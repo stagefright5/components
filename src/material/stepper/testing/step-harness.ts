@@ -10,7 +10,7 @@ import {
   ContentContainerComponentHarness,
   HarnessPredicate,
   HarnessLoader,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {StepHarnessFilters} from './step-harness-filters';
 
 /** Harness for interacting with a standard Angular Material step in tests. */

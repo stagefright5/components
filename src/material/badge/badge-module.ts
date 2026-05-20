@@ -7,8 +7,8 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
-import {A11yModule} from '@angular/cdk/a11y';
+import {MatCommonModule} from '@stagefright5/material/core';
+import {A11yModule} from '@stagefright5/cdk/a11y';
 import {MatBadge} from './badge';
 
 @NgModule({

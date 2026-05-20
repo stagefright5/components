@@ -19,6 +19,7 @@ export const CDK_TREE_NODE_OUTLET_NODE = new InjectionToken<{}>('CDK_TREE_NODE_O
  * inside the outlet.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkTreeNodeOutlet]',
 })
 export class CdkTreeNodeOutlet {

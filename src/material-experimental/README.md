@@ -11,7 +11,7 @@ component by following these steps:
 1. Install Angular Material Experimental & MDC WEB:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -32,7 +32,7 @@ component by following these steps:
 
 3. Import the `NgModule` for the component you want to use. For example, the checkbox:
 ```ts
-  import {MatCheckboxModule} from '@angular/material-experimental/mdc-checkbox';
+  import {MatCheckboxModule} from '@stagefright5/material-experimental/mdc-checkbox';
 
   @NgModule({
     declarations: [MyComponent],
@@ -52,8 +52,8 @@ mixins except that they are suffixed with `-mdc`. Some experimental components m
 be included in the pre-built CSS mixin and will need to be explicitly included.
 
 ```scss
-  @use '@angular/material' as mat;
-  @use '@angular/material-experimental' as mat-experimental;
+  @use '@stagefright5/material' as mat;
+  @use '@stagefright5/material-experimental' as mat-experimental;
 
   $my-primary: mat.define-palette(mat.$indigo-palette);
   $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);

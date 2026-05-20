@@ -7,8 +7,8 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
-import {CdkEditable, CdkPopoverEditModule} from '@angular/cdk-experimental/popover-edit';
+import {MatCommonModule} from '@stagefright5/material/core';
+import {CdkEditable, CdkPopoverEditModule} from '@stagefright5/cdk-experimental/popover-edit';
 import {
   MatPopoverEdit,
   MatPopoverEditTabOut,

@@ -39,6 +39,7 @@ describe('DragDrop', () => {
 });
 
 @Component({
+  standalone: false,
   template: '<div></div>',
 })
 class TestComponent {

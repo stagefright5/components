@@ -11,7 +11,7 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   Directive,
   ElementRef,
@@ -23,13 +23,14 @@ import {
   Optional,
   Inject,
 } from '@angular/core';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {auditTime, takeUntil} from 'rxjs/operators';
 import {fromEvent, Subject} from 'rxjs';
 import {DOCUMENT} from '@angular/common';
 
 /** Directive to automatically resize a textarea to fit its content. */
 @Directive({
+  standalone: false,
   selector: 'textarea[cdkTextareaAutosize]',
   exportAs: 'cdkTextareaAutosize',
   host: {

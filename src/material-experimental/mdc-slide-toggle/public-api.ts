@@ -13,4 +13,4 @@ export * from './module';
 export {
   MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR,
   MatSlideToggleRequiredValidator,
-} from '@angular/material/slide-toggle';
+} from '@stagefright5/material/slide-toggle';

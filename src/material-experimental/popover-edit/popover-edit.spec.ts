@@ -1,6 +1,6 @@
-import {DataSource} from '@angular/cdk/collections';
-import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, TAB} from '@angular/cdk/keycodes';
-import {MatTableModule} from '@angular/material/table';
+import {DataSource} from '@stagefright5/cdk/collections';
+import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, TAB} from '@stagefright5/cdk/keycodes';
+import {MatTableModule} from '@stagefright5/material/table';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {CommonModule} from '@angular/common';
 import {Component, Directive, ElementRef, ViewChild} from '@angular/core';
@@ -13,7 +13,7 @@ import {
   HoverContentState,
   FormValueContainer,
   PopoverEditClickOutBehavior,
-} from '@angular/cdk-experimental/popover-edit';
+} from '@stagefright5/cdk-experimental/popover-edit';
 import {MatPopoverEditModule} from './index';
 
 const NAME_EDIT_TEMPLATE = `
@@ -184,6 +184,7 @@ class ElementDataSource extends DataSource<PeriodicElement> {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div #table style="margin: 16px; max-width: 90vw; max-height: 90vh;">
     <mat-table editable [dataSource]="dataSource">
@@ -237,6 +238,7 @@ class MatFlexTableInCell extends BaseTestComponent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div #table style="margin: 16px">
     <table mat-table editable [dataSource]="dataSource">

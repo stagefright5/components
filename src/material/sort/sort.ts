@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   Directive,
   EventEmitter,
@@ -19,7 +19,7 @@ import {
   Optional,
   Output,
 } from '@angular/core';
-import {CanDisable, HasInitialized, mixinDisabled, mixinInitialized} from '@angular/material/core';
+import {CanDisable, HasInitialized, mixinDisabled, mixinInitialized} from '@stagefright5/material/core';
 import {Subject} from 'rxjs';
 import {SortDirection} from './sort-direction';
 import {
@@ -66,6 +66,7 @@ const _MatSortBase = mixinInitialized(mixinDisabled(class {}));
 
 /** Container for MatSortables to manage the sort state and provide default sort parameters. */
 @Directive({
+  standalone: false,
   selector: '[matSort]',
   exportAs: 'matSort',
   host: {'class': 'mat-sort'},

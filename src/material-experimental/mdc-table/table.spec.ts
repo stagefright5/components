@@ -8,10 +8,10 @@ import {
   tick,
 } from '@angular/core/testing';
 import {MatTable, MatTableDataSource, MatTableModule} from './index';
-import {DataSource} from '@angular/cdk/table';
+import {DataSource} from '@stagefright5/cdk/table';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {MatSort, MatSortHeader, MatSortModule} from '@angular/material/sort';
-import {MatPaginator, MatPaginatorModule} from '@angular/material-experimental/mdc-paginator';
+import {MatSort, MatSortHeader, MatSortModule} from '@stagefright5/material/sort';
+import {MatPaginator, MatPaginatorModule} from '@stagefright5/material-experimental/mdc-paginator';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('MDC-based MatTable', () => {
@@ -674,6 +674,7 @@ class FakeDataSource extends DataSource<TestData> {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -717,6 +718,7 @@ class MatTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -750,6 +752,7 @@ class NativeHtmlTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -801,6 +804,7 @@ class NestedTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -821,6 +825,7 @@ class StickyTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource" [multiTemplateDataRows]="multiTemplateDataRows">
       <ng-container matColumnDef="column_a">
@@ -849,6 +854,7 @@ class MatTableWithWhenRowApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="column_a">
@@ -907,6 +913,7 @@ class ArrayDataSourceMatTableApp implements AfterViewInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="column_a">
@@ -956,6 +963,7 @@ class MatTableWithSortApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -1007,6 +1015,7 @@ class MatTableWithPaginatorApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -1027,6 +1036,7 @@ class TableWithNgContainerRow {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">

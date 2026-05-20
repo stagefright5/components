@@ -17,6 +17,7 @@ export const MAT_TAB_CONTENT = new InjectionToken<MatTabContent>('MatTabContent'
 
 /** Decorates the `ng-template` tags and reads out the template from it. */
 @Directive({
+  standalone: false,
   selector: '[matTabContent]',
   providers: [{provide: MAT_TAB_CONTENT, useExisting: MatTabContent}],
 })

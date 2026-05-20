@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -33,9 +33,10 @@ import {
  * See https://material.io/develop/web/components/buttons/icon-buttons/
  */
 @Component({
+  standalone: false,
   selector: `button[mat-icon-button]`,
   templateUrl: 'button.html',
-  styleUrls: ['icon-button.css', 'button-high-contrast.css'],
+  styleUrls: ['icon-button.scss', 'button-high-contrast.scss'],
   inputs: MAT_BUTTON_INPUTS,
   host: MAT_BUTTON_HOST,
   exportAs: 'matButton',
@@ -61,9 +62,10 @@ export class MatIconButton extends MatButtonBase {
  * See https://material.io/develop/web/components/buttons/icon-buttons/
  */
 @Component({
+  standalone: false,
   selector: `a[mat-icon-button]`,
   templateUrl: 'button.html',
-  styleUrls: ['icon-button.css', 'button-high-contrast.css'],
+  styleUrls: ['icon-button.scss', 'button-high-contrast.scss'],
   inputs: MAT_ANCHOR_INPUTS,
   host: MAT_ANCHOR_HOST,
   exportAs: 'matButton, matAnchor',

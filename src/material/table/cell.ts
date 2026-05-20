@@ -15,13 +15,14 @@ import {
   CdkFooterCellDef,
   CdkHeaderCell,
   CdkHeaderCellDef,
-} from '@angular/cdk/table';
+} from '@stagefright5/cdk/table';
 
 /**
  * Cell definition for the mat-table.
  * Captures the template of a column's data row cell as well as cell-specific properties.
  */
 @Directive({
+  standalone: false,
   selector: '[matCellDef]',
   providers: [{provide: CdkCellDef, useExisting: MatCellDef}],
 })
@@ -32,6 +33,7 @@ export class MatCellDef extends CdkCellDef {}
  * Captures the template of a column's header cell and as well as cell-specific properties.
  */
 @Directive({
+  standalone: false,
   selector: '[matHeaderCellDef]',
   providers: [{provide: CdkHeaderCellDef, useExisting: MatHeaderCellDef}],
 })
@@ -42,6 +44,7 @@ export class MatHeaderCellDef extends CdkHeaderCellDef {}
  * Captures the template of a column's footer cell and as well as cell-specific properties.
  */
 @Directive({
+  standalone: false,
   selector: '[matFooterCellDef]',
   providers: [{provide: CdkFooterCellDef, useExisting: MatFooterCellDef}],
 })
@@ -52,6 +55,7 @@ export class MatFooterCellDef extends CdkFooterCellDef {}
  * Defines a set of cells available for a table column.
  */
 @Directive({
+  standalone: false,
   selector: '[matColumnDef]',
   inputs: ['sticky'],
   providers: [
@@ -83,6 +87,7 @@ export class MatColumnDef extends CdkColumnDef {
 
 /** Header cell template container that adds the right classes and role. */
 @Directive({
+  standalone: false,
   selector: 'mat-header-cell, th[mat-header-cell]',
   host: {
     'class': 'mat-header-cell',
@@ -93,6 +98,7 @@ export class MatHeaderCell extends CdkHeaderCell {}
 
 /** Footer cell template container that adds the right classes and role. */
 @Directive({
+  standalone: false,
   selector: 'mat-footer-cell, td[mat-footer-cell]',
   host: {
     'class': 'mat-footer-cell',
@@ -103,6 +109,7 @@ export class MatFooterCell extends CdkFooterCell {}
 
 /** Cell template container that adds the right classes and role. */
 @Directive({
+  standalone: false,
   selector: 'mat-cell, td[mat-cell]',
   host: {
     'class': 'mat-cell',

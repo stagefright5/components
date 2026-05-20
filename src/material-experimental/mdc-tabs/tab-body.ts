@@ -24,9 +24,9 @@ import {
   MatTabBodyPortal as BaseMatTabBodyPortal,
   matTabsAnimations,
   _MatTabBodyBase,
-} from '@angular/material/tabs';
-import {CdkPortalOutlet} from '@angular/cdk/portal';
-import {Directionality} from '@angular/cdk/bidi';
+} from '@stagefright5/material/tabs';
+import {CdkPortalOutlet} from '@stagefright5/cdk/portal';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {DOCUMENT} from '@angular/common';
 
 /**
@@ -34,6 +34,7 @@ import {DOCUMENT} from '@angular/common';
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[matTabBodyHost]',
 })
 export class MatTabBodyPortal extends BaseMatTabBodyPortal {
@@ -52,9 +53,10 @@ export class MatTabBodyPortal extends BaseMatTabBodyPortal {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-body',
   templateUrl: 'tab-body.html',
-  styleUrls: ['tab-body.css'],
+  styleUrls: ['tab-body.scss'],
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:validate-decorators
   changeDetection: ChangeDetectionStrategy.Default,

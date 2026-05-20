@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {ComponentHarness, HarnessLoader} from '@angular/cdk/testing';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatToolbarHarness, MatToolbarSection} from '@angular/material/toolbar/testing';
+import {ComponentHarness, HarnessLoader} from '@stagefright5/cdk/testing';
+import {MatToolbarModule} from '@stagefright5/material/toolbar';
+import {MatToolbarHarness, MatToolbarSection} from '@stagefright5/material/toolbar/testing';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 
 /** Shared tests to run on both the original and MDC-based toolbars. */
 export function runHarnessTests(
@@ -65,6 +65,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-toolbar><span>My App</span></mat-toolbar>
     <mat-toolbar>

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {TAB} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {TAB} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   AfterViewInit,
@@ -39,9 +39,9 @@ import {
   CanUpdateErrorState,
   ErrorStateMatcher,
   mixinErrorState,
-} from '@angular/material-experimental/mdc-core';
-import {MatFormFieldControl} from '@angular/material-experimental/mdc-form-field';
-import {LiveAnnouncer} from '@angular/cdk/a11y';
+} from '@stagefright5/material-experimental/mdc-core';
+import {MatFormFieldControl} from '@stagefright5/material-experimental/mdc-form-field';
+import {LiveAnnouncer} from '@stagefright5/cdk/a11y';
 import {MatChipTextControl} from './chip-text-control';
 import {Observable} from 'rxjs';
 import {startWith, takeUntil} from 'rxjs/operators';
@@ -85,13 +85,14 @@ const _MatChipGridMixinBase = mixinErrorState(MatChipGridBase);
  * the matChipInputFor directive.
  */
 @Component({
+  standalone: false,
   selector: 'mat-chip-grid',
   template: `
     <span class="mdc-evolution-chip-set__chips" role="presentation">
       <ng-content></ng-content>
     </span>
   `,
-  styleUrls: ['chip-set.css'],
+  styleUrls: ['chip-set.scss'],
   inputs: ['tabIndex'],
   host: {
     'class': 'mat-mdc-chip-set mat-mdc-chip-grid mdc-evolution-chip-set',

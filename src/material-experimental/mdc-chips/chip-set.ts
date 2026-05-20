@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {LiveAnnouncer} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterContentInit,
@@ -23,7 +23,7 @@ import {
   QueryList,
   ViewEncapsulation,
 } from '@angular/core';
-import {HasTabIndex, mixinTabIndex} from '@angular/material-experimental/mdc-core';
+import {HasTabIndex, mixinTabIndex} from '@stagefright5/material-experimental/mdc-core';
 import {
   MDCChipSetFoundation,
   MDCChipSetAdapter,
@@ -55,13 +55,14 @@ const _MatChipSetMixinBase = mixinTabIndex(MatChipSetBase);
  * Extended by MatChipListbox and MatChipGrid for different interaction patterns.
  */
 @Component({
+  standalone: false,
   selector: 'mat-chip-set',
   template: `
     <span class="mdc-evolution-chip-set__chips" role="presentation">
       <ng-content></ng-content>
     </span>
   `,
-  styleUrls: ['chip-set.css'],
+  styleUrls: ['chip-set.scss'],
   host: {
     'class': 'mat-mdc-chip-set mdc-evolution-chip-set',
     '[attr.role]': 'role',

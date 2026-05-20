@@ -7,8 +7,8 @@
  */
 
 import {ViewContainerRef, ComponentFactoryResolver} from '@angular/core';
-import {Direction} from '@angular/cdk/bidi';
-import {ScrollStrategy} from '@angular/cdk/overlay';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {ScrollStrategy} from '@stagefright5/cdk/overlay';
 
 /** Options for where to set focus to automatically on dialog open */
 export type AutoFocusTarget = 'dialog' | 'first-tabbable' | 'first-heading';

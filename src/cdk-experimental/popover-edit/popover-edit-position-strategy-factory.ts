@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {Overlay, OverlaySizeConfig, PositionStrategy} from '@angular/cdk/overlay';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {Overlay, OverlaySizeConfig, PositionStrategy} from '@stagefright5/cdk/overlay';
 import {Injectable} from '@angular/core';
 
 /**

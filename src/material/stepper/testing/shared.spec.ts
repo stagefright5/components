@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {ReactiveFormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatStepperModule} from '@angular/material/stepper';
-import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import {MatStepperModule} from '@stagefright5/material/stepper';
+import {STEPPER_GLOBAL_OPTIONS} from '@stagefright5/cdk/stepper';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatStepperHarness} from './stepper-harness';
 import {MatStepperNextHarness, MatStepperPreviousHarness} from './stepper-button-harnesses';
@@ -265,6 +265,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-stepper orientation="vertical" id="one-stepper">
       <mat-step label="One">

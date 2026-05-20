@@ -8,7 +8,7 @@
 
 import {PositionStrategy} from './position-strategy';
 import {ElementRef} from '@angular/core';
-import {ViewportRuler, CdkScrollable, ViewportScrollPosition} from '@angular/cdk/scrolling';
+import {ViewportRuler, CdkScrollable, ViewportScrollPosition} from '@stagefright5/cdk/scrolling';
 import {
   ConnectedOverlayPositionChange,
   ConnectionPositionPair,
@@ -19,8 +19,8 @@ import {
 import {Observable, Subscription, Subject} from 'rxjs';
 import {OverlayReference} from '../overlay-reference';
 import {isElementScrolledOutsideView, isElementClippedByScrolling} from './scroll-clip';
-import {coerceCssPixelValue, coerceArray} from '@angular/cdk/coercion';
-import {Platform} from '@angular/cdk/platform';
+import {coerceCssPixelValue, coerceArray} from '@stagefright5/cdk/coercion';
+import {Platform} from '@stagefright5/cdk/platform';
 import {OverlayContainer} from '../overlay-container';
 
 // TODO: refactor clipping detection into a separate thing (part of scrolling module)

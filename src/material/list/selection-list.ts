@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption, FocusKeyManager, FocusMonitor} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
-import {A, DOWN_ARROW, ENTER, hasModifierKey, SPACE, UP_ARROW} from '@angular/cdk/keycodes';
+import {FocusableOption, FocusKeyManager, FocusMonitor} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
+import {A, DOWN_ARROW, ENTER, hasModifierKey, SPACE, UP_ARROW} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   Attribute,
@@ -39,7 +39,7 @@ import {
   mixinDisableRipple,
   setLines,
   ThemePalette,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {Subject} from 'rxjs';
 import {startWith, takeUntil} from 'rxjs/operators';
 import {MatListAvatarCssMatStyler, MatListIconCssMatStyler} from './list';
@@ -82,6 +82,7 @@ export type MatListOptionCheckboxPosition = 'before' | 'after';
  * if the current item is selected.
  */
 @Component({
+  standalone: false,
   selector: 'mat-list-option',
   exportAs: 'matListOption',
   inputs: ['disableRipple'],
@@ -334,6 +335,7 @@ export class MatListOption
  * Material Design list component where each item is a selectable option. Behaves as a listbox.
  */
 @Component({
+  standalone: false,
   selector: 'mat-selection-list',
   exportAs: 'matSelectionList',
   inputs: ['disableRipple'],
@@ -346,7 +348,7 @@ export class MatListOption
     '[attr.tabindex]': '_tabIndex',
   },
   template: '<ng-content></ng-content>',
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [MAT_SELECTION_LIST_VALUE_ACCESSOR],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -2,8 +2,8 @@ import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ApplicationRef, Component, DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {MatButtonModule, MatButton} from './index';
-import {MatRipple, ThemePalette} from '@angular/material/core';
-import {createMouseEvent, dispatchEvent} from '@angular/cdk/testing/private';
+import {MatRipple, ThemePalette} from '@stagefright5/material/core';
+import {createMouseEvent, dispatchEvent} from '@stagefright5/cdk/testing/private';
 
 describe('MatButton', () => {
   beforeEach(waitForAsync(() => {
@@ -343,6 +343,7 @@ describe('MatButton', () => {
 
 /** Test component that contains an MatButton. */
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <button [tabIndex]="tabIndex" mat-button type="button" (click)="increment()"

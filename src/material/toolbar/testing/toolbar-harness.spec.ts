@@ -1,6 +1,6 @@
-import {runHarnessTests} from '@angular/material/toolbar/testing/shared.spec';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatToolbarHarness} from '@angular/material/toolbar/testing';
+import {runHarnessTests} from '@stagefright5/material/toolbar/testing/shared.spec';
+import {MatToolbarModule} from '@stagefright5/material/toolbar';
+import {MatToolbarHarness} from '@stagefright5/material/toolbar/testing';
 
 describe('Non-MDC-based MatToolbarHarness', () => {
   runHarnessTests(MatToolbarModule, MatToolbarHarness);

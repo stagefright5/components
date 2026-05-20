@@ -7,7 +7,7 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatLineModule, MatCommonModule} from '@angular/material/core';
+import {MatLineModule, MatCommonModule} from '@stagefright5/material/core';
 import {
   MatGridTile,
   MatGridTileText,

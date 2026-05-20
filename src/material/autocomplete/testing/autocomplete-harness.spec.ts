@@ -1,5 +1,5 @@
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {runHarnessTests} from '@angular/material/autocomplete/testing/shared.spec';
+import {MatAutocompleteModule} from '@stagefright5/material/autocomplete';
+import {runHarnessTests} from '@stagefright5/material/autocomplete/testing/shared.spec';
 import {MatAutocompleteHarness} from './autocomplete-harness';
 
 describe('Non-MDC-based MatAutocompleteHarness', () => {

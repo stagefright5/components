@@ -1,4 +1,4 @@
-import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {ChangeDetectorRef, Component, ElementRef, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, fakeAsync, flush, TestBed} from '@angular/core/testing';
 
@@ -436,6 +436,7 @@ describe('cdkSelectionColumn with multiple = false', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <ul cdkSelection [dataSource]="data" [cdkSelectionMultiple]="true"
         (cdkSelectionChange)="selectionChange = $event">
@@ -499,6 +500,7 @@ class ListWithMultiSelection {
 }
 
 @Component({
+  standalone: false,
   template: `
     <ul cdkSelection [dataSource]="data" [cdkSelectionMultiple]="false"
         (cdkSelectionChange)="selectionChange = $event" >
@@ -538,6 +540,7 @@ class ListWithSingleSelection {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table cdkSelection [dataSource]="data" [cdkSelectionMultiple]="true">
       <cdk-selection-column cdkSelectionColumnName="select"></cdk-selection-column>
@@ -601,6 +604,7 @@ class MultiSelectTableWithSelectionColumn {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table cdkSelection [dataSource]="data" [cdkSelectionMultiple]="false">
       <cdk-selection-column cdkSelectionColumnName="select"></cdk-selection-column>

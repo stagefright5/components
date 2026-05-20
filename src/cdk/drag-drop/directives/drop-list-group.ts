@@ -7,7 +7,7 @@
  */
 
 import {Directive, OnDestroy, Input, InjectionToken} from '@angular/core';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 /**
  * Injection token that can be used to reference instances of `CdkDropListGroup`. It serves as
@@ -25,6 +25,7 @@ export const CDK_DROP_LIST_GROUP = new InjectionToken<CdkDropListGroup<unknown>>
  * from `cdkDropList`.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkDropListGroup]',
   exportAs: 'cdkDropListGroup',
   providers: [{provide: CDK_DROP_LIST_GROUP, useExisting: CdkDropListGroup}],

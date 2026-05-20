@@ -26,8 +26,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import {AnimationEvent} from '@angular/animations';
-import {TemplatePortal, CdkPortalOutlet} from '@angular/cdk/portal';
-import {Directionality, Direction} from '@angular/cdk/bidi';
+import {TemplatePortal, CdkPortalOutlet} from '@stagefright5/cdk/portal';
+import {Directionality, Direction} from '@stagefright5/cdk/bidi';
 import {DOCUMENT} from '@angular/common';
 import {Subscription, Subject} from 'rxjs';
 import {matTabsAnimations} from './tabs-animations';
@@ -63,6 +63,7 @@ export type MatTabBodyOriginState = 'left' | 'right';
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[matTabBodyHost]',
 })
 export class MatTabBodyPortal extends CdkPortalOutlet implements OnInit, OnDestroy {
@@ -254,9 +255,10 @@ export abstract class _MatTabBodyBase implements OnInit, OnDestroy {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-body',
   templateUrl: 'tab-body.html',
-  styleUrls: ['tab-body.css'],
+  styleUrls: ['tab-body.scss'],
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:validate-decorators
   changeDetection: ChangeDetectionStrategy.Default,

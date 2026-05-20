@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AfterViewInit,
   Attribute,
@@ -29,14 +29,14 @@ import {
   MAT_CHECKBOX_DEFAULT_OPTIONS,
   MatCheckboxDefaultOptions,
   MAT_CHECKBOX_DEFAULT_OPTIONS_FACTORY,
-} from '@angular/material/checkbox';
+} from '@stagefright5/material/checkbox';
 import {
   mixinColor,
   mixinDisabled,
   CanColor,
   CanDisable,
   MatRipple,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MDCCheckboxAdapter, MDCCheckboxFoundation} from '@material/checkbox';
 
@@ -70,9 +70,10 @@ const _MatCheckboxBase = mixinColor(
 );
 
 @Component({
+  standalone: false,
   selector: 'mat-checkbox',
   templateUrl: 'checkbox.html',
-  styleUrls: ['checkbox.css'],
+  styleUrls: ['checkbox.scss'],
   inputs: ['color', 'disabled'],
   host: {
     'class': 'mat-mdc-checkbox',

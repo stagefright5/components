@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   AfterViewInit,
@@ -39,7 +39,7 @@ import {
   mixinDisableRipple,
   mixinTabIndex,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {
   MDCChipFoundation,
   MDCChipAdapter,
@@ -51,7 +51,7 @@ import {
   ActionNavigationEvent,
   MDCChipActionInteractionTrigger,
 } from '@material/chips';
-import {FocusMonitor} from '@angular/cdk/a11y';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 import {Subject} from 'rxjs';
 import {
   MatChipAvatar,
@@ -89,11 +89,12 @@ const _MatChipMixinBase = mixinTabIndex(mixinColor(mixinDisableRipple(MatChipBas
  * Extended by MatChipOption and MatChipRow for different interaction patterns.
  */
 @Component({
+  standalone: false,
   selector: 'mat-basic-chip, mat-chip',
   inputs: ['color', 'disableRipple', 'tabIndex'],
   exportAs: 'matChip',
   templateUrl: 'chip.html',
-  styleUrls: ['chip.css'],
+  styleUrls: ['chip.scss'],
   host: {
     'class': 'mat-mdc-chip',
     '[class.mdc-evolution-chip]': '!_isBasicChip',

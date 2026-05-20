@@ -10,7 +10,7 @@ import {
   ContentContainerComponentHarness,
   HarnessLoader,
   HarnessPredicate,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {TabHarnessFilters} from './tab-harness-filters';
 
 /** Harness for interacting with an MDC_based Angular Material tab in tests. */

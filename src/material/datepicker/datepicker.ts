@@ -15,6 +15,7 @@ import {MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER} from './date-selection-model';
 // if angular adds support for `exportAs: '$implicit'` on directives.
 /** Component responsible for managing the datepicker popup/dialog. */
 @Component({
+  standalone: false,
   selector: 'mat-datepicker',
   template: '',
   exportAs: 'matDatepicker',

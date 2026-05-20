@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BidiModule, Directionality} from '@angular/cdk/bidi';
-import {Platform} from '@angular/cdk/platform';
+import {BidiModule, Directionality} from '@stagefright5/cdk/bidi';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   dispatchMouseEvent,
   dispatchPointerEvent,
@@ -1684,6 +1684,7 @@ describe('MDC-based MatSlider', () => {
 const SLIDER_STYLES = ['.mat-mdc-slider { width: 300px; }'];
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input matSliderThumb>
@@ -1694,6 +1695,7 @@ const SLIDER_STYLES = ['.mat-mdc-slider { width: 300px; }'];
 class StandardSlider {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input matSliderStartThumb>
@@ -1705,6 +1707,7 @@ class StandardSlider {}
 class StandardRangeSlider {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider disabled>
     <input matSliderThumb>
@@ -1715,6 +1718,7 @@ class StandardRangeSlider {}
 class DisabledSlider {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider disabled>
     <input matSliderStartThumb>
@@ -1726,6 +1730,7 @@ class DisabledSlider {}
 class DisabledRangeSlider {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider min="25" max="75">
     <input matSliderThumb>
@@ -1736,6 +1741,7 @@ class DisabledRangeSlider {}
 class SliderWithMinAndMax {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider min="25" max="75">
     <input matSliderStartThumb>
@@ -1747,6 +1753,7 @@ class SliderWithMinAndMax {}
 class RangeSliderWithMinAndMax {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input value="50" matSliderThumb>
@@ -1757,6 +1764,7 @@ class RangeSliderWithMinAndMax {}
 class SliderWithValue {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input value="25" matSliderStartThumb>
@@ -1768,6 +1776,7 @@ class SliderWithValue {}
 class RangeSliderWithValue {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider step="25">
     <input matSliderThumb>
@@ -1778,6 +1787,7 @@ class RangeSliderWithValue {}
 class SliderWithStep {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider step="25">
     <input matSliderStartThumb>
@@ -1789,6 +1799,7 @@ class SliderWithStep {}
 class RangeSliderWithStep {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider [displayWith]="displayWith" min="1" max="1000000" discrete>
     <input matSliderThumb>
@@ -1806,6 +1817,7 @@ class DiscreteSliderWithDisplayWith {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider [displayWith]="displayWith" min="1" max="1000000" discrete>
     <input matSliderStartThumb>
@@ -1824,6 +1836,7 @@ class DiscreteRangeSliderWithDisplayWith {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [value]="value" matSliderThumb>
@@ -1836,6 +1849,7 @@ class SliderWithOneWayBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [value]="startValue" matSliderStartThumb>
@@ -1850,6 +1864,7 @@ class RangeSliderWithOneWayBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input (change)="onChange($event)" (input)="onInput($event)" matSliderThumb>
@@ -1864,6 +1879,7 @@ class SliderWithChangeHandler {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input
@@ -1887,6 +1903,7 @@ class RangeSliderWithChangeHandler {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [(ngModel)]="val" matSliderThumb>
@@ -1900,6 +1917,7 @@ class SliderWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [(ngModel)]="startVal" matSliderStartThumb>
@@ -1915,6 +1933,7 @@ class RangeSliderWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [formControl]="control" matSliderThumb>
@@ -1926,6 +1945,7 @@ class SliderWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [formControl]="startInputControl" matSliderStartThumb>
@@ -1939,6 +1959,7 @@ class RangeSliderWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [(value)]="value" matSliderThumb>
@@ -1953,6 +1974,7 @@ class SliderWithTwoWayBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-slider>
     <input [(value)]="startValue" matSliderStartThumb>

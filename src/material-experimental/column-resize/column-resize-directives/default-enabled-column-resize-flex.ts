@@ -12,7 +12,7 @@ import {
   ColumnResizeNotifier,
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
-} from '@angular/cdk-experimental/column-resize';
+} from '@stagefright5/cdk-experimental/column-resize';
 
 import {AbstractMatColumnResize, FLEX_HOST_BINDINGS, FLEX_PROVIDERS} from './common';
 
@@ -21,6 +21,7 @@ import {AbstractMatColumnResize, FLEX_HOST_BINDINGS, FLEX_PROVIDERS} from './com
  * Individual columns will be resizable unless opted out.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-table',
   host: FLEX_HOST_BINDINGS,
   providers: [

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ActiveDescendantKeyManager} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty, coerceStringArray} from '@angular/cdk/coercion';
-import {Platform} from '@angular/cdk/platform';
+import {ActiveDescendantKeyManager} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty, coerceStringArray} from '@stagefright5/cdk/coercion';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -37,7 +37,7 @@ import {
   mixinDisableRipple,
   MatOption,
   MatOptgroup,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {Subscription} from 'rxjs';
 
 /**
@@ -283,9 +283,10 @@ export abstract class _MatAutocompleteBase
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-autocomplete',
   templateUrl: 'autocomplete.html',
-  styleUrls: ['autocomplete.css'],
+  styleUrls: ['autocomplete.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'matAutocomplete',

@@ -295,6 +295,7 @@ describe('MapMarkerClusterer', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                <map-marker-clusterer [ariaLabelFn]="ariaLabelFn"

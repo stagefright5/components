@@ -28,20 +28,20 @@ import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
-import {FocusMonitor} from '@angular/cdk/a11y';
+} from '@stagefright5/material-experimental/mdc-core';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 import {
   _MatTabNavBase,
   _MatTabLinkBase,
   MAT_TABS_CONFIG,
   MatTabsConfig,
-} from '@angular/material/tabs';
+} from '@stagefright5/material/tabs';
 import {DOCUMENT} from '@angular/common';
-import {Directionality} from '@angular/cdk/bidi';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {Platform} from '@angular/cdk/platform';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {Platform} from '@stagefright5/cdk/platform';
 import {MatInkBar, MatInkBarItem, MatInkBarFoundation} from '../ink-bar';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {BehaviorSubject, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
@@ -50,11 +50,12 @@ import {takeUntil} from 'rxjs/operators';
  * Provides anchored navigation with animated ink bar.
  */
 @Component({
+  standalone: false,
   selector: '[mat-tab-nav-bar]',
   exportAs: 'matTabNavBar, matTabNav',
   inputs: ['color'],
   templateUrl: 'tab-nav-bar.html',
-  styleUrls: ['tab-nav-bar.css'],
+  styleUrls: ['tab-nav-bar.scss'],
   host: {
     '[attr.role]': '_getRole()',
     'class': 'mat-mdc-tab-nav-bar mat-mdc-tab-header',
@@ -120,13 +121,14 @@ export class MatTabNav extends _MatTabNavBase implements AfterContentInit {
  * Link inside of a `mat-tab-nav-bar`.
  */
 @Component({
+  standalone: false,
   selector: '[mat-tab-link], [matTabLink]',
   exportAs: 'matTabLink',
   inputs: ['disabled', 'disableRipple', 'tabIndex'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   templateUrl: 'tab-link.html',
-  styleUrls: ['tab-link.css'],
+  styleUrls: ['tab-link.scss'],
   host: {
     'class': 'mdc-tab mat-mdc-tab-link mat-mdc-focus-indicator',
     '[attr.aria-controls]': '_getAriaControls()',
@@ -182,6 +184,7 @@ let nextUniqueId = 0;
  * Tab panel component associated with MatTabNav.
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-nav-panel',
   exportAs: 'matTabNavPanel',
   template: '<ng-content></ng-content>',

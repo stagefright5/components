@@ -7,7 +7,7 @@
  */
 
 import {Inject, Injectable, Optional} from '@angular/core';
-import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {
   Locale,
   getMonth,

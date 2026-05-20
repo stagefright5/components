@@ -21,7 +21,7 @@ import {CdkMenuItemCheckbox} from './menu-item-checkbox';
 import {CdkMenuModule} from './menu-module';
 import {CdkMenuPanel} from './menu-panel';
 import {MenuStack} from './menu-stack';
-import {TAB} from '@angular/cdk/keycodes';
+import {TAB} from '@stagefright5/cdk/keycodes';
 
 describe('Menu', () => {
   describe('as checkbox group', () => {
@@ -632,6 +632,7 @@ describe('Menu', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>
@@ -654,6 +655,7 @@ class MenuCheckboxGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>
@@ -675,6 +677,7 @@ class MenuWithNestedGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>
@@ -698,6 +701,7 @@ class MenuWithConditionalGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenu>
       <button cdkMenuItem>Inbox</button>
@@ -708,6 +712,7 @@ class MenuWithConditionalGroup {
 class InlineMenu {}
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTargetMenuAim cdkMenuBar>
       <button #file_trigger cdkMenuItem [cdkMenuTriggerFor]="file">File</button>
@@ -769,6 +774,7 @@ class WithComplexNestedMenus {
   @ViewChildren(CdkMenu) menus: QueryList<CdkMenu>;
 }
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar cdkTargetMenuAim style="position: fixed; bottom: 0">
       <button #file_trigger cdkMenuItem [cdkMenuTriggerFor]="file">File</button>

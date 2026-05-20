@@ -29,9 +29,9 @@ describe('v13 tilde import migration', () => {
 
   it('should remove the tilde from angular imports', async () => {
     writeLines(TEST_PATH, [
-      `@use '~@angular/material' as mat;`,
-      `@import '~@angular/material/theming';`,
-      `@import '~@angular/cdk/overlay-prebuilt.css';`,
+      `@use '~@stagefright5/material' as mat;`,
+      `@import '~@stagefright5/material/theming';`,
+      `@import '~@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -40,9 +40,9 @@ describe('v13 tilde import migration', () => {
     await runMigration();
 
     expect(splitFile(TEST_PATH)).toEqual([
-      `@use '@angular/material' as mat;`,
-      `@import '@angular/material/theming';`,
-      `@import '@angular/cdk/overlay-prebuilt.css';`,
+      `@use '@stagefright5/material' as mat;`,
+      `@import '@stagefright5/material/theming';`,
+      `@import '@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -51,7 +51,7 @@ describe('v13 tilde import migration', () => {
 
   it('should handle an arbitrary amount of whitespace', async () => {
     writeLines(TEST_PATH, [
-      `@use                               '~@angular/material' as mat;`,
+      `@use                               '~@stagefright5/material' as mat;`,
 
       `@include mat.core();`,
     ]);
@@ -59,7 +59,7 @@ describe('v13 tilde import migration', () => {
     await runMigration();
 
     expect(splitFile(TEST_PATH)).toEqual([
-      `@use                               '@angular/material' as mat;`,
+      `@use                               '@stagefright5/material' as mat;`,
 
       `@include mat.core();`,
     ]);
@@ -68,7 +68,7 @@ describe('v13 tilde import migration', () => {
   it('should preserve tilde after the start', async () => {
     writeLines(TEST_PATH, [
       `@use '~@angular/~material' as mat;`,
-      `@import '@angular/cdk/~overlay-prebuilt.css';`,
+      `@import '@stagefright5/cdk/~overlay-prebuilt.css';`,
 
       `@include mat.core();`,
     ]);
@@ -77,7 +77,7 @@ describe('v13 tilde import migration', () => {
 
     expect(splitFile(TEST_PATH)).toEqual([
       `@use '@angular/~material' as mat;`,
-      `@import '@angular/cdk/~overlay-prebuilt.css';`,
+      `@import '@stagefright5/cdk/~overlay-prebuilt.css';`,
 
       `@include mat.core();`,
     ]);
@@ -85,8 +85,8 @@ describe('v13 tilde import migration', () => {
 
   it('should handle different types of quotes', async () => {
     writeLines(TEST_PATH, [
-      `@use "~@angular/material" as mat;`,
-      `@import '~@angular/cdk/overlay-prebuilt.css';`,
+      `@use "~@stagefright5/material" as mat;`,
+      `@import '~@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -95,8 +95,8 @@ describe('v13 tilde import migration', () => {
     await runMigration();
 
     expect(splitFile(TEST_PATH)).toEqual([
-      `@use "@angular/material" as mat;`,
-      `@import '@angular/cdk/overlay-prebuilt.css';`,
+      `@use "@stagefright5/material" as mat;`,
+      `@import '@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -107,7 +107,7 @@ describe('v13 tilde import migration', () => {
     writeLines(TEST_PATH, [
       `@use '~@angular-momentum/material' as mat;`,
       `@import '~@angular-momentum/material/theming';`,
-      `@import '@angular/cdk/overlay-prebuilt.css';`,
+      `@import '@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -118,7 +118,7 @@ describe('v13 tilde import migration', () => {
     expect(splitFile(TEST_PATH)).toEqual([
       `@use '~@angular-momentum/material' as mat;`,
       `@import '~@angular-momentum/material/theming';`,
-      `@import '@angular/cdk/overlay-prebuilt.css';`,
+      `@import '@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -127,9 +127,9 @@ describe('v13 tilde import migration', () => {
 
   it('should remove remove .scss file extension', async () => {
     writeLines(TEST_PATH, [
-      `@use '~@angular/material.scss' as mat;`,
-      `@import '~@angular/material/theming.scss';`,
-      `@import '~@angular/cdk/overlay-prebuilt.css';`,
+      `@use '~@stagefright5/material.scss' as mat;`,
+      `@import '~@stagefright5/material/theming.scss';`,
+      `@import '~@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,
@@ -138,9 +138,9 @@ describe('v13 tilde import migration', () => {
     await runMigration();
 
     expect(splitFile(TEST_PATH)).toEqual([
-      `@use '@angular/material' as mat;`,
-      `@import '@angular/material/theming';`,
-      `@import '@angular/cdk/overlay-prebuilt.css';`,
+      `@use '@stagefright5/material' as mat;`,
+      `@import '@stagefright5/material/theming';`,
+      `@import '@stagefright5/cdk/overlay-prebuilt.css';`,
 
       `@include mat.button-theme();`,
       `@include mat-core();`,

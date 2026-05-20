@@ -24,6 +24,7 @@ import {CdkSelection} from './selection';
  * and `toggle()` to change the selection state.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkSelectAll]',
   exportAs: 'cdkSelectAll',
 })

@@ -1,6 +1,6 @@
 {
-  "name": "@angular/google-maps",
-  "version": "0.0.0-PLACEHOLDER",
+  "name": "@stagefright5/google-maps",
+  "version": "0.0.0-stagefright5",
   "description": "Angular Google Maps",
   "repository": {
     "type": "git",
@@ -18,12 +18,12 @@
   "homepage": "https://github.com/angular/components/tree/main/src/google-maps#readme",
   "dependencies": {
     "@types/google.maps": "^3.45.6",
-    "tslib": "0.0.0-TSLIB"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-NG",
-    "@angular/common": "0.0.0-NG",
-    "rxjs": "0.0.0-RXJS"
+    "@angular/core": "^21.0.0",
+    "@angular/common": "^21.0.0",
+    "rxjs": "^6.5.3 || ^7.4.0"
   },
   "sideEffects": false,
   "ng-update": {}

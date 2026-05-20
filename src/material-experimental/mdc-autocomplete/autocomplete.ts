@@ -18,14 +18,15 @@ import {
   MAT_OPTION_PARENT_COMPONENT,
   MatOptgroup,
   MatOption,
-} from '@angular/material-experimental/mdc-core';
-import {_MatAutocompleteBase} from '@angular/material/autocomplete';
+} from '@stagefright5/material-experimental/mdc-core';
+import {_MatAutocompleteBase} from '@stagefright5/material/autocomplete';
 import {panelAnimation} from './animations';
 
 @Component({
+  standalone: false,
   selector: 'mat-autocomplete',
   templateUrl: 'autocomplete.html',
-  styleUrls: ['autocomplete.css'],
+  styleUrls: ['autocomplete.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'matAutocomplete',

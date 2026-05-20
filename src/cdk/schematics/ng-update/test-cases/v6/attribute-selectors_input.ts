@@ -23,6 +23,7 @@ const d = 'portalHost';
 class E {}
 
 @Component({
+  standalone: false,
   template: `
     <div portalHost="F"></div>
     <div [portalHost]="myPortal"></div>

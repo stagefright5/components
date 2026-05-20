@@ -7,8 +7,8 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
-import {OverlayModule} from '@angular/cdk/overlay';
+import {MatCommonModule} from '@stagefright5/material/core';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
 
 import {MatColumnResize} from './column-resize-directives/column-resize';
 import {MatColumnResizeFlex} from './column-resize-directives/column-resize-flex';

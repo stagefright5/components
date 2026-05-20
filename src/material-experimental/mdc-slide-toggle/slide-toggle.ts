@@ -30,10 +30,10 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
-import {ThemePalette} from '@angular/material-experimental/mdc-core';
-import {FocusMonitor} from '@angular/cdk/a11y';
+import {ThemePalette} from '@stagefright5/material-experimental/mdc-core';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 import {
   MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS,
   MatSlideToggleDefaultOptions,
@@ -60,9 +60,10 @@ export class MatSlideToggleChange {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-slide-toggle',
   templateUrl: 'slide-toggle.html',
-  styleUrls: ['slide-toggle.css'],
+  styleUrls: ['slide-toggle.scss'],
   host: {
     'class': 'mat-mdc-slide-toggle',
     '[id]': 'id',

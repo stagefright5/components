@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusKeyManager, FocusOrigin} from '@angular/cdk/a11y';
-import {Direction} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {FocusKeyManager, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   ESCAPE,
   LEFT_ARROW,
@@ -16,7 +16,7 @@ import {
   DOWN_ARROW,
   UP_ARROW,
   hasModifierKey,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -535,9 +535,10 @@ export class _MatMenuBase
 
 /** @docs-public MatMenu */
 @Component({
+  standalone: false,
   selector: 'mat-menu',
   templateUrl: 'menu.html',
-  styleUrls: ['menu.css'],
+  styleUrls: ['menu.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   exportAs: 'matMenu',

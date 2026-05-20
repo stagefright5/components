@@ -25,9 +25,10 @@ export interface TextOnlySnackBar {
  * This should only be used internally by the snack bar service.
  */
 @Component({
+  standalone: false,
   selector: 'simple-snack-bar',
   templateUrl: 'simple-snack-bar.html',
-  styleUrls: ['simple-snack-bar.css'],
+  styleUrls: ['simple-snack-bar.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

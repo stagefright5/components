@@ -7,7 +7,7 @@
  */
 
 import {Component, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
-import {_MatOptgroupBase, MAT_OPTGROUP} from '@angular/material/core';
+import {_MatOptgroupBase, MAT_OPTGROUP} from '@stagefright5/material/core';
 
 // Notes on the accessibility pattern used for `mat-optgroup`.
 // The option group has two different "modes": regular and inert. The regular mode uses the
@@ -33,13 +33,14 @@ import {_MatOptgroupBase, MAT_OPTGROUP} from '@angular/material/core';
  * Component that is used to group instances of `mat-option`.
  */
 @Component({
+  standalone: false,
   selector: 'mat-optgroup',
   exportAs: 'matOptgroup',
   templateUrl: 'optgroup.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   inputs: ['disabled'],
-  styleUrls: ['optgroup.css'],
+  styleUrls: ['optgroup.scss'],
   host: {
     'class': 'mat-mdc-optgroup',
     '[attr.role]': '_inert ? null : "group"',

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate, parallel} from '@angular/cdk/testing';
-import {ɵTileCoordinator as TileCoordinator} from '@angular/material/grid-list';
+import {ComponentHarness, HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
+import {ɵTileCoordinator as TileCoordinator} from '@stagefright5/material/grid-list';
 import {GridListHarnessFilters, GridTileHarnessFilters} from './grid-list-harness-filters';
 import {MatGridTileHarness} from './grid-tile-harness';
 

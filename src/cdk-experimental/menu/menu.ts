@@ -22,7 +22,7 @@ import {
   Inject,
   Self,
 } from '@angular/core';
-import {FocusKeyManager, FocusOrigin} from '@angular/cdk/a11y';
+import {FocusKeyManager, FocusOrigin} from '@stagefright5/cdk/a11y';
 import {
   LEFT_ARROW,
   RIGHT_ARROW,
@@ -31,8 +31,8 @@ import {
   ESCAPE,
   TAB,
   hasModifierKey,
-} from '@angular/cdk/keycodes';
-import {Directionality} from '@angular/cdk/bidi';
+} from '@stagefright5/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {merge} from 'rxjs';
 import {take, takeUntil, startWith, mergeMap, mapTo, mergeAll, switchMap} from 'rxjs/operators';
 import {CdkMenuGroup} from './menu-group';
@@ -51,6 +51,7 @@ import {MENU_AIM, MenuAim} from './menu-aim';
  * It also acts as a RadioGroup for elements marked with role `menuitemradio`.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenu]',
   exportAs: 'cdkMenu',
   host: {

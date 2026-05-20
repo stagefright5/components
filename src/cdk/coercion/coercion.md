@@ -10,7 +10,7 @@ import {
   NumberInput,
   coerceNumberProperty,
   coerceElement,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 
 @Directive({
   selector: 'my-button',

@@ -1,7 +1,7 @@
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {MatNativeDateModule, DateAdapter} from '@angular/material/core';
+import {MatNativeDateModule, DateAdapter} from '@stagefright5/material/core';
 import {DEC, FEB, JAN} from '../testing';
 import {By} from '@angular/platform-browser';
 import {MatCalendar} from './calendar';
@@ -370,6 +370,7 @@ describe('MatCalendarHeader', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar
         [startAt]="startDate"
@@ -386,6 +387,7 @@ class StandardCalendar {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar
       [startAt]="startAt"

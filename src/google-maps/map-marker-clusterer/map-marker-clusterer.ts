@@ -41,6 +41,7 @@ const DEFAULT_CLUSTERER_OPTIONS: MarkerClustererOptions = {};
  * See https://developers.google.com/maps/documentation/javascript/marker-clustering
  */
 @Component({
+  standalone: false,
   selector: 'map-marker-clusterer',
   exportAs: 'mapMarkerClusterer',
   changeDetection: ChangeDetectionStrategy.OnPush,

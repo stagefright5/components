@@ -4,10 +4,10 @@ This is a prototype of an alternate version of `MatSlider` built on top of
 ## How to use
 Assuming your application is already up and running using Angular Material, you can add this component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -29,7 +29,7 @@ Assuming your application is already up and running using Angular Material, you 
 3. Import the experimental `MatSliderModule` and add it to the module that declares your component:
 
    ```ts
-   import {MatSliderModule} from '@angular/material-experimental/mdc-slider';
+   import {MatSliderModule} from '@stagefright5/material-experimental/mdc-slider';
 
    @NgModule({
      declarations: [MyComponent],
@@ -48,8 +48,8 @@ Assuming your application is already up and running using Angular Material, you 
 5. Add the theme mixins to your Sass:
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $candy-app-primary: mat.define-palette(mat.$indigo-palette);
    $candy-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -66,5 +66,5 @@ Assuming your application is already up and running using Angular Material, you 
 
 ## API differences
 
-The API of the slider matches the one from `@angular/material/slider`. Simply replace imports to
-`@angular/material/slider` with imports to `@angular/material-experimental/mdc-slider`.
+The API of the slider matches the one from `@stagefright5/material/slider`. Simply replace imports to
+`@stagefright5/material/slider` with imports to `@stagefright5/material-experimental/mdc-slider`.

@@ -8,8 +8,8 @@ import {
   getProjectIndexFiles,
   getProjectStyleFile,
   getProjectTargetOptions,
-} from '@angular/cdk/schematics';
-import {createTestApp, createTestLibrary, getFileContent} from '@angular/cdk/schematics/testing';
+} from '@stagefright5/cdk/schematics';
+import {createTestApp, createTestLibrary, getFileContent} from '@stagefright5/cdk/schematics/testing';
 import {getWorkspace} from '@schematics/angular/utility/workspace';
 import {COLLECTION_PATH} from '../paths';
 import {addPackageToPackageJson} from './package-config';
@@ -64,8 +64,8 @@ describe('ng-add schematic', () => {
     const dependencies = packageJson.dependencies;
     const angularCoreVersion = dependencies['@angular/core'];
 
-    expect(dependencies['@angular/material']).toBe('~0.0.0-PLACEHOLDER');
-    expect(dependencies['@angular/cdk']).toBe('~0.0.0-PLACEHOLDER');
+    expect(dependencies['@stagefright5/material']).toBe('~0.0.0-stagefright5');
+    expect(dependencies['@stagefright5/cdk']).toBe('~0.0.0-stagefright5');
     expect(dependencies['@angular/forms'])
       .withContext('Expected the @angular/forms package to have the same version as @angular/core.')
       .toBe(angularCoreVersion);
@@ -90,14 +90,14 @@ describe('ng-add schematic', () => {
   it('should respect version range from CLI ng-add command', async () => {
     // Simulates the behavior of the CLI `ng add` command. The command inserts the
     // requested package version into the `package.json` before the actual schematic runs.
-    addPackageToPackageJson(appTree, '@angular/material', '^9.0.0');
+    addPackageToPackageJson(appTree, '@stagefright5/material', '^9.0.0');
 
     const tree = await runner.runSchematicAsync('ng-add', {}, appTree).toPromise();
     const packageJson = JSON.parse(getFileContent(tree, '/package.json')) as PackageJson;
     const dependencies = packageJson.dependencies;
 
-    expect(dependencies['@angular/material']).toBe('^9.0.0');
-    expect(dependencies['@angular/cdk']).toBe('^9.0.0');
+    expect(dependencies['@stagefright5/material']).toBe('^9.0.0');
+    expect(dependencies['@stagefright5/cdk']).toBe('^9.0.0');
   });
 
   it('should add default theme', async () => {
@@ -108,7 +108,7 @@ describe('ng-add schematic', () => {
 
     expectProjectStyleFile(
       project,
-      './node_modules/@angular/material/prebuilt-themes/indigo-pink.css',
+      './node_modules/@stagefright5/material/prebuilt-themes/indigo-pink.css',
     );
   });
 
@@ -127,7 +127,7 @@ describe('ng-add schematic', () => {
     const buffer = tree.read(expectedStylesPath);
     const themeContent = buffer!.toString();
 
-    expect(themeContent).toContain(`@use '@angular/material' as mat;`);
+    expect(themeContent).toContain(`@use '@stagefright5/material' as mat;`);
     expect(themeContent).toContain(`$app-primary: mat.define-palette(`);
   });
 
@@ -317,7 +317,7 @@ describe('ng-add schematic', () => {
   describe('theme files', () => {
     /** Path to the default prebuilt theme file that will be added when running ng-add. */
     const defaultPrebuiltThemePath =
-      './node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+      './node_modules/@stagefright5/material/prebuilt-themes/indigo-pink.css';
 
     /** Writes a specific style file to the workspace in the given tree */
     function writeStyleFileToWorkspace(tree: Tree, stylePath: string) {
@@ -354,7 +354,7 @@ describe('ng-add schematic', () => {
     }
 
     it('should replace existing prebuilt theme files', async () => {
-      const existingThemePath = './node_modules/@angular/material/prebuilt-themes/purple-green.css';
+      const existingThemePath = './node_modules/@stagefright5/material/prebuilt-themes/purple-green.css';
       writeStyleFileToWorkspace(appTree, existingThemePath);
 
       const tree = await runner.runSchematicAsync('ng-add-setup-project', {}, appTree).toPromise();

@@ -7,4 +7,4 @@
  */
 
 export * from './radio-harness';
-export {RadioButtonHarnessFilters, RadioGroupHarnessFilters} from '@angular/material/radio/testing';
+export {RadioButtonHarnessFilters, RadioGroupHarnessFilters} from '@stagefright5/material/radio/testing';

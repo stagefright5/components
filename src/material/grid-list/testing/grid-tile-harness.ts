@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentContainerComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
+import {ContentContainerComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
 import {GridTileHarnessFilters} from './grid-list-harness-filters';
 
 /** Selectors for the various `mat-grid-tile` sections that may contain user content. */

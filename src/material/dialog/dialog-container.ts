@@ -13,15 +13,15 @@ import {
   FocusTrap,
   FocusTrapFactory,
   InteractivityChecker,
-} from '@angular/cdk/a11y';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+} from '@stagefright5/cdk/a11y';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {
   BasePortalOutlet,
   CdkPortalOutlet,
   ComponentPortal,
   DomPortal,
   TemplatePortal,
-} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/portal';
 import {DOCUMENT} from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -301,9 +301,10 @@ export abstract class _MatDialogContainerBase extends BasePortalOutlet {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-dialog-container',
   templateUrl: 'dialog-container.html',
-  styleUrls: ['dialog.css'],
+  styleUrls: ['dialog.scss'],
   encapsulation: ViewEncapsulation.None,
   // Using OnPush for dialogs caused some G3 sync issues. Disabled until we can track them down.
   // tslint:disable-next-line:validate-decorators

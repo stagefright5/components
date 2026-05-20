@@ -1,6 +1,6 @@
-import {ComponentHarness, HarnessLoader, HarnessPredicate, parallel} from '@angular/cdk/testing';
+import {ComponentHarness, HarnessLoader, HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
 import {createFakeEvent, dispatchFakeEvent} from '../../../cdk/testing/private';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component, Type} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -254,6 +254,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field id="first-form-field" [floatLabel]="shouldLabelFloat">
       <span matPrefix *ngIf="!isMdc">prefix_text</span>

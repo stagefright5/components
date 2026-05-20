@@ -22,6 +22,7 @@ import {MapEventManager} from '../map-event-manager';
  * See developers.google.com/maps/documentation/javascript/reference/kml#KmlLayer
  */
 @Directive({
+  standalone: false,
   selector: 'map-kml-layer',
   exportAs: 'mapKmlLayer',
 })
@@ -121,7 +122,7 @@ export class MapKmlLayer implements OnInit, OnDestroy {
    */
   getStatus(): google.maps.KmlLayerStatus {
     this._assertInitialized();
-    return this.kmlLayer.getStatus();
+    return this.kmlLayer.getStatus() as google.maps.KmlLayerStatus;
   }
 
   /**

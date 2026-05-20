@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {TableHarnessFilters, _MatTableHarnessBase} from '@angular/material/table/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {TableHarnessFilters, _MatTableHarnessBase} from '@stagefright5/material/table/testing';
 import {MatRowHarness, MatHeaderRowHarness, MatFooterRowHarness} from './row-harness';
 
 /** Harness for interacting with an MDC-based mat-table in tests. */

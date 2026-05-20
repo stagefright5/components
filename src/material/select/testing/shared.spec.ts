@@ -1,11 +1,11 @@
-import {OverlayContainer} from '@angular/cdk/overlay';
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {OverlayContainer} from '@stagefright5/cdk/overlay';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import {FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
+import {MatSelectModule} from '@stagefright5/material/select';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectHarness} from './select-harness';
 
@@ -249,6 +249,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select [disabled]="isDisabled" [required]="isRequired" id="single-selection">

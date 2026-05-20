@@ -1,14 +1,14 @@
-import {MatDialogContainer as DialogContainer} from '@angular/material';
-import {MatAccordion, MatExpansionPanel, MatExpansionPanelHeader} from '@angular/material';
-import {MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS as SPINNER_DEFAULTS} from '@angular/material';
+import {MatDialogContainer as DialogContainer} from '@stagefright5/material';
+import {MatAccordion, MatExpansionPanel, MatExpansionPanelHeader} from '@stagefright5/material';
+import {MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS as SPINNER_DEFAULTS} from '@stagefright5/material';
 
 // unsorted
-import {MatTreeNodeToggle, MatTreeNodeDef, MatTree} from '@angular/material';
+import {MatTreeNodeToggle, MatTreeNodeDef, MatTree} from '@stagefright5/material';
 
-import {/* comment */ MatTooltip as Tooltip} from '@angular/material';
+import {/* comment */ MatTooltip as Tooltip} from '@stagefright5/material';
 
 // primary entry-point export
-import {VERSION} from '@angular/material';
+import {VERSION} from '@stagefright5/material';
 
 // type import
-import {MatMenuPanel} from "@angular/material";
+import {MatMenuPanel} from "@stagefright5/material";

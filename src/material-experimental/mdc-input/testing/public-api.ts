@@ -13,4 +13,4 @@ export {
   MatNativeOptionHarness,
   NativeOptionHarnessFilters,
   NativeSelectHarnessFilters,
-} from '@angular/material/input/testing';
+} from '@stagefright5/material/input/testing';

@@ -8,14 +8,14 @@
 
 import {Inject, Injectable, Provider} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {CdkTable, _CoalescedStyleScheduler, _COALESCED_STYLE_SCHEDULER} from '@angular/cdk/table';
+import {CdkTable, _CoalescedStyleScheduler, _COALESCED_STYLE_SCHEDULER} from '@stagefright5/cdk/table';
 
 import {
   ColumnResize,
   ResizeStrategy,
   CdkFlexTableResizeStrategy,
   TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER,
-} from '@angular/cdk-experimental/column-resize';
+} from '@stagefright5/cdk-experimental/column-resize';
 
 export {TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER};
 

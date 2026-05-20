@@ -8,10 +8,10 @@
 
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MAT_PAGINATOR_INTL_PROVIDER} from '@angular/material/paginator';
-import {MatButtonModule} from '@angular/material-experimental/mdc-button';
-import {MatSelectModule} from '@angular/material-experimental/mdc-select';
-import {MatTooltipModule} from '@angular/material-experimental/mdc-tooltip';
+import {MAT_PAGINATOR_INTL_PROVIDER} from '@stagefright5/material/paginator';
+import {MatButtonModule} from '@stagefright5/material-experimental/mdc-button';
+import {MatSelectModule} from '@stagefright5/material-experimental/mdc-select';
+import {MatTooltipModule} from '@stagefright5/material-experimental/mdc-tooltip';
 import {MatPaginator} from './paginator';
 
 @NgModule({

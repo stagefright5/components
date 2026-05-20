@@ -22,6 +22,7 @@ import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-content, [mat-card-content], [matCardContent]',
   host: {'class': 'mat-card-content'},
 })
@@ -32,6 +33,7 @@ export class MatCardContent {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: `mat-card-title, [mat-card-title], [matCardTitle]`,
   host: {
     'class': 'mat-card-title',
@@ -44,6 +46,7 @@ export class MatCardTitle {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: `mat-card-subtitle, [mat-card-subtitle], [matCardSubtitle]`,
   host: {
     'class': 'mat-card-subtitle',
@@ -56,6 +59,7 @@ export class MatCardSubtitle {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-actions',
   exportAs: 'matCardActions',
   host: {
@@ -73,6 +77,7 @@ export class MatCardActions {
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-footer',
   host: {'class': 'mat-card-footer'},
 })
@@ -83,6 +88,7 @@ export class MatCardFooter {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-image], [matCardImage]',
   host: {'class': 'mat-card-image'},
 })
@@ -93,6 +99,7 @@ export class MatCardImage {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-sm-image], [matCardImageSmall]',
   host: {'class': 'mat-card-sm-image'},
 })
@@ -103,6 +110,7 @@ export class MatCardSmImage {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-md-image], [matCardImageMedium]',
   host: {'class': 'mat-card-md-image'},
 })
@@ -113,6 +121,7 @@ export class MatCardMdImage {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-lg-image], [matCardImageLarge]',
   host: {'class': 'mat-card-lg-image'},
 })
@@ -123,6 +132,7 @@ export class MatCardLgImage {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-xl-image], [matCardImageXLarge]',
   host: {'class': 'mat-card-xl-image'},
 })
@@ -133,6 +143,7 @@ export class MatCardXlImage {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-avatar], [matCardAvatar]',
   host: {'class': 'mat-card-avatar'},
 })
@@ -150,10 +161,11 @@ export class MatCardAvatar {}
  * - mat-card-footer
  */
 @Component({
+  standalone: false,
   selector: 'mat-card',
   exportAs: 'matCard',
   templateUrl: 'card.html',
-  styleUrls: ['card.css'],
+  styleUrls: ['card.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
@@ -172,6 +184,7 @@ export class MatCard {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-card-header',
   templateUrl: 'card-header.html',
   encapsulation: ViewEncapsulation.None,
@@ -186,6 +199,7 @@ export class MatCardHeader {}
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-card-title-group',
   templateUrl: 'card-title-group.html',
   encapsulation: ViewEncapsulation.None,

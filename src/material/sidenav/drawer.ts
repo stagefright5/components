@@ -12,12 +12,12 @@ import {
   FocusTrap,
   FocusTrapFactory,
   InteractivityChecker,
-} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
-import {Platform} from '@angular/cdk/platform';
-import {CdkScrollable, ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
+import {Platform} from '@stagefright5/cdk/platform';
+import {CdkScrollable, ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterContentChecked,
@@ -95,6 +95,7 @@ export function MAT_DRAWER_DEFAULT_AUTOSIZE_FACTORY(): boolean {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-drawer-content',
   template: '<ng-content></ng-content>',
   host: {
@@ -133,6 +134,7 @@ export class MatDrawerContent extends CdkScrollable implements AfterContentInit 
  * This component corresponds to a drawer that can be opened on the drawer container.
  */
 @Component({
+  standalone: false,
   selector: 'mat-drawer',
   exportAs: 'matDrawer',
   templateUrl: 'drawer.html',
@@ -628,10 +630,11 @@ export class MatDrawer implements AfterViewInit, AfterContentChecked, OnDestroy 
  * and coordinates the backdrop and content styling.
  */
 @Component({
+  standalone: false,
   selector: 'mat-drawer-container',
   exportAs: 'matDrawerContainer',
   templateUrl: 'drawer-container.html',
-  styleUrls: ['drawer.css'],
+  styleUrls: ['drawer.scss'],
   host: {
     'class': 'mat-drawer-container',
     '[class.mat-drawer-container-explicit-backdrop]': '_backdropOverride',

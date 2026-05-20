@@ -7,7 +7,7 @@
  */
 
 import {Directive, Input, TemplateRef} from '@angular/core';
-import {StepState} from '@angular/cdk/stepper';
+import {StepState} from '@stagefright5/cdk/stepper';
 
 /** Template context available to an attached `matStepperIcon`. */
 export interface MatStepperIconContext {
@@ -23,6 +23,7 @@ export interface MatStepperIconContext {
  * Template to be used to override the icons inside the step header.
  */
 @Directive({
+  standalone: false,
   selector: 'ng-template[matStepperIcon]',
 })
 export class MatStepperIcon {

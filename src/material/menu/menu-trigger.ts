@@ -11,9 +11,9 @@ import {
   FocusOrigin,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
-} from '@angular/cdk/a11y';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {ENTER, LEFT_ARROW, RIGHT_ARROW, SPACE} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/a11y';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {ENTER, LEFT_ARROW, RIGHT_ARROW, SPACE} from '@stagefright5/cdk/keycodes';
 import {
   FlexibleConnectedPositionStrategy,
   HorizontalConnectionPos,
@@ -22,8 +22,8 @@ import {
   OverlayRef,
   ScrollStrategy,
   VerticalConnectionPos,
-} from '@angular/cdk/overlay';
-import {TemplatePortal} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/overlay';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   AfterContentInit,
   Directive,
@@ -39,7 +39,7 @@ import {
   Self,
   ViewContainerRef,
 } from '@angular/core';
-import {normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {asapScheduler, merge, Observable, of as observableOf, Subscription} from 'rxjs';
 import {delay, filter, take, takeUntil} from 'rxjs/operators';
 import {_MatMenuBase, MenuCloseReason} from './menu';
@@ -74,6 +74,7 @@ const passiveEventListenerOptions = normalizePassiveListenerOptions({passive: tr
 // TODO(andrewseguin): Remove the kebab versions in favor of camelCased attribute selectors
 
 @Directive({
+  standalone: false,
   host: {
     'aria-haspopup': 'true',
     '[attr.aria-expanded]': 'menuOpen || null',
@@ -670,6 +671,7 @@ export abstract class _MatMenuTriggerBase implements AfterContentInit, OnDestroy
 
 /** Directive applied to an element that should trigger a `mat-menu`. */
 @Directive({
+  standalone: false,
   selector: `[mat-menu-trigger-for], [matMenuTriggerFor]`,
   host: {
     'class': 'mat-menu-trigger',

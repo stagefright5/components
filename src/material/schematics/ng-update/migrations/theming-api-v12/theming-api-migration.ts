@@ -8,7 +8,7 @@
 
 import {extname} from '@angular-devkit/core';
 import {SchematicContext} from '@angular-devkit/schematics';
-import {DevkitMigration, ResolvedResource, TargetVersion} from '@angular/cdk/schematics';
+import {DevkitMigration, ResolvedResource, TargetVersion} from '@stagefright5/cdk/schematics';
 import {migrateFileContent} from './migration';
 
 /** Migration that switches all Sass files using Material theming APIs to `@use`. */
@@ -24,10 +24,10 @@ export class ThemingApiMigration extends DevkitMigration<null> {
       const migratedContent = content
         ? migrateFileContent(
             content,
-            '@angular/material/',
-            '@angular/cdk/',
-            '@angular/material',
-            '@angular/cdk',
+            '@stagefright5/material/',
+            '@stagefright5/cdk/',
+            '@stagefright5/material',
+            '@stagefright5/cdk',
             undefined,
             /material\/prebuilt-themes|cdk\/.*-prebuilt/,
           )

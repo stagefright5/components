@@ -53,6 +53,7 @@ export const DEFAULT_WIDTH = '500px';
  * @see https://developers.google.com/maps/documentation/javascript/reference/
  */
 @Component({
+  standalone: false,
   selector: 'google-map',
   exportAs: 'googleMap',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -478,7 +479,7 @@ export class GoogleMap implements OnChanges, OnInit, OnDestroy {
    */
   get overlayMapTypes(): google.maps.MVCArray<google.maps.MapType> {
     this._assertInitialized();
-    return this.googleMap.overlayMapTypes;
+    return this.googleMap.overlayMapTypes as google.maps.MVCArray<google.maps.MapType>;
   }
 
   private _setSize() {

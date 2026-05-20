@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AriaDescriber} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {AriaDescriber} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   Directive,
   ElementRef,
@@ -19,7 +19,7 @@ import {
   Optional,
   Renderer2,
 } from '@angular/core';
-import {CanDisable, mixinDisabled, ThemePalette} from '@angular/material/core';
+import {CanDisable, mixinDisabled, ThemePalette} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 
 let nextId = 0;
@@ -46,6 +46,7 @@ const BADGE_CONTENT_CLASS = 'mat-badge-content';
 
 /** Directive to display a text badge. */
 @Directive({
+  standalone: false,
   selector: '[matBadge]',
   inputs: ['disabled: matBadgeDisabled'],
   host: {

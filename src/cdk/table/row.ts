@@ -91,6 +91,7 @@ const _CdkHeaderRowDefBase: CanStickCtor & typeof CdkHeaderRowDefBase =
  * Captures the header row's template and other header properties such as the columns to display.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkHeaderRowDef]',
   inputs: ['columns: cdkHeaderRowDef', 'sticky: cdkHeaderRowDefSticky'],
 })
@@ -121,6 +122,7 @@ const _CdkFooterRowDefBase: CanStickCtor & typeof CdkFooterRowDefBase =
  * Captures the footer row's template and other footer properties such as the columns to display.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkFooterRowDef]',
   inputs: ['columns: cdkFooterRowDef', 'sticky: cdkFooterRowDefSticky'],
 })
@@ -146,6 +148,7 @@ export class CdkFooterRowDef extends _CdkFooterRowDefBase implements CanStick, O
  * a when predicate that describes when this row should be used.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkRowDef]',
   inputs: ['columns: cdkRowDefColumns', 'when: cdkRowDefWhen'],
 })
@@ -228,7 +231,7 @@ export interface CdkCellOutletMultiRowContext<T> {
  * Outlet for rendering cells inside of a row or header row.
  * @docs-private
  */
-@Directive({selector: '[cdkCellOutlet]'})
+@Directive({standalone: false, selector: '[cdkCellOutlet]'})
 export class CdkCellOutlet implements OnDestroy {
   /** The ordered list of cells to render within this outlet's view container */
   cells: CdkCellDef[];
@@ -260,6 +263,7 @@ export class CdkCellOutlet implements OnDestroy {
 
 /** Header template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'cdk-header-row, tr[cdk-header-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -275,6 +279,7 @@ export class CdkHeaderRow {}
 
 /** Footer template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'cdk-footer-row, tr[cdk-footer-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -290,6 +295,7 @@ export class CdkFooterRow {}
 
 /** Data row template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'cdk-row, tr[cdk-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -305,6 +311,7 @@ export class CdkRow {}
 
 /** Row that can be used to display a message when no data is shown in the table. */
 @Directive({
+  standalone: false,
   selector: 'ng-template[cdkNoDataRow]',
 })
 export class CdkNoDataRow {

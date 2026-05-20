@@ -1,5 +1,5 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {MatChipsModule} from '../index';
@@ -75,6 +75,7 @@ describe('MatChipOptionHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-listbox>
       <mat-basic-chip-option> Basic Chip Option </mat-basic-chip-option>

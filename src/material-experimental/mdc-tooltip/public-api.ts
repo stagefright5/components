@@ -22,4 +22,4 @@ export {
   MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER,
   MatTooltipDefaultOptions,
   MAT_TOOLTIP_DEFAULT_OPTIONS,
-} from '@angular/material/tooltip';
+} from '@stagefright5/material/tooltip';

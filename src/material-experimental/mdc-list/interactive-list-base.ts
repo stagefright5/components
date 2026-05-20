@@ -14,6 +14,7 @@ import {startWith} from 'rxjs/operators';
 import {MatListBase, MatListItemBase} from './list-base';
 
 @Directive({
+  standalone: false,
   host: {
     '(keydown)': '_handleKeydown($event)',
     '(click)': '_handleClick($event)',

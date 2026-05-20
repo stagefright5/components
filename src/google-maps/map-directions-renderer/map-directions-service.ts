@@ -44,7 +44,7 @@ export class MapDirectionsService {
 
       this._directionsService.route(request, (result, status) => {
         this._ngZone.run(() => {
-          observer.next({result: result || undefined, status});
+          observer.next({result: result || undefined, status: status as google.maps.DirectionsStatus});
           observer.complete();
         });
       });

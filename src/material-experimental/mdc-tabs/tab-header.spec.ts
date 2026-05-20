@@ -1,7 +1,7 @@
-import {Direction} from '@angular/cdk/bidi';
-import {END, ENTER, HOME, LEFT_ARROW, RIGHT_ARROW, SPACE} from '@angular/cdk/keycodes';
-import {PortalModule} from '@angular/cdk/portal';
-import {ScrollingModule, ViewportRuler} from '@angular/cdk/scrolling';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {END, ENTER, HOME, LEFT_ARROW, RIGHT_ARROW, SPACE} from '@stagefright5/cdk/keycodes';
+import {PortalModule} from '@stagefright5/cdk/portal';
+import {ScrollingModule, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
@@ -19,11 +19,11 @@ import {
   TestBed,
   tick,
 } from '@angular/core/testing';
-import {MatRippleModule} from '@angular/material-experimental/mdc-core';
+import {MatRippleModule} from '@stagefright5/material-experimental/mdc-core';
 import {By} from '@angular/platform-browser';
 import {MatTabHeader} from './tab-header';
 import {MatTabLabelWrapper} from './tab-label-wrapper';
-import {ObserversModule, MutationObserverFactory} from '@angular/cdk/observers';
+import {ObserversModule, MutationObserverFactory} from '@stagefright5/cdk/observers';
 
 describe('MDC-based MatTabHeader', () => {
   let fixture: ComponentFixture<SimpleTabHeaderApp>;
@@ -699,6 +699,7 @@ interface Tab {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div [dir]="dir">
     <mat-tab-header [selectedIndex]="selectedIndex" [disableRipple]="disableRipple"

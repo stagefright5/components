@@ -1,12 +1,12 @@
-import {Platform, PlatformModule} from '@angular/cdk/platform';
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {Platform, PlatformModule} from '@stagefright5/cdk/platform';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, inject, TestBed} from '@angular/core/testing';
-import {MatButtonModule} from '@angular/material/button';
-import {MatButtonHarness} from '@angular/material/button/testing/button-harness';
-import {MatIconModule} from '@angular/material/icon';
-import {MatIconHarness} from '@angular/material/icon/testing/icon-harness';
+import {MatButtonModule} from '@stagefright5/material/button';
+import {MatButtonHarness} from '@stagefright5/material/button/testing/button-harness';
+import {MatIconModule} from '@stagefright5/material/icon';
+import {MatIconHarness} from '@stagefright5/material/icon/testing/icon-harness';
 
 /** Shared tests to run on both the original and MDC-based buttons. */
 export function runHarnessTests(
@@ -116,6 +116,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   // Include one of each type of button selector to ensure that they're all captured by
   // the harness's selector.
   template: `

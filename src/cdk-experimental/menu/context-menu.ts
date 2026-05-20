@@ -18,16 +18,16 @@ import {
   Output,
   ViewContainerRef,
 } from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   ConnectedPosition,
   FlexibleConnectedPositionStrategy,
   Overlay,
   OverlayConfig,
   OverlayRef,
-} from '@angular/cdk/overlay';
-import {Portal, TemplatePortal} from '@angular/cdk/portal';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/overlay';
+import {Portal, TemplatePortal} from '@stagefright5/cdk/portal';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {merge, partition, Subject} from 'rxjs';
 import {skip, takeUntil} from 'rxjs/operators';
 import {CdkMenuPanel} from './menu-panel';
@@ -76,6 +76,7 @@ export type ContextMenuCoordinates = {x: number; y: number};
  * non-disabled context menu will trigger.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkContextMenuTriggerFor]',
   exportAs: 'cdkContextMenuTriggerFor',
   host: {

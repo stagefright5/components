@@ -12,6 +12,7 @@ import {Directive, TemplateRef} from '@angular/core';
  * Content for a `mat-step` that will be rendered lazily.
  */
 @Directive({
+  standalone: false,
   selector: 'ng-template[matStepContent]',
 })
 export class MatStepContent {

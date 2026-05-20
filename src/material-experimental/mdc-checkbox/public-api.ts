@@ -22,4 +22,4 @@ export {
   MAT_CHECKBOX_DEFAULT_OPTIONS_FACTORY,
   MatCheckboxDefaultOptions,
   MAT_CHECKBOX_DEFAULT_OPTIONS,
-} from '@angular/material/checkbox';
+} from '@stagefright5/material/checkbox';

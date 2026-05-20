@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DomPortalOutlet, TemplatePortal} from '@angular/cdk/portal';
+import {DomPortalOutlet, TemplatePortal} from '@stagefright5/cdk/portal';
 import {DOCUMENT} from '@angular/common';
 import {
   ApplicationRef,
@@ -130,6 +130,7 @@ export abstract class _MatMenuContentBase implements OnDestroy {
  * Menu content that will be rendered lazily once the menu is opened.
  */
 @Directive({
+  standalone: false,
   selector: 'ng-template[matMenuContent]',
   providers: [{provide: MAT_MENU_CONTENT, useExisting: MatMenuContent}],
 })

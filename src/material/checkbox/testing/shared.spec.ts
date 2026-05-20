@@ -1,10 +1,10 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatCheckboxHarness} from '@angular/material/checkbox/testing/checkbox-harness';
+import {MatCheckboxModule} from '@stagefright5/material/checkbox';
+import {MatCheckboxHarness} from '@stagefright5/material/checkbox/testing/checkbox-harness';
 
 /**
  * Function that can be used to run the shared checkbox harness tests for either the non-MDC or
@@ -160,6 +160,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-checkbox
           [formControl]="ctrl"

@@ -32,6 +32,7 @@ export class CdkTreeNodeOutletContext<T> {
  * Captures the node's template and a when predicate that describes when this node should be used.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkTreeNodeDef]',
   inputs: ['when: cdkTreeNodeDefWhen'],
 })

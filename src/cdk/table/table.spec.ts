@@ -1,4 +1,4 @@
-import {CollectionViewer, DataSource} from '@angular/cdk/collections';
+import {CollectionViewer, DataSource} from '@stagefright5/cdk/collections';
 import {
   AfterContentInit,
   Component,
@@ -30,7 +30,7 @@ import {
   getTableUnknownColumnError,
   getTableUnknownDataSourceError,
 } from './table-errors';
-import {BidiModule} from '@angular/cdk/bidi';
+import {BidiModule} from '@stagefright5/cdk/bidi';
 
 describe('CdkTable', () => {
   let fixture: ComponentFixture<any>;
@@ -1975,6 +1975,7 @@ class BooleanDataSource extends DataSource<boolean> {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource"
                (contentChanged)="contentChangedCount = contentChangedCount + 1">
@@ -2016,6 +2017,7 @@ class SimpleCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2046,6 +2048,7 @@ class CdkTableWithDifferentDataInputsApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2063,6 +2066,7 @@ class BooleanRowCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource"
                (contentChanged)="contentChangedCount = contentChangedCount + 1">
@@ -2082,6 +2086,7 @@ class NullDataCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="[]">
       <ng-container cdkColumnDef="first-header">
@@ -2110,6 +2115,7 @@ class NullDataCdkTableApp {
 class MultipleHeaderFooterRowsCdkTableApp {}
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" [multiTemplateDataRows]="multiTemplateDataRows">
       <ng-container cdkColumnDef="column_a">
@@ -2183,6 +2189,7 @@ class WhenRowCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" multiTemplateDataRows>
       <ng-container cdkColumnDef="column_a">
@@ -2235,6 +2242,7 @@ class WhenRowCdkTableApp {
 class CoercedMultiTemplateDataRows extends WhenRowCdkTableApp {}
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2278,6 +2286,7 @@ class WhenRowWithoutDefaultCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2321,6 +2330,7 @@ class WhenRowMultipleDefaultsCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2341,6 +2351,7 @@ class DynamicDataSourceCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" [trackBy]="trackBy">
       <ng-container cdkColumnDef="column_a">
@@ -2402,6 +2413,7 @@ class StickyPositioningListenerTest implements StickyPositioningListener {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" [dir]="dir">
       <ng-container [cdkColumnDef]="column" *ngFor="let column of columns"
@@ -2460,6 +2472,7 @@ class StickyFlexLayoutCdkTableApp extends StickyPositioningListenerTest {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <ng-container [cdkColumnDef]="column" *ngFor="let column of columns"
@@ -2515,6 +2528,7 @@ class StickyNativeLayoutCdkTableApp extends StickyPositioningListenerTest {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container [cdkColumnDef]="column" *ngFor="let column of dynamicColumns">
@@ -2535,6 +2549,7 @@ class DynamicColumnDefinitionsCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" role="treegrid">
       <ng-container cdkColumnDef="column_a">
@@ -2555,6 +2570,7 @@ class CustomRoleCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container [cdkColumnDef]="columnsToRender[0]">
@@ -2575,6 +2591,7 @@ class CrazyColumnNameCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2597,6 +2614,7 @@ class DuplicateColumnDefNameCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_b">
@@ -2614,6 +2632,7 @@ class MissingColumnDefCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_b">
@@ -2638,6 +2657,7 @@ class MissingColumnDefAfterRenderCdkTableApp implements AfterViewInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2652,6 +2672,7 @@ class MissingAllRowDefsCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2670,6 +2691,7 @@ class MissingHeaderRowDefCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2688,6 +2710,7 @@ class MissingRowDefCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2706,6 +2729,7 @@ class MissingFooterRowDefCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2724,6 +2748,7 @@ class UndefinedColumnsCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2760,6 +2785,7 @@ class RowContextCdkTableApp {
 }
 
 @Component({
+  standalone: false,
   selector: 'wrapper-table',
   template: `
     <cdk-table [dataSource]="dataSource">
@@ -2798,6 +2824,7 @@ class WrapperCdkTableApp<T> implements AfterContentInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <wrapper-table [dataSource]="dataSource" [columns]="columnsToRender">
       <ng-container cdkColumnDef="injected_column_a">
@@ -2833,6 +2860,7 @@ class OuterTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2866,6 +2894,7 @@ class NativeHtmlTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2914,6 +2943,7 @@ class NestedHtmlTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <ng-container cdkColumnDef="column_a">
@@ -2943,6 +2973,7 @@ class NativeTableWithNoHeaderOrFooterRows {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <caption>Very important data</caption>
@@ -2964,6 +2995,7 @@ class NativeHtmlTableWithCaptionApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table cdk-table [dataSource]="dataSource">
       <colgroup>
@@ -2992,6 +3024,7 @@ class NativeHtmlTableWithColgroupAndCol {
 }
 
 @Component({
+  standalone: false,
   // Note that we need the `ngSwitch` below in order to surface the issue we're testing for.
   template: `
     <cdk-table [dataSource]="dataSource">

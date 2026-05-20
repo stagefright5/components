@@ -1,10 +1,10 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {getSupportedInputTypes} from '@angular/cdk/platform';
+import {MatInputModule} from '@stagefright5/material/input';
+import {getSupportedInputTypes} from '@stagefright5/cdk/platform';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputHarness} from './input-harness';
 
@@ -222,6 +222,7 @@ export function runInputHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="Favorite food" value="Sushi" name="favorite-food">

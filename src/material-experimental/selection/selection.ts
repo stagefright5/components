@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {CdkSelection, SelectionChange} from '@angular/cdk-experimental/selection';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {CdkSelection, SelectionChange} from '@stagefright5/cdk-experimental/selection';
 import {Directive, Input, Output, EventEmitter} from '@angular/core';
 
 /**
@@ -17,6 +17,7 @@ import {Directive, Input, Output, EventEmitter} from '@angular/core';
  * `matRowSelection` and `matSelectionColumn` are applied.
  */
 @Directive({
+  standalone: false,
   selector: '[matSelection]',
   exportAs: 'matSelection',
   providers: [{provide: CdkSelection, useExisting: MatSelection}],
@@ -39,4 +40,4 @@ export class MatSelection<T> extends CdkSelection<T> {
 /**
  * Represents the change in the selection set.
  */
-export {SelectionChange} from '@angular/cdk-experimental/selection';
+export {SelectionChange} from '@stagefright5/cdk-experimental/selection';

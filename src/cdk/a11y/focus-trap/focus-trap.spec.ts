@@ -1,4 +1,4 @@
-import {Platform, _supportsShadowDom} from '@angular/cdk/platform';
+import {Platform, _supportsShadowDom} from '@stagefright5/cdk/platform';
 import {
   Component,
   ViewChild,
@@ -7,7 +7,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {PortalModule, CdkPortalOutlet, TemplatePortal} from '@angular/cdk/portal';
+import {PortalModule, CdkPortalOutlet, TemplatePortal} from '@stagefright5/cdk/portal';
 import {A11yModule, FocusTrap, CdkTrapFocus} from '../index';
 import {By} from '@angular/platform-browser';
 
@@ -326,6 +326,7 @@ function getActiveElement() {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTrapFocus>
       <input>
@@ -345,7 +346,7 @@ const AUTO_FOCUS_TEMPLATE = `
   </div>
 `;
 
-@Component({template: AUTO_FOCUS_TEMPLATE})
+@Component({standalone: false, template: AUTO_FOCUS_TEMPLATE})
 class FocusTrapWithAutoCapture {
   @ViewChild(CdkTrapFocus) focusTrapDirective: CdkTrapFocus;
   showTrappedRegion = false;
@@ -353,12 +354,14 @@ class FocusTrapWithAutoCapture {
 }
 
 @Component({
+  standalone: false,
   template: AUTO_FOCUS_TEMPLATE,
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 class FocusTrapWithAutoCaptureInShadowDom extends FocusTrapWithAutoCapture {}
 
 @Component({
+  standalone: false,
   template: `
     <div *ngIf="renderFocusTrap" [cdkTrapFocus]="_isFocusTrapEnabled">
       <input>
@@ -373,6 +376,7 @@ class FocusTrapWithBindings {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTrapFocus>
       <input>
@@ -390,6 +394,7 @@ class FocusTrapTargets {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTrapFocus>
       <div cdkFocusInitial></div>
@@ -401,6 +406,7 @@ class FocusTrapUnfocusableTarget {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTrapFocus>
       <svg xmlns="http://www.w3.org/2000/svg">
@@ -414,6 +420,7 @@ class FocusTrapWithSvg {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTrapFocus>
       <p>Hello</p>
@@ -425,6 +432,7 @@ class FocusTrapWithoutFocusableElements {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div class="portal-outlet">
     <ng-template cdkPortalOutlet></ng-template>

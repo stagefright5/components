@@ -18,16 +18,16 @@ import {
   Optional,
   NgZone,
 } from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   OverlayRef,
   Overlay,
   OverlayConfig,
   ConnectedPosition,
   FlexibleConnectedPositionStrategy,
-} from '@angular/cdk/overlay';
-import {SPACE, ENTER, RIGHT_ARROW, LEFT_ARROW, DOWN_ARROW, UP_ARROW} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/overlay';
+import {SPACE, ENTER, RIGHT_ARROW, LEFT_ARROW, DOWN_ARROW, UP_ARROW} from '@stagefright5/cdk/keycodes';
 import {fromEvent, Subject, merge} from 'rxjs';
 import {takeUntil, filter} from 'rxjs/operators';
 import {CdkMenuPanel} from './menu-panel';
@@ -65,6 +65,7 @@ export function isClickInsideMenuOverlay(target: Element): boolean {
  * functionality.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuTriggerFor]',
   exportAs: 'cdkMenuTriggerFor',
   host: {

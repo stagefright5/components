@@ -13,19 +13,20 @@ import {
   _CoalescedStyleScheduler,
   _COALESCED_STYLE_SCHEDULER,
   STICKY_POSITIONING_LISTENER,
-} from '@angular/cdk/table';
+} from '@stagefright5/cdk/table';
 import {ChangeDetectionStrategy, Component, Directive, ViewEncapsulation} from '@angular/core';
 import {
   _DisposeViewRepeaterStrategy,
   _RecycleViewRepeaterStrategy,
   _VIEW_REPEATER_STRATEGY,
-} from '@angular/cdk/collections';
+} from '@stagefright5/cdk/collections';
 
 /**
  * Enables the recycle view repeater strategy, which reduces rendering latency. Not compatible with
  * tables that animate rows.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-table[recycleRows], table[mat-table][recycleRows]',
   providers: [{provide: _VIEW_REPEATER_STRATEGY, useClass: _RecycleViewRepeaterStrategy}],
 })
@@ -35,10 +36,11 @@ export class MatRecycleRows {}
  * Wrapper for the CdkTable with Material design styles.
  */
 @Component({
+  standalone: false,
   selector: 'mat-table, table[mat-table]',
   exportAs: 'matTable',
   template: CDK_TABLE_TEMPLATE,
-  styleUrls: ['table.css'],
+  styleUrls: ['table.scss'],
   host: {
     'class': 'mat-table',
     '[class.mat-table-fixed-layout]': 'fixedLayout',

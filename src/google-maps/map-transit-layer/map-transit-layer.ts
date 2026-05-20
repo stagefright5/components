@@ -19,6 +19,7 @@ import {MapBaseLayer} from '../map-base-layer';
  * See developers.google.com/maps/documentation/javascript/reference/map#TransitLayer
  */
 @Directive({
+  standalone: false,
   selector: 'map-transit-layer',
   exportAs: 'mapTransitLayer',
 })

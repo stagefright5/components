@@ -11,7 +11,7 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -31,14 +31,14 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import {FocusOrigin} from '@angular/cdk/a11y';
+import {FocusOrigin} from '@stagefright5/cdk/a11y';
 import {
   CanColor,
   CanDisableRipple,
   mixinColor,
   mixinDisableRipple,
   ThemePalette,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {merge, Subscription} from 'rxjs';
 import {startWith} from 'rxjs/operators';
@@ -480,10 +480,11 @@ export abstract class _MatTabGroupBase
  * See: https://material.io/design/components/tabs.html
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-group',
   exportAs: 'matTabGroup',
   templateUrl: 'tab-group.html',
-  styleUrls: ['tab-group.css'],
+  styleUrls: ['tab-group.scss'],
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:validate-decorators
   changeDetection: ChangeDetectionStrategy.Default,

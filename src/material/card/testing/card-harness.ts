@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, ContentContainerComponentHarness} from '@angular/cdk/testing';
+import {HarnessPredicate, ContentContainerComponentHarness} from '@stagefright5/cdk/testing';
 import {CardHarnessFilters} from './card-harness-filters';
 
 /** Selectors for different sections of the mat-card that can container user content. */

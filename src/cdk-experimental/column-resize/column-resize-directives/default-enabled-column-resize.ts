@@ -7,7 +7,7 @@
  */
 
 import {Directive, ElementRef, NgZone} from '@angular/core';
-import {CdkTable} from '@angular/cdk/table';
+import {CdkTable} from '@stagefright5/cdk/table';
 
 import {ColumnResize} from '../column-resize';
 import {ColumnResizeNotifier, ColumnResizeNotifierSource} from '../column-resize-notifier';
@@ -19,6 +19,7 @@ import {TABLE_PROVIDERS} from './constants';
  * Individual columns will be resizable unless opted out.
  */
 @Directive({
+  standalone: false,
   selector: 'table[cdk-table]',
   providers: [
     ...TABLE_PROVIDERS,

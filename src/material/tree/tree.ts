@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkTree} from '@angular/cdk/tree';
+import {CdkTree} from '@stagefright5/cdk/tree';
 import {ChangeDetectionStrategy, Component, ViewChild, ViewEncapsulation} from '@angular/core';
 import {MatTreeNodeOutlet} from './outlet';
 
@@ -14,6 +14,7 @@ import {MatTreeNodeOutlet} from './outlet';
  * Wrapper for the CdkTable with Material design styles.
  */
 @Component({
+  standalone: false,
   selector: 'mat-tree',
   exportAs: 'matTree',
   template: `<ng-container matTreeNodeOutlet></ng-container>`,
@@ -21,7 +22,7 @@ import {MatTreeNodeOutlet} from './outlet';
     'class': 'mat-tree',
     'role': 'tree',
   },
-  styleUrls: ['tree.css'],
+  styleUrls: ['tree.scss'],
   encapsulation: ViewEncapsulation.None,
   // See note on CdkTree for explanation on why this uses the default change detection strategy.
   // tslint:disable-next-line:validate-decorators

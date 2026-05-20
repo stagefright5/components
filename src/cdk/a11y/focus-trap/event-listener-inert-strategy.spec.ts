@@ -69,6 +69,7 @@ function createComponent<T>(
 }
 
 @Component({
+  standalone: false,
   template: `
     <textarea #outsideFocusable></textarea>
     <div #focusTrapElement>

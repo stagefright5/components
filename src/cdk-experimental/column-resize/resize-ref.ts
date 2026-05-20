@@ -7,7 +7,7 @@
  */
 
 import {ElementRef} from '@angular/core';
-import {OverlayRef} from '@angular/cdk/overlay';
+import {OverlayRef} from '@stagefright5/cdk/overlay';
 
 /** Tracks state of resize events in progress. */
 export class ResizeRef {

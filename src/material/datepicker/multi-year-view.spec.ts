@@ -1,4 +1,4 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   DOWN_ARROW,
   END,
@@ -8,11 +8,11 @@ import {
   PAGE_UP,
   RIGHT_ARROW,
   UP_ARROW,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {dispatchFakeEvent, dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {Component, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatNativeDateModule} from '@stagefright5/material/core';
 import {JAN} from '../testing';
 import {By} from '@angular/platform-browser';
 import {MatCalendarBody} from './calendar-body';
@@ -364,6 +364,7 @@ describe('MatMultiYearView', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-multi-year-view [(activeDate)]="date" [(selected)]="selected"
                          (yearSelected)="selectedYear=$event"></mat-multi-year-view>`,
@@ -377,6 +378,7 @@ class StandardMultiYearView {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-multi-year-view
       [(activeDate)]="activeDate"
@@ -395,6 +397,7 @@ class MultiYearViewWithDateFilter {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-multi-year-view [(activeDate)]="activeDate" [minDate]="minDate" [maxDate]="maxDate">
     </mat-multi-year-view>
@@ -407,6 +410,7 @@ class MultiYearViewWithMinMaxDate {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-multi-year-view [activeDate]="activeDate" [dateClass]="dateClass"></mat-multi-year-view>
   `,

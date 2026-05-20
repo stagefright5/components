@@ -14,7 +14,7 @@ import {
   getProjectMainFile,
   getProjectStyleFile,
   hasNgModuleImport,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {getWorkspace} from '@schematics/angular/utility/workspace';
 import {ProjectType} from '@schematics/angular/utility/workspace-models';
 import {addFontsToIndex} from './fonts/material-fonts';

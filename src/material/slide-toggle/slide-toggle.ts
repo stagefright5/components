@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AfterContentInit,
   Attribute,
@@ -35,7 +35,7 @@ import {
   mixinDisabled,
   mixinDisableRipple,
   mixinTabIndex,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS,
@@ -78,6 +78,7 @@ const _MatSlideToggleBase = mixinTabIndex(
 
 /** Represents a slidable "switch" toggle that can be moved between on and off. */
 @Component({
+  standalone: false,
   selector: 'mat-slide-toggle',
   exportAs: 'matSlideToggle',
   host: {
@@ -94,7 +95,7 @@ const _MatSlideToggleBase = mixinTabIndex(
     '[class._mat-animation-noopable]': '_noopAnimations',
   },
   templateUrl: 'slide-toggle.html',
-  styleUrls: ['slide-toggle.css'],
+  styleUrls: ['slide-toggle.scss'],
   providers: [MAT_SLIDE_TOGGLE_VALUE_ACCESSOR],
   inputs: ['disabled', 'disableRipple', 'color', 'tabIndex'],
   encapsulation: ViewEncapsulation.None,

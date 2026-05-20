@@ -2,7 +2,7 @@ import {
   CanColorCtor,
   CanDisableRippleCtor as DisableRippleCtorAlias,
   MatRipple,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {HasInitializedCtor} from '@not-angular/material/core';
 
 export declare const colorCtor: CanColorCtor;

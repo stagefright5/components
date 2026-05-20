@@ -7,4 +7,4 @@
  */
 
 export * from './paginator-harness';
-export {PaginatorHarnessFilters} from '@angular/material/paginator/testing';
+export {PaginatorHarnessFilters} from '@stagefright5/material/paginator/testing';

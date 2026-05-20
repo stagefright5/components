@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {Directive, OnDestroy, ElementRef, Self, Optional, Inject, NgZone} from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {CdkMenuItemSelectable} from './menu-item-selectable';
 import {CdkMenuItem} from './menu-item';
 import {CdkMenuItemTrigger} from './menu-item-trigger';
@@ -20,6 +20,7 @@ import {MENU_AIM, MenuAim} from './menu-aim';
  * or `CdkMenuGroup` comprise a radio group with unique selection enforced.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuItemRadio]',
   exportAs: 'cdkMenuItemRadio',
   host: {

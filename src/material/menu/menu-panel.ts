@@ -8,8 +8,8 @@
 
 import {EventEmitter, TemplateRef, InjectionToken} from '@angular/core';
 import {MenuPositionX, MenuPositionY} from './menu-positions';
-import {Direction} from '@angular/cdk/bidi';
-import {FocusOrigin} from '@angular/cdk/a11y';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {FocusOrigin} from '@stagefright5/cdk/a11y';
 import {MatMenuContent} from './menu-content';
 
 /**

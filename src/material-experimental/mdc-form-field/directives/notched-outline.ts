@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -29,6 +29,7 @@ import {MDCNotchedOutline} from '@material/notched-outline';
  * inputs to toggle the notch state and width.
  */
 @Component({
+  standalone: false,
   selector: 'div[matFormFieldNotchedOutline]',
   templateUrl: './notched-outline.html',
   host: {

@@ -1,4 +1,4 @@
-import {createTestCaseSetup, resolveBazelPath} from '@angular/cdk/schematics/testing';
+import {createTestCaseSetup, resolveBazelPath} from '@stagefright5/cdk/schematics/testing';
 import {MIGRATION_PATH} from '../../../paths';
 
 describe('constructor checks', () => {

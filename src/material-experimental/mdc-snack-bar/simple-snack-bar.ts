@@ -7,12 +7,13 @@
  */
 
 import {ChangeDetectionStrategy, Component, Inject, ViewEncapsulation} from '@angular/core';
-import {MAT_SNACK_BAR_DATA, TextOnlySnackBar, MatSnackBarRef} from '@angular/material/snack-bar';
+import {MAT_SNACK_BAR_DATA, TextOnlySnackBar, MatSnackBarRef} from '@stagefright5/material/snack-bar';
 
 @Component({
+  standalone: false,
   selector: 'simple-snack-bar',
   templateUrl: 'simple-snack-bar.html',
-  styleUrls: ['simple-snack-bar.css'],
+  styleUrls: ['simple-snack-bar.scss'],
   exportAs: 'matSnackBar',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

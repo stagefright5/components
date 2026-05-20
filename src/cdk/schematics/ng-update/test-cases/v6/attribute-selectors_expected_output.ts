@@ -23,6 +23,7 @@ const d = 'portalHost';
 class E {}
 
 @Component({
+  standalone: false,
   template: `
     <div cdkPortalOutlet="F"></div>
     <div [cdkPortalOutlet]="myPortal"></div>

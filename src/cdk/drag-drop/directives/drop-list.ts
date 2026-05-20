@@ -12,7 +12,7 @@ import {
   coerceNumberProperty,
   coerceBooleanProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   ElementRef,
   EventEmitter,
@@ -26,8 +26,8 @@ import {
   Inject,
   InjectionToken,
 } from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
-import {ScrollDispatcher} from '@angular/cdk/scrolling';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ScrollDispatcher} from '@stagefright5/cdk/scrolling';
 import {CdkDrag} from './drag';
 import {CdkDragDrop, CdkDragEnter, CdkDragExit, CdkDragSortEvent} from '../drag-events';
 import {CDK_DROP_LIST_GROUP, CdkDropListGroup} from './drop-list-group';
@@ -58,6 +58,7 @@ export const CDK_DROP_LIST = new InjectionToken<CdkDropList>('CdkDropList');
 
 /** Container that wraps a set of draggable items. */
 @Directive({
+  standalone: false,
   selector: '[cdkDropList], cdk-drop-list',
   exportAs: 'cdkDropList',
   providers: [

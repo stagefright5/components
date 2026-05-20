@@ -1,10 +1,10 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatSlideToggleHarness} from '@angular/material/slide-toggle/testing/slide-toggle-harness';
+import {MatSlideToggleModule} from '@stagefright5/material/slide-toggle';
+import {MatSlideToggleHarness} from '@stagefright5/material/slide-toggle/testing/slide-toggle-harness';
 
 /** Shared tests to run on both the original and MDC-based slide-toggles. */
 export function runHarnessTests(
@@ -154,6 +154,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-slide-toggle
           [formControl]="ctrl"

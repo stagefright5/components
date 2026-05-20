@@ -1,4 +1,4 @@
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatPaginatorModule} from '@stagefright5/material/paginator';
 import {runHarnessTests} from './shared.spec';
 import {MatPaginatorHarness} from './paginator-harness';
 

@@ -1,11 +1,11 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {PortalModule, TemplatePortal} from '@angular/cdk/portal';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {PortalModule, TemplatePortal} from '@stagefright5/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {AfterContentInit, Component, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatRippleModule} from '@angular/material-experimental/mdc-core';
+import {MatRippleModule} from '@stagefright5/material-experimental/mdc-core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {CdkScrollable, ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkScrollable, ScrollingModule} from '@stagefright5/cdk/scrolling';
 import {MatTabBody, MatTabBodyPortal} from './tab-body';
 import {By} from '@angular/platform-browser';
 import {Subject} from 'rxjs';
@@ -197,6 +197,7 @@ describe('MDC-based MatTabBody', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <ng-template>Tab Body Content</ng-template>
     <mat-tab-body [content]="content" [position]="position" [origin]="origin"></mat-tab-body>

@@ -1,6 +1,6 @@
 {
-  "name": "@angular/cdk-experimental",
-  "version": "0.0.0-PLACEHOLDER",
+  "name": "@stagefright5/cdk-experimental",
+  "version": "0.0.0-stagefright5",
   "description": "Experimental components for Angular CDK",
   "repository": {
     "type": "git",
@@ -12,11 +12,14 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "0.0.0-PLACEHOLDER",
-    "@angular/core": "0.0.0-NG"
+    "@stagefright5/cdk": "0.0.0-stagefright5",
+    "@angular/core": "^21.0.0"
   },
   "dependencies": {
-    "tslib": "0.0.0-TSLIB"
+    "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@stagefright5/cdk": "workspace:*"
+  }
 }

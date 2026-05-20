@@ -8,9 +8,9 @@
 
 import {Directive, ElementRef, forwardRef, Inject, Input, OnDestroy, Optional} from '@angular/core';
 import {NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidatorFn, Validators} from '@angular/forms';
-import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats, ThemePalette} from '@angular/material/core';
-import {MatFormField, MAT_FORM_FIELD} from '@angular/material/form-field';
-import {MAT_INPUT_VALUE_ACCESSOR} from '@angular/material/input';
+import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats, ThemePalette} from '@stagefright5/material/core';
+import {MatFormField, MAT_FORM_FIELD} from '@stagefright5/material/form-field';
+import {MAT_INPUT_VALUE_ACCESSOR} from '@stagefright5/material/input';
 import {Subscription} from 'rxjs';
 import {MatDatepickerInputBase, DateFilterFn} from './datepicker-input-base';
 import {MatDatepickerControl, MatDatepickerPanel} from './datepicker-base';
@@ -32,6 +32,7 @@ export const MAT_DATEPICKER_VALIDATORS: any = {
 
 /** Directive used to connect an input to a MatDatepicker. */
 @Directive({
+  standalone: false,
   selector: 'input[matDatepicker]',
   providers: [
     MAT_DATEPICKER_VALUE_ACCESSOR,

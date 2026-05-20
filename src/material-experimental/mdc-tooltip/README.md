@@ -10,7 +10,7 @@ component by following these steps:
 1. Install Angular Material Experimental & MDC WEB:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -33,7 +33,7 @@ component by following these steps:
    component:
 
    ```ts
-   import {MatTooltipModule} from '@angular/material-experimental/mdc-tooltip';
+   import {MatTooltipModule} from '@stagefright5/material-experimental/mdc-tooltip';
 
    @NgModule({
      declarations: [MyComponent],
@@ -53,8 +53,8 @@ component by following these steps:
    the experimental `matTooltip`):
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $my-primary: mat.define-palette(mat.$indigo-palette);
    $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -79,7 +79,7 @@ following string replace across your TypeScript files:
 
 ```bash
 grep -lr --include="*.ts" --exclude-dir="node_modules" \
-  --exclude="*.d.ts" "['\"]@angular/material/tooltip['\"]" | xargs sed -i \
+  --exclude="*.d.ts" "['\"]@stagefright5/material/tooltip['\"]" | xargs sed -i \
   "s/['\"]@angular\/material\/tooltip['\"]/'@angular\/material-experimental\/mdc-tooltip'/g"
 ```
 

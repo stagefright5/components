@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   CollectionViewer,
   DataSource,
@@ -19,9 +19,9 @@ import {
   _ViewRepeaterItemChange,
   _ViewRepeaterItemInsertArgs,
   _ViewRepeaterOperation,
-} from '@angular/cdk/collections';
-import {Platform} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/collections';
+import {Platform} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterContentChecked,
@@ -91,6 +91,7 @@ import {CDK_TABLE} from './tokens';
  * tables that animate rows.
  */
 @Directive({
+  standalone: false,
   selector: 'cdk-table[recycleRows], table[cdk-table][recycleRows]',
   providers: [{provide: _VIEW_REPEATER_STRATEGY, useClass: _RecycleViewRepeaterStrategy}],
 })
@@ -108,7 +109,7 @@ export type CdkTableDataSourceInput<T> = readonly T[] | DataSource<T> | Observab
  * Provides a handle for the table to grab the view container's ng-container to insert data rows.
  * @docs-private
  */
-@Directive({selector: '[rowOutlet]'})
+@Directive({standalone: false, selector: '[rowOutlet]'})
 export class DataRowOutlet implements RowOutlet {
   constructor(public viewContainer: ViewContainerRef, public elementRef: ElementRef) {}
 }
@@ -117,7 +118,7 @@ export class DataRowOutlet implements RowOutlet {
  * Provides a handle for the table to grab the view container's ng-container to insert the header.
  * @docs-private
  */
-@Directive({selector: '[headerRowOutlet]'})
+@Directive({standalone: false, selector: '[headerRowOutlet]'})
 export class HeaderRowOutlet implements RowOutlet {
   constructor(public viewContainer: ViewContainerRef, public elementRef: ElementRef) {}
 }
@@ -126,7 +127,7 @@ export class HeaderRowOutlet implements RowOutlet {
  * Provides a handle for the table to grab the view container's ng-container to insert the footer.
  * @docs-private
  */
-@Directive({selector: '[footerRowOutlet]'})
+@Directive({standalone: false, selector: '[footerRowOutlet]'})
 export class FooterRowOutlet implements RowOutlet {
   constructor(public viewContainer: ViewContainerRef, public elementRef: ElementRef) {}
 }
@@ -136,7 +137,7 @@ export class FooterRowOutlet implements RowOutlet {
  * container's ng-container to insert the no data row.
  * @docs-private
  */
-@Directive({selector: '[noDataRowOutlet]'})
+@Directive({standalone: false, selector: '[noDataRowOutlet]'})
 export class NoDataRowOutlet implements RowOutlet {
   constructor(public viewContainer: ViewContainerRef, public elementRef: ElementRef) {}
 }
@@ -198,10 +199,11 @@ export interface RenderRow<T> {
  * connect function that will return an Observable stream that emits the data array to render.
  */
 @Component({
+  standalone: false,
   selector: 'cdk-table, table[cdk-table]',
   exportAs: 'cdkTable',
   template: CDK_TABLE_TEMPLATE,
-  styleUrls: ['table.css'],
+  styleUrls: ['table.scss'],
   host: {
     'class': 'cdk-table',
     '[class.cdk-table-fixed-layout]': 'fixedLayout',

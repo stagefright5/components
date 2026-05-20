@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {Overlay, OverlayConfig, OverlayRef} from '@angular/cdk/overlay';
-import {ComponentPortal, ComponentType, TemplatePortal} from '@angular/cdk/portal';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {Overlay, OverlayConfig, OverlayRef} from '@stagefright5/cdk/overlay';
+import {ComponentPortal, ComponentType, TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   ComponentRef,
   Injectable,
@@ -20,7 +20,6 @@ import {
   Inject,
   OnDestroy,
   StaticProvider,
-  InjectFlags,
 } from '@angular/core';
 import {of as observableOf} from 'rxjs';
 import {MAT_BOTTOM_SHEET_DATA, MatBottomSheetConfig} from './bottom-sheet-config';
@@ -214,7 +213,7 @@ export class MatBottomSheet implements OnDestroy {
     if (
       config.direction &&
       (!userInjector ||
-        !userInjector.get<Directionality | null>(Directionality, null, InjectFlags.Optional))
+        !userInjector.get<Directionality | null>(Directionality, null, {optional: true}))
     ) {
       providers.push({
         provide: Directionality,

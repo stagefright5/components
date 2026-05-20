@@ -1,8 +1,8 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule} from '@stagefright5/material/menu';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuHarness} from './menu-harness';
 
@@ -160,6 +160,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
       <button type="button" id="settings" [matMenuTriggerFor]="settingsMenu">Settings</button>
       <button type="button" disabled [matMenuTriggerFor]="settingsMenu">Disabled menu</button>
@@ -173,6 +174,7 @@ export function runHarnessTests(
 class MenuHarnessTest {}
 
 @Component({
+  standalone: false,
   template: `
       <button [matMenuTriggerFor]="menu1">Menu 1</button>
 

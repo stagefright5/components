@@ -14,6 +14,7 @@ import {DOCUMENT} from '@angular/common';
  * element's contents.
  */
 @Directive({
+  standalone: false,
   selector: 'span[matChipEditInput]',
   host: {
     'class': 'mat-chip-edit-input',

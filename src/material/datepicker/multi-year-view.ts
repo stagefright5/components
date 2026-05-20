@@ -17,7 +17,7 @@ import {
   RIGHT_ARROW,
   UP_ARROW,
   SPACE,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -31,8 +31,8 @@ import {
   ViewEncapsulation,
   OnDestroy,
 } from '@angular/core';
-import {DateAdapter} from '@angular/material/core';
-import {Directionality} from '@angular/cdk/bidi';
+import {DateAdapter} from '@stagefright5/material/core';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   MatCalendarBody,
   MatCalendarCell,
@@ -53,6 +53,7 @@ export const yearsPerRow = 4;
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-multi-year-view',
   templateUrl: 'multi-year-view.html',
   exportAs: 'matMultiYearView',

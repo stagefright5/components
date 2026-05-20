@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW} from '@stagefright5/cdk/keycodes';
 import {Injectable} from '@angular/core';
 import {PartialObserver} from 'rxjs';
 

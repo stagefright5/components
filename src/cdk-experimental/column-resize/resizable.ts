@@ -17,14 +17,14 @@ import {
   ViewContainerRef,
   ChangeDetectorRef,
 } from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
-import {ComponentPortal} from '@angular/cdk/portal';
-import {Overlay, OverlayRef} from '@angular/cdk/overlay';
-import {CdkColumnDef, _CoalescedStyleScheduler} from '@angular/cdk/table';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ComponentPortal} from '@stagefright5/cdk/portal';
+import {Overlay, OverlayRef} from '@stagefright5/cdk/overlay';
+import {CdkColumnDef, _CoalescedStyleScheduler} from '@stagefright5/cdk/table';
 import {merge, Subject} from 'rxjs';
 import {filter, takeUntil} from 'rxjs/operators';
 
-import {_closest} from '@angular/cdk-experimental/popover-edit';
+import {_closest} from '@stagefright5/cdk-experimental/popover-edit';
 
 import {HEADER_ROW_SELECTOR} from './selectors';
 import {ResizeOverlayHandle} from './overlay-handle';

@@ -1,4 +1,4 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   DOWN_ARROW,
   END,
@@ -8,11 +8,11 @@ import {
   PAGE_UP,
   RIGHT_ARROW,
   UP_ARROW,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {dispatchFakeEvent, dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {Component, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatNativeDateModule} from '@stagefright5/material/core';
 import {AUG, DEC, FEB, JAN, JUL, JUN, MAR, MAY, NOV, OCT, SEP} from '../testing';
 import {By} from '@angular/platform-browser';
 import {MatCalendarBody} from './calendar-body';
@@ -360,6 +360,7 @@ describe('MatYearView', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-year-view [(activeDate)]="date" [(selected)]="selected"
                    (monthSelected)="selectedMonth=$event"></mat-year-view>`,
@@ -373,6 +374,7 @@ class StandardYearView {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-year-view
       [activeDate]="activeDate"
@@ -396,6 +398,7 @@ class YearViewWithDateFilter {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-year-view [activeDate]="activeDate" [dateClass]="dateClass"></mat-year-view>`,
 })
 class YearViewWithDateClass {

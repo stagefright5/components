@@ -1,0 +1,28 @@
+main {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+}
+
+.viewport {
+  width: 240px;
+  height: 120px;
+  border: 1px solid #ddd;
+}
+
+.overlay-panel {
+  padding: 8px;
+  background: white;
+  border: 1px solid #ddd;
+}

@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {_MatSelectHarnessBase} from '@angular/material/select/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {_MatSelectHarnessBase} from '@stagefright5/material/select/testing';
 import {
   MatOptionHarness,
   MatOptgroupHarness,
   OptionHarnessFilters,
   OptgroupHarnessFilters,
-} from '@angular/material-experimental/mdc-core/testing';
+} from '@stagefright5/material-experimental/mdc-core/testing';
 import {SelectHarnessFilters} from './select-harness-filters';
 
 /** Harness for interacting with an MDC-based mat-select in tests. */

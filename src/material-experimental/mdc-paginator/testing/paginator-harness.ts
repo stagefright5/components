@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {MatSelectHarness} from '@angular/material-experimental/mdc-select/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {MatSelectHarness} from '@stagefright5/material-experimental/mdc-select/testing';
 import {
   PaginatorHarnessFilters,
   _MatPaginatorHarnessBase,
-} from '@angular/material/paginator/testing';
+} from '@stagefright5/material/paginator/testing';
 
 /** Harness for interacting with an MDC-based mat-paginator in tests. */
 export class MatPaginatorHarness extends _MatPaginatorHarnessBase {

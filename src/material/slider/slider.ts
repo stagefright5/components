@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
+import {FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   DOWN_ARROW,
   END,
@@ -24,7 +24,7 @@ import {
   RIGHT_ARROW,
   UP_ARROW,
   hasModifierKey,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   Attribute,
   ChangeDetectionStrategy,
@@ -51,9 +51,9 @@ import {
   mixinColor,
   mixinDisabled,
   mixinTabIndex,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
-import {normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {Subscription} from 'rxjs';
 
@@ -112,6 +112,7 @@ const _MatSliderBase = mixinTabIndex(
  * behavior to the native `<input type="range">` element.
  */
 @Component({
+  standalone: false,
   selector: 'mat-slider',
   exportAs: 'matSlider',
   providers: [MAT_SLIDER_VALUE_ACCESSOR],
@@ -156,7 +157,7 @@ const _MatSliderBase = mixinTabIndex(
     '[class._mat-animation-noopable]': '_animationMode === "NoopAnimations"',
   },
   templateUrl: 'slider.html',
-  styleUrls: ['slider.css'],
+  styleUrls: ['slider.scss'],
   inputs: ['disabled', 'color', 'tabIndex'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

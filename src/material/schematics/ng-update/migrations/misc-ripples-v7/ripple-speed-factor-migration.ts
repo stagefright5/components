@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Migration, ResolvedResource, TargetVersion, WorkspacePath} from '@angular/cdk/schematics';
+import {Migration, ResolvedResource, TargetVersion, WorkspacePath} from '@stagefright5/cdk/schematics';
 import * as ts from 'typescript';
 import {
   convertSpeedFactorToDuration,

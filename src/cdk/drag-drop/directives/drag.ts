@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -34,7 +34,7 @@ import {
   coerceNumberProperty,
   coerceElement,
   BooleanInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {Observable, Observer, Subject, merge} from 'rxjs';
 import {startWith, take, map, takeUntil, switchMap, tap} from 'rxjs/operators';
 import {
@@ -60,6 +60,7 @@ const DRAG_HOST_CLASS = 'cdk-drag';
 
 /** Element that can be moved inside a CdkDropList container. */
 @Directive({
+  standalone: false,
   selector: '[cdkDrag]',
   exportAs: 'cdkDrag',
   host: {

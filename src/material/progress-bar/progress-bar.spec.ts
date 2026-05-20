@@ -363,8 +363,8 @@ describe('MatProgressBar', () => {
   });
 });
 
-@Component({template: '<mat-progress-bar></mat-progress-bar>'})
+@Component({standalone: false, template: '<mat-progress-bar></mat-progress-bar>'})
 class BasicProgressBar {}
 
-@Component({template: '<mat-progress-bar mode="buffer"></mat-progress-bar>'})
+@Component({standalone: false, template: '<mat-progress-bar mode="buffer"></mat-progress-bar>'})
 class BufferProgressBar {}

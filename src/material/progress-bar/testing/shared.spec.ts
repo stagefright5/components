@@ -1,8 +1,8 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressBarModule} from '@stagefright5/material/progress-bar';
 import {MatProgressBarHarness} from './progress-bar-harness';
 
 export function runHarnessTests(
@@ -44,6 +44,7 @@ export function runHarnessTests(
 
 // TODO: Add and test progress bars with modes `buffer` and `query`.
 @Component({
+  standalone: false,
   template: `
     <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>

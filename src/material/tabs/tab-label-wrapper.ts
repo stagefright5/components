@@ -7,7 +7,7 @@
  */
 
 import {Directive, ElementRef} from '@angular/core';
-import {CanDisable, mixinDisabled} from '@angular/material/core';
+import {CanDisable, mixinDisabled} from '@stagefright5/material/core';
 
 // Boilerplate for applying mixins to MatTabLabelWrapper.
 /** @docs-private */
@@ -18,6 +18,7 @@ const _MatTabLabelWrapperBase = mixinDisabled(class {});
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[matTabLabelWrapper]',
   inputs: ['disabled'],
   host: {

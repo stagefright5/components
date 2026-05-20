@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -43,9 +43,10 @@ export class MatChipSelectionChange {
  * Used with MatChipListbox.
  */
 @Component({
+  standalone: false,
   selector: 'mat-basic-chip-option, mat-chip-option',
   templateUrl: 'chip-option.html',
-  styleUrls: ['chip.css'],
+  styleUrls: ['chip.scss'],
   inputs: ['color', 'disableRipple', 'tabIndex'],
   host: {
     'class': 'mat-mdc-chip mat-mdc-chip-option mdc-evolution-chip mdc-evolution-chip--filter',

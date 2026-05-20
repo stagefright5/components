@@ -1,9 +1,9 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatAutocompleteHarness} from '@angular/material/autocomplete/testing';
+import {MatAutocompleteModule} from '@stagefright5/material/autocomplete';
+import {MatAutocompleteHarness} from '@stagefright5/material/autocomplete/testing';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 /**
@@ -142,6 +142,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-autocomplete #autocomplete="matAutocomplete">
       <mat-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</mat-option>

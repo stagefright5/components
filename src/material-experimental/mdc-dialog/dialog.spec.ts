@@ -1,9 +1,9 @@
-import {FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
-import {A, ESCAPE} from '@angular/cdk/keycodes';
-import {Overlay, OverlayContainer, ScrollStrategy} from '@angular/cdk/overlay';
-import {_supportsShadowDom} from '@angular/cdk/platform';
-import {ScrollDispatcher} from '@angular/cdk/scrolling';
+import {FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {A, ESCAPE} from '@stagefright5/cdk/keycodes';
+import {Overlay, OverlayContainer, ScrollStrategy} from '@stagefright5/cdk/overlay';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
+import {ScrollDispatcher} from '@stagefright5/cdk/scrolling';
 import {
   createKeyboardEvent,
   dispatchEvent,
@@ -2007,12 +2007,13 @@ describe('MDC-based MatDialog with animations enabled', () => {
   }));
 });
 
-@Directive({selector: 'dir-with-view-container'})
+@Directive({standalone: false, selector: 'dir-with-view-container'})
 class DirectiveWithViewContainer {
   constructor(public viewContainerRef: ViewContainerRef) {}
 }
 
 @Component({
+  standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: 'hello',
 })
@@ -2021,6 +2022,7 @@ class ComponentWithOnPushViewContainer {
 }
 
 @Component({
+  standalone: false,
   selector: 'arbitrary-component',
   template: `<dir-with-view-container *ngIf="showChildView"></dir-with-view-container>`,
 })
@@ -2035,6 +2037,7 @@ class ComponentWithChildViewContainer {
 }
 
 @Component({
+  standalone: false,
   selector: 'arbitrary-component-with-template-ref',
   template: `<ng-template let-data let-dialogRef="dialogRef">
     Cheese {{localValue}} {{data?.value}}{{setDialogRef(dialogRef)}}</ng-template>`,
@@ -2052,7 +2055,7 @@ class ComponentWithTemplateRef {
 }
 
 /** Simple component for testing ComponentPortal. */
-@Component({template: '<p>Pizza</p> <input> <button>Close</button>'})
+@Component({standalone: false, template: '<p>Pizza</p> <input> <button>Close</button>'})
 class PizzaMsg {
   constructor(
     public dialogRef: MatDialogRef<PizzaMsg>,
@@ -2062,6 +2065,7 @@ class PizzaMsg {
 }
 
 @Component({
+  standalone: false,
   template: `
     <h1 mat-dialog-title>This is the title</h1>
     <mat-dialog-content>Lorem ipsum dolor sit amet.</mat-dialog-content>
@@ -2080,6 +2084,7 @@ class PizzaMsg {
 class ContentElementDialog {}
 
 @Component({
+  standalone: false,
   template: `
     <ng-template>
       <h1 mat-dialog-title>This is the title</h1>
@@ -2101,21 +2106,22 @@ class ComponentWithContentElementTemplateRef {
   @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
 }
 
-@Component({template: '', providers: [MatDialog]})
+@Component({standalone: false, template: '', providers: [MatDialog]})
 class ComponentThatProvidesMatDialog {
   constructor(public dialog: MatDialog) {}
 }
 
 /** Simple component for testing ComponentPortal. */
-@Component({template: ''})
+@Component({standalone: false, template: ''})
 class DialogWithInjectedData {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 }
 
-@Component({template: '<p>Pasta</p>'})
+@Component({standalone: false, template: '<p>Pasta</p>'})
 class DialogWithoutFocusableElements {}
 
 @Component({
+  standalone: false,
   template: `<button>I'm a button</button>`,
   encapsulation: ViewEncapsulation.ShadowDom,
 })

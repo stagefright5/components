@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Overlay, OverlayContainer, ScrollStrategy} from '@angular/cdk/overlay';
+import {Overlay, OverlayContainer, ScrollStrategy} from '@stagefright5/cdk/overlay';
 import {Location} from '@angular/common';
 import {Inject, Injectable, InjectionToken, Injector, Optional, SkipSelf} from '@angular/core';
-import {_MatDialogBase, MatDialogConfig} from '@angular/material/dialog';
+import {_MatDialogBase, MatDialogConfig} from '@stagefright5/material/dialog';
 import {MatDialogContainer} from './dialog-container';
 import {MatDialogRef} from './dialog-ref';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';

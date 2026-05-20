@@ -1,5 +1,5 @@
-import {MatInputModule} from '@angular/material-experimental/mdc-input';
-import {runNativeSelectHarnessTests} from '@angular/material/input/testing/shared-native-select.spec';
+import {MatInputModule} from '@stagefright5/material-experimental/mdc-input';
+import {runNativeSelectHarnessTests} from '@stagefright5/material/input/testing/shared-native-select.spec';
 import {MatNativeSelectHarness} from './index';
 
 describe('MDC-based MatNativeSelectHarness', () => {

@@ -16,6 +16,7 @@ import {MatCommonModule} from '../common-behaviors/common-module';
  * counted by checking the query list's length.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-line], [matLine]',
   host: {'class': 'mat-line'},
 })

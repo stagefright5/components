@@ -10,7 +10,7 @@ import {
   ContentContainerComponentHarness,
   HarnessLoader,
   HarnessPredicate,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {ExpansionPanelHarnessFilters} from './expansion-harness-filters';
 
 /** Selectors for the various `mat-expansion-panel` sections that may contain user content. */

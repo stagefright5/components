@@ -1,4 +1,4 @@
-import {CollectionViewer, DataSource} from '@angular/cdk/collections';
+import {CollectionViewer, DataSource} from '@stagefright5/cdk/collections';
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {ComponentFixture, TestBed, fakeAsync, tick, waitForAsync} from '@angular/core/testing';
 import {
@@ -23,7 +23,7 @@ import {
 } from './sort-errors';
 
 import {By} from '@angular/platform-browser';
-import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {MatTableModule} from '../table/index';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {Observable} from 'rxjs';
@@ -521,6 +521,7 @@ function testSingleColumnSortDirectionSequence(
 type SimpleMatSortAppColumnIds = 'defaultA' | 'defaultB' | 'overrideStart' | 'overrideDisableClear';
 
 @Component({
+  standalone: false,
   template: `
     <div matSort
          [matSortActive]="active"
@@ -613,6 +614,7 @@ class FakeDataSource extends DataSource<any> {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-table [dataSource]="dataSource" matSort>
       <ng-container cdkColumnDef="column_a">
@@ -643,6 +645,7 @@ class CdkTableMatSortApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="column_a">
@@ -673,11 +676,13 @@ class MatTableMatSortApp {
 }
 
 @Component({
+  standalone: false,
   template: `<div mat-sort-header="a"> A </div>`,
 })
 class MatSortHeaderMissingMatSortApp {}
 
 @Component({
+  standalone: false,
   template: `
     <div matSort>
       <div mat-sort-header="duplicateId"> A </div>
@@ -688,6 +693,7 @@ class MatSortHeaderMissingMatSortApp {}
 class MatSortDuplicateMatSortableIdsApp {}
 
 @Component({
+  standalone: false,
   template: `
     <div matSort>
       <div mat-sort-header> A </div>
@@ -697,6 +703,7 @@ class MatSortDuplicateMatSortableIdsApp {}
 class MatSortableMissingIdApp {}
 
 @Component({
+  standalone: false,
   template: `
     <div matSort matSortDirection="ascending">
       <div mat-sort-header="a"> A </div>
@@ -706,6 +713,7 @@ class MatSortableMissingIdApp {}
 class MatSortableInvalidDirection {}
 
 @Component({
+  standalone: false,
   template: `
     <div matSort
          [matSortActive]="active"

@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {
   RadioButtonHarnessFilters,
   RadioGroupHarnessFilters,
   _MatRadioGroupHarnessBase,
   _MatRadioButtonHarnessBase,
-} from '@angular/material/radio/testing';
+} from '@stagefright5/material/radio/testing';
 
 /** Harness for interacting with an MDC-based mat-radio-group in tests. */
 export class MatRadioGroupHarness extends _MatRadioGroupHarnessBase<

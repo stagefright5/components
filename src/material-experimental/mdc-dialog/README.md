@@ -6,10 +6,10 @@ experimental and should not be used in production.
 Assuming your application is already up and running using Angular Material, you can add this
 component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -32,7 +32,7 @@ component by following these steps:
    component:
 
    ```ts
-   import {MatDialogModule} from '@angular/material-experimental/mdc-dialog';
+   import {MatDialogModule} from '@stagefright5/material-experimental/mdc-dialog';
 
    @NgModule({
      declarations: [MyComponent],
@@ -44,9 +44,9 @@ component by following these steps:
 4. Use the `MatDialog` service in your components by injecting the service, just like you would
    use the normal dialog.
 
-5. Ensure color and typography styles for `@angular/material-experimental` are set up. Either
+5. Ensure color and typography styles for `@stagefright5/material-experimental` are set up. Either
    use a custom theme and use the `mat-mdc-dialog-theme` mixin, or use a prebuilt theme
-   from `@angular/material-experimental/mdc-theming/prebuilt`.
+   from `@stagefright5/material-experimental/mdc-theming/prebuilt`.
 
 ## API differences
 
@@ -67,7 +67,7 @@ directly through CSS, or move them into one of the defined sections the Angular 
 provides.
 
 ```scss
-@use '@angular/material-experimental/mdc-dialog/dialog-legacy-padding' as mat-mdc-dialog;
+@use '@stagefright5/material-experimental/mdc-dialog/dialog-legacy-padding' as mat-mdc-dialog;
 
 @include mat-mdc-dialog.legacy-padding();
 ```

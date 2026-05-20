@@ -1,4 +1,4 @@
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   DOWN_ARROW,
   END,
@@ -11,9 +11,9 @@ import {
   UP_ARROW,
   A,
   ESCAPE,
-} from '@angular/cdk/keycodes';
-import {OverlayContainer} from '@angular/cdk/overlay';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/keycodes';
+import {OverlayContainer} from '@stagefright5/cdk/overlay';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {
   createKeyboardEvent,
   dispatchEvent,
@@ -51,15 +51,15 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
-import {ErrorStateMatcher, MatOption, MatOptionSelectionChange} from '@angular/material/core';
+import {ErrorStateMatcher, MatOption, MatOptionSelectionChange} from '@stagefright5/material/core';
 import {
   FloatLabelType,
   MatFormFieldModule,
   MAT_FORM_FIELD_DEFAULT_OPTIONS,
-} from '@angular/material/form-field';
+} from '@stagefright5/material/form-field';
 import {By} from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {LiveAnnouncer} from '@angular/cdk/a11y';
+import {LiveAnnouncer} from '@stagefright5/cdk/a11y';
 import {Subject, Subscription, EMPTY, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {MatSelectModule} from './index';
@@ -5160,6 +5160,7 @@ describe('MatSelect', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'basic-select',
   template: `
     <div [style.height.px]="heightAbove"></div>
@@ -5203,6 +5204,7 @@ class BasicSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'ng-model-select',
   template: `
     <mat-form-field>
@@ -5227,6 +5229,7 @@ class NgModelSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'many-selects',
   template: `
     <mat-form-field>
@@ -5246,6 +5249,7 @@ class NgModelSelect {
 class ManySelects {}
 
 @Component({
+  standalone: false,
   selector: 'ng-if-select',
   template: `
     <div *ngIf="isShowing">
@@ -5272,6 +5276,7 @@ class NgIfSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-change-event',
   template: `
     <mat-form-field>
@@ -5297,6 +5302,7 @@ class SelectWithChangeEvent {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-init-without-options',
   template: `
     <mat-form-field>
@@ -5325,6 +5331,7 @@ class SelectInitWithoutOptions {
 }
 
 @Component({
+  standalone: false,
   selector: 'custom-select-accessor',
   template: `<mat-form-field><mat-select></mat-select></mat-form-field>`,
   providers: [
@@ -5344,6 +5351,7 @@ class CustomSelectAccessor implements ControlValueAccessor {
 }
 
 @Component({
+  standalone: false,
   selector: 'comp-with-custom-select',
   template: `<custom-select-accessor [formControl]="ctrl"></custom-select-accessor>`,
   providers: [
@@ -5360,6 +5368,7 @@ class CompWithCustomSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-infinite-loop',
   template: `
     <mat-form-field>
@@ -5373,6 +5382,7 @@ class SelectWithErrorSibling {
 }
 
 @Component({
+  standalone: false,
   selector: 'throws-error-on-init',
   template: '',
 })
@@ -5383,6 +5393,7 @@ class ThrowsErrorOnInit implements OnInit {
 }
 
 @Component({
+  standalone: false,
   selector: 'basic-select-on-push',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -5405,6 +5416,7 @@ class BasicSelectOnPush {
 }
 
 @Component({
+  standalone: false,
   selector: 'basic-select-on-push-preselected',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -5428,6 +5440,7 @@ class BasicSelectOnPushPreselected {
 }
 
 @Component({
+  standalone: false,
   selector: 'floating-label-select',
   template: `
     <mat-form-field [floatLabel]="floatLabel">
@@ -5453,6 +5466,7 @@ class FloatLabelSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'multi-select',
   template: `
     <mat-form-field>
@@ -5484,12 +5498,14 @@ class MultiSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-plain-tabindex',
   template: `<mat-form-field><mat-select tabindex="5"></mat-select></mat-form-field>`,
 })
 class SelectWithPlainTabindex {}
 
 @Component({
+  standalone: false,
   selector: 'select-early-sibling-access',
   template: `
     <mat-form-field>
@@ -5501,6 +5517,7 @@ class SelectWithPlainTabindex {}
 class SelectEarlyAccessSibling {}
 
 @Component({
+  standalone: false,
   selector: 'basic-select-initially-hidden',
   template: `
     <mat-form-field>
@@ -5515,6 +5532,7 @@ class BasicSelectInitiallyHidden {
 }
 
 @Component({
+  standalone: false,
   selector: 'basic-select-no-placeholder',
   template: `
     <mat-form-field>
@@ -5527,6 +5545,7 @@ class BasicSelectInitiallyHidden {
 class BasicSelectNoPlaceholder {}
 
 @Component({
+  standalone: false,
   selector: 'basic-select-with-theming',
   template: `
     <mat-form-field [color]="theme">
@@ -5543,6 +5562,7 @@ class BasicSelectWithTheming {
 }
 
 @Component({
+  standalone: false,
   selector: 'reset-values-select',
   template: `
     <mat-form-field>
@@ -5570,6 +5590,7 @@ class ResetValuesSelect {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select [formControl]="control">
@@ -5590,6 +5611,7 @@ class FalsyValueSelect {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-groups',
   template: `
     <mat-form-field>
@@ -5647,6 +5669,7 @@ class SelectWithGroups {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-indirect-groups',
   // Note that we need the blank `ngSwitch` in order to have
   // a directive between `mat-select` and `mat-optgroup`.
@@ -5669,6 +5692,7 @@ class SelectWithGroups {
 class SelectWithIndirectDescendantGroups extends SelectWithGroups {}
 
 @Component({
+  standalone: false,
   selector: 'select-with-groups',
   template: `
     <mat-form-field>
@@ -5693,6 +5717,7 @@ class SelectWithGroupsAndNgContainer {
 }
 
 @Component({
+  standalone: false,
   template: `
     <form>
       <mat-form-field>
@@ -5706,6 +5731,7 @@ class InvalidSelectInForm {
 }
 
 @Component({
+  standalone: false,
   template: `
     <form [formGroup]="formGroup">
       <mat-form-field>
@@ -5734,6 +5760,7 @@ class SelectInsideFormGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select placeholder="Food" [(value)]="selectedFood">
@@ -5756,6 +5783,7 @@ class BasicSelectWithoutForms {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select placeholder="Food" [(value)]="selectedFood">
@@ -5777,6 +5805,7 @@ class BasicSelectWithoutFormsPreselected {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select placeholder="Food" [(value)]="selectedFoods" multiple>
@@ -5799,6 +5828,7 @@ class BasicSelectWithoutFormsMultiple {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-custom-trigger',
   template: `
     <mat-form-field>
@@ -5822,6 +5852,7 @@ class SelectWithCustomTrigger {
 }
 
 @Component({
+  standalone: false,
   selector: 'ng-model-compare-with',
   template: `
     <mat-form-field>
@@ -5870,6 +5901,7 @@ class NgModelCompareWithSelect {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-select placeholder="Food" [formControl]="control" [errorStateMatcher]="errorStateMatcher">
       <mat-option *ngFor="let food of foods" [value]="food.value">
@@ -5889,6 +5921,7 @@ class CustomErrorBehaviorSelect {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select placeholder="Food" [(ngModel)]="selectedFoods">
@@ -5913,6 +5946,7 @@ class SingleSelectWithPreselectedArrayValues {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-without-option-centering',
   template: `
     <mat-form-field>
@@ -5942,6 +5976,7 @@ class SelectWithoutOptionCentering {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-label>Select a thing</mat-label>
@@ -5957,6 +5992,7 @@ class SelectWithFormFieldLabel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field appearance="fill">
       <mat-label>Select something</mat-label>
@@ -5971,6 +6007,7 @@ class SelectWithNgIfAndLabel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-select multiple [ngModel]="value">
@@ -5993,6 +6030,7 @@ class MultiSelectWithLotsOfOptions {
 }
 
 @Component({
+  standalone: false,
   selector: 'basic-select-with-reset',
   template: `
     <mat-form-field>
@@ -6012,6 +6050,7 @@ class SelectWithResetOptionAndFormControl {
 }
 
 @Component({
+  standalone: false,
   selector: 'select-with-placeholder-in-ngcontainer-with-ngIf',
   template: `
     <mat-form-field>
@@ -6028,6 +6067,7 @@ class SelectWithResetOptionAndFormControl {
 class SelectInNgContainer {}
 
 @Component({
+  standalone: false,
   template: `
     <form [formGroup]="form">
       <mat-form-field>

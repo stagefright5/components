@@ -11,7 +11,7 @@ import {
   ComponentHarness,
   HarnessPredicate,
   TestElement,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {TooltipHarnessFilters} from './tooltip-harness-filters';
 
 export abstract class _MatTooltipHarnessBase extends ComponentHarness {

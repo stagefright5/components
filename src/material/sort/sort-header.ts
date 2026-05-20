@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AriaDescriber, FocusMonitor} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {ENTER, SPACE} from '@angular/cdk/keycodes';
+import {AriaDescriber, FocusMonitor} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {ENTER, SPACE} from '@stagefright5/cdk/keycodes';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -22,7 +22,7 @@ import {
   Optional,
   ViewEncapsulation,
 } from '@angular/core';
-import {CanDisable, mixinDisabled} from '@angular/material/core';
+import {CanDisable, mixinDisabled} from '@stagefright5/material/core';
 import {merge, Subscription} from 'rxjs';
 import {MatSort, MatSortable} from './sort';
 import {matSortAnimations} from './sort-animations';
@@ -69,10 +69,11 @@ interface MatSortHeaderColumnDef {
  * column definition.
  */
 @Component({
+  standalone: false,
   selector: '[mat-sort-header]',
   exportAs: 'matSortHeader',
   templateUrl: 'sort-header.html',
-  styleUrls: ['sort-header.css'],
+  styleUrls: ['sort-header.scss'],
   host: {
     'class': 'mat-sort-header',
     '(click)': '_handleClick()',

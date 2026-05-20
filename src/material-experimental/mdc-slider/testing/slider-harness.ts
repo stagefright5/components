@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {coerceNumberProperty} from '@angular/cdk/coercion';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
 import {SliderHarnessFilters, ThumbPosition} from './slider-harness-filters';
 import {MatSliderThumbHarness} from './slider-thumb-harness';
 

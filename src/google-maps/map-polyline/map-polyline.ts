@@ -22,6 +22,7 @@ import {MapEventManager} from '../map-event-manager';
  * See developers.google.com/maps/documentation/javascript/reference/polygon#Polyline
  */
 @Directive({
+  standalone: false,
   selector: 'map-polyline',
   exportAs: 'mapPolyline',
 })

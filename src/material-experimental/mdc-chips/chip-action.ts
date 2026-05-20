@@ -30,7 +30,7 @@ import {
   HasTabIndex,
   mixinDisabled,
   mixinTabIndex,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 
 const _MatChipActionMixinBase = mixinTabIndex(mixinDisabled(class {}), -1);
 
@@ -39,6 +39,7 @@ const _MatChipActionMixinBase = mixinTabIndex(mixinDisabled(class {}), -1);
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[matChipAction]',
   inputs: ['disabled', 'tabIndex'],
   host: {

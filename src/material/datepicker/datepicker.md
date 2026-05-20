@@ -325,12 +325,12 @@ The easiest way to ensure this is to import one of the provided date modules:
     </tr>
     <tr>
       <th align="left" scope="row">Import from</th>
-      <td><code>@angular/material/core</code></td>
+      <td><code>@stagefright5/material/core</code></td>
     </tr>
   </tbody>
 </table>
 
-`MatDateFnsModule` (installed via `@angular/material-date-fns-adapter`)
+`MatDateFnsModule` (installed via `@stagefright5/material-date-fns-adapter`)
 
 <table>
   <tbody>
@@ -348,12 +348,12 @@ The easiest way to ensure this is to import one of the provided date modules:
     </tr>
     <tr>
       <th align="left" scope="row">Import from</th>
-      <td><code>@angular/material-date-fns-adapter</code></td>
+      <td><code>@stagefright5/material-date-fns-adapter</code></td>
     </tr>
   </tbody>
 </table>
 
-`MatLuxonDateModule` (installed via `@angular/material-luxon-adapter`)
+`MatLuxonDateModule` (installed via `@stagefright5/material-luxon-adapter`)
 
 <table>
   <tbody>
@@ -371,12 +371,12 @@ The easiest way to ensure this is to import one of the provided date modules:
     </tr>
     <tr>
       <th align="left" scope="row">Import from</th>
-      <td><code>@angular/material-luxon-adapter</code></td>
+      <td><code>@stagefright5/material-luxon-adapter</code></td>
     </tr>
   </tbody>
 </table>
 
-`MatMomentDateModule` (installed via `@angular/material-moment-adapter`)
+`MatMomentDateModule` (installed via `@stagefright5/material-moment-adapter`)
 
 <table>
   <tbody>
@@ -394,7 +394,7 @@ The easiest way to ensure this is to import one of the provided date modules:
     </tr>
     <tr>
       <th align="left" scope="row">Import from</th>
-      <td><code>@angular/material-moment-adapter</code></td>
+      <td><code>@stagefright5/material-moment-adapter</code></td>
     </tr>
   </tbody>
 </table>

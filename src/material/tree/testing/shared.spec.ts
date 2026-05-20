@@ -1,15 +1,15 @@
 import {Component} from '@angular/core';
-import {FlatTreeControl, NestedTreeControl} from '@angular/cdk/tree';
+import {FlatTreeControl, NestedTreeControl} from '@stagefright5/cdk/tree';
 import {
   MatTreeFlatDataSource,
   MatTreeFlattener,
   MatTreeModule,
   MatTreeNestedDataSource,
-} from '@angular/material/tree';
-import {MatTreeHarness} from '@angular/material/tree/testing';
+} from '@stagefright5/material/tree';
+import {MatTreeHarness} from '@stagefright5/material/tree/testing';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 
 /** Shared tests to run on both the original and MDC-based trees. */
 export function runHarnessTests(
@@ -224,6 +224,7 @@ interface ExampleFlatNode {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="flatTreeDataSource" [treeControl]="flatTreeControl">
       <!-- This is the tree node template for leaf nodes -->

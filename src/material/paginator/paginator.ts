@@ -11,7 +11,7 @@ import {
   coerceBooleanProperty,
   BooleanInput,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -35,8 +35,8 @@ import {
   ThemePalette,
   mixinDisabled,
   CanDisable,
-} from '@angular/material/core';
-import {MatFormFieldAppearance} from '@angular/material/form-field';
+} from '@stagefright5/material/core';
+import {MatFormFieldAppearance} from '@stagefright5/material/form-field';
 
 /** The default page size if there is no page size and there are no provided page size options. */
 const DEFAULT_PAGE_SIZE = 50;
@@ -358,10 +358,11 @@ export abstract class _MatPaginatorBase<
  * navigational button to go to the previous or next page.
  */
 @Component({
+  standalone: false,
   selector: 'mat-paginator',
   exportAs: 'matPaginator',
   templateUrl: 'paginator.html',
-  styleUrls: ['paginator.css'],
+  styleUrls: ['paginator.scss'],
   inputs: ['disabled'],
   host: {
     'class': 'mat-paginator',

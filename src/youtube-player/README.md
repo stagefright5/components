@@ -4,7 +4,7 @@ This component provides a simple angular wrapper around the embed [YouTube playe
 
 ## Installation
 
-To install, run `npm install @angular/youtube-player`.
+To install, run `npm install @stagefright5/youtube-player`.
 
 ## Usage
 
@@ -21,7 +21,7 @@ If your video is found at https://www.youtube.com/watch?v=PRQCAL_RMVo, then your
 ```typescript
 // example-module.ts
 import {NgModule, Component, OnInit} from '@angular/core';
-import {YouTubePlayerModule} from '@angular/youtube-player';
+import {YouTubePlayerModule} from '@stagefright5/youtube-player';
 
 @NgModule({
   imports: [YouTubePlayerModule],

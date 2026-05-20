@@ -9,7 +9,7 @@
 import {Injectable, Inject, OnDestroy} from '@angular/core';
 import {OverlayContainer} from './overlay-container';
 import {DOCUMENT} from '@angular/common';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 
 /**
  * Alternative to OverlayContainer that supports correct displaying of overlay elements in

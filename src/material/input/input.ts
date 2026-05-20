@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {getSupportedInputTypes, Platform} from '@angular/cdk/platform';
-import {AutofillMonitor} from '@angular/cdk/text-field';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {getSupportedInputTypes, Platform} from '@stagefright5/cdk/platform';
+import {AutofillMonitor} from '@stagefright5/cdk/text-field';
 import {
   AfterViewInit,
   Directive,
@@ -23,8 +23,8 @@ import {
   Self,
 } from '@angular/core';
 import {FormGroupDirective, NgControl, NgForm, Validators} from '@angular/forms';
-import {CanUpdateErrorState, ErrorStateMatcher, mixinErrorState} from '@angular/material/core';
-import {MatFormFieldControl, MatFormField, MAT_FORM_FIELD} from '@angular/material/form-field';
+import {CanUpdateErrorState, ErrorStateMatcher, mixinErrorState} from '@stagefright5/material/core';
+import {MatFormFieldControl, MatFormField, MAT_FORM_FIELD} from '@stagefright5/material/form-field';
 import {Subject} from 'rxjs';
 import {getMatInputUnsupportedTypeError} from './input-errors';
 import {MAT_INPUT_VALUE_ACCESSOR} from './input-value-accessor';
@@ -60,6 +60,7 @@ const _MatInputBase = mixinErrorState(
 
 /** Directive that allows a native input to work inside a `MatFormField`. */
 @Directive({
+  standalone: false,
   selector: `input[matInput], textarea[matInput], select[matNativeControl],
       input[matNativeControl], textarea[matNativeControl]`,
   exportAs: 'matInput',

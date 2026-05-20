@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ActiveDescendantKeyManager, LiveAnnouncer} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
+import {ActiveDescendantKeyManager, LiveAnnouncer} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
+} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
 import {
   A,
   DOWN_ARROW,
@@ -24,14 +24,14 @@ import {
   RIGHT_ARROW,
   SPACE,
   UP_ARROW,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   CdkConnectedOverlay,
   ConnectedPosition,
   Overlay,
   ScrollStrategy,
-} from '@angular/cdk/overlay';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/overlay';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {
   AfterContentInit,
   Attribute,
@@ -85,8 +85,8 @@ import {
   mixinErrorState,
   mixinTabIndex,
   _MatOptionBase,
-} from '@angular/material/core';
-import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/material/form-field';
+} from '@stagefright5/material/core';
+import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@stagefright5/material/form-field';
 import {defer, merge, Observable, Subject} from 'rxjs';
 import {
   distinctUntilChanged,
@@ -217,6 +217,7 @@ export const MAT_SELECT_TRIGGER = new InjectionToken<MatSelectTrigger>('MatSelec
  * Allows the user to customize the trigger that is displayed when the select has a value.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-select-trigger',
   providers: [{provide: MAT_SELECT_TRIGGER, useExisting: MatSelectTrigger}],
 })
@@ -1156,10 +1157,11 @@ export abstract class _MatSelectBase<C>
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-select',
   exportAs: 'matSelect',
   templateUrl: 'select.html',
-  styleUrls: ['select.css'],
+  styleUrls: ['select.scss'],
   inputs: ['disabled', 'disableRipple', 'tabIndex'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

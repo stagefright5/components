@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AriaLivePoliteness} from '@angular/cdk/a11y';
+import {AriaLivePoliteness} from '@stagefright5/cdk/a11y';
 import {
   BasePortalOutlet,
   CdkPortalOutlet,
   ComponentPortal,
   TemplatePortal,
-} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/portal';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -26,10 +26,10 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import {MatSnackBarConfig, _SnackBarContainer} from '@angular/material/snack-bar';
+import {MatSnackBarConfig, _SnackBarContainer} from '@stagefright5/material/snack-bar';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MDCSnackbarAdapter, MDCSnackbarFoundation, cssClasses} from '@material/snackbar';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {Observable, Subject} from 'rxjs';
 
 /**
@@ -43,9 +43,10 @@ const MDC_SNACKBAR_LABEL_CLASS = 'mdc-snackbar__label';
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-snack-bar-container',
   templateUrl: 'snack-bar-container.html',
-  styleUrls: ['snack-bar-container.css'],
+  styleUrls: ['snack-bar-container.scss'],
   // In Ivy embedded views will be change detected from their declaration place, rather than
   // where they were stamped out. This means that we can't have the snack bar container be OnPush,
   // because it might cause snack bars that were opened from a template not to be out of date.

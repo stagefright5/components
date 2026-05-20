@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   Directive,
   ElementRef,
@@ -50,6 +50,7 @@ export const MAT_RIPPLE_GLOBAL_OPTIONS = new InjectionToken<RippleGlobalOptions>
 );
 
 @Directive({
+  standalone: false,
   selector: '[mat-ripple], [matRipple]',
   exportAs: 'matRipple',
   host: {

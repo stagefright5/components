@@ -1,9 +1,9 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatBadgeModule, MatBadgePosition, MatBadgeSize} from '@angular/material/badge';
-import {MatBadgeHarness} from '@angular/material/badge/testing/badge-harness';
+import {MatBadgeModule, MatBadgePosition, MatBadgeSize} from '@stagefright5/material/badge';
+import {MatBadgeHarness} from '@stagefright5/material/badge/testing/badge-harness';
 
 /** Shared tests to run on both the original and MDC-based badges. */
 export function runHarnessTests(
@@ -108,6 +108,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <button id="simple" [matBadge]="simpleContent">Simple</button>
     <button

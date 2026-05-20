@@ -18,10 +18,10 @@ import {
   NgZone,
   OnDestroy,
 } from '@angular/core';
-import {coerceBooleanProperty, BooleanInput} from '@angular/cdk/coercion';
-import {FocusableOption} from '@angular/cdk/a11y';
-import {SPACE, ENTER, RIGHT_ARROW, LEFT_ARROW} from '@angular/cdk/keycodes';
-import {Directionality} from '@angular/cdk/bidi';
+import {coerceBooleanProperty, BooleanInput} from '@stagefright5/cdk/coercion';
+import {FocusableOption} from '@stagefright5/cdk/a11y';
+import {SPACE, ENTER, RIGHT_ARROW, LEFT_ARROW} from '@stagefright5/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {Subject, fromEvent} from 'rxjs';
 import {takeUntil, filter} from 'rxjs/operators';
 import {CdkMenuItemTrigger} from './menu-item-trigger';
@@ -44,6 +44,7 @@ function removeIcons(element: Element) {
  * behavior when clicked.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuItem]',
   exportAs: 'cdkMenuItem',
   host: {

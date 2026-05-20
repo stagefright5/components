@@ -1,11 +1,11 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {dispatchFakeEvent, dispatchKeyboardEvent} from '@angular/cdk/testing/private';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {dispatchFakeEvent, dispatchKeyboardEvent} from '@stagefright5/cdk/testing/private';
 import {Component, DebugElement, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, fakeAsync, flush, TestBed} from '@angular/core/testing';
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {By} from '@angular/platform-browser';
 import {Subject} from 'rxjs';
 import {
@@ -15,7 +15,7 @@ import {
   MatChipSelectionChange,
   MatChipsModule,
 } from './index';
-import {SPACE} from '@angular/cdk/keycodes';
+import {SPACE} from '@stagefright5/cdk/keycodes';
 
 describe('MDC-based Option Chips', () => {
   let fixture: ComponentFixture<any>;
@@ -296,6 +296,7 @@ describe('MDC-based Option Chips', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-listbox>
       <div *ngIf="shouldShow">

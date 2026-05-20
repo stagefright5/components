@@ -15,9 +15,9 @@ import {
   EventEmitter,
   NgZone,
 } from '@angular/core';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {MockNgZone, dispatchFakeEvent} from '../testing/private';
-import {ComponentPortal, PortalModule, TemplatePortal, CdkPortal} from '@angular/cdk/portal';
+import {ComponentPortal, PortalModule, TemplatePortal, CdkPortal} from '@stagefright5/cdk/portal';
 import {Location} from '@angular/common';
 import {SpyLocation} from '@angular/common/testing';
 import {
@@ -1075,13 +1075,14 @@ describe('Overlay', () => {
 
 /** Simple component for testing ComponentPortal. */
 @Component({
+  standalone: false,
   selector: 'pizza',
   template: '<p>Pizza</p>',
 })
 class PizzaMsg {}
 
 /** Test-bed component that contains a TempatePortal and an ElementRef. */
-@Component({template: `<ng-template cdk-portal>Cake</ng-template>`})
+@Component({standalone: false, template: `<ng-template cdk-portal>Cake</ng-template>`})
 class TestComponentWithTemplatePortals {
   @ViewChild(CdkPortal) templatePortal: CdkPortal;
 

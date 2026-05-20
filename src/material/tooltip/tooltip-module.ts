@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {OverlayModule} from '@angular/cdk/overlay';
-import {A11yModule} from '@angular/cdk/a11y';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {A11yModule} from '@stagefright5/cdk/a11y';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
+import {MatCommonModule} from '@stagefright5/material/core';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
 import {
   MatTooltip,
   TooltipComponent,

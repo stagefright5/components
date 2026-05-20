@@ -1,5 +1,5 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {ENTER, RIGHT_ARROW, SPACE} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ENTER, RIGHT_ARROW, SPACE} from '@stagefright5/cdk/keycodes';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
@@ -15,7 +15,7 @@ import {
   TestBed,
   tick,
 } from '@angular/core/testing';
-import {DateAdapter, MatNativeDateModule} from '@angular/material/core';
+import {DateAdapter, MatNativeDateModule} from '@stagefright5/material/core';
 import {DEC, FEB, JAN, JUL, NOV} from '../testing';
 import {By} from '@angular/platform-browser';
 import {MatCalendar} from './calendar';
@@ -654,6 +654,7 @@ describe('MatCalendar', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar
         [startAt]="startDate"
@@ -670,6 +671,7 @@ class StandardCalendar {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar [startAt]="startAt" [minDate]="minDate" [maxDate]="maxDate"></mat-calendar>
   `,
@@ -681,6 +683,7 @@ class CalendarWithMinMax {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar [startAt]="startDate" [(selected)]="selected" [dateFilter]="dateFilter">
     </mat-calendar>
@@ -696,6 +699,7 @@ class CalendarWithDateFilter {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar
       [startAt]="startAt"

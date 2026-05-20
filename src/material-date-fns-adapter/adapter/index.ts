@@ -7,7 +7,7 @@
  */
 
 import {NgModule} from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {DateFnsAdapter} from './date-fns-adapter';
 import {MAT_DATE_FNS_FORMATS} from './date-fns-formats';
 

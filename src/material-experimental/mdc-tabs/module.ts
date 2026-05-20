@@ -8,10 +8,10 @@
 
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule, MatRippleModule} from '@angular/material-experimental/mdc-core';
-import {PortalModule} from '@angular/cdk/portal';
-import {ObserversModule} from '@angular/cdk/observers';
-import {A11yModule} from '@angular/cdk/a11y';
+import {MatCommonModule, MatRippleModule} from '@stagefright5/material-experimental/mdc-core';
+import {PortalModule} from '@stagefright5/cdk/portal';
+import {ObserversModule} from '@stagefright5/cdk/observers';
+import {A11yModule} from '@stagefright5/cdk/a11y';
 import {MatTabBody, MatTabBodyPortal} from './tab-body';
 import {MatTabContent} from './tab-content';
 import {MatTabLabel} from './tab-label';

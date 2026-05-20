@@ -20,13 +20,14 @@ import {
   MAT_OPTION_PARENT_COMPONENT,
   MatOptionParentComponent,
   MAT_OPTGROUP,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {MatOptgroup} from './optgroup';
 
 /**
  * Single option inside of a `<mat-select>` element.
  */
 @Component({
+  standalone: false,
   selector: 'mat-option',
   exportAs: 'matOption',
   host: {
@@ -43,7 +44,7 @@ import {MatOptgroup} from './optgroup';
     '(keydown)': '_handleKeydown($event)',
     'class': 'mat-mdc-option mat-mdc-focus-indicator mdc-list-item',
   },
-  styleUrls: ['option.css'],
+  styleUrls: ['option.scss'],
   templateUrl: 'option.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

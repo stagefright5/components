@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewChecked,
@@ -23,7 +23,7 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import {CanColor, mixinColor} from '@angular/material/core';
+import {CanColor, mixinColor} from '@stagefright5/material/core';
 import {Subscription} from 'rxjs';
 import {take} from 'rxjs/operators';
 
@@ -117,10 +117,11 @@ const funcIriPattern = /^url\(['"]?#(.*?)['"]?\)$/;
  *     `<mat-icon fontSet="fa" fontIcon="alarm"></mat-icon>`
  */
 @Component({
+  standalone: false,
   template: '<ng-content></ng-content>',
   selector: 'mat-icon',
   exportAs: 'matIcon',
-  styleUrls: ['icon.css'],
+  styleUrls: ['icon.scss'],
   inputs: ['color'],
   host: {
     'role': 'img',

@@ -8,7 +8,7 @@
 
 import {NgModule} from '@angular/core';
 import {MatRecycleRows, MatTable} from './table';
-import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {
   MatCell,
   MatCellDef,
@@ -28,7 +28,7 @@ import {
   MatNoDataRow,
 } from './row';
 import {MatTextColumn} from './text-column';
-import {MatCommonModule} from '@angular/material/core';
+import {MatCommonModule} from '@stagefright5/material/core';
 
 const EXPORTED_DECLARATIONS = [
   // Table

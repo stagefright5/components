@@ -148,6 +148,7 @@ describe('MapKmlLayer', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                 <map-kml-layer [options]="options"

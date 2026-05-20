@@ -1,8 +1,8 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonToggleModule} from '@stagefright5/material/button-toggle';
 import {MatButtonToggleHarness} from './button-toggle-harness';
 
 /** Shared tests to run on both the original and MDC-based button toggles. */
@@ -124,6 +124,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-button-toggle
         name="first-name"

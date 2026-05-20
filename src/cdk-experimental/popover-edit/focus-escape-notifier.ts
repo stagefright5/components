@@ -8,7 +8,7 @@
 
 import {Inject, Injectable, NgZone} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {FocusTrap, InteractivityChecker} from '@angular/cdk/a11y';
+import {FocusTrap, InteractivityChecker} from '@stagefright5/cdk/a11y';
 import {Observable, Subject} from 'rxjs';
 
 /** Value indicating whether focus left the target area before or after the enclosed elements. */

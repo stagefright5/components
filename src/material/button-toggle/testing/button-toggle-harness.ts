@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {MatButtonToggleAppearance} from '@angular/material/button-toggle';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {MatButtonToggleAppearance} from '@stagefright5/material/button-toggle';
 import {ButtonToggleHarnessFilters} from './button-toggle-harness-filters';
 
 /** Harness for interacting with a standard mat-button-toggle in tests. */

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {DomPortalOutlet} from '@angular/cdk/portal';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {DomPortalOutlet} from '@stagefright5/cdk/portal';
 import {DOCUMENT, Location} from '@angular/common';
 import {
   ApplicationRef,

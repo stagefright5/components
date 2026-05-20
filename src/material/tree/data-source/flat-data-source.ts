@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CollectionViewer, DataSource} from '@angular/cdk/collections';
-import {FlatTreeControl, TreeControl} from '@angular/cdk/tree';
+import {CollectionViewer, DataSource} from '@stagefright5/cdk/collections';
+import {FlatTreeControl, TreeControl} from '@stagefright5/cdk/tree';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {map, take} from 'rxjs/operators';
 

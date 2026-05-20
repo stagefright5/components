@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption, FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
+import {FocusableOption, FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -24,7 +24,7 @@ import {
   CanDisableRipple,
   mixinDisabled,
   mixinDisableRipple,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {Subject} from 'rxjs';
 import {DOCUMENT} from '@angular/common';
 import {MAT_MENU_PANEL, MatMenuPanel} from './menu-panel';
@@ -37,6 +37,7 @@ const _MatMenuItemBase = mixinDisableRipple(mixinDisabled(class {}));
  * Single item inside of a `mat-menu`. Provides the menu item styling and accessibility treatment.
  */
 @Component({
+  standalone: false,
   selector: '[mat-menu-item]',
   exportAs: 'matMenuItem',
   inputs: ['disabled', 'disableRipple'],

@@ -2,8 +2,8 @@ import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ApplicationRef, Component, DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {MatButtonModule, MatButton, MatFabDefaultOptions, MAT_FAB_DEFAULT_OPTIONS} from './index';
-import {MatRipple, ThemePalette} from '@angular/material-experimental/mdc-core';
-import {createMouseEvent, dispatchEvent} from '@angular/cdk/testing/private';
+import {MatRipple, ThemePalette} from '@stagefright5/material-experimental/mdc-core';
+import {createMouseEvent, dispatchEvent} from '@stagefright5/cdk/testing/private';
 
 describe('MDC-based MatButton', () => {
   beforeEach(waitForAsync(() => {
@@ -359,6 +359,7 @@ describe('MatFabDefaultOptions', () => {
 
 /** Test component that contains an MatButton. */
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <button [tabIndex]="tabIndex" mat-button type="button" (click)="increment()"

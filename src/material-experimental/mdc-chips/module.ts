@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ENTER} from '@angular/cdk/keycodes';
+import {ENTER} from '@stagefright5/cdk/keycodes';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {
   ErrorStateMatcher,
   MatCommonModule,
   MatRippleModule,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {MatChip} from './chip';
 import {MAT_CHIPS_DEFAULT_OPTIONS, MatChipsDefaultOptions} from './chip-default-options';
 import {MatChipEditInput} from './chip-edit-input';

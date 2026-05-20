@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ENTER} from '@angular/cdk/keycodes';
+import {ENTER} from '@stagefright5/cdk/keycodes';
 import {NgModule} from '@angular/core';
-import {ErrorStateMatcher, MatCommonModule} from '@angular/material/core';
+import {ErrorStateMatcher, MatCommonModule} from '@stagefright5/material/core';
 import {MatChip, MatChipAvatar, MatChipRemove, MatChipTrailingIcon} from './chip';
 import {MAT_CHIPS_DEFAULT_OPTIONS, MatChipsDefaultOptions} from './chip-default-options';
 import {MatChipInput} from './chip-input';

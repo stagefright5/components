@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   Directive,
   ElementRef,
@@ -30,6 +30,7 @@ export const CDK_DRAG_HANDLE = new InjectionToken<CdkDragHandle>('CdkDragHandle'
 
 /** Handle that can be used to drag a CdkDrag instance. */
 @Directive({
+  standalone: false,
   selector: '[cdkDragHandle]',
   host: {
     'class': 'cdk-drag-handle',

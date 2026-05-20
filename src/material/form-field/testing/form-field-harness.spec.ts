@@ -1,15 +1,15 @@
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatAutocompleteModule} from '@stagefright5/material/autocomplete';
+import {MatNativeDateModule} from '@stagefright5/material/core';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
 import {
   MatDatepickerInputHarness,
   MatDateRangeInputHarness,
-} from '@angular/material/datepicker/testing';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatInputHarness} from '@angular/material/input/testing';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSelectHarness} from '@angular/material/select/testing';
+} from '@stagefright5/material/datepicker/testing';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
+import {MatInputModule} from '@stagefright5/material/input';
+import {MatInputHarness} from '@stagefright5/material/input/testing';
+import {MatSelectModule} from '@stagefright5/material/select';
+import {MatSelectHarness} from '@stagefright5/material/select/testing';
 
 import {MatFormFieldHarness} from './form-field-harness';
 import {runHarnessTests} from './shared.spec';

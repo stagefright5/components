@@ -1,4 +1,4 @@
-import {runHarnessTests} from '@angular/material/button/testing/shared.spec';
+import {runHarnessTests} from '@stagefright5/material/button/testing/shared.spec';
 import {MatButtonModule} from '../index';
 import {MatButtonHarness} from './button-harness';
 

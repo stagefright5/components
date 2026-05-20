@@ -11,8 +11,8 @@ import {
   ComponentHarnessConstructor,
   HarnessPredicate,
   parallel,
-} from '@angular/cdk/testing';
-import {DividerHarnessFilters, MatDividerHarness} from '@angular/material/divider/testing';
+} from '@stagefright5/cdk/testing';
+import {DividerHarnessFilters, MatDividerHarness} from '@stagefright5/material/divider/testing';
 import {BaseListItemHarnessFilters, SubheaderHarnessFilters} from './list-harness-filters';
 import {MatSubheaderHarness} from './list-item-harness-base';
 

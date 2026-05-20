@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {parse5} from '@angular/cdk/schematics';
+import {parse5} from '@stagefright5/cdk/schematics';
 
 /**
  * Parses the specified HTML content and looks for "script" elements which

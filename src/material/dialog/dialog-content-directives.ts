@@ -25,6 +25,7 @@ let dialogElementUid = 0;
  * Button that will close the current dialog.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-dialog-close], [matDialogClose]',
   exportAs: 'matDialogClose',
   host: {
@@ -94,6 +95,7 @@ export class MatDialogClose implements OnInit, OnChanges {
  * Title of a dialog element. Stays fixed to the top of the dialog when scrolling.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-dialog-title], [matDialogTitle]',
   exportAs: 'matDialogTitle',
   host: {
@@ -134,6 +136,7 @@ export class MatDialogTitle implements OnInit {
  * Scrollable content container of a dialog.
  */
 @Directive({
+  standalone: false,
   selector: `[mat-dialog-content], mat-dialog-content, [matDialogContent]`,
   host: {'class': 'mat-dialog-content'},
 })
@@ -144,6 +147,7 @@ export class MatDialogContent {}
  * Stays fixed to the bottom when scrolling.
  */
 @Directive({
+  standalone: false,
   selector: `[mat-dialog-actions], mat-dialog-actions, [matDialogActions]`,
   host: {'class': 'mat-dialog-actions'},
 })

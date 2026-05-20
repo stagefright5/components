@@ -7,9 +7,10 @@
  */
 
 import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@angular/core';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 @Component({
+  standalone: false,
   selector: 'mat-divider',
   host: {
     'role': 'separator',
@@ -20,7 +21,7 @@ import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
     'class': 'mat-divider',
   },
   template: '',
-  styleUrls: ['divider.css'],
+  styleUrls: ['divider.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -1,9 +1,9 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule} from '@stagefright5/material/input';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatNativeSelectHarness} from './native-select-harness';
 
@@ -195,6 +195,7 @@ export function runNativeSelectHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <select

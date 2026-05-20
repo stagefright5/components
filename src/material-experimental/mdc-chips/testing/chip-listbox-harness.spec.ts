@@ -1,5 +1,5 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {MatChipsModule} from '../index';
@@ -99,6 +99,7 @@ describe('MatChipListboxHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-listbox [multiple]="isMultiple" [disabled]="disabled" [required]="required">
       <mat-chip-option *ngFor="let option of options" [selected]="option.selected">

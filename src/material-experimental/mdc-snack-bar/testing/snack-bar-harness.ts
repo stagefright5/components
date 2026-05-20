@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {
   MatSnackBarHarness as BaseMatSnackBarHarness,
   SnackBarHarnessFilters,
-} from '@angular/material/snack-bar/testing';
+} from '@stagefright5/material/snack-bar/testing';
 
 /** Harness for interacting with an MDC-based mat-snack-bar in tests. */
 export class MatSnackBarHarness extends BaseMatSnackBarHarness {

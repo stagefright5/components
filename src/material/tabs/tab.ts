@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TemplatePortal} from '@angular/cdk/portal';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -24,7 +24,7 @@ import {
   Inject,
   Optional,
 } from '@angular/core';
-import {CanDisable, mixinDisabled} from '@angular/material/core';
+import {CanDisable, mixinDisabled} from '@stagefright5/material/core';
 import {Subject} from 'rxjs';
 import {MAT_TAB_CONTENT} from './tab-content';
 import {MAT_TAB_LABEL, MatTabLabel, MAT_TAB} from './tab-label';
@@ -40,6 +40,7 @@ const _MatTabBase = mixinDisabled(class {});
 export const MAT_TAB_GROUP = new InjectionToken<any>('MAT_TAB_GROUP');
 
 @Component({
+  standalone: false,
   selector: 'mat-tab',
   templateUrl: 'tab.html',
   inputs: ['disabled'],

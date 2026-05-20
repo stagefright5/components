@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -28,7 +28,7 @@ import {
   ViewEncapsulation,
   OnDestroy,
 } from '@angular/core';
-import {CanColor, mixinColor} from '@angular/material/core';
+import {CanColor, mixinColor} from '@stagefright5/material/core';
 import {fromEvent, merge, Subject} from 'rxjs';
 import {startWith, take, takeUntil} from 'rxjs/operators';
 import {MAT_ERROR, MatError} from './error';
@@ -44,7 +44,7 @@ import {MatLabel} from './label';
 import {MatPlaceholder} from './placeholder';
 import {MAT_PREFIX, MatPrefix} from './prefix';
 import {MAT_SUFFIX, MatSuffix} from './suffix';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {NgControl} from '@angular/forms';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 
@@ -100,6 +100,7 @@ export const MAT_FORM_FIELD = new InjectionToken<MatFormField>('MatFormField');
 
 /** Container for form controls that applies Material Design styling and behavior. */
 @Component({
+  standalone: false,
   selector: 'mat-form-field',
   exportAs: 'matFormField',
   templateUrl: 'form-field.html',
@@ -107,12 +108,12 @@ export const MAT_FORM_FIELD = new InjectionToken<MatFormField>('MatFormField');
   // in form-field-input.css. The MatInput styles are fairly minimal so it shouldn't be a
   // big deal for people who aren't using MatInput.
   styleUrls: [
-    'form-field.css',
-    'form-field-fill.css',
-    'form-field-input.css',
-    'form-field-legacy.css',
-    'form-field-outline.css',
-    'form-field-standard.css',
+    'form-field.scss',
+    'form-field-fill.scss',
+    'form-field-input.scss',
+    'form-field-legacy.scss',
+    'form-field-outline.scss',
+    'form-field-standard.scss',
   ],
   animations: [matFormFieldAnimations.transitionMessages],
   host: {

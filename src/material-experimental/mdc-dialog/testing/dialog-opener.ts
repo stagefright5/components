@@ -6,19 +6,20 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentType} from '@angular/cdk/overlay';
+import {ComponentType} from '@stagefright5/cdk/overlay';
 import {ChangeDetectionStrategy, Component, NgModule, ViewEncapsulation} from '@angular/core';
-import {_MatTestDialogOpenerBase} from '@angular/material/dialog/testing';
+import {_MatTestDialogOpenerBase} from '@stagefright5/material/dialog/testing';
 import {
   MatDialog,
   MatDialogContainer,
   MatDialogModule,
   MatDialogConfig,
-} from '@angular/material-experimental/mdc-dialog';
+} from '@stagefright5/material-experimental/mdc-dialog';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 /** Test component that immediately opens a dialog when bootstrapped. */
 @Component({
+  standalone: false,
   selector: 'mat-test-dialog-opener',
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush,

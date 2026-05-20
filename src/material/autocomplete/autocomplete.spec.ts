@@ -1,8 +1,8 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {DOWN_ARROW, ENTER, ESCAPE, SPACE, TAB, UP_ARROW} from '@angular/cdk/keycodes';
-import {Overlay, OverlayContainer} from '@angular/cdk/overlay';
-import {_supportsShadowDom} from '@angular/cdk/platform';
-import {ScrollDispatcher} from '@angular/cdk/scrolling';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {DOWN_ARROW, ENTER, ESCAPE, SPACE, TAB, UP_ARROW} from '@stagefright5/cdk/keycodes';
+import {Overlay, OverlayContainer} from '@stagefright5/cdk/overlay';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
+import {ScrollDispatcher} from '@stagefright5/cdk/scrolling';
 import {
   MockNgZone,
   clearElement,
@@ -12,7 +12,7 @@ import {
   dispatchKeyboardEvent,
   typeInElement,
   dispatchMouseEvent,
-} from '@angular/cdk/testing/private';
+} from '@stagefright5/cdk/testing/private';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -36,8 +36,8 @@ import {
   tick,
 } from '@angular/core/testing';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatOption, MatOptionSelectionChange} from '@angular/material/core';
-import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
+import {MatOption, MatOptionSelectionChange} from '@stagefright5/material/core';
+import {MatFormField, MatFormFieldModule} from '@stagefright5/material/form-field';
 import {By} from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {EMPTY, Observable, Subject, Subscription} from 'rxjs';
@@ -3192,7 +3192,7 @@ const SIMPLE_AUTOCOMPLETE_TEMPLATE = `
   </mat-autocomplete>
 `;
 
-@Component({template: SIMPLE_AUTOCOMPLETE_TEMPLATE})
+@Component({standalone: false, template: SIMPLE_AUTOCOMPLETE_TEMPLATE})
 class SimpleAutocomplete implements OnDestroy {
   stateCtrl = new FormControl();
   filteredStates: any[];
@@ -3246,10 +3246,11 @@ class SimpleAutocomplete implements OnDestroy {
   }
 }
 
-@Component({template: SIMPLE_AUTOCOMPLETE_TEMPLATE, encapsulation: ViewEncapsulation.ShadowDom})
+@Component({standalone: false, template: SIMPLE_AUTOCOMPLETE_TEMPLATE, encapsulation: ViewEncapsulation.ShadowDom})
 class SimpleAutocompleteShadowDom extends SimpleAutocomplete {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field *ngIf="isVisible">
       <input matInput placeholder="Choose" [matAutocomplete]="auto" [formControl]="optionCtrl">
@@ -3284,6 +3285,7 @@ class NgIfAutocomplete {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="State" [matAutocomplete]="auto"
@@ -3311,6 +3313,7 @@ class AutocompleteWithoutForms {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="State" [matAutocomplete]="auto" [(ngModel)]="selectedState"
@@ -3339,6 +3342,7 @@ class AutocompleteWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="Number" [matAutocomplete]="auto" [(ngModel)]="selectedNumber">
@@ -3357,6 +3361,7 @@ class AutocompleteWithNumbers {
 }
 
 @Component({
+  standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <mat-form-field>
@@ -3380,6 +3385,7 @@ class AutocompleteWithOnPushDelay implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <input placeholder="Choose" [matAutocomplete]="auto" [formControl]="optionCtrl">
 
@@ -3411,6 +3417,7 @@ class AutocompleteWithNativeInput {
 }
 
 @Component({
+  standalone: false,
   template: `<input placeholder="Choose" [matAutocomplete]="auto" [formControl]="control">`,
 })
 class AutocompleteWithoutPanel {
@@ -3419,6 +3426,7 @@ class AutocompleteWithoutPanel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field floatLabel="never">
       <input placeholder="State" matInput [matAutocomplete]="auto" [formControl]="formControl">
@@ -3434,6 +3442,7 @@ class AutocompleteWithFormsAndNonfloatingLabel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="State" [matAutocomplete]="auto" [(ngModel)]="selectedState">
@@ -3468,6 +3477,7 @@ class AutocompleteWithGroups {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="State" [matAutocomplete]="auto" [(ngModel)]="selectedState">
@@ -3487,6 +3497,7 @@ class AutocompleteWithGroups {
 class AutocompleteWithIndirectGroups extends AutocompleteWithGroups {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="State" [matAutocomplete]="auto" [(ngModel)]="selectedState">
@@ -3509,6 +3520,7 @@ class AutocompleteWithSelectEvent {
 }
 
 @Component({
+  standalone: false,
   template: `
     <input [formControl]="formControl" [matAutocomplete]="auto"/>
     <mat-autocomplete #auto="matAutocomplete"></mat-autocomplete>
@@ -3519,6 +3531,7 @@ class PlainAutocompleteInputWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input type="number" matInput [matAutocomplete]="auto" [(ngModel)]="selectedValue">
@@ -3535,6 +3548,7 @@ class AutocompleteWithNumberInputAndNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div>
       <mat-form-field>
@@ -3568,6 +3582,7 @@ class AutocompleteWithDifferentOrigin {
 }
 
 @Component({
+  standalone: false,
   template: `
     <input autocomplete="changed" [(ngModel)]="value" [matAutocomplete]="auto"/>
     <mat-autocomplete #auto="matAutocomplete"></mat-autocomplete>
@@ -3578,11 +3593,13 @@ class AutocompleteWithNativeAutocompleteAttribute {
 }
 
 @Component({
+  standalone: false,
   template: '<input [matAutocomplete]="null" matAutocompleteDisabled>',
 })
 class InputWithoutAutocompleteAndDisabled {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput [matAutocomplete]="auto">

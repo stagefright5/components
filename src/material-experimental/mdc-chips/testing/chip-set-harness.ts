@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
 import {MatChipHarness} from './chip-harness';
 import {ChipHarnessFilters, ChipSetHarnessFilters} from './chip-harness-filters';
 

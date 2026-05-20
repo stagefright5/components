@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {OverlayRef} from '@angular/cdk/overlay';
-import {MatDialogRef as NonMdcDialogRef} from '@angular/material/dialog';
+import {OverlayRef} from '@stagefright5/cdk/overlay';
+import {MatDialogRef as NonMdcDialogRef} from '@stagefright5/material/dialog';
 import {MatDialogContainer} from './dialog-container';
 
 // Counter for unique dialog ids.

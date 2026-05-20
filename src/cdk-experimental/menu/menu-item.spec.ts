@@ -126,11 +126,13 @@ describe('MenuItem', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<button cdkMenuItem>Click me!</button>`,
 })
 class SingleMenuItem {}
 
 @Component({
+  standalone: false,
   template: `
     <button cdkMenuItem>
       <mat-icon>unicorn</mat-icon>
@@ -140,6 +142,7 @@ class SingleMenuItem {}
 })
 class MenuItemWithIcon {}
 @Component({
+  standalone: false,
   template: `
     <button cdkMenuItem>
       <div class="material-icons">unicorn</div>
@@ -150,11 +153,13 @@ class MenuItemWithIcon {}
 class MenuItemWithIconClass {}
 
 @Component({
+  standalone: false,
   template: ` <button cdkMenuItem><b>Click</b> me!</button> `,
 })
 class MenuItemWithBoldElement {}
 
 @Component({
+  standalone: false,
   template: `
     <button cdkMenuItem>
       <div>
@@ -171,6 +176,7 @@ class MenuItemWithBoldElement {}
 class MenuItemWithMultipleNestings {}
 
 @Component({
+  standalone: false,
   selector: 'mat-icon',
   template: '<ng-content></ng-content>',
 })

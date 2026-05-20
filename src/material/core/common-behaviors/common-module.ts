@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HighContrastModeDetector} from '@angular/cdk/a11y';
-import {BidiModule} from '@angular/cdk/bidi';
+import {HighContrastModeDetector} from '@stagefright5/cdk/a11y';
+import {BidiModule} from '@stagefright5/cdk/bidi';
 import {Inject, InjectionToken, NgModule, Optional} from '@angular/core';
-import {VERSION as CDK_VERSION} from '@angular/cdk';
+import {VERSION as CDK_VERSION} from '@stagefright5/cdk';
 import {DOCUMENT} from '@angular/common';
-import {_isTestEnvironment} from '@angular/cdk/platform';
+import {_isTestEnvironment} from '@stagefright5/cdk/platform';
 import {VERSION} from '../version';
 
 /** @docs-private */

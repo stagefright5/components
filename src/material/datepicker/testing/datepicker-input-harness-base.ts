@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarnessConstructor, HarnessPredicate} from '@angular/cdk/testing';
-import {MatFormFieldControlHarness} from '@angular/material/form-field/testing/control';
+import {ComponentHarnessConstructor, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {MatFormFieldControlHarness} from '@stagefright5/material/form-field/testing/control';
 import {DatepickerInputHarnessFilters} from './datepicker-harness-filters';
 
 /** Sets up the filter predicates for a datepicker input harness. */

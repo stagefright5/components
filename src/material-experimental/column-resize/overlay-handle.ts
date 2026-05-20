@@ -20,15 +20,15 @@ import {
   CdkColumnDef,
   _CoalescedStyleScheduler,
   _COALESCED_STYLE_SCHEDULER,
-} from '@angular/cdk/table';
-import {Directionality} from '@angular/cdk/bidi';
+} from '@stagefright5/cdk/table';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   ColumnResize,
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
   ResizeOverlayHandle,
   ResizeRef,
-} from '@angular/cdk-experimental/column-resize';
+} from '@stagefright5/cdk-experimental/column-resize';
 
 import {AbstractMatColumnResize} from './column-resize-directives/common';
 
@@ -37,6 +37,7 @@ import {AbstractMatColumnResize} from './column-resize-directives/common';
  * for handling column resize mouse events and displaying a vertical line along the column edge.
  */
 @Component({
+  standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   host: {'class': 'mat-column-resize-overlay-thumb'},

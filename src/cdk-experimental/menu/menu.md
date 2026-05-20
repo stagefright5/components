@@ -1,13 +1,13 @@
-The `@angular/cdk-experimental/menu` module provides directives to help create custom menu
+The `@stagefright5/cdk-experimental/menu` module provides directives to help create custom menu
 interactions based on the [WAI ARIA specification][aria].
 
-By using `@angular/cdk-experimental/menu` you get all of the expected behaviors for an accessible
+By using `@stagefright5/cdk-experimental/menu` you get all of the expected behaviors for an accessible
 experience, including bidi layout support, keyboard interaction, and focus management. All
 directives apply their associated ARIA roles to their host element.
 
 ### Supported ARIA Roles
 
-The directives in `@angular/cdk-experimental/menu` set the appropriate roles on their host element.
+The directives in `@stagefright5/cdk-experimental/menu` set the appropriate roles on their host element.
 
 | Directive           | ARIA Role        |
 | ------------------- | ---------------- |
@@ -196,7 +196,7 @@ Finally, you can provide state for each item using the `checked` attribute.
 
 ### Smart Menu Aim
 
-`@angular/cdk-experimental/menu` intelligently predicts when a user intends to navigate to an open
+`@stagefright5/cdk-experimental/menu` intelligently predicts when a user intends to navigate to an open
 submenu and prevent premature closeouts. This functionality prevents users from having to hunt
 through the open menus in a maze-like fashion to reach their destination.
 
@@ -214,7 +214,7 @@ detect this intention and will trigger the next menu.
 
 ### Accessibility
 
-The set of directives defined in `@angular/cdk-experimental/menu` follow accessibility best
+The set of directives defined in `@stagefright5/cdk-experimental/menu` follow accessibility best
 practices as defined in the [ARIA spec][menubar]. Specifically, the menus are aware of left-to-right
 and right-to-left layouts and opened appropriately. You should however add any necessary CSS styles.
 Menu items should always have meaningful labels, whether through text content, `aria-label`, or

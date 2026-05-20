@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {Platform} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable} from '@angular/core';
 import {OverlayContainer} from '../overlay-container';

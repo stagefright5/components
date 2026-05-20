@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AriaLivePoliteness} from '@angular/cdk/a11y';
-import {ContentContainerComponentHarness, HarnessPredicate, parallel} from '@angular/cdk/testing';
+import {AriaLivePoliteness} from '@stagefright5/cdk/a11y';
+import {ContentContainerComponentHarness, HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
 import {SnackBarHarnessFilters} from './snack-bar-harness-filters';
 
 /** Harness for interacting with a standard mat-snack-bar in tests. */

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentObserver} from '@angular/cdk/observers';
+import {ContentObserver} from '@stagefright5/cdk/observers';
 import {DOCUMENT} from '@angular/common';
 import {
   Directive,
@@ -183,6 +183,7 @@ export class LiveAnnouncer implements OnDestroy {
  * with a wider range of browsers and screen readers.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkAriaLive]',
   exportAs: 'cdkAriaLive',
 })

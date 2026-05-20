@@ -19,9 +19,9 @@ import {
   Inject,
   Self,
 } from '@angular/core';
-import {Directionality} from '@angular/cdk/bidi';
-import {FocusKeyManager, FocusOrigin} from '@angular/cdk/a11y';
-import {LEFT_ARROW, RIGHT_ARROW, UP_ARROW, DOWN_ARROW, ESCAPE, TAB} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {FocusKeyManager, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {LEFT_ARROW, RIGHT_ARROW, UP_ARROW, DOWN_ARROW, ESCAPE, TAB} from '@stagefright5/cdk/keycodes';
 import {takeUntil, mergeAll, mapTo, startWith, mergeMap, switchMap} from 'rxjs/operators';
 import {Subject, merge} from 'rxjs';
 import {CdkMenuGroup} from './menu-group';
@@ -38,6 +38,7 @@ import {MenuAim, MENU_AIM} from './menu-aim';
  *
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuBar]',
   exportAs: 'cdkMenuBar',
   host: {

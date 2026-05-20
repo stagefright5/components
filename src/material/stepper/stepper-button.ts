@@ -6,11 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkStepperNext, CdkStepperPrevious} from '@angular/cdk/stepper';
+import {CdkStepperNext, CdkStepperPrevious} from '@stagefright5/cdk/stepper';
 import {Directive} from '@angular/core';
 
 /** Button that moves to the next step in a stepper workflow. */
 @Directive({
+  standalone: false,
   selector: 'button[matStepperNext]',
   host: {
     'class': 'mat-stepper-next',
@@ -22,6 +23,7 @@ export class MatStepperNext extends CdkStepperNext {}
 
 /** Button that moves to the previous step in a stepper workflow. */
 @Directive({
+  standalone: false,
   selector: 'button[matStepperPrevious]',
   host: {
     'class': 'mat-stepper-previous',

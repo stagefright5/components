@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
 import {
   AfterContentInit,
   Attribute,
@@ -33,7 +33,7 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {CanDisableRipple, mixinDisableRipple} from '@angular/material/core';
+import {CanDisableRipple, mixinDisableRipple} from '@stagefright5/material/core';
 
 /**
  * @deprecated No longer used.
@@ -100,6 +100,7 @@ export class MatButtonToggleChange {
 
 /** Exclusive selection button toggle group that behaves like a radio-button group. */
 @Directive({
+  standalone: false,
   selector: 'mat-button-toggle-group',
   providers: [
     MAT_BUTTON_TOGGLE_GROUP_VALUE_ACCESSOR,
@@ -395,9 +396,10 @@ const _MatButtonToggleBase = mixinDisableRipple(class {});
 
 /** Single button inside of a toggle group. */
 @Component({
+  standalone: false,
   selector: 'mat-button-toggle',
   templateUrl: 'button-toggle.html',
-  styleUrls: ['button-toggle.css'],
+  styleUrls: ['button-toggle.scss'],
   encapsulation: ViewEncapsulation.None,
   exportAs: 'matButtonToggle',
   changeDetection: ChangeDetectionStrategy.OnPush,

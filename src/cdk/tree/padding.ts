@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {Directive, ElementRef, Input, OnDestroy, Optional} from '@angular/core';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
@@ -21,6 +21,7 @@ const cssUnitPattern = /([A-Za-z%]+)$/;
  * This directive will add left-padding to the node to show hierarchy.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkTreeNodePadding]',
 })
 export class CdkTreeNodePadding<T, K = T> implements OnDestroy {

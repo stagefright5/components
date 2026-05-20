@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
+  standalone: false,
   template: `
     <mat-radio-group align="end"></mat-radio-group>
     <mat-radio-group [align]="myAlign">
@@ -12,6 +13,7 @@ import {Component} from '@angular/core';
 class A {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-drawer align="end"></mat-drawer>
     <mat-drawer [align]="myAlign"></mat-drawer>
@@ -21,6 +23,7 @@ class A {}
 class B {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field dividerColor="primary"></mat-form-field>
     <mat-form-field [dividerColor]="myColor"></mat-form-field>
@@ -31,6 +34,7 @@ class B {}
 class C {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group [mat-dynamic-height]="myHeight"></mat-tab-group>
     <mat-checkbox align="end"></mat-checkbox>

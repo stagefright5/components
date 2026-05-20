@@ -35,6 +35,7 @@ import {TEXT_COLUMN_OPTIONS, TextColumnOptions} from './tokens';
  * input.
  */
 @Component({
+  standalone: false,
   selector: 'cdk-text-column',
   template: `
     <ng-container cdkColumnDef>

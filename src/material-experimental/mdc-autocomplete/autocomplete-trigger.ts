@@ -8,11 +8,11 @@
 
 import {Directive, forwardRef} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
-import {_MatAutocompleteTriggerBase} from '@angular/material/autocomplete';
+import {_MatAutocompleteTriggerBase} from '@stagefright5/material/autocomplete';
 import {
   _countGroupLabelsBeforeOption,
   _getOptionScrollPosition,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 
 /**
  * Provider that allows the autocomplete to register as a ControlValueAccessor.
@@ -25,6 +25,7 @@ export const MAT_AUTOCOMPLETE_VALUE_ACCESSOR: any = {
 };
 
 @Directive({
+  standalone: false,
   selector: `input[matAutocomplete], textarea[matAutocomplete]`,
   host: {
     'class': 'mat-mdc-autocomplete-trigger',

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, ComponentHarness} from '@angular/cdk/testing';
+import {HarnessPredicate, ComponentHarness} from '@stagefright5/cdk/testing';
 import {CalendarHarnessFilters, CalendarCellHarnessFilters} from './datepicker-harness-filters';
 import {MatCalendarCellHarness} from './calendar-cell-harness';
 

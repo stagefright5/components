@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {DOWN_ARROW, ENTER, ESCAPE, TAB, UP_ARROW, hasModifierKey} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {DOWN_ARROW, ENTER, ESCAPE, TAB, UP_ARROW, hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {
   FlexibleConnectedPositionStrategy,
   Overlay,
@@ -16,10 +16,10 @@ import {
   PositionStrategy,
   ScrollStrategy,
   ConnectedPosition,
-} from '@angular/cdk/overlay';
-import {_getEventTarget} from '@angular/cdk/platform';
-import {TemplatePortal} from '@angular/cdk/portal';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/overlay';
+import {_getEventTarget} from '@stagefright5/cdk/platform';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -44,8 +44,8 @@ import {
   _getOptionScrollPosition,
   MatOption,
   MatOptionSelectionChange,
-} from '@angular/material/core';
-import {MAT_FORM_FIELD, MatFormField} from '@angular/material/form-field';
+} from '@stagefright5/material/core';
+import {MAT_FORM_FIELD, MatFormField} from '@stagefright5/material/form-field';
 import {defer, fromEvent, merge, Observable, of as observableOf, Subject, Subscription} from 'rxjs';
 import {delay, filter, map, switchMap, take, tap, startWith} from 'rxjs/operators';
 
@@ -801,6 +801,7 @@ export abstract class _MatAutocompleteTriggerBase
 }
 
 @Directive({
+  standalone: false,
   selector: `input[matAutocomplete], textarea[matAutocomplete]`,
   host: {
     'class': 'mat-autocomplete-trigger',

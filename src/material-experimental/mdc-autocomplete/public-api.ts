@@ -22,4 +22,4 @@ export {
   MatAutocompleteActivatedEvent,
   MatAutocompleteDefaultOptions,
   MatAutocompleteSelectedEvent,
-} from '@angular/material/autocomplete';
+} from '@stagefright5/material/autocomplete';

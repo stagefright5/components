@@ -7,7 +7,7 @@ using the CDK on its own, you'll have to include the styles yourself. You can do
 the prebuilt styles in your global stylesheet:
 
 ```scss
-@import '@angular/cdk/overlay-prebuilt.css';
+@import '@stagefright5/cdk/overlay-prebuilt.css';
 ```
 
 ### Creating overlays
@@ -83,7 +83,7 @@ application.
 
 
 A custom scroll strategy can be created by implementing the `ScrollStrategy` interface. Each
-strategy will typically inject `ScrollDispatcher` (from `@angular/cdk/scrolling`) to be notified
+strategy will typically inject `ScrollDispatcher` (from `@stagefright5/cdk/scrolling`) to be notified
 of when scrolling takes place. See the documentation for `ScrollDispatcher` for more information
 on how scroll events are detected and dispatched.
 

@@ -7,10 +7,11 @@
  */
 
 import {Directive} from '@angular/core';
-import {MatTabLabel as BaseMatTabLabel} from '@angular/material/tabs';
+import {MatTabLabel as BaseMatTabLabel} from '@stagefright5/material/tabs';
 
 /** Used to flag tab labels for use with the portal directive */
 @Directive({
+  standalone: false,
   selector: '[mat-tab-label], [matTabLabel]',
 })
 export class MatTabLabel extends BaseMatTabLabel {}

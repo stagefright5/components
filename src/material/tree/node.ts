@@ -12,7 +12,7 @@ import {
   CdkTree,
   CdkTreeNode,
   CdkTreeNodeDef,
-} from '@angular/cdk/tree';
+} from '@stagefright5/cdk/tree';
 import {
   AfterContentInit,
   Attribute,
@@ -23,8 +23,8 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import {CanDisable, HasTabIndex, mixinDisabled, mixinTabIndex} from '@angular/material/core';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {CanDisable, HasTabIndex, mixinDisabled, mixinTabIndex} from '@stagefright5/material/core';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 const _MatTreeNodeBase = mixinTabIndex(mixinDisabled(CdkTreeNode));
 
@@ -32,6 +32,7 @@ const _MatTreeNodeBase = mixinTabIndex(mixinDisabled(CdkTreeNode));
  * Wrapper for the CdkTree node with Material design styles.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-tree-node',
   exportAs: 'matTreeNode',
   inputs: ['role', 'disabled', 'tabIndex'],
@@ -69,6 +70,7 @@ export class MatTreeNode<T, K = T>
  * Captures the node's template and a when predicate that describes when this node should be used.
  */
 @Directive({
+  standalone: false,
   selector: '[matTreeNodeDef]',
   inputs: ['when: matTreeNodeDefWhen'],
   providers: [{provide: CdkTreeNodeDef, useExisting: MatTreeNodeDef}],
@@ -81,6 +83,7 @@ export class MatTreeNodeDef<T> extends CdkTreeNodeDef<T> {
  * Wrapper for the CdkTree nested node with Material design styles.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-nested-tree-node',
   exportAs: 'matNestedTreeNode',
   inputs: ['role', 'disabled', 'tabIndex'],

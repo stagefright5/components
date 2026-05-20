@@ -21,6 +21,7 @@ import {GoogleMap} from '../google-map/google-map';
  * See developers.google.com/maps/documentation/javascript/reference/map#TrafficLayer
  */
 @Directive({
+  standalone: false,
   selector: 'map-traffic-layer',
   exportAs: 'mapTrafficLayer',
 })

@@ -21,11 +21,13 @@ const myConstant = 1;
 b.speedFactor = 0.5 + myConstant;
 
 @Component({
+  standalone: false,
   template: `<div matRipple [matRippleSpeedFactor]="0.5"></div>`
 })
 class C {}
 
 @Component({
+  standalone: false,
   template: `<div matRipple [matRippleSpeedFactor]="myValue"></div>`
 })
 class D {

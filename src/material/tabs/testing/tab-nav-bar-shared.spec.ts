@@ -1,8 +1,8 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatTabsModule} from '@stagefright5/material/tabs';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabNavBarHarness} from './tab-nav-bar-harness';
 
@@ -101,6 +101,7 @@ export function runTabNavBarHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar [tabPanel]="tabPanel">
       <a href="#" (click)="select(0, $event)" [active]="activeLink === 0" matTabLink>First</a>

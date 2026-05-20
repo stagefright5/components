@@ -30,6 +30,7 @@ import {MapEventManager} from '../map-event-manager';
  * See developers.google.com/maps/documentation/javascript/reference/directions#DirectionsRenderer
  */
 @Directive({
+  standalone: false,
   selector: 'map-directions-renderer',
   exportAs: 'mapDirectionsRenderer',
 })

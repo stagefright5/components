@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {BACKSPACE, hasModifierKey, TAB} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {BACKSPACE, hasModifierKey, TAB} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   Directive,
@@ -50,6 +50,7 @@ let nextUniqueId = 0;
  * May be placed inside or outside of an `<mat-chip-list>`.
  */
 @Directive({
+  standalone: false,
   selector: 'input[matChipInputFor]',
   exportAs: 'matChipInput, matChipInputFor',
   host: {

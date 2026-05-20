@@ -1,6 +1,6 @@
 import {MatTableDataSource} from './table-data-source';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatSort, MatSortModule} from '@angular/material/sort';
+import {MatSort, MatSortModule} from '@stagefright5/material/sort';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {Component, ViewChild} from '@angular/core';
 
@@ -78,6 +78,7 @@ describe('MatTableDataSource', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<div matSort matSortDirection="asc"></div>`,
 })
 class MatSortApp {

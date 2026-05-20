@@ -12,8 +12,8 @@ import {
   MatPseudoCheckboxModule,
   MatRippleModule,
   MatCommonModule,
-} from '@angular/material-experimental/mdc-core';
-import {MatDividerModule} from '@angular/material/divider';
+} from '@stagefright5/material-experimental/mdc-core';
+import {MatDividerModule} from '@stagefright5/material/divider';
 import {MatActionList} from './action-list';
 import {MatList, MatListItem} from './list';
 import {MatListOption} from './list-option';
@@ -27,7 +27,7 @@ import {
 } from './list-item-sections';
 import {MatNavList} from './nav-list';
 import {MatSelectionList} from './selection-list';
-import {ObserversModule} from '@angular/cdk/observers';
+import {ObserversModule} from '@stagefright5/cdk/observers';
 
 @NgModule({
   imports: [

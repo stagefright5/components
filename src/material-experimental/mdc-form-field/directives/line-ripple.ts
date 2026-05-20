@@ -18,6 +18,7 @@ import {MDCLineRipple} from '@material/line-ripple';
  * and deactivating the line-ripple.
  */
 @Directive({
+  standalone: false,
   selector: 'div[matFormFieldLineRipple]',
   host: {
     'class': 'mdc-line-ripple',

@@ -2,8 +2,8 @@ import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing'
 import {Component, Provider, Type, ViewChild} from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {dispatchMouseEvent} from '../../cdk/testing/private';
-import {ThemePalette} from '@angular/material/core';
-import {MatSelect} from '@angular/material/select';
+import {ThemePalette} from '@stagefright5/material/core';
+import {MatSelect} from '@stagefright5/material/select';
 import {By} from '@angular/platform-browser';
 import {MatPaginator, MatPaginatorIntl, MatPaginatorModule} from './index';
 import {MAT_PAGINATOR_DEFAULT_OPTIONS, MatPaginatorDefaultOptions} from './paginator';
@@ -532,6 +532,7 @@ function getLastButton(fixture: ComponentFixture<any>) {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator [pageIndex]="pageIndex"
                    [pageSize]="pageSize"
@@ -564,6 +565,7 @@ class MatPaginatorApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator></mat-paginator>
   `,
@@ -573,6 +575,7 @@ class MatPaginatorWithoutInputsApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator [pageSizeOptions]="[10, 20, 30]"></mat-paginator>
   `,
@@ -582,6 +585,7 @@ class MatPaginatorWithoutPageSizeApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator [pageSize]="10"></mat-paginator>
   `,
@@ -591,6 +595,7 @@ class MatPaginatorWithoutOptionsApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator pageIndex="0"
                    pageSize="10"
@@ -604,6 +609,7 @@ class MatPaginatorWithStringValues {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator [pageSizeOptions]="pageSizeOptions">
     </mat-paginator>

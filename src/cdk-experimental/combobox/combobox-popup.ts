@@ -22,6 +22,7 @@ export const PANEL = new InjectionToken<CdkComboboxPanel>('CdkComboboxPanel');
 let nextId = 0;
 
 @Directive({
+  standalone: false,
   selector: '[cdkComboboxPopup]',
   exportAs: 'cdkComboboxPopup',
   host: {

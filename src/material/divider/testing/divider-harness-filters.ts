@@ -6,6 +6,6 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BaseHarnessFilters} from '@angular/cdk/testing';
+import {BaseHarnessFilters} from '@stagefright5/cdk/testing';
 
 export interface DividerHarnessFilters extends BaseHarnessFilters {}

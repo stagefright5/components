@@ -1,9 +1,9 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatIconModule} from '@angular/material/icon';
-import {MatIconHarness} from '@angular/material/icon/testing';
+import {MatIconModule} from '@stagefright5/material/icon';
+import {MatIconHarness} from '@stagefright5/material/icon/testing';
 import {MatChipsModule} from '../index';
 import {MatChipHarness} from './chip-harness';
 
@@ -82,6 +82,7 @@ describe('MatChipHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-basic-chip>Basic Chip</mat-basic-chip>
     <mat-chip>Chip <span matChipTrailingIcon>trailing_icon</span></mat-chip>

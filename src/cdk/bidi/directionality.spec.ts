@@ -158,6 +158,7 @@ describe('Directionality', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div [dir]="direction" (dirChange)="changeCount = changeCount + 1">
       <injects-directionality></injects-directionality>
@@ -171,6 +172,7 @@ class ElementWithDir {
 }
 
 @Component({
+  standalone: false,
   template: '<div dir="auto"></div>',
 })
 class ElementWithPredefinedAutoDir {
@@ -178,6 +180,7 @@ class ElementWithPredefinedAutoDir {
 }
 
 @Component({
+  standalone: false,
   template: '<div dir="RTL"></div>',
 })
 class ElementWithPredefinedUppercaseDir {
@@ -186,6 +189,7 @@ class ElementWithPredefinedUppercaseDir {
 
 /** Test component with Dir directive. */
 @Component({
+  standalone: false,
   selector: 'injects-directionality',
   template: `<div></div>`,
 })

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ModifierKeys, TestKey} from '@angular/cdk/testing';
+import {ModifierKeys, TestKey} from '@stagefright5/cdk/testing';
 import * as webdriver from 'selenium-webdriver';
 
 /**

@@ -1,5 +1,5 @@
 import {SchematicTestRunner} from '@angular-devkit/schematics/testing';
-import {createTestApp, getFileContent} from '@angular/cdk/schematics/testing';
+import {createTestApp, getFileContent} from '@stagefright5/cdk/schematics/testing';
 import {COLLECTION_PATH} from '../../paths';
 import {Schema} from './schema';
 
@@ -42,12 +42,12 @@ describe('material-dashboard-schematic', () => {
     expect(moduleContent).toContain('MatButtonModule');
 
     expect(moduleContent).toContain(
-      `import { MatGridListModule } from '@angular/material/grid-list';`,
+      `import { MatGridListModule } from '@stagefright5/material/grid-list';`,
     );
-    expect(moduleContent).toContain(`import { MatCardModule } from '@angular/material/card';`);
-    expect(moduleContent).toContain(`import { MatMenuModule } from '@angular/material/menu';`);
-    expect(moduleContent).toContain(`import { MatIconModule } from '@angular/material/icon';`);
-    expect(moduleContent).toContain(`import { MatButtonModule } from '@angular/material/button';`);
+    expect(moduleContent).toContain(`import { MatCardModule } from '@stagefright5/material/card';`);
+    expect(moduleContent).toContain(`import { MatMenuModule } from '@stagefright5/material/menu';`);
+    expect(moduleContent).toContain(`import { MatIconModule } from '@stagefright5/material/icon';`);
+    expect(moduleContent).toContain(`import { MatButtonModule } from '@stagefright5/material/button';`);
   });
 
   it('should throw if no name has been specified', async () => {

@@ -1,4 +1,4 @@
-import {DOWN_ARROW, SPACE, ENTER, UP_ARROW, HOME, END, A, D, TAB} from '@angular/cdk/keycodes';
+import {DOWN_ARROW, SPACE, ENTER, UP_ARROW, HOME, END, A, D, TAB} from '@stagefright5/cdk/keycodes';
 import {
   createKeyboardEvent,
   dispatchFakeEvent,
@@ -22,11 +22,11 @@ import {
   flush,
   inject,
 } from '@angular/core/testing';
-import {MatRipple, defaultRippleAnimationConfig, ThemePalette} from '@angular/material/core';
+import {MatRipple, defaultRippleAnimationConfig, ThemePalette} from '@stagefright5/material/core';
 import {By} from '@angular/platform-browser';
 import {MatListModule, MatListOption, MatSelectionList, MatSelectionListChange} from './index';
 import {FormControl, FormsModule, NgModel, ReactiveFormsModule} from '@angular/forms';
-import {FocusMonitor} from '@angular/cdk/a11y';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 
 describe('MatSelectionList without forms', () => {
   describe('with list option', () => {
@@ -1651,6 +1651,7 @@ describe('MatSelectionList with forms', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list
     id="selection-list-1"
@@ -1688,6 +1689,7 @@ class SelectionListWithListOptions {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list id="selection-list-2">
     <mat-list-option checkboxPosition="after">
@@ -1707,6 +1709,7 @@ class SelectionListWithListOptions {
 class SelectionListWithCheckboxPositionAfter {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list id="selection-list-3" [disabled]="disabled">
     <mat-list-option checkboxPosition="after">
@@ -1728,6 +1731,7 @@ class SelectionListWithListDisabled {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list>
     <mat-list-option [disabled]="disableItem">Item</mat-list-option>
@@ -1739,6 +1743,7 @@ class SelectionListWithDisabledOption {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list>
     <mat-list-option [selected]="true">Item</mat-list-option>
@@ -1747,6 +1752,7 @@ class SelectionListWithDisabledOption {
 class SelectionListWithSelectedOption {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list>
     <mat-list-option [selected]="true" [value]="itemValue">Item</mat-list-option>
@@ -1757,6 +1763,7 @@ class SelectionListWithSelectedOptionAndValue {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list id="selection-list-4">
     <mat-list-option checkboxPosition="after" class="test-focus" id="123">
@@ -1767,6 +1774,7 @@ class SelectionListWithSelectedOptionAndValue {
 class SelectionListWithOnlyOneOption {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list
       [(ngModel)]="selectedOptions"
@@ -1783,6 +1791,7 @@ class SelectionListWithModel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list [formControl]="formControl" *ngIf="renderList">
       <mat-list-option value="opt1">Option 1</mat-list-option>
@@ -1799,6 +1808,7 @@ class SelectionListWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list [(ngModel)]="selectedOptions">
       <mat-list-option value="opt1">Option 1</mat-list-option>
@@ -1810,6 +1820,7 @@ class SelectionListWithPreselectedOption {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list [(ngModel)]="selectedOptions">
       <mat-list-option value="opt1">Option 1</mat-list-option>
@@ -1821,6 +1832,7 @@ class SelectionListWithPreselectedOptionAndModel {
 }
 
 @Component({
+  standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <mat-selection-list [formControl]="formControl">
@@ -1834,6 +1846,7 @@ class SelectionListWithPreselectedFormControlOnPush {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list [(ngModel)]="selectedOptions" [compareWith]="compareWith">
       <mat-list-option *ngFor="let option of options" [value]="option">
@@ -1853,6 +1866,7 @@ class SelectionListWithCustomComparator {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list [compareWith]="compareWith">
       <mat-list-option [value]="value" [selected]="value.id === 1">
@@ -1866,6 +1880,7 @@ class SelectionListWithChangingOptionValue {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list>
       <mat-list-option>
@@ -1878,6 +1893,7 @@ class SelectionListWithChangingOptionValue {
 class SelectionListWithAvatar {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list>
       <mat-list-option>
@@ -1890,6 +1906,7 @@ class SelectionListWithAvatar {}
 class SelectionListWithIcon {}
 
 @Component({
+  standalone: false,
   // Note the blank `ngSwitch` which we need in order to hit the bug that we're testing.
   template: `
     <mat-selection-list>
@@ -1904,6 +1921,7 @@ class SelectionListWithIndirectChildOptions {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-selection-list>
     <mat-list-option [(selected)]="selected">Item</mat-list-option>

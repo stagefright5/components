@@ -15,7 +15,7 @@ import {
   TestElement,
   TestKey,
   TextOptions,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import * as webdriver from 'selenium-webdriver';
 import {getSeleniumWebDriverModifierKeys, seleniumWebDriverKeyMap} from './selenium-webdriver-keys';
 

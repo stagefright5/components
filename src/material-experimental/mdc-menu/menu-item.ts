@@ -7,12 +7,13 @@
  */
 
 import {Component, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
-import {MatMenuItem as BaseMatMenuItem} from '@angular/material/menu';
+import {MatMenuItem as BaseMatMenuItem} from '@stagefright5/material/menu';
 
 /**
  * Single item inside of a `mat-menu`. Provides the menu item styling and accessibility treatment.
  */
 @Component({
+  standalone: false,
   selector: '[mat-menu-item]',
   exportAs: 'matMenuItem',
   inputs: ['disabled', 'disableRipple'],

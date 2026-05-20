@@ -10,7 +10,7 @@ component by following these steps:
 1. Install Angular Material Experimental & MDC WEB:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -33,7 +33,7 @@ component by following these steps:
    component:
 
    ```ts
-   import {MatCheckboxModule} from '@angular/material-experimental/mdc-checkbox';
+   import {MatCheckboxModule} from '@stagefright5/material-experimental/mdc-checkbox';
 
    @NgModule({
      declarations: [MyComponent],
@@ -53,8 +53,8 @@ component by following these steps:
    the experimental `<mat-checkbox>`):
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $my-primary: mat.define-palette(mat.$indigo-palette);
    $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -72,8 +72,8 @@ component by following these steps:
 ## API differences
 The experimental checkbox API closely matches the
 [API of the standard checkbox](https://material.angular.io/components/checkbox/api).
-`@angular/material-experimental/mdc-checkbox` exports symbols with the same name and public interface
-as all of the symbols found under `@angular/material/checkbox`, except for the following
+`@stagefright5/material-experimental/mdc-checkbox` exports symbols with the same name and public interface
+as all of the symbols found under `@stagefright5/material/checkbox`, except for the following
 differences:
 
 * The experimental `MatCheckbox` does not have a public `ripple` property.
@@ -85,7 +85,7 @@ following string replace across your TypeScript files:
 
 ```bash
 grep -lr --include="*.ts" --exclude-dir="node_modules" \
-  --exclude="*.d.ts" "['\"]@angular/material/checkbox['\"]" | xargs sed -i \
+  --exclude="*.d.ts" "['\"]@stagefright5/material/checkbox['\"]" | xargs sed -i \
   "s/['\"]@angular\/material\/checkbox['\"]/'@angular\/material-experimental\/mdc-checkbox'/g"
 ```
 

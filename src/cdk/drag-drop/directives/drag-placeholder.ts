@@ -20,6 +20,7 @@ export const CDK_DRAG_PLACEHOLDER = new InjectionToken<CdkDragPlaceholder>('CdkD
  * it is being dragged. The placeholder is displayed in place of the element being dragged.
  */
 @Directive({
+  standalone: false,
   selector: 'ng-template[cdkDragPlaceholder]',
   providers: [{provide: CDK_DRAG_PLACEHOLDER, useExisting: CdkDragPlaceholder}],
 })

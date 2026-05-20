@@ -10,7 +10,7 @@
  * Directions that can be used when setting sticky positioning.
  * @docs-private
  */
-import {Direction} from '@angular/cdk/bidi';
+import {Direction} from '@stagefright5/cdk/bidi';
 import {_CoalescedStyleScheduler} from './coalesced-style-scheduler';
 import {StickyPositioningListener} from './sticky-position-listener';
 

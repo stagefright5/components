@@ -1,10 +1,10 @@
-import {ArrayDataSource} from '@angular/cdk/collections';
+import {ArrayDataSource} from '@stagefright5/cdk/collections';
 import {
   CdkVirtualForOf,
   CdkVirtualScrollViewport,
   ScrollDispatcher,
   ScrollingModule,
-} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/scrolling';
 import {CommonModule} from '@angular/common';
 import {dispatchFakeEvent} from '../testing/private';
 import {
@@ -1098,6 +1098,7 @@ function triggerScroll(viewport: CdkVirtualScrollViewport, offset?: number) {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport
         [itemSize]="itemSize" [minBufferPx]="minBufferPx" [maxBufferPx]="maxBufferPx"
@@ -1169,6 +1170,7 @@ class FixedSizeVirtualScroll {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport dir="rtl"
         [itemSize]="itemSize" [minBufferPx]="minBufferPx" [maxBufferPx]="maxBufferPx"
@@ -1232,6 +1234,7 @@ class FixedSizeVirtualScrollWithRtlDirection {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport>
       <div class="item" *cdkVirtualFor="let item of items">{{item}}</div>
@@ -1255,6 +1258,7 @@ class VirtualScrollWithNoStrategy {
 }
 
 @Directive({
+  standalone: false,
   selector: '[injects-view-container]',
 })
 class InjectsViewContainer {
@@ -1262,6 +1266,7 @@ class InjectsViewContainer {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport itemSize="50">
       <div injects-view-container class="item" *cdkVirtualFor="let item of items">{{item}}</div>
@@ -1299,6 +1304,7 @@ class VirtualScrollWithItemInjectingViewContainer {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport [itemSize]="itemSize">
       <ng-container *ngIf="renderVirtualFor">
@@ -1340,6 +1346,7 @@ class DelayedInitializationVirtualScroll {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport appendOnly itemSize="50">
       <div class="item" *cdkVirtualFor="let item of items">{{item}}</div>

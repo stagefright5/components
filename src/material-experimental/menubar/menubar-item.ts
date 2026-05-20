@@ -7,7 +7,7 @@
  */
 
 import {Component, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
-import {CdkMenuItem} from '@angular/cdk-experimental/menu';
+import {CdkMenuItem} from '@stagefright5/cdk-experimental/menu';
 
 /**
  * A material design MenubarItem adhering to the functionality of CdkMenuItem and
@@ -15,10 +15,11 @@ import {CdkMenuItem} from '@angular/cdk-experimental/menu';
  * MatMenubar.
  */
 @Component({
+  standalone: false,
   selector: 'mat-menubar-item',
   exportAs: 'matMenubarItem',
   templateUrl: 'menubar-item.html',
-  styleUrls: ['menubar-item.css'],
+  styleUrls: ['menubar-item.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

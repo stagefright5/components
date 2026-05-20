@@ -1,10 +1,10 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
-import {DateAdapter, MatNativeDateModule} from '@angular/material/core';
+import {DateAdapter, MatNativeDateModule} from '@stagefright5/material/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule} from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDatepickerInputHarness} from './datepicker-input-harness';
 import {MatCalendarHarness} from './calendar-harness';
@@ -184,6 +184,7 @@ export function runDatepickerInputHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <input
       id="basic"

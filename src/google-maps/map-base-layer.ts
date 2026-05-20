@@ -14,6 +14,7 @@ import {Directive, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {GoogleMap} from './google-map/google-map';
 
 @Directive({
+  standalone: false,
   selector: 'map-base-layer',
   exportAs: 'mapBaseLayer',
 })

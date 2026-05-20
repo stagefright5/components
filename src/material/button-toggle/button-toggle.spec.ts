@@ -907,6 +907,7 @@ describe('MatButtonToggle without forms', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group [disabled]="isGroupDisabled"
                            [vertical]="isVertical"
@@ -925,6 +926,7 @@ class ButtonTogglesInsideButtonToggleGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group
     [name]="groupName"
@@ -950,6 +952,7 @@ class ButtonToggleGroupWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group [disabled]="isGroupDisabled" [vertical]="isVertical" multiple>
     <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
@@ -964,6 +967,7 @@ class ButtonTogglesInsideButtonToggleGroupMultiple {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group multiple [value]="value">
     <mat-button-toggle [value]="0">Eggs</mat-button-toggle>
@@ -979,6 +983,7 @@ class FalsyButtonTogglesInsideButtonToggleGroupMultiple {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle>Yes</mat-button-toggle>
   `,
@@ -986,6 +991,7 @@ class FalsyButtonTogglesInsideButtonToggleGroupMultiple {
 class StandaloneButtonToggle {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group (change)="lastEvent = $event" value="red">
     <mat-button-toggle value="red">Value Red</mat-button-toggle>
@@ -998,6 +1004,7 @@ class ButtonToggleGroupWithInitialValue {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-button-toggle-group [formControl]="control">
     <mat-button-toggle value="red">Value Red</mat-button-toggle>
@@ -1011,6 +1018,7 @@ class ButtonToggleGroupWithFormControl {
 }
 
 @Component({
+  standalone: false,
   // We need the `ngSwitch` so that there's a directive between the group and the toggles.
   template: `
     <mat-button-toggle-group [formControl]="control">
@@ -1028,17 +1036,20 @@ class ButtonToggleGroupWithIndirectDescendantToggles {
 
 /** Simple test component with an aria-label set. */
 @Component({
+  standalone: false,
   template: `<mat-button-toggle aria-label="Super effective"></mat-button-toggle>`,
 })
 class ButtonToggleWithAriaLabel {}
 
 /** Simple test component with an aria-label set. */
 @Component({
+  standalone: false,
   template: `<mat-button-toggle aria-labelledby="some-id"></mat-button-toggle>`,
 })
 class ButtonToggleWithAriaLabelledby {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-button-toggle-group [(value)]="value">
       <mat-button-toggle *ngFor="let toggle of possibleValues" [value]="toggle">
@@ -1056,16 +1067,19 @@ class RepeatedButtonTogglesWithPreselectedValue {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-button-toggle tabindex="3"></mat-button-toggle>`,
 })
 class ButtonToggleWithTabindex {}
 
 @Component({
+  standalone: false,
   template: `<mat-button-toggle name="custom-name"></mat-button-toggle>`,
 })
 class ButtonToggleWithStaticName {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-button-toggle-group>
       <mat-button-toggle value="1">One</mat-button-toggle>
@@ -1079,6 +1093,7 @@ class ButtonToggleWithStaticChecked {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-button-toggle aria-label="Toggle me" aria-labelledby="something"></mat-button-toggle>
   `,

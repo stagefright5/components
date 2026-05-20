@@ -952,6 +952,7 @@ describe('MatRadioDefaultOverrides', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <mat-radio-group [disabled]="isGroupDisabled"
                   [labelPosition]="labelPos"
@@ -982,6 +983,7 @@ class RadiosInsideRadioGroup {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-radio-group name="test-name">
     <mat-radio-button value="fire">Charmander</mat-radio-button>
@@ -993,6 +995,7 @@ class RadiosInsideRadioGroup {
 class RadiosInsidePreCheckedRadioGroup {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-radio-button name="season" value="spring">Spring</mat-radio-button>
     <mat-radio-button name="season" value="summer">Summer</mat-radio-button>
@@ -1021,6 +1024,7 @@ class StandaloneRadioButtons {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-radio-group [name]="groupName" [(ngModel)]="modelValue" (change)="lastEvent = $event">
     <mat-radio-button *ngFor="let option of options" [value]="option.value">
@@ -1041,6 +1045,7 @@ class RadioGroupWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-radio-button>One</mat-radio-button>`,
 })
 class DisableableRadioButton {
@@ -1052,6 +1057,7 @@ class DisableableRadioButton {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-radio-group [formControl]="formControl">
       <mat-radio-button value="1">One</mat-radio-button>
@@ -1065,6 +1071,7 @@ class RadioGroupWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-radio-button [tabIndex]="tabIndex"></mat-radio-button>`,
 })
 class FocusableRadioButton {
@@ -1072,6 +1079,7 @@ class FocusableRadioButton {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-radio-group name="group" [(ngModel)]="modelValue">
     <transcluding-wrapper *ngFor="let option of options">
@@ -1090,6 +1098,7 @@ class InterleavedRadioGroup {
 }
 
 @Component({
+  standalone: false,
   selector: 'transcluding-wrapper',
   template: `
     <div><ng-content></ng-content></div>
@@ -1098,21 +1107,25 @@ class InterleavedRadioGroup {
 class TranscludingWrapper {}
 
 @Component({
+  standalone: false,
   template: `<mat-radio-button tabindex="5"></mat-radio-button>`,
 })
 class RadioButtonWithPredefinedTabindex {}
 
 @Component({
+  standalone: false,
   template: `<mat-radio-button></mat-radio-button>`,
 })
 class DefaultRadioButton {}
 
 @Component({
+  standalone: false,
   template: `<mat-radio-button color="warn"></mat-radio-button>`,
 })
 class RadioButtonWithColorBinding {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-radio-button
       aria-label="Radio button"

@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   _MatSlideToggleHarnessBase,
   SlideToggleHarnessFilters,
-} from '@angular/material/slide-toggle/testing';
+} from '@stagefright5/material/slide-toggle/testing';
 
 /** Harness for interacting with a MDC-based mat-slide-toggle in tests. */
 export class MatSlideToggleHarness extends _MatSlideToggleHarnessBase {

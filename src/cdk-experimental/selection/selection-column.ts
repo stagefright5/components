@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkCellDef, CdkColumnDef, CdkHeaderCellDef, CdkTable} from '@angular/cdk/table';
+import {CdkCellDef, CdkColumnDef, CdkHeaderCellDef, CdkTable} from '@stagefright5/cdk/table';
 import {
   Component,
   Input,
@@ -28,6 +28,7 @@ import {CdkSelection} from './selection';
  * Must be used within a parent `CdkSelection` directive.
  */
 @Component({
+  standalone: false,
   selector: 'cdk-selection-column',
   template: `
     <ng-container cdkColumnDef>

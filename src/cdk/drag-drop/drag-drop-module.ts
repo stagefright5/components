@@ -7,7 +7,7 @@
  */
 
 import {NgModule} from '@angular/core';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
 import {CdkDropList} from './directives/drop-list';
 import {CdkDropListGroup} from './directives/drop-list-group';
 import {CdkDrag} from './directives/drag';

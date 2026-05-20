@@ -1,0 +1,32 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/stagefright5/google-maps",
+  "allowedNonPeerDependencies": [
+    ".*"
+  ],
+  "assets": [
+    {
+      "glob": "**/*.scss",
+      "input": ".",
+      "output": "."
+    },
+    {
+      "glob": "**/*.css",
+      "input": ".",
+      "output": "."
+    },
+    {
+      "glob": "README.md",
+      "input": ".",
+      "output": "."
+    },
+    {
+      "glob": "schematics/**",
+      "input": ".",
+      "output": "schematics"
+    }
+  ],
+  "lib": {
+    "entryFile": "public-api.ts"
+  }
+}

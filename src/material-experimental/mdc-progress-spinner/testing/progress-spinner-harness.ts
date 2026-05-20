@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty} from '@angular/cdk/coercion';
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
-import {ProgressSpinnerHarnessFilters} from '@angular/material/progress-spinner/testing';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {ProgressSpinnerMode} from '@stagefright5/material/progress-spinner';
+import {ProgressSpinnerHarnessFilters} from '@stagefright5/material/progress-spinner/testing';
 
 /** Harness for interacting with a MDC based mat-progress-spinner in tests. */
 export class MatProgressSpinnerHarness extends ComponentHarness {

@@ -7,7 +7,7 @@
  */
 
 import {UpdateRecorder} from '@angular-devkit/schematics';
-import {parse5} from '@angular/cdk/schematics';
+import {parse5} from '@stagefright5/cdk/schematics';
 
 /**
  * Removes the specified element. Additionally, preceding whitespace will be removed

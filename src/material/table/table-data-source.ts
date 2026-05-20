@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {_isNumberValue} from '@angular/cdk/coercion';
-import {DataSource} from '@angular/cdk/table';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort, Sort} from '@angular/material/sort';
+import {_isNumberValue} from '@stagefright5/cdk/coercion';
+import {DataSource} from '@stagefright5/cdk/table';
+import {MatPaginator} from '@stagefright5/material/paginator';
+import {MatSort, Sort} from '@stagefright5/material/sort';
 import {
   BehaviorSubject,
   combineLatest,
@@ -237,7 +237,7 @@ export class _MatTableDataSource<
    */
   filterPredicate: (data: T, filter: string) => boolean = (data: T, filter: string): boolean => {
     // Transform the data into a lowercase string of all property values.
-    const dataStr = Object.keys(data)
+    const dataStr = Object.keys(data as any)
       .reduce((currentTerm: string, key: string) => {
         // Use an obscure Unicode character to delimit the words in the concatenated string.
         // This avoids matches where the values of two columns combined will match the user's query

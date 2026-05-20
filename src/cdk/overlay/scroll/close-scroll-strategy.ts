@@ -9,7 +9,7 @@ import {NgZone} from '@angular/core';
 import {ScrollStrategy, getMatScrollStrategyAlreadyAttachedError} from './scroll-strategy';
 import {OverlayReference} from '../overlay-reference';
 import {Subscription} from 'rxjs';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 
 /**
  * Config options for the CloseScrollStrategy.

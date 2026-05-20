@@ -1,5 +1,5 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {MatChipsModule} from '../index';
@@ -65,6 +65,7 @@ describe('MatChipInputHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-grid #grid1>
       <input [matChipInputFor]="grid1" [required]="required" placeholder="Placeholder" />

@@ -1,9 +1,9 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import {MatPaginatorModule, PageEvent} from '@stagefright5/material/paginator';
 import {MatPaginatorHarness} from './paginator-harness';
 
 /** Shared tests to run on both the original and MDC-based paginator. */
@@ -121,6 +121,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-paginator
       (page)="handlePageEvent($event)"

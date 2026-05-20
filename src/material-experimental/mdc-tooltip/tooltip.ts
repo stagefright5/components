@@ -20,18 +20,18 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
-import {AriaDescriber, FocusMonitor} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
-import {ConnectedPosition, Overlay, ScrollDispatcher} from '@angular/cdk/overlay';
+import {AriaDescriber, FocusMonitor} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ConnectedPosition, Overlay, ScrollDispatcher} from '@stagefright5/cdk/overlay';
 import {
   MatTooltipDefaultOptions,
   MAT_TOOLTIP_DEFAULT_OPTIONS,
   MAT_TOOLTIP_SCROLL_STRATEGY,
   _MatTooltipBase,
   _TooltipComponentBase,
-} from '@angular/material/tooltip';
+} from '@stagefright5/material/tooltip';
 import {numbers} from '@material/tooltip';
 
 /**
@@ -48,6 +48,7 @@ export const TOOLTIP_PANEL_CLASS = 'mat-mdc-tooltip-panel';
  * https://material.io/design/components/tooltips.html
  */
 @Directive({
+  standalone: false,
   selector: '[matTooltip]',
   exportAs: 'matTooltip',
   host: {
@@ -112,9 +113,10 @@ export class MatTooltip extends _MatTooltipBase<TooltipComponent> {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tooltip-component',
   templateUrl: 'tooltip.html',
-  styleUrls: ['tooltip.css'],
+  styleUrls: ['tooltip.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {DOWN_ARROW} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {DOWN_ARROW} from '@stagefright5/cdk/keycodes';
 import {
   Directive,
   ElementRef,
@@ -28,7 +28,7 @@ import {
   Validator,
   ValidatorFn,
 } from '@angular/forms';
-import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@stagefright5/material/core';
 import {Subscription, Subject} from 'rxjs';
 import {createMissingDateImplError} from './datepicker-errors';
 import {

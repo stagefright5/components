@@ -222,6 +222,7 @@ describe('MapMarker', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                <map-marker [title]="title"

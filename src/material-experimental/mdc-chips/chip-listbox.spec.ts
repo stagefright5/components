@@ -1,5 +1,5 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {END, HOME, LEFT_ARROW, RIGHT_ARROW, SPACE, TAB} from '@angular/cdk/keycodes';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {END, HOME, LEFT_ARROW, RIGHT_ARROW, SPACE, TAB} from '@stagefright5/cdk/keycodes';
 import {dispatchFakeEvent, dispatchKeyboardEvent, MockNgZone} from '../../cdk/testing/private';
 import {
   Component,
@@ -744,6 +744,7 @@ describe('MDC-based MatChipListbox', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-listbox [tabIndex]="tabIndex" [selectable]="selectable">
       <mat-chip-option *ngFor="let i of chips" (select)="chipSelect(i)"
@@ -762,6 +763,7 @@ class StandardChipListbox {
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-chip-listbox [formControl]="control" [required]="isRequired"
         [tabIndex]="tabIndexOverride" [selectable]="selectable">
@@ -792,6 +794,7 @@ class BasicChipListbox {
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-chip-listbox [multiple]="true" [formControl]="control"
         [required]="isRequired"
@@ -823,6 +826,7 @@ class MultiSelectionChipListbox {
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-chip-listbox [formControl]="control">
         <mat-chip-option *ngFor="let food of foods" [value]="food.value">
@@ -841,6 +845,7 @@ class FalsyValueChipListbox {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-listbox>
         <mat-chip-option *ngFor="let food of foods" [value]="food.value" [selected]="food.selected">

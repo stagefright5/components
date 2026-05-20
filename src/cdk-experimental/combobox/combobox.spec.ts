@@ -18,8 +18,8 @@ import {dispatchKeyboardEvent, dispatchMouseEvent} from '../../cdk/testing/priva
 import {
   AriaHasPopupValue,
   CdkComboboxPanel,
-} from '@angular/cdk-experimental/combobox/combobox-panel';
-import {DOWN_ARROW, ESCAPE} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk-experimental/combobox/combobox-panel';
+import {DOWN_ARROW, ESCAPE} from '@stagefright5/cdk/keycodes';
 
 describe('Combobox', () => {
   describe('with a basic toggle trigger', () => {
@@ -385,6 +385,7 @@ describe('Combobox', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <button cdkCombobox #toggleCombobox class="example-combobox"
           [cdkComboboxTriggerFor]="panel"
@@ -411,6 +412,7 @@ export const PANEL = new InjectionToken<CdkComboboxPanel>('CdkComboboxPanel');
 let id = 0;
 
 @Directive({
+  standalone: false,
   selector: '[dialogContent]',
   exportAs: 'dialogContent',
   host: {

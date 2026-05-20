@@ -12,6 +12,7 @@ import {Directive, TemplateRef} from '@angular/core';
 import {Subject} from 'rxjs';
 
 @Directive({
+  standalone: false,
   host: {
     'class': 'cdk-combobox-panel',
   },

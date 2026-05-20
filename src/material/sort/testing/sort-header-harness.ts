@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {SortDirection} from '@angular/material/sort';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {SortDirection} from '@stagefright5/material/sort';
 import {SortHeaderHarnessFilters} from './sort-harness-filters';
 
 /** Harness for interacting with a standard Angular Material sort header in tests. */

@@ -48,6 +48,7 @@ describe('MDC-based MatCard', () => {
 });
 
 @Component({
+  standalone: false,
   template: '<mat-card></mat-card>',
 })
 class BasicCard {

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceBooleanProperty, BooleanInput} from '@angular/cdk/coercion';
+import {coerceBooleanProperty, BooleanInput} from '@stagefright5/cdk/coercion';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -32,7 +32,7 @@ import {
   setLines,
   mixinDisableRipple,
   mixinDisabled,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
@@ -59,6 +59,7 @@ export const MAT_LIST = new InjectionToken<MatList>('MatList');
 export const MAT_NAV_LIST = new InjectionToken<MatNavList>('MatNavList');
 
 @Component({
+  standalone: false,
   selector: 'mat-nav-list',
   exportAs: 'matNavList',
   host: {
@@ -66,7 +67,7 @@ export const MAT_NAV_LIST = new InjectionToken<MatNavList>('MatNavList');
     'class': 'mat-nav-list mat-list-base',
   },
   templateUrl: 'list.html',
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   inputs: ['disableRipple', 'disabled'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -89,13 +90,14 @@ export class MatNavList
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-list, mat-action-list',
   exportAs: 'matList',
   templateUrl: 'list.html',
   host: {
     'class': 'mat-list mat-list-base',
   },
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   inputs: ['disableRipple', 'disabled'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -144,6 +146,7 @@ export class MatList
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-list-avatar], [matListAvatar]',
   host: {'class': 'mat-list-avatar'},
 })
@@ -154,6 +157,7 @@ export class MatListAvatarCssMatStyler {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-list-icon], [matListIcon]',
   host: {'class': 'mat-list-icon'},
 })
@@ -164,6 +168,7 @@ export class MatListIconCssMatStyler {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-subheader], [matSubheader]',
   host: {'class': 'mat-subheader'},
 })
@@ -171,6 +176,7 @@ export class MatListSubheaderCssMatStyler {}
 
 /** An item within a Material Design list. */
 @Component({
+  standalone: false,
   selector: 'mat-list-item, a[mat-list-item], button[mat-list-item]',
   exportAs: 'matListItem',
   host: {

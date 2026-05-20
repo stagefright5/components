@@ -1,5 +1,5 @@
-import {ComponentPortal, PortalModule} from '@angular/cdk/portal';
-import {CdkScrollable, ScrollingModule, ViewportRuler} from '@angular/cdk/scrolling';
+import {ComponentPortal, PortalModule} from '@stagefright5/cdk/portal';
+import {CdkScrollable, ScrollingModule, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {dispatchFakeEvent, MockNgZone} from '../../testing/private';
 import {Component, ElementRef, NgZone} from '@angular/core';
 import {fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
@@ -2923,6 +2923,7 @@ function createOverflowContainerElement() {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div
       class="transform-origin"

@@ -13,11 +13,12 @@ import {
   TemplateRef,
   ContentChild,
 } from '@angular/core';
-import {MatTab as BaseMatTab, MAT_TAB} from '@angular/material/tabs';
+import {MatTab as BaseMatTab, MAT_TAB} from '@stagefright5/material/tabs';
 import {MatTabContent} from './tab-content';
 import {MatTabLabel} from './tab-label';
 
 @Component({
+  standalone: false,
   selector: 'mat-tab',
 
   // Note that usually we'd go through a bit more trouble and set up another class so that

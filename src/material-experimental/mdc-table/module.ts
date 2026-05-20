@@ -7,9 +7,9 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material-experimental/mdc-core';
+import {MatCommonModule} from '@stagefright5/material-experimental/mdc-core';
 import {MatRecycleRows, MatTable} from './table';
-import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {
   MatCell,
   MatCellDef,

@@ -26,6 +26,7 @@ export type HeatmapData =
  * See: https://developers.google.com/maps/documentation/javascript/reference/visualization
  */
 @Directive({
+  standalone: false,
   selector: 'map-heatmap-layer',
   exportAs: 'mapHeatmapLayer',
 })

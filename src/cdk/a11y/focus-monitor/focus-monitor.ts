@@ -11,7 +11,7 @@ import {
   normalizePassiveListenerOptions,
   _getShadowRoot,
   _getEventTarget,
-} from '@angular/cdk/platform';
+} from '@stagefright5/cdk/platform';
 import {
   Directive,
   ElementRef,
@@ -27,7 +27,7 @@ import {
 } from '@angular/core';
 import {Observable, of as observableOf, Subject, Subscription} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {coerceElement} from '@angular/cdk/coercion';
+import {coerceElement} from '@stagefright5/cdk/coercion';
 import {DOCUMENT} from '@angular/common';
 import {InputModalityDetector, TOUCH_BUFFER_MS} from '../input-modality/input-modality-detector';
 
@@ -562,6 +562,7 @@ export class FocusMonitor implements OnDestroy {
  * 2) cdkMonitorSubtreeFocus: considers an element focused if it or any of its children are focused.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMonitorElementFocus], [cdkMonitorSubtreeFocus]',
 })
 export class CdkMonitorFocus implements AfterViewInit, OnDestroy {

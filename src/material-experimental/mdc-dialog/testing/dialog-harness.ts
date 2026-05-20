@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {DialogHarnessFilters, _MatDialogHarnessBase} from '@angular/material/dialog/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {DialogHarnessFilters, _MatDialogHarnessBase} from '@stagefright5/material/dialog/testing';
 
 /** Selectors for different sections of the mat-dialog that can contain user content. */
 export const enum MatDialogSection {

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ALT, CONTROL, MAC_META, META, SHIFT} from '@angular/cdk/keycodes';
+import {ALT, CONTROL, MAC_META, META, SHIFT} from '@stagefright5/cdk/keycodes';
 import {Inject, Injectable, InjectionToken, OnDestroy, Optional, NgZone} from '@angular/core';
-import {normalizePassiveListenerOptions, Platform, _getEventTarget} from '@angular/cdk/platform';
+import {normalizePassiveListenerOptions, Platform, _getEventTarget} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {distinctUntilChanged, skip} from 'rxjs/operators';

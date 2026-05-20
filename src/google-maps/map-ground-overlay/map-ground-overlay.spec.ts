@@ -155,6 +155,7 @@ describe('MapGroundOverlay', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                 <map-ground-overlay [url]="url"

@@ -5,10 +5,10 @@
     "rootDir": "..",
     "baseUrl": ".",
     "paths": {
-      "@angular/cdk/*": ["../cdk/*"],
-      "@angular/material/*": ["../material/*"],
-      "@angular/cdk-experimental/*": ["../cdk-experimental/*"],
-      "@angular/material-experimental/*": ["../material-experimental/*"],
+      "@stagefright5/cdk/*": ["../cdk/*"],
+      "@stagefright5/material/*": ["../material/*"],
+      "@stagefright5/cdk-experimental/*": ["../cdk-experimental/*"],
+      "@stagefright5/material-experimental/*": ["../material-experimental/*"],
       "@material/*": ["../../node_modules/@material/*/index.d.ts"]
     }
   },

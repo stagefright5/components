@@ -6,10 +6,10 @@ experimental and should not be used in production.
 Assuming your application is already up and running using Angular Material, you can add this
 component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -32,7 +32,7 @@ component by following these steps:
    component:
 
    ```ts
-   import {MatFormFieldModule} from '@angular/material-experimental/mdc-form-field';
+   import {MatFormFieldModule} from '@stagefright5/material-experimental/mdc-form-field';
 
    @NgModule({
      declarations: [MyComponent],
@@ -44,15 +44,15 @@ component by following these steps:
 4. Use `<mat-form-field>` in your component's template, just like you would use the normal
    form-field.
    
-5. Ensure color and typography styles for `@angular/material-experimental` are set up. Either
+5. Ensure color and typography styles for `@stagefright5/material-experimental` are set up. Either
    use a custom theme and use the `mat-mdc-form-field-theme` mixin, or use a prebuilt theme
-   from `@angular/material-experimental/mdc-theming/prebuilt`.
+   from `@stagefright5/material-experimental/mdc-theming/prebuilt`.
 
 ## API differences
 
 In the Material Design specification, text fields with the `standard` and `legacy` appearance
 can no longer be found. These appearances will be removed for the standard
-`@angular/material/form-field` in the future.
+`@stagefright5/material/form-field` in the future.
 
 The experimental MDC-based form-field no longer has support for these appearances. The form-field
 uses the `fill` appearance by default, but also supports the `outline` appearance. 
@@ -79,5 +79,5 @@ needs to be changed to:
 ```
 
 Other than the removal of the `legacy` and `standard` appearances, the API of form-field
-matches the one from `@angular/material/from-field`. Simply replace imports to
-`@angular/material/form-field` with imports to `@angular/material-experimental/mdc-form-field`.
+matches the one from `@stagefright5/material/from-field`. Simply replace imports to
+`@stagefright5/material/form-field` with imports to `@stagefright5/material-experimental/mdc-form-field`.

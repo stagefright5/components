@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {A11yModule} from '@angular/cdk/a11y';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {PortalModule} from '@angular/cdk/portal';
+import {A11yModule} from '@stagefright5/cdk/a11y';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {PortalModule} from '@stagefright5/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
-import {MatCommonModule} from '@angular/material/core';
+import {MatButtonModule} from '@stagefright5/material/button';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
+import {MatCommonModule} from '@stagefright5/material/core';
 import {MatCalendar, MatCalendarHeader} from './calendar';
 import {MatCalendarBody} from './calendar-body';
 import {MatDatepicker} from './datepicker';

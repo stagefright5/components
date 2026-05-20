@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {Directive, Input} from '@angular/core';
 
 import {CdkSelection} from './selection';
@@ -19,6 +19,7 @@ import {CdkSelection} from './selection';
  * directive.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkRowSelection]',
   host: {
     '[class.cdk-selected]': '_selection.isSelected(this.value, this.index)',

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -25,7 +25,7 @@ import {
   ViewEncapsulation,
   ChangeDetectorRef,
 } from '@angular/core';
-import {CanColor, mixinColor, ThemePalette} from '@angular/material/core';
+import {CanColor, mixinColor, ThemePalette} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {fromEvent, Observable, Subscription} from 'rxjs';
 import {filter} from 'rxjs/operators';
@@ -100,6 +100,7 @@ let progressbarId = 0;
  * `<mat-progress-bar>` component.
  */
 @Component({
+  standalone: false,
   selector: 'mat-progress-bar',
   exportAs: 'matProgressBar',
   host: {
@@ -116,7 +117,7 @@ let progressbarId = 0;
   },
   inputs: ['color'],
   templateUrl: 'progress-bar.html',
-  styleUrls: ['progress-bar.css'],
+  styleUrls: ['progress-bar.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })

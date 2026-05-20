@@ -4,6 +4,7 @@ import {By} from '@angular/platform-browser';
 const a = By.css('mat-input-container');
 
 @Component({
+  standalone: false,
   template: `
     <mat-input-container>
       <input matInput placeholder="Test">
@@ -19,6 +20,7 @@ const a = By.css('mat-input-container');
 class B {}
 
 @Component({
+  standalone: false,
   styles: [`
     mat-input-container {
       flex-direction: row;

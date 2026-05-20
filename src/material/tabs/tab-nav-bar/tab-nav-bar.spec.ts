@@ -1,7 +1,7 @@
 import {Component, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {ComponentFixture, TestBed, fakeAsync, tick, waitForAsync} from '@angular/core/testing';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions} from '@angular/material/core';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions} from '@stagefright5/material/core';
 import {MatTabLink, MatTabNav, MatTabsModule} from '../index';
 import {
   dispatchFakeEvent,
@@ -10,7 +10,7 @@ import {
 } from '../../../cdk/testing/private';
 
 import {By} from '@angular/platform-browser';
-import {SPACE} from '@angular/cdk/keycodes';
+import {SPACE} from '@stagefright5/cdk/keycodes';
 import {Subject} from 'rxjs';
 
 describe('MatTabNavBar', () => {
@@ -505,6 +505,7 @@ describe('MatTabNavBar', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <nav mat-tab-nav-bar [disableRipple]="disableRippleOnBar">
@@ -531,6 +532,7 @@ class SimpleTabNavBarTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngIf="!isDestroyed">Link</a>
@@ -542,6 +544,7 @@ class TabLinkWithNgIf {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link [tabIndex]="tabIndex">TabIndex Link</a>
@@ -553,6 +556,7 @@ class TabLinkWithTabIndexBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link tabindex="5">Link</a>
@@ -562,6 +566,7 @@ class TabLinkWithTabIndexBinding {
 class TabLinkWithNativeTabindexAttr {}
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngFor="let tab of tabs" [active]="false">Tab link {{label}}</a>
@@ -573,6 +578,7 @@ class TabBarWithInactiveTabsOnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar [tabPanel]="tabPanel">
       <a mat-tab-link

@@ -23,4 +23,4 @@ export {
   _MAT_HINT,
   MatPlaceholder,
   matFormFieldAnimations,
-} from '@angular/material/form-field';
+} from '@stagefright5/material/form-field';

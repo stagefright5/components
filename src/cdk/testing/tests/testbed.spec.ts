@@ -1,6 +1,6 @@
-import {_supportsShadowDom} from '@angular/cdk/platform';
-import {HarnessLoader, manualChangeDetection, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
+import {HarnessLoader, manualChangeDetection, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {waitForAsync, ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing';
 import {querySelectorAll as piercingQuerySelectorAll} from 'kagekiri';
 import {crossEnvironmentSpecs} from './cross-environment.spec';

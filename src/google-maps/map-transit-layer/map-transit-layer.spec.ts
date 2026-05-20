@@ -45,6 +45,7 @@ describe('MapTransitLayer', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                 <map-transit-layer></map-transit-layer>

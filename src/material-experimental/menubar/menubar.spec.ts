@@ -1,6 +1,6 @@
 import {Component, ViewChild, ElementRef} from '@angular/core';
-import {RIGHT_ARROW} from '@angular/cdk/keycodes';
-import {CdkMenuBar} from '@angular/cdk-experimental/menu';
+import {RIGHT_ARROW} from '@stagefright5/cdk/keycodes';
+import {CdkMenuBar} from '@stagefright5/cdk-experimental/menu';
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {MatMenuBarModule} from './menubar-module';
@@ -61,6 +61,7 @@ describe('MatMenuBar', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-menubar>
       <mat-menubar-item id="first"></mat-menubar-item>

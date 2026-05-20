@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {Directive, forwardRef, Input, OnChanges} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
@@ -191,6 +191,7 @@ export function _fixedSizeVirtualScrollStrategyFactory(fixedSizeDir: CdkFixedSiz
 
 /** A virtual scroll strategy that supports fixed-size items. */
 @Directive({
+  standalone: false,
   selector: 'cdk-virtual-scroll-viewport[itemSize]',
   providers: [
     {

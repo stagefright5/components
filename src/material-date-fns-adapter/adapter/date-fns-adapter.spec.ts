@@ -7,7 +7,7 @@
  */
 
 import {TestBed, waitForAsync} from '@angular/core/testing';
-import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {Locale} from 'date-fns';
 import {ja, enUS, da, de} from 'date-fns/locale';
 import {DateFnsModule} from './index';

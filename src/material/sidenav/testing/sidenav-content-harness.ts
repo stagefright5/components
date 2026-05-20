@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentContainerComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
+import {ContentContainerComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
 import {DrawerContentHarnessFilters} from './drawer-harness-filters';
 
 /** Harness for interacting with a standard mat-sidenav-content in tests. */

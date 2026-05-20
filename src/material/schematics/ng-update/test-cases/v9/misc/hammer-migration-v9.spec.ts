@@ -1,6 +1,6 @@
 import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
-import {addPackageToPackageJson} from '@angular/cdk/schematics/ng-add/package-config';
-import {createTestCaseSetup, resolveBazelPath} from '@angular/cdk/schematics/testing';
+import {addPackageToPackageJson} from '@stagefright5/cdk/schematics/ng-add/package-config';
+import {createTestCaseSetup, resolveBazelPath} from '@stagefright5/cdk/schematics/testing';
 import {readFileSync} from 'fs';
 import {MIGRATION_PATH} from '../../../../paths';
 
@@ -144,7 +144,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser'; // some comment
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -178,7 +178,7 @@ describe('v9 HammerJS removal', () => {
           HAMMER_GESTURE_CONFIG,
           HammerModule
         } from '@angular/platform-browser'; // some comment
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -218,7 +218,7 @@ describe('v9 HammerJS removal', () => {
         import {
           HAMMER_GESTURE_CONFIG as configToken
         } from '@angular/platform-browser'; // some comment
-        import {GestureConfig as gestureConfig} from '@angular/material/core';
+        import {GestureConfig as gestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -249,7 +249,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule} from '@angular/core';
         import {NOT_KNOWN_TOKEN, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         const myProvider = {provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig}
 
@@ -313,7 +313,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule, Inject} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -470,7 +470,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG, HammerModule} from '@angular/platform-browser';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -567,7 +567,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [{provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig}]
@@ -624,6 +624,7 @@ describe('v9 HammerJS removal', () => {
         import {Component} from '@angular/core';
 
         @Component({
+  standalone: false,
           template: \`<span (slide)="onSlide()"></span>\`
         })
         export class TestComponent {}
@@ -723,7 +724,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
-        import {GestureConfig} from '@angular/material/core'; // some-comment
+        import {GestureConfig} from '@stagefright5/material/core'; // some-comment
 
         @NgModule({
           providers: [
@@ -767,7 +768,7 @@ describe('v9 HammerJS removal', () => {
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
         import {GestureConfig} from 'ngx-hammer-events';
-        import * as core from '@angular/material/core';
+        import * as core from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -786,7 +787,7 @@ describe('v9 HammerJS removal', () => {
         import {NgModule} from '@angular/core';
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
         import {GestureConfig} from 'ngx-hammer-events';
-        import * as core from '@angular/material/core';
+        import * as core from '@stagefright5/material/core';
         import { GestureConfig as GestureConfig_1 } from "./gesture-config";
 
         @NgModule({
@@ -909,7 +910,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
         import {NgModule} from '@angular/core';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [
@@ -1121,7 +1122,7 @@ describe('v9 HammerJS removal', () => {
         const subModuleFileContent = dedent`
           import {NgModule} from '@angular/core';
           import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
-          import {GestureConfig} from '@angular/material/core';
+          import {GestureConfig} from '@stagefright5/material/core';
 
           @NgModule({
             providers: [
@@ -1195,7 +1196,7 @@ describe('v9 HammerJS removal', () => {
         dedent`
         import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
         import {NgModule} from '@angular/core';
-        import {GestureConfig} from '@angular/material/core';
+        import {GestureConfig} from '@stagefright5/material/core';
 
         @NgModule({
           providers: [

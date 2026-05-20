@@ -36,6 +36,7 @@ export const CDK_COPY_TO_CLIPBOARD_CONFIG = new InjectionToken<CdkCopyToClipboar
  * clipboard.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkCopyToClipboard]',
   host: {
     '(click)': 'copy()',

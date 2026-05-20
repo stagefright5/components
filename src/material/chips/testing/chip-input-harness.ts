@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, ComponentHarness, TestKey} from '@angular/cdk/testing';
+import {HarnessPredicate, ComponentHarness, TestKey} from '@stagefright5/cdk/testing';
 import {ChipInputHarnessFilters} from './chip-harness-filters';
 
 /** Harness for interacting with a standard Material chip inputs in tests. */

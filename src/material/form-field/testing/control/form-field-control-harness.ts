@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness} from '@angular/cdk/testing';
+import {ComponentHarness} from '@stagefright5/cdk/testing';
 
 /**
  * Base class for custom form-field control harnesses. Harnesses for

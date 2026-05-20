@@ -1,4 +1,4 @@
-import {MatExpansionModule} from '@angular/material/expansion';
+import {MatExpansionModule} from '@stagefright5/material/expansion';
 
 import {MatAccordionHarness} from './accordion-harness';
 import {MatExpansionPanelHarness} from './expansion-harness';

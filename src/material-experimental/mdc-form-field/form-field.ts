@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Directionality} from '@angular/cdk/bidi';
-import {Platform} from '@angular/cdk/platform';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -28,14 +28,14 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {NgControl} from '@angular/forms';
-import {ThemePalette} from '@angular/material-experimental/mdc-core';
+import {ThemePalette} from '@stagefright5/material-experimental/mdc-core';
 import {
   getMatFormFieldDuplicatedHintError,
   getMatFormFieldMissingControlError,
   MAT_FORM_FIELD,
   matFormFieldAnimations,
   MatFormFieldControl,
-} from '@angular/material/form-field';
+} from '@stagefright5/material/form-field';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MDCTextFieldAdapter,
@@ -53,7 +53,7 @@ import {MatFormFieldNotchedOutline} from './directives/notched-outline';
 import {MAT_PREFIX, MatPrefix} from './directives/prefix';
 import {MAT_SUFFIX, MatSuffix} from './directives/suffix';
 import {DOCUMENT} from '@angular/common';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 /** Type for the available floatLabel values. */
 export type FloatLabelType = 'always' | 'auto';
@@ -109,10 +109,11 @@ const WRAPPER_HORIZONTAL_PADDING = 16;
 
 /** Container for form controls that applies Material Design styling and behavior. */
 @Component({
+  standalone: false,
   selector: 'mat-form-field',
   exportAs: 'matFormField',
   templateUrl: './form-field.html',
-  styleUrls: ['./form-field.css'],
+  styleUrls: ['./form-field.scss'],
   animations: [matFormFieldAnimations.transitionMessages],
   host: {
     'class': 'mat-mdc-form-field',

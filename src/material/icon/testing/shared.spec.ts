@@ -1,9 +1,9 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
-import {MatIconHarness} from '@angular/material/icon/testing/icon-harness';
+import {MatIconModule, MatIconRegistry} from '@stagefright5/material/icon';
+import {MatIconHarness} from '@stagefright5/material/icon/testing/icon-harness';
 import {DomSanitizer} from '@angular/platform-browser';
 import {IconType} from './icon-harness-filters';
 
@@ -98,6 +98,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-icon fontSet="fontIcons" fontIcon="fontIcon"></mat-icon>
     <mat-icon svgIcon="svgIcons:svgIcon"></mat-icon>

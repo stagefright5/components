@@ -28,6 +28,7 @@ import {BasePortalOutlet, ComponentPortal, Portal, TemplatePortal, DomPortal} fr
  * the directive instance itself can be attached to a host, enabling declarative use of portals.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkPortal]',
   exportAs: 'cdkPortal',
 })
@@ -42,6 +43,7 @@ export class CdkPortal extends TemplatePortal {
  * @breaking-change 9.0.0
  */
 @Directive({
+  standalone: false,
   selector: '[cdk-portal], [portal]',
   exportAs: 'cdkPortal',
   providers: [
@@ -66,6 +68,7 @@ export type CdkPortalOutletAttachedRef = ComponentRef<any> | EmbeddedViewRef<any
  * `<ng-template [cdkPortalOutlet]="greeting"></ng-template>`
  */
 @Directive({
+  standalone: false,
   selector: '[cdkPortalOutlet]',
   exportAs: 'cdkPortalOutlet',
   inputs: ['portal: cdkPortalOutlet'],
@@ -244,6 +247,7 @@ export class CdkPortalOutlet extends BasePortalOutlet implements OnInit, OnDestr
  * @breaking-change 9.0.0
  */
 @Directive({
+  standalone: false,
   selector: '[cdkPortalHost], [portalHost]',
   exportAs: 'cdkPortalHost',
   inputs: ['portal: cdkPortalHost'],

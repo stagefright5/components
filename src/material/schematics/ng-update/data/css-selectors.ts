@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TargetVersion, VersionChanges} from '@angular/cdk/schematics';
+import {TargetVersion, VersionChanges} from '@stagefright5/cdk/schematics';
 
 export interface MaterialCssSelectorData {
   /** The CSS selector to replace. */

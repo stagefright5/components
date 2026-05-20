@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkAccordionModule} from '@angular/cdk/accordion';
-import {PortalModule} from '@angular/cdk/portal';
+import {CdkAccordionModule} from '@stagefright5/cdk/accordion';
+import {PortalModule} from '@stagefright5/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
+import {MatCommonModule} from '@stagefright5/material/core';
 import {MatAccordion} from './accordion';
 import {MatExpansionPanel, MatExpansionPanelActionRow} from './expansion-panel';
 import {MatExpansionPanelContent} from './expansion-panel-content';

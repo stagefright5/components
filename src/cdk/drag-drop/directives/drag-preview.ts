@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {Directive, InjectionToken, Input, TemplateRef} from '@angular/core';
 
 /**
@@ -21,6 +21,7 @@ export const CDK_DRAG_PREVIEW = new InjectionToken<CdkDragPreview>('CdkDragPrevi
  * of a CdkDrag when it is being dragged.
  */
 @Directive({
+  standalone: false,
   selector: 'ng-template[cdkDragPreview]',
   providers: [{provide: CDK_DRAG_PREVIEW, useExisting: CdkDragPreview}],
 })

@@ -7,17 +7,18 @@
  */
 
 import {Component, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
-import {CdkMenuBar, CdkMenuGroup, CDK_MENU, MenuStack} from '@angular/cdk-experimental/menu';
+import {CdkMenuBar, CdkMenuGroup, CDK_MENU, MenuStack} from '@stagefright5/cdk-experimental/menu';
 
 /**
  * A material design Menubar adhering to the functionality of CdkMenuBar. MatMenubar
  * should contain MatMenubarItems which trigger their own sub-menus.
  */
 @Component({
+  standalone: false,
   selector: 'mat-menubar',
   exportAs: 'matMenubar',
   templateUrl: 'menubar.html',
-  styleUrls: ['menubar.css'],
+  styleUrls: ['menubar.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

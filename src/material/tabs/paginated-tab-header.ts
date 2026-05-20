@@ -21,11 +21,11 @@ import {
   Inject,
   Input,
 } from '@angular/core';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {FocusKeyManager, FocusableOption} from '@angular/cdk/a11y';
-import {ENTER, SPACE, hasModifierKey} from '@angular/cdk/keycodes';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {FocusKeyManager, FocusableOption} from '@stagefright5/cdk/a11y';
+import {ENTER, SPACE, hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {
   merge,
   of as observableOf,
@@ -37,7 +37,7 @@ import {
   fromEvent,
 } from 'rxjs';
 import {take, switchMap, startWith, skip, takeUntil} from 'rxjs/operators';
-import {Platform, normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {Platform, normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 
 /** Config used to bind passive event listeners */

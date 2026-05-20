@@ -1,4 +1,4 @@
-import {MatDividerModule} from '@angular/material/divider';
+import {MatDividerModule} from '@stagefright5/material/divider';
 import {MatDividerHarness} from './divider-harness';
 import {runHarnessTests} from './shared.spec';
 

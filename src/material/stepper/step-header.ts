@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
+import {FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -22,8 +22,8 @@ import {Subscription} from 'rxjs';
 import {MatStepLabel} from './step-label';
 import {MatStepperIntl} from './stepper-intl';
 import {MatStepperIconContext} from './stepper-icon';
-import {CdkStepHeader, StepState} from '@angular/cdk/stepper';
-import {mixinColor, CanColor} from '@angular/material/core';
+import {CdkStepHeader, StepState} from '@stagefright5/cdk/stepper';
+import {mixinColor, CanColor} from '@stagefright5/material/core';
 
 // Boilerplate for applying mixins to MatStepHeader.
 /** @docs-private */
@@ -37,9 +37,10 @@ const _MatStepHeaderBase = mixinColor(
 );
 
 @Component({
+  standalone: false,
   selector: 'mat-step-header',
   templateUrl: 'step-header.html',
-  styleUrls: ['step-header.css'],
+  styleUrls: ['step-header.scss'],
   inputs: ['color'],
   host: {
     'class': 'mat-step-header',

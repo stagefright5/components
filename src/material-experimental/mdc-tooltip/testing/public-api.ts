@@ -7,4 +7,4 @@
  */
 
 export * from './tooltip-harness';
-export {TooltipHarnessFilters} from '@angular/material/tooltip/testing';
+export {TooltipHarnessFilters} from '@stagefright5/material/tooltip/testing';

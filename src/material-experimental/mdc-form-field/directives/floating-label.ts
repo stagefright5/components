@@ -23,6 +23,7 @@ import {ponyfill} from '@material/dom';
  * label's floating or required state.
  */
 @Directive({
+  standalone: false,
   selector: 'label[matFormFieldFloatingLabel]',
   host: {
     'class': 'mdc-floating-label mat-mdc-floating-label',

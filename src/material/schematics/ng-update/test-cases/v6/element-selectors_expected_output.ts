@@ -4,6 +4,7 @@ import {By} from '@angular/platform-browser';
 const a = By.css('mat-form-field');
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <input matInput placeholder="Test">
@@ -19,6 +20,7 @@ const a = By.css('mat-form-field');
 class B {}
 
 @Component({
+  standalone: false,
   styles: [`
     mat-form-field {
       flex-direction: row;

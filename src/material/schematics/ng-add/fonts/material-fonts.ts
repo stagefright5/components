@@ -11,7 +11,7 @@ import {
   appendHtmlElementToHead,
   getProjectFromWorkspace,
   getProjectIndexFiles,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {getWorkspace} from '@schematics/angular/utility/workspace';
 import {Schema} from '../schema';
 

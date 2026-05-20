@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {Directive, Inject, Input, OnDestroy, OnInit, Optional, Self} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {Observable, of as observableOf, Subject} from 'rxjs';
@@ -25,6 +25,7 @@ import {CdkSelection} from './selection';
  * state.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkSelectionToggle]',
   exportAs: 'cdkSelectionToggle',
 })

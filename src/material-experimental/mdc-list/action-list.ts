@@ -10,13 +10,14 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
 import {MatListBase} from './list-base';
 
 @Component({
+  standalone: false,
   selector: 'mat-action-list',
   exportAs: 'matActionList',
   template: '<ng-content></ng-content>',
   host: {
     'class': 'mat-mdc-action-list mat-mdc-list-base mdc-list',
   },
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [{provide: MatListBase, useExisting: MatActionList}],

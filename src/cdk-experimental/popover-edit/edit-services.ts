@@ -7,10 +7,10 @@
  */
 
 import {Injectable, NgZone} from '@angular/core';
-import {FocusTrapFactory} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
-import {Overlay} from '@angular/cdk/overlay';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+import {FocusTrapFactory} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {Overlay} from '@stagefright5/cdk/overlay';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 
 import {EditEventDispatcher} from './edit-event-dispatcher';
 import {FocusDispatcher} from './focus-dispatcher';

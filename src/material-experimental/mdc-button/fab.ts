@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -27,8 +27,8 @@ import {
   MAT_BUTTON_INPUTS,
   MatButtonBase,
 } from './button-base';
-import {ThemePalette} from '@angular/material-experimental/mdc-core';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {ThemePalette} from '@stagefright5/material-experimental/mdc-core';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 /** Default FAB options that can be overridden. */
 export interface MatFabDefaultOptions {
@@ -63,9 +63,10 @@ const defaults = MAT_FAB_DEFAULT_OPTIONS_FACTORY();
  * The `MatFabButton` class has two appearances: normal and extended.
  */
 @Component({
+  standalone: false,
   selector: `button[mat-fab]`,
   templateUrl: 'button.html',
-  styleUrls: ['fab.css'],
+  styleUrls: ['fab.scss'],
   inputs: [...MAT_BUTTON_INPUTS, 'extended'],
   host: {
     ...MAT_BUTTON_HOST,
@@ -106,9 +107,10 @@ export class MatFabButton extends MatButtonBase {
  * See https://material.io/components/buttons-floating-action-button/
  */
 @Component({
+  standalone: false,
   selector: `button[mat-mini-fab]`,
   templateUrl: 'button.html',
-  styleUrls: ['fab.css'],
+  styleUrls: ['fab.scss'],
   inputs: MAT_BUTTON_INPUTS,
   host: MAT_BUTTON_HOST,
   exportAs: 'matButton',
@@ -139,9 +141,10 @@ export class MatMiniFabButton extends MatButtonBase {
  * The `MatFabAnchor` class has two appearances: normal and extended.
  */
 @Component({
+  standalone: false,
   selector: `a[mat-fab]`,
   templateUrl: 'button.html',
-  styleUrls: ['fab.css'],
+  styleUrls: ['fab.scss'],
   inputs: [...MAT_ANCHOR_INPUTS, 'extended'],
   host: {
     ...MAT_ANCHOR_HOST,
@@ -182,9 +185,10 @@ export class MatFabAnchor extends MatAnchor {
  * See https://material.io/components/buttons-floating-action-button/
  */
 @Component({
+  standalone: false,
   selector: `a[mat-mini-fab]`,
   templateUrl: 'button.html',
-  styleUrls: ['fab.css'],
+  styleUrls: ['fab.scss'],
   inputs: MAT_ANCHOR_INPUTS,
   host: MAT_ANCHOR_HOST,
   exportAs: 'matButton, matAnchor',

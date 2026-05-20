@@ -2,10 +2,10 @@ import {waitForAsync, TestBed} from '@angular/core/testing';
 import {
   MatProgressSpinner,
   MatProgressSpinnerModule,
-} from '@angular/material-experimental/mdc-progress-spinner';
+} from '@stagefright5/material-experimental/mdc-progress-spinner';
 import {CommonModule} from '@angular/common';
 import {By} from '@angular/platform-browser';
-import {MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS} from '@angular/material/progress-spinner';
+import {MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS} from '@stagefright5/material/progress-spinner';
 import {Component, ElementRef, ViewChild, ViewEncapsulation} from '@angular/core';
 
 describe('MDC-based MatProgressSpinner', () => {
@@ -384,23 +384,24 @@ describe('MDC-based MatProgressSpinner', () => {
   });
 });
 
-@Component({template: '<mat-progress-spinner></mat-progress-spinner>'})
+@Component({standalone: false, template: '<mat-progress-spinner></mat-progress-spinner>'})
 class BasicProgressSpinner {}
 
-@Component({template: '<mat-progress-spinner [strokeWidth]="strokeWidth"></mat-progress-spinner>'})
+@Component({standalone: false, template: '<mat-progress-spinner [strokeWidth]="strokeWidth"></mat-progress-spinner>'})
 class ProgressSpinnerCustomStrokeWidth {
   strokeWidth: number;
 }
 
-@Component({template: '<mat-progress-spinner [diameter]="diameter"></mat-progress-spinner>'})
+@Component({standalone: false, template: '<mat-progress-spinner [diameter]="diameter"></mat-progress-spinner>'})
 class ProgressSpinnerCustomDiameter {
   diameter: number;
 }
 
-@Component({template: '<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>'})
+@Component({standalone: false, template: '<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>'})
 class IndeterminateProgressSpinner {}
 
 @Component({
+  standalone: false,
   template: '<mat-progress-spinner [value]="value" [mode]="mode"></mat-progress-spinner>',
 })
 class ProgressSpinnerWithValueAndBoundMode {
@@ -409,6 +410,7 @@ class ProgressSpinnerWithValueAndBoundMode {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-spinner [color]="color"></mat-spinner>`,
 })
@@ -417,6 +419,7 @@ class SpinnerWithColor {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-progress-spinner value="50" [color]="color"></mat-progress-spinner>`,
 })
@@ -425,6 +428,7 @@ class ProgressSpinnerWithColor {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-progress-spinner value="25" diameter="37" strokeWidth="11"></mat-progress-spinner>
   `,
@@ -432,6 +436,7 @@ class ProgressSpinnerWithColor {
 class ProgressSpinnerWithStringValues {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-progress-spinner mode="indeterminate" [diameter]="diameter"></mat-progress-spinner>
   `,
@@ -442,6 +447,7 @@ class IndeterminateSpinnerInShadowDom {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div *ngIf="true">
       <mat-progress-spinner mode="indeterminate" [diameter]="diameter"></mat-progress-spinner>
@@ -456,5 +462,5 @@ class IndeterminateSpinnerInShadowDomWithNgIf {
   diameter: number;
 }
 
-@Component({template: '<mat-spinner mode="determinate"></mat-spinner>'})
+@Component({standalone: false, template: '<mat-spinner mode="determinate"></mat-spinner>'})
 class SpinnerWithMode {}

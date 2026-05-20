@@ -1,4 +1,4 @@
-import {LEFT_ARROW, RIGHT_ARROW} from '@angular/cdk/keycodes';
+import {LEFT_ARROW, RIGHT_ARROW} from '@stagefright5/cdk/keycodes';
 import {dispatchFakeEvent, dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {Component, DebugElement, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {
@@ -958,6 +958,7 @@ describe('nested MatTabGroup with enabled animations', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group"
         [(selectedIndex)]="selectedIndex"
@@ -1001,6 +1002,7 @@ class SimpleTabsTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group"
         [(selectedIndex)]="selectedIndex"
@@ -1031,6 +1033,7 @@ class SimpleDynamicTabsTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group" [(selectedIndex)]="selectedIndex">
       <mat-tab *ngFor="let tab of tabs" label="{{tab.label}}">
@@ -1056,6 +1059,7 @@ class BindedTabsTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group">
       <mat-tab>
@@ -1079,6 +1083,7 @@ class DisabledTabsTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group">
       <mat-tab *ngFor="let tab of tabs | async">
@@ -1105,6 +1110,7 @@ class AsyncTabsTestApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-tab-group>
     <mat-tab label="Junk food"> Pizza, fries </mat-tab>
@@ -1121,6 +1127,7 @@ class TabGroupWithSimpleApi {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <mat-tab label="One">Tab one content</mat-tab>
@@ -1139,6 +1146,7 @@ class NestedTabs {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <mat-tab label="One">
@@ -1155,6 +1163,7 @@ class NestedTabs {
 class TemplateTabs {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-tab-group>
     <mat-tab [aria-label]="ariaLabel" [aria-labelledby]="ariaLabelledby"></mat-tab>
@@ -1167,6 +1176,7 @@ class TabGroupWithAriaInputs {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <mat-tab label="Junk food" #pizza> Pizza, fries </mat-tab>
@@ -1179,6 +1189,7 @@ class TabGroupWithAriaInputs {
 class TabGroupWithIsActiveBinding {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group animationDuration="500">
       <mat-tab label="One">Tab one content</mat-tab>
@@ -1189,6 +1200,7 @@ class TabGroupWithIsActiveBinding {}
 class TabsWithCustomAnimationDuration {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <ng-container [ngSwitch]="true">
@@ -1203,6 +1215,7 @@ class TabGroupWithIndirectDescendantTabs {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div style="height: 300px; background-color: aqua">
       Top Content here
@@ -1224,6 +1237,7 @@ class TabGroupWithSpaceAbove {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <mat-tab label="Parent 1">
@@ -1244,6 +1258,7 @@ class TabGroupWithSpaceAbove {
 class NestedTabGroupWithLabel {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group class="tab-group">
       <mat-tab label="Tab One" [labelClass]="labelClassList" [bodyClass]="bodyClassList">

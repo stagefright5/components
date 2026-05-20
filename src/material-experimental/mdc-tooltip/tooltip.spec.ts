@@ -1,8 +1,8 @@
-import {FocusMonitor} from '@angular/cdk/a11y';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {ESCAPE} from '@angular/cdk/keycodes';
-import {CdkScrollable, OverlayContainer, OverlayModule} from '@angular/cdk/overlay';
-import {Platform} from '@angular/cdk/platform';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {ESCAPE} from '@stagefright5/cdk/keycodes';
+import {CdkScrollable, OverlayContainer, OverlayModule} from '@stagefright5/cdk/overlay';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   createFakeEvent,
   createKeyboardEvent,
@@ -1461,6 +1461,7 @@ describe('MDC-based MatTooltip', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'app',
   template: `
     <button #button
@@ -1483,6 +1484,7 @@ class BasicTooltipDemo {
 }
 
 @Component({
+  standalone: false,
   selector: 'app',
   template: `
     <div cdkScrollable style="padding: 100px; margin: 300px;
@@ -1513,6 +1515,7 @@ class ScrollableTooltipDemo {
 }
 
 @Component({
+  standalone: false,
   selector: 'app',
   template: `
     <button [matTooltip]="message"
@@ -1527,6 +1530,7 @@ class OnPushTooltipDemo {
 }
 
 @Component({
+  standalone: false,
   selector: 'app',
   template: `
     <button *ngFor="let tooltip of tooltips"
@@ -1539,6 +1543,7 @@ class DynamicTooltipsDemo {
 }
 
 @Component({
+  standalone: false,
   template: `<button [matTooltip]="message" [attr.aria-label]="message">Click me</button>`,
 })
 class DataBoundAriaLabelTooltip {
@@ -1546,6 +1551,7 @@ class DataBoundAriaLabelTooltip {
 }
 
 @Component({
+  standalone: false,
   template: `
     <input
       #input
@@ -1565,6 +1571,7 @@ class TooltipOnTextFields {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button
       #button
@@ -1579,6 +1586,7 @@ class TooltipOnDraggableElement {
 }
 
 @Component({
+  standalone: false,
   selector: 'app',
   template: `<button #button [matTooltip]="message">Button</button>`,
 })

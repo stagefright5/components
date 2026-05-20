@@ -7,8 +7,8 @@
  */
 
 import {Directive} from '@angular/core';
-import {MatTabContent as BaseMatTabContent} from '@angular/material/tabs';
+import {MatTabContent as BaseMatTabContent} from '@stagefright5/material/tabs';
 
 /** Decorates the `ng-template` tags and reads out the template from it. */
-@Directive({selector: '[matTabContent]'})
+@Directive({standalone: false, selector: '[matTabContent]'})
 export class MatTabContent extends BaseMatTabContent {}

@@ -8,6 +8,7 @@ const d = By.css('.mat-form-field-flex');
 const e = By.css('.mat-form-field-hint-spacer');
 
 @Component({
+  standalone: false,
   template: `
     <ng-content select=".mat-form-field-suffix"></ng-content>
 
@@ -25,6 +26,7 @@ const e = By.css('.mat-form-field-hint-spacer');
 class F {}
 
 @Component({
+  standalone: false,
   styles: [`
     .mat-form-field-subscript-wrapper {
       flex-direction: row;
@@ -37,6 +39,7 @@ class F {}
 class G {}
 
 @Component({
+  standalone: false,
   // Considering this is SCSS that will be transformed by Webpack loaders.
   styles: [`
     body, html {

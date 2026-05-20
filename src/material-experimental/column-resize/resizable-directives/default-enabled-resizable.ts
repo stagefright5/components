@@ -16,19 +16,19 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {Directionality} from '@angular/cdk/bidi';
-import {Overlay} from '@angular/cdk/overlay';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {Overlay} from '@stagefright5/cdk/overlay';
 import {
   CdkColumnDef,
   _CoalescedStyleScheduler,
   _COALESCED_STYLE_SCHEDULER,
-} from '@angular/cdk/table';
+} from '@stagefright5/cdk/table';
 import {
   ColumnResize,
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
   ResizeStrategy,
-} from '@angular/cdk-experimental/column-resize';
+} from '@stagefright5/cdk-experimental/column-resize';
 
 import {AbstractMatResizable, RESIZABLE_HOST_BINDINGS, RESIZABLE_INPUTS} from './common';
 
@@ -37,6 +37,7 @@ import {AbstractMatResizable, RESIZABLE_HOST_BINDINGS, RESIZABLE_INPUTS} from '.
  * is present.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-header-cell:not([disableResize]), th[mat-header-cell]:not([disableResize])',
   host: RESIZABLE_HOST_BINDINGS,
   inputs: RESIZABLE_INPUTS,

@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {BACKSPACE, DELETE, SPACE} from '@angular/cdk/keycodes';
-import {Platform} from '@angular/cdk/platform';
+import {FocusableOption} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {BACKSPACE, DELETE, SPACE} from '@stagefright5/cdk/keycodes';
+import {Platform} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {
   Attribute,
@@ -39,7 +39,7 @@ import {
   RippleGlobalOptions,
   RippleRenderer,
   RippleTarget,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {Subject} from 'rxjs';
 import {take} from 'rxjs/operators';
@@ -99,6 +99,7 @@ const _MatChipMixinBase = mixinTabIndex(mixinColor(mixinDisableRipple(MatChipBas
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-chip-avatar, [matChipAvatar]',
   host: {'class': 'mat-chip-avatar'},
   providers: [{provide: MAT_CHIP_AVATAR, useExisting: MatChipAvatar}],
@@ -110,6 +111,7 @@ export class MatChipAvatar {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-chip-trailing-icon, [matChipTrailingIcon]',
   host: {'class': 'mat-chip-trailing-icon'},
   providers: [{provide: MAT_CHIP_TRAILING_ICON, useExisting: MatChipTrailingIcon}],
@@ -118,6 +120,7 @@ export class MatChipTrailingIcon {}
 
 /** Material Design styled chip directive. Used inside the MatChipList component. */
 @Directive({
+  standalone: false,
   selector: `mat-basic-chip, [mat-basic-chip], mat-chip, [mat-chip]`,
   inputs: ['color', 'disableRipple', 'tabIndex'],
   exportAs: 'matChip',
@@ -467,6 +470,7 @@ export class MatChip
  * styles to properly center the icon within the chip.
  */
 @Directive({
+  standalone: false,
   selector: '[matChipRemove]',
   host: {
     'class': 'mat-chip-remove mat-chip-trailing-icon',

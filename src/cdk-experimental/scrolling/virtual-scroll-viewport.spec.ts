@@ -1,4 +1,4 @@
-import {CdkVirtualScrollViewport, ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkVirtualScrollViewport, ScrollingModule} from '@stagefright5/cdk/scrolling';
 import {Component, Input, ViewChild, ViewEncapsulation} from '@angular/core';
 import {waitForAsync, ComponentFixture, fakeAsync, flush, TestBed} from '@angular/core/testing';
 import {ScrollingModule as ExperimentalScrollingModule} from './scrolling-module';
@@ -70,6 +70,7 @@ function finishInit(fixture: ComponentFixture<any>) {
 }
 
 @Component({
+  standalone: false,
   template: `
     <cdk-virtual-scroll-viewport
         autosize [minBufferPx]="minBufferPx" [maxBufferPx]="maxBufferPx"

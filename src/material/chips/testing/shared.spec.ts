@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {HarnessLoader, parallel, TestKey} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel, TestKey} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatIconHarness} from '@angular/material/icon/testing';
+import {MatChipsModule} from '@stagefright5/material/chips';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
+import {MatIconModule} from '@stagefright5/material/icon';
+import {MatIconHarness} from '@stagefright5/material/icon/testing';
 import {MatChipListHarness} from './chip-list-harness';
 import {MatChipHarness} from './chip-harness';
 import {MatChipInputHarness} from './chip-input-harness';
@@ -331,6 +331,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-list
       [disabled]="isDisabled"

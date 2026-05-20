@@ -1,5 +1,5 @@
-import {MatDividerHarness} from '@angular/material/divider/testing';
-import {MatListModule} from '@angular/material/list';
+import {MatDividerHarness} from '@stagefright5/material/divider/testing';
+import {MatListModule} from '@stagefright5/material/list';
 import {MatActionListHarness} from './action-list-harness';
 import {MatListHarness} from './list-harness';
 import {MatNavListHarness} from './nav-list-harness';

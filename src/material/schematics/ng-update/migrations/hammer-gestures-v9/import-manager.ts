@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FileSystem} from '@angular/cdk/schematics';
+import {FileSystem} from '@stagefright5/cdk/schematics';
 import {dirname, resolve} from 'path';
 import * as ts from 'typescript';
 

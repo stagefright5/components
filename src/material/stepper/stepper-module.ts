@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {PortalModule} from '@angular/cdk/portal';
-import {CdkStepperModule} from '@angular/cdk/stepper';
+import {PortalModule} from '@stagefright5/cdk/portal';
+import {CdkStepperModule} from '@stagefright5/cdk/stepper';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {ErrorStateMatcher, MatCommonModule, MatRippleModule} from '@angular/material/core';
-import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@stagefright5/material/button';
+import {ErrorStateMatcher, MatCommonModule, MatRippleModule} from '@stagefright5/material/core';
+import {MatIconModule} from '@stagefright5/material/icon';
 import {MatStepHeader} from './step-header';
 import {MatStepLabel} from './step-label';
 import {MatHorizontalStepper, MatStep, MatStepper, MatVerticalStepper} from './stepper';

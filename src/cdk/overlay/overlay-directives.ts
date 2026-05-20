@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   Directive,
   ElementRef,
@@ -76,6 +76,7 @@ export const CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY = new InjectionToken<() => Sc
  * ConnectedPositionStrategy.
  */
 @Directive({
+  standalone: false,
   selector: '[cdk-overlay-origin], [overlay-origin], [cdkOverlayOrigin]',
   exportAs: 'cdkOverlayOrigin',
 })
@@ -91,6 +92,7 @@ export class CdkOverlayOrigin {
  * Overlay using a FlexibleConnectedPositionStrategy.
  */
 @Directive({
+  standalone: false,
   selector: '[cdk-connected-overlay], [connected-overlay], [cdkConnectedOverlay]',
   exportAs: 'cdkConnectedOverlay',
 })

@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed, fakeAsync} from '@angular/core/testing';
 import {Component, DebugElement, ViewEncapsulation, ViewChild} from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {MatBadge, MatBadgeModule} from './index';
-import {ThemePalette} from '@angular/material/core';
+import {ThemePalette} from '@stagefright5/material/core';
 
 describe('MatBadge', () => {
   let fixture: ComponentFixture<any>;
@@ -212,6 +212,7 @@ describe('MatBadge', () => {
 
 /** Test component that contains a MatBadge. */
 @Component({
+  standalone: false,
   // Explicitly set the view encapsulation since we have a test that checks for it.
   encapsulation: ViewEncapsulation.Emulated,
   styles: ['span { color: hotpink; }'],
@@ -241,6 +242,7 @@ class BadgeTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <span matBadge="Hello">
       home
@@ -251,6 +253,7 @@ class BadgeTestApp {
 class PreExistingBadge {}
 
 @Component({
+  standalone: false,
   template: `
     <span matBadge="Hello">
       home
@@ -261,6 +264,7 @@ class PreExistingBadge {}
 class NestedBadge {}
 
 @Component({
+  standalone: false,
   template: `<ng-template matBadge="1">Notifications</ng-template>`,
 })
 class BadgeOnTemplate {}

@@ -1,4 +1,4 @@
-`@angular/cdk/testing` provides infrastructure to help with testing Angular components.
+`@stagefright5/cdk/testing` provides infrastructure to help with testing Angular components.
 
 ### Component test harnesses
 
@@ -9,7 +9,7 @@ structure. The idea for component harnesses comes from the
 [PageObject](https://martinfowler.com/bliki/PageObject.html) pattern commonly used for integration
 testing.
 
-`@angular/cdk/testing` contains infrastructure for creating and using component test harnesses. You
+`@stagefright5/cdk/testing` contains infrastructure for creating and using component test harnesses. You
 can create test harnesses for any component, ranging from small reusable widgets to full application
 pages.
 

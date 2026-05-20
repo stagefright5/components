@@ -1,8 +1,8 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {A, ESCAPE} from '@angular/cdk/keycodes';
-import {OverlayContainer, ScrollStrategy} from '@angular/cdk/overlay';
-import {_supportsShadowDom} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {A, ESCAPE} from '@stagefright5/cdk/keycodes';
+import {OverlayContainer, ScrollStrategy} from '@stagefright5/cdk/overlay';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {dispatchKeyboardEvent, createKeyboardEvent, dispatchEvent} from '../../cdk/testing/private';
 import {Location} from '@angular/common';
 import {SpyLocation} from '@angular/common/testing';
@@ -995,12 +995,12 @@ describe('MatBottomSheet with default options', () => {
   }));
 });
 
-@Directive({selector: 'dir-with-view-container'})
+@Directive({standalone: false, selector: 'dir-with-view-container'})
 class DirectiveWithViewContainer {
   constructor(public viewContainerRef: ViewContainerRef) {}
 }
 
-@Component({template: `<dir-with-view-container></dir-with-view-container>`})
+@Component({standalone: false, template: `<dir-with-view-container></dir-with-view-container>`})
 class ComponentWithChildViewContainer {
   @ViewChild(DirectiveWithViewContainer) childWithViewContainer: DirectiveWithViewContainer;
 
@@ -1010,6 +1010,7 @@ class ComponentWithChildViewContainer {
 }
 
 @Component({
+  standalone: false,
   selector: 'arbitrary-component-with-template-ref',
   template: `<ng-template let-data let-bottomSheetRef="bottomSheetRef">
       Cheese {{localValue}} {{data?.value}}{{setRef(bottomSheetRef)}}</ng-template>`,
@@ -1026,7 +1027,7 @@ class ComponentWithTemplateRef {
   }
 }
 
-@Component({template: '<p>Pizza</p> <input> <button>Close</button>'})
+@Component({standalone: false, template: '<p>Pizza</p> <input> <button>Close</button>'})
 class PizzaMsg {
   constructor(
     public bottomSheetRef: MatBottomSheetRef<PizzaMsg>,
@@ -1035,10 +1036,11 @@ class PizzaMsg {
   ) {}
 }
 
-@Component({template: '<p>Taco</p>'})
+@Component({standalone: false, template: '<p>Taco</p>'})
 class TacoMsg {}
 
 @Component({
+  standalone: false,
   template: `
     <h1>This is the title</h1>
     <p>This is the paragraph</p>
@@ -1047,6 +1049,7 @@ class TacoMsg {}
 class ContentElementDialog {}
 
 @Component({
+  standalone: false,
   template: '',
   providers: [MatBottomSheet],
 })
@@ -1054,12 +1057,13 @@ class ComponentThatProvidesMatBottomSheet {
   constructor(public bottomSheet: MatBottomSheet) {}
 }
 
-@Component({template: ''})
+@Component({standalone: false, template: ''})
 class BottomSheetWithInjectedData {
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {}
 }
 
 @Component({
+  standalone: false,
   template: `<button>I'm a button</button>`,
   encapsulation: ViewEncapsulation.ShadowDom,
 })

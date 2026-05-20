@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {MatListHarnessBase} from './list-harness-base';
 import {ActionListHarnessFilters, ActionListItemHarnessFilters} from './list-harness-filters';
 import {getListItemPredicate, MatListItemHarnessBase} from './list-item-harness-base';

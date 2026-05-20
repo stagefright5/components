@@ -1,10 +1,10 @@
-import {CollectionViewer, DataSource} from '@angular/cdk/collections';
+import {CollectionViewer, DataSource} from '@stagefright5/cdk/collections';
 import {Component, Type, ViewChild} from '@angular/core';
 import {ComponentFixture, fakeAsync, flushMicrotasks, TestBed} from '@angular/core/testing';
 import {BehaviorSubject, combineLatest} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {CdkTable, CdkTableModule} from '@angular/cdk/table';
-import {Platform} from '@angular/cdk/platform';
+import {CdkTable, CdkTableModule} from '@stagefright5/cdk/table';
+import {Platform} from '@stagefright5/cdk/platform';
 
 import {CdkTableScrollContainerModule} from './index';
 
@@ -244,6 +244,7 @@ class FakeDataSource extends DataSource<TestData> {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkTableScrollContainer>
     <table cdk-table [dataSource]="dataSource">

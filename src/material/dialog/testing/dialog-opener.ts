@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentType} from '@angular/cdk/overlay';
+import {ComponentType} from '@stagefright5/cdk/overlay';
 import {
   ChangeDetectionStrategy,
   Directive,
@@ -23,7 +23,7 @@ import {
   MatDialogContainer,
   MatDialogModule,
   MatDialogRef,
-} from '@angular/material/dialog';
+} from '@stagefright5/material/dialog';
 import {Subscription} from 'rxjs';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -69,6 +69,7 @@ export class _MatTestDialogOpenerBase<C extends _MatDialogContainerBase, T, R>
 
 /** Test component that immediately opens a dialog when created. */
 @Component({
+  standalone: false,
   selector: 'mat-test-dialog-opener',
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush,

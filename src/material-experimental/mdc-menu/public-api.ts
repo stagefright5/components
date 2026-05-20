@@ -23,4 +23,4 @@ export {
   MenuPositionY,
   transformMenu,
   MAT_MENU_CONTENT,
-} from '@angular/material/menu';
+} from '@stagefright5/material/menu';

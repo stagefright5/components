@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusTrapFactory, InteractivityChecker} from '@angular/cdk/a11y';
+import {FocusMonitor, FocusTrapFactory, InteractivityChecker} from '@stagefright5/cdk/a11y';
 import {DOCUMENT} from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -19,7 +19,7 @@ import {
   ViewEncapsulation,
   NgZone,
 } from '@angular/core';
-import {MatDialogConfig, _MatDialogContainerBase} from '@angular/material/dialog';
+import {MatDialogConfig, _MatDialogContainerBase} from '@stagefright5/material/dialog';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {cssClasses, numbers} from '@material/dialog';
 
@@ -28,9 +28,10 @@ import {cssClasses, numbers} from '@material/dialog';
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-dialog-container',
   templateUrl: 'dialog-container.html',
-  styleUrls: ['dialog.css'],
+  styleUrls: ['dialog.scss'],
   encapsulation: ViewEncapsulation.None,
   // Disabled for consistency with the non-MDC dialog container.
   // tslint:disable-next-line:validate-decorators

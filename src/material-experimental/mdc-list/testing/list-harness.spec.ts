@@ -4,12 +4,12 @@ import {
   ComponentHarnessConstructor,
   HarnessPredicate,
   parallel,
-} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component, Type} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatDividerHarness} from '@angular/material/divider/testing';
-import {MatListModule} from '@angular/material-experimental/mdc-list';
+import {MatDividerHarness} from '@stagefright5/material/divider/testing';
+import {MatListModule} from '@stagefright5/material-experimental/mdc-list';
 import {MatActionListHarness, MatActionListItemHarness} from './action-list-harness';
 import {MatListHarness, MatListItemHarness} from './list-harness';
 import {
@@ -501,6 +501,7 @@ describe('MatSelectionListHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
       <mat-list class="test-base-list-functionality">
         <mat-list-item>
@@ -537,6 +538,7 @@ class ListHarnessTest {
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-action-list class="test-base-list-functionality">
         <mat-list-item (click)="lastClicked = 'Item 1'">
@@ -577,6 +579,7 @@ class ActionListHarnessTest {
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-nav-list class="test-base-list-functionality">
         <a mat-list-item (click)="onClick($event, 'Item 1')">
@@ -623,6 +626,7 @@ class NavListHarnessTest {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-selection-list class="test-base-list-functionality">
       <mat-list-option checkboxPosition="before">

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -27,7 +27,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {ThemePalette} from '@angular/material-experimental/mdc-core';
+import {ThemePalette} from '@stagefright5/material-experimental/mdc-core';
 import {MDCListAdapter, numbers as mdcListNumbers} from '@material/list';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
@@ -58,6 +58,7 @@ export class MatSelectionListChange {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-selection-list',
   exportAs: 'matSelectionList',
   host: {
@@ -66,7 +67,7 @@ export class MatSelectionListChange {
     '[attr.aria-multiselectable]': 'multiple',
   },
   template: '<ng-content></ng-content>',
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [
     MAT_SELECTION_LIST_VALUE_ACCESSOR,

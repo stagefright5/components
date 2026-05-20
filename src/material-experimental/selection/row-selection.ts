@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkRowSelection} from '@angular/cdk-experimental/selection';
+import {CdkRowSelection} from '@stagefright5/cdk-experimental/selection';
 import {Input, Directive} from '@angular/core';
 
 /**
@@ -17,6 +17,7 @@ import {Input, Directive} from '@angular/core';
  * directive.
  */
 @Directive({
+  standalone: false,
   selector: '[matRowSelection]',
   host: {
     '[class.mat-selected]': '_selection.isSelected(this.value, this.index)',

@@ -29,15 +29,15 @@ import {
   _MatRadioButtonBase,
   MatRadioDefaultOptions,
   _MatRadioGroupBase,
-} from '@angular/material/radio';
-import {FocusMonitor} from '@angular/cdk/a11y';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+} from '@stagefright5/material/radio';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
 
 // Re-export symbols used by the base Material radio component so that users do not need to depend
 // on both packages.
-export {MatRadioChange, MAT_RADIO_DEFAULT_OPTIONS} from '@angular/material/radio';
+export {MatRadioChange, MAT_RADIO_DEFAULT_OPTIONS} from '@stagefright5/material/radio';
 
 /**
  * Provider Expression that allows mat-radio-group to register as a ControlValueAccessor. This
@@ -63,6 +63,7 @@ export const MAT_RADIO_GROUP = new InjectionToken<_MatRadioGroupBase<_MatRadioBu
  * A group of radio buttons. May contain one or more `<mat-radio-button>` elements.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-radio-group',
   exportAs: 'matRadioGroup',
   providers: [
@@ -81,9 +82,10 @@ export class MatRadioGroup extends _MatRadioGroupBase<MatRadioButton> {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-radio-button',
   templateUrl: 'radio.html',
-  styleUrls: ['radio.css'],
+  styleUrls: ['radio.scss'],
   host: {
     'class': 'mat-mdc-radio-button',
     '[attr.id]': 'id',

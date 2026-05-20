@@ -7,4 +7,4 @@
  */
 
 export * from './menu-harness';
-export {MenuHarnessFilters, MenuItemHarnessFilters} from '@angular/material/menu/testing';
+export {MenuHarnessFilters, MenuItemHarnessFilters} from '@stagefright5/material/menu/testing';

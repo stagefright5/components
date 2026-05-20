@@ -1,8 +1,8 @@
 import {inject, TestBed, fakeAsync} from '@angular/core/testing';
 import {Component, NgZone} from '@angular/core';
 import {Subject} from 'rxjs';
-import {ComponentPortal, PortalModule} from '@angular/cdk/portal';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+import {ComponentPortal, PortalModule} from '@stagefright5/cdk/portal';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {Overlay, OverlayConfig, OverlayRef, OverlayModule, OverlayContainer} from '../index';
 
 describe('CloseScrollStrategy', () => {
@@ -137,5 +137,5 @@ describe('CloseScrollStrategy', () => {
 });
 
 /** Simple component that we can attach to the overlay. */
-@Component({template: '<p>Mozarella</p>'})
+@Component({standalone: false, template: '<p>Mozarella</p>'})
 class MozarellaMsg {}

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable} from '@angular/core';
 

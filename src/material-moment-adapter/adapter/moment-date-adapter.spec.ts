@@ -8,7 +8,7 @@
 
 import {LOCALE_ID} from '@angular/core';
 import {waitForAsync, inject, TestBed} from '@angular/core/testing';
-import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {DEC, FEB, JAN, MAR} from '../../material/testing';
 import {MomentDateModule} from './index';
 import {MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter} from './moment-date-adapter';

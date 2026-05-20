@@ -1,4 +1,4 @@
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
 import {runDatepickerToggleHarnessTests} from './datepicker-toggle-harness-shared.spec';
 import {MatDatepickerToggleHarness} from './datepicker-toggle-harness';
 import {MatCalendarHarness} from './calendar-harness';

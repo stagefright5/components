@@ -7,7 +7,7 @@ import {
   tick,
   waitForAsync,
 } from '@angular/core/testing';
-import {ENTER, SPACE} from '@angular/cdk/keycodes';
+import {ENTER, SPACE} from '@stagefright5/cdk/keycodes';
 import {
   MAT_EXPANSION_PANEL_DEFAULT_OPTIONS,
   MatExpansionModule,
@@ -527,6 +527,7 @@ describe('MatExpansionPanel', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <mat-expansion-panel [expanded]="expanded"
                       [hideToggle]="hideToggle"
@@ -548,6 +549,7 @@ class PanelWithContent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div *ngIf="expansionShown">
     <mat-expansion-panel>
@@ -561,6 +563,7 @@ class PanelWithContentInNgIf {
 }
 
 @Component({
+  standalone: false,
   styles: [
     `mat-expansion-panel {
       margin: 13px 37px;
@@ -577,6 +580,7 @@ class PanelWithCustomMargin {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-expansion-panel [expanded]="expanded">
     <mat-expansion-panel-header>Panel Title</mat-expansion-panel-header>
@@ -592,6 +596,7 @@ class LazyPanelWithContent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>Panel Title</mat-expansion-panel-header>
@@ -604,6 +609,7 @@ class LazyPanelWithContent {
 class LazyPanelOpenOnLoad {}
 
 @Component({
+  standalone: false,
   template: `
   <mat-expansion-panel [(expanded)]="expanded">
     <mat-expansion-panel-header>Panel Title</mat-expansion-panel-header>
@@ -614,6 +620,7 @@ class PanelWithTwoWayBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-expansion-panel>
     <mat-expansion-panel-header tabindex="7">Panel Title</mat-expansion-panel-header>

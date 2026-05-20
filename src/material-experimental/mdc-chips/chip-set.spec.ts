@@ -101,6 +101,7 @@ describe('MDC-based MatChipSet', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
       <mat-chip-set>
         <mat-chip *ngFor="let i of chips">
@@ -115,6 +116,7 @@ class BasicChipSet {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-set>
       <ng-container [ngSwitch]="true">

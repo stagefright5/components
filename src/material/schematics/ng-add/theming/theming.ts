@@ -23,7 +23,7 @@ import {
   getProjectStyleFile,
   getProjectTargetOptions,
   getProjectIndexFiles,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {InsertChange} from '@schematics/angular/utility/change';
 import {getWorkspace, updateWorkspace} from '@schematics/angular/utility/workspace';
 import {join} from 'path';
@@ -31,7 +31,7 @@ import {Schema} from '../schema';
 import {createCustomTheme} from './create-custom-theme';
 
 /** Path segment that can be found in paths that refer to a prebuilt theme. */
-const prebuiltThemePathSegment = '@angular/material/prebuilt-themes';
+const prebuiltThemePathSegment = '@stagefright5/material/prebuilt-themes';
 
 /** Default file name of the custom theme that can be generated. */
 const defaultCustomThemeFilename = 'custom-theme.scss';
@@ -110,7 +110,7 @@ async function insertCustomTheme(
 /** Insert a pre-built theme into the angular.json file. */
 function insertPrebuiltTheme(project: string, theme: string, logger: logging.LoggerApi): Rule {
   // Path needs to be always relative to the `package.json` or workspace root.
-  const themePath = `./node_modules/@angular/material/prebuilt-themes/${theme}.css`;
+  const themePath = `./node_modules/@stagefright5/material/prebuilt-themes/${theme}.css`;
 
   return chain([
     addThemeStyleToTarget(project, 'build', themePath, logger),

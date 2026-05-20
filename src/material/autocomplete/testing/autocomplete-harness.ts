@@ -6,19 +6,19 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   BaseHarnessFilters,
   ComponentHarness,
   ComponentHarnessConstructor,
   HarnessPredicate,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {
   MatOptgroupHarness,
   MatOptionHarness,
   OptgroupHarnessFilters,
   OptionHarnessFilters,
-} from '@angular/material/core/testing';
+} from '@stagefright5/material/core/testing';
 import {AutocompleteHarnessFilters} from './autocomplete-harness-filters';
 
 export abstract class _MatAutocompleteHarnessBase<

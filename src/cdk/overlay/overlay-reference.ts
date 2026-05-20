@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Portal} from '@angular/cdk/portal';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Portal} from '@stagefright5/cdk/portal';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {Observable, Subject} from 'rxjs';
 
 /**

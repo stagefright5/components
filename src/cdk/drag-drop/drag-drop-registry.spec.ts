@@ -258,6 +258,6 @@ describe('DragDropRegistry', () => {
     }
   }
 
-  @Component({template: ``})
+  @Component({standalone: false, template: ``})
   class BlankComponent {}
 });

@@ -1,4 +1,4 @@
-import {TAB} from '@angular/cdk/keycodes';
+import {TAB} from '@stagefright5/cdk/keycodes';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
@@ -779,11 +779,13 @@ describe('FocusMonitor observable stream', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<div class="parent"><button>focus me!</button></div>`,
 })
 class PlainButton {}
 
 @Component({
+  standalone: false,
   template: `<button cdkMonitorElementFocus (cdkFocusChange)="focusChanged($event)"></button>`,
 })
 class ButtonWithFocusClasses {
@@ -791,21 +793,25 @@ class ButtonWithFocusClasses {
 }
 
 @Component({
+  standalone: false,
   template: `<div tabindex="0" cdkMonitorElementFocus><button></button></div>`,
 })
 class ComplexComponentWithMonitorElementFocus {}
 
 @Component({
+  standalone: false,
   template: `<div tabindex="0" cdkMonitorSubtreeFocus><button></button></div>`,
 })
 class ComplexComponentWithMonitorSubtreeFocus {}
 
 @Component({
+  standalone: false,
   template: `<div cdkMonitorSubtreeFocus><button cdkMonitorElementFocus></button></div>`,
 })
 class ComplexComponentWithMonitorSubtreeFocusAndMonitorElementFocus {}
 
 @Component({
+  standalone: false,
   template: `<ng-container cdkMonitorElementFocus></ng-container>`,
 })
 class FocusMonitorOnCommentNode {}

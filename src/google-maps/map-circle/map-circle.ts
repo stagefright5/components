@@ -21,6 +21,7 @@ import {MapEventManager} from '../map-event-manager';
  * @see developers.google.com/maps/documentation/javascript/reference/polygon#Circle
  */
 @Directive({
+  standalone: false,
   selector: 'map-circle',
   exportAs: 'mapCircle',
 })

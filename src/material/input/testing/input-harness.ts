@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, parallel} from '@angular/cdk/testing';
-import {MatFormFieldControlHarness} from '@angular/material/form-field/testing/control';
+import {HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
+import {MatFormFieldControlHarness} from '@stagefright5/material/form-field/testing/control';
 import {InputHarnessFilters} from './input-harness-filters';
 
 /** Harness for interacting with a standard Material inputs in tests. */

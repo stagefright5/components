@@ -6,21 +6,20 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   Overlay,
   OverlayConfig,
   OverlayContainer,
   OverlayRef,
   ScrollStrategy,
-} from '@angular/cdk/overlay';
-import {ComponentPortal, ComponentType, TemplatePortal} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/overlay';
+import {ComponentPortal, ComponentType, TemplatePortal} from '@stagefright5/cdk/portal';
 import {Location} from '@angular/common';
 import {
   Directive,
   Inject,
   Injectable,
-  InjectFlags,
   InjectionToken,
   Injector,
   OnDestroy,
@@ -346,7 +345,7 @@ export abstract class _MatDialogBase<C extends _MatDialogContainerBase> implemen
     if (
       config.direction &&
       (!userInjector ||
-        !userInjector.get<Directionality | null>(Directionality, null, InjectFlags.Optional))
+        !userInjector.get<Directionality | null>(Directionality, null, {optional: true}))
     ) {
       providers.push({
         provide: Directionality,

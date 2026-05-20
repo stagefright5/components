@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty, coerceStringArray} from '@angular/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty, coerceStringArray} from '@stagefright5/cdk/coercion';
 import {
   DOWN_ARROW,
   ESCAPE,
@@ -17,15 +17,15 @@ import {
   PAGE_UP,
   RIGHT_ARROW,
   UP_ARROW,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   Overlay,
   OverlayConfig,
   OverlayRef,
   ScrollStrategy,
   FlexibleConnectedPositionStrategy,
-} from '@angular/cdk/overlay';
-import {ComponentPortal, ComponentType, TemplatePortal} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/overlay';
+import {ComponentPortal, ComponentType, TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -49,10 +49,10 @@ import {
   SimpleChanges,
   OnInit,
 } from '@angular/core';
-import {CanColor, DateAdapter, mixinColor, ThemePalette} from '@angular/material/core';
+import {CanColor, DateAdapter, mixinColor, ThemePalette} from '@stagefright5/material/core';
 import {merge, Subject, Observable, Subscription} from 'rxjs';
 import {filter, take} from 'rxjs/operators';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {MatCalendar, MatCalendarView} from './calendar';
 import {matDatepickerAnimations} from './datepicker-animations';
 import {createMissingDateImplError} from './datepicker-errors';
@@ -111,9 +111,10 @@ const _MatDatepickerContentBase = mixinColor(
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-datepicker-content',
   templateUrl: 'datepicker-content.html',
-  styleUrls: ['datepicker-content.css'],
+  styleUrls: ['datepicker-content.scss'],
   host: {
     'class': 'mat-datepicker-content',
     '[@transformPanel]': '_animationState',

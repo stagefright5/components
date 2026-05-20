@@ -6,13 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkTreeNodeToggle} from '@angular/cdk/tree';
+import {CdkTreeNodeToggle} from '@stagefright5/cdk/tree';
 import {Directive} from '@angular/core';
 
 /**
  * Wrapper for the CdkTree's toggle with Material design styles.
  */
 @Directive({
+  standalone: false,
   selector: '[matTreeNodeToggle]',
   providers: [{provide: CdkTreeNodeToggle, useExisting: MatTreeNodeToggle}],
   inputs: ['recursive: matTreeNodeToggleRecursive'],

@@ -1,4 +1,4 @@
-import {DOWN_ARROW, END, HOME, LEFT_ARROW, RIGHT_ARROW, TAB, UP_ARROW} from '@angular/cdk/keycodes';
+import {DOWN_ARROW, END, HOME, LEFT_ARROW, RIGHT_ARROW, TAB, UP_ARROW} from '@stagefright5/cdk/keycodes';
 import {createKeyboardEvent} from '../../testing/private';
 import {QueryList} from '@angular/core';
 import {fakeAsync, tick} from '@angular/core/testing';

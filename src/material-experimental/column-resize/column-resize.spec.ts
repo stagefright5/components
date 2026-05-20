@@ -1,13 +1,13 @@
 import {Component, Directive, ElementRef, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import {ComponentFixture, TestBed, fakeAsync, flushMicrotasks} from '@angular/core/testing';
-import {BidiModule} from '@angular/cdk/bidi';
-import {DataSource} from '@angular/cdk/collections';
+import {BidiModule} from '@stagefright5/cdk/bidi';
+import {DataSource} from '@stagefright5/cdk/collections';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
-import {ESCAPE} from '@angular/cdk/keycodes';
-import {MatTableModule} from '@angular/material/table';
+import {ESCAPE} from '@stagefright5/cdk/keycodes';
+import {MatTableModule} from '@stagefright5/material/table';
 import {BehaviorSubject} from 'rxjs';
 
-import {ColumnSize} from '@angular/cdk-experimental/column-resize';
+import {ColumnSize} from '@stagefright5/cdk-experimental/column-resize';
 import {
   MatColumnResize,
   MatColumnResizeFlex,
@@ -266,36 +266,36 @@ abstract class BaseTestComponentRtl extends BaseTestComponent {
   }
 }
 
-@Component({template: getTableTemplate(false)})
+@Component({standalone: false, template: getTableTemplate(false)})
 class MatResizeTest extends BaseTestComponent {
   @ViewChild(MatColumnResize) columnResize: AbstractMatColumnResize;
 }
 
-@Component({template: getTableTemplate(false), changeDetection: ChangeDetectionStrategy.OnPush})
+@Component({standalone: false, template: getTableTemplate(false), changeDetection: ChangeDetectionStrategy.OnPush})
 class MatResizeOnPushTest extends MatResizeTest {}
 
-@Component({template: getTableTemplate(true)})
+@Component({standalone: false, template: getTableTemplate(true)})
 class MatResizeDefaultTest extends BaseTestComponent {
   @ViewChild(MatDefaultEnabledColumnResize) columnResize: AbstractMatColumnResize;
 }
 
-@Component({template: getTableTemplate(true)})
+@Component({standalone: false, template: getTableTemplate(true)})
 class MatResizeDefaultRtlTest extends BaseTestComponentRtl {
   @ViewChild(MatDefaultEnabledColumnResize) columnResize: AbstractMatColumnResize;
 }
 
-@Component({template: getFlexTemplate(false)})
+@Component({standalone: false, template: getFlexTemplate(false)})
 class MatResizeFlexTest extends BaseTestComponent {
   @ViewChild(MatColumnResizeFlex) columnResize: AbstractMatColumnResize;
 }
 
-@Component({template: getFlexTemplate(true)})
+@Component({standalone: false, template: getFlexTemplate(true)})
 class MatResizeDefaultFlexTest extends BaseTestComponent {
   @ViewChild(MatDefaultEnabledColumnResizeFlex)
   columnResize: AbstractMatColumnResize;
 }
 
-@Component({template: getFlexTemplate(true)})
+@Component({standalone: false, template: getFlexTemplate(true)})
 class MatResizeDefaultFlexRtlTest extends BaseTestComponentRtl {
   @ViewChild(MatDefaultEnabledColumnResizeFlex)
   columnResize: AbstractMatColumnResize;

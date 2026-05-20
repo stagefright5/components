@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty} from '@angular/cdk/coercion';
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
 import {ProgressBarHarnessFilters} from './progress-bar-harness-filters';
 
 /** Harness for interacting with a standard mat-progress-bar in tests. */

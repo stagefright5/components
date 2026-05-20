@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {
   MatCellHarness as BaseMatCellHarness,
   MatHeaderCellHarness as BaseMatHeaderCellHarness,
   MatFooterCellHarness as BaseMatFooterCellHarness,
   CellHarnessFilters,
-} from '@angular/material/table/testing';
+} from '@stagefright5/material/table/testing';
 
 /** Harness for interacting with an MDC-based Angular Material table cell. */
 export class MatCellHarness extends BaseMatCellHarness {

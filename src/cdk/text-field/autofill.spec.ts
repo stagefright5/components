@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {Component, ElementRef, NgZone, ViewChild} from '@angular/core';
 import {ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import {EMPTY} from 'rxjs';
@@ -217,6 +217,7 @@ describe('cdkAutofill', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <input #input1>
     <input #input2>
@@ -231,6 +232,7 @@ class Inputs {
 }
 
 @Component({
+  standalone: false,
   template: `<input #input cdkAutofill>`,
 })
 class InputWithCdkAutofilled {

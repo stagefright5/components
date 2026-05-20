@@ -27,8 +27,8 @@ import {
   FixedTileStyler,
   TileStyleTarget,
 } from './tile-styler';
-import {Directionality} from '@angular/cdk/bidi';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {MAT_GRID_LIST, MatGridListBase} from './grid-list-base';
 
 // TODO(kara): Conditional (responsive) column count / row size.
@@ -38,10 +38,11 @@ import {MAT_GRID_LIST, MatGridListBase} from './grid-list-base';
 const MAT_FIT_MODE = 'fit';
 
 @Component({
+  standalone: false,
   selector: 'mat-grid-list',
   exportAs: 'matGridList',
   templateUrl: 'grid-list.html',
-  styleUrls: ['grid-list.css'],
+  styleUrls: ['grid-list.scss'],
   host: {
     'class': 'mat-grid-list',
     // Ensures that the "cols" input value is reflected in the DOM. This is

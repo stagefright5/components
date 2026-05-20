@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentContainerComponentHarness, HarnessPredicate, parallel} from '@angular/cdk/testing';
+import {ContentContainerComponentHarness, HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
 import {ToolbarHarnessFilters} from './toolbar-harness-filters';
 
 /** Selectors for different sections of the mat-toolbar that contain user content. */

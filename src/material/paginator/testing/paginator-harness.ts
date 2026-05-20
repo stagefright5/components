@@ -11,9 +11,9 @@ import {
   ComponentHarness,
   HarnessPredicate,
   TestElement,
-} from '@angular/cdk/testing';
-import {MatSelectHarness} from '@angular/material/select/testing';
-import {coerceNumberProperty} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/testing';
+import {MatSelectHarness} from '@stagefright5/material/select/testing';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
 import {PaginatorHarnessFilters} from './paginator-harness-filters';
 
 export abstract class _MatPaginatorHarnessBase extends ComponentHarness {

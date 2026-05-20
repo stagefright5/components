@@ -8,7 +8,7 @@
 
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material/core';
+import {MatCommonModule} from '@stagefright5/material/core';
 import {MatSlider} from './slider';
 
 @NgModule({

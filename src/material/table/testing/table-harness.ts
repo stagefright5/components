@@ -12,7 +12,7 @@ import {
   ContentContainerComponentHarness,
   HarnessPredicate,
   parallel,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {TableHarnessFilters, RowHarnessFilters} from './table-harness-filters';
 import {
   MatRowHarness,
@@ -90,7 +90,7 @@ export abstract class _MatTableHarnessBase<
     ]);
 
     rowsData.forEach(data => {
-      Object.keys(data).forEach(columnName => {
+      Object.keys(data as any).forEach(columnName => {
         const cellText = data[columnName];
 
         if (!text[columnName]) {
@@ -139,7 +139,7 @@ function getCellTextsByColumn(rowsData: MatRowHarnessColumnsText[], column: stri
   const columnTexts: string[] = [];
 
   rowsData.forEach(data => {
-    Object.keys(data).forEach(columnName => {
+    Object.keys(data as any).forEach(columnName => {
       if (columnName === column) {
         columnTexts.push(data[columnName]);
       }

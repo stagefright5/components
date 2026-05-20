@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterContentInit,
@@ -402,6 +402,7 @@ export class FocusTrapFactory {
 
 /** Directive for trapping focus within a region. */
 @Directive({
+  standalone: false,
   selector: '[cdkTrapFocus]',
   exportAs: 'cdkTrapFocus',
 })

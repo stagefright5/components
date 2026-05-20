@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {
   MenuHarnessFilters,
   MenuItemHarnessFilters,
   _MatMenuItemHarnessBase,
   _MatMenuHarnessBase,
-} from '@angular/material/menu/testing';
+} from '@stagefright5/material/menu/testing';
 
 /** Harness for interacting with an MDC-based mat-menu in tests. */
 export class MatMenuHarness extends _MatMenuHarnessBase<

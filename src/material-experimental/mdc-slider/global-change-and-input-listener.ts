@@ -29,7 +29,7 @@ export class GlobalChangeAndInputListener<K extends 'change' | 'input'> implemen
   private _observables = new Map<K, Observable<Event>>();
 
   /** The notifier that triggers the global event observables to stop emitting and complete. */
-  private _destroyed = new Subject();
+  private _destroyed = new Subject<void>();
 
   constructor(@Inject(DOCUMENT) document: any, private _ngZone: NgZone) {
     this._document = document;

@@ -24,11 +24,11 @@ import {
   MAT_TAB_GROUP,
   MAT_TABS_CONFIG,
   MatTabsConfig,
-} from '@angular/material/tabs';
+} from '@stagefright5/material/tabs';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MatTab} from './tab';
 import {MatTabHeader} from './tab-header';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 
 /**
  * Material design tab-group component. Supports basic tab pairs (label + content) and includes
@@ -36,10 +36,11 @@ import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
  * See: https://material.io/design/components/tabs.html
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-group',
   exportAs: 'matTabGroup',
   templateUrl: 'tab-group.html',
-  styleUrls: ['tab-group.css'],
+  styleUrls: ['tab-group.scss'],
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:validate-decorators
   changeDetection: ChangeDetectionStrategy.Default,

@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {A11yModule} from '@angular/cdk/a11y';
-import {ObserversModule} from '@angular/cdk/observers';
-import {PortalModule} from '@angular/cdk/portal';
+import {A11yModule} from '@stagefright5/cdk/a11y';
+import {ObserversModule} from '@stagefright5/cdk/observers';
+import {PortalModule} from '@stagefright5/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule, MatRippleModule} from '@angular/material/core';
+import {MatCommonModule, MatRippleModule} from '@stagefright5/material/core';
 import {MatInkBar} from './ink-bar';
 import {MatTab} from './tab';
 import {MatTabBody, MatTabBodyPortal} from './tab-body';

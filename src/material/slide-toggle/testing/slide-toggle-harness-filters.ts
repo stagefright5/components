@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BaseHarnessFilters} from '@angular/cdk/testing';
+import {BaseHarnessFilters} from '@stagefright5/cdk/testing';
 
 /** A set of criteria that can be used to filter a list of `MatSlideToggleHarness` instances. */
 export interface SlideToggleHarnessFilters extends BaseHarnessFilters {

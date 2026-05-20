@@ -5,7 +5,7 @@ import {
   HighContrastModeDetector,
   WHITE_ON_BLACK_CSS_CLASS,
 } from './high-contrast-mode-detector';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {inject} from '@angular/core/testing';
 
 describe('HighContrastModeDetector', () => {

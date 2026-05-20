@@ -15,7 +15,7 @@ import {
   CdkRow,
   CdkRowDef,
   CdkNoDataRow,
-} from '@angular/cdk/table';
+} from '@stagefright5/cdk/table';
 import {ChangeDetectionStrategy, Component, Directive, ViewEncapsulation} from '@angular/core';
 
 /**
@@ -23,6 +23,7 @@ import {ChangeDetectionStrategy, Component, Directive, ViewEncapsulation} from '
  * Captures the header row's template and other header properties such as the columns to display.
  */
 @Directive({
+  standalone: false,
   selector: '[matHeaderRowDef]',
   providers: [{provide: CdkHeaderRowDef, useExisting: MatHeaderRowDef}],
   inputs: ['columns: matHeaderRowDef', 'sticky: matHeaderRowDefSticky'],
@@ -34,6 +35,7 @@ export class MatHeaderRowDef extends CdkHeaderRowDef {}
  * Captures the footer row's template and other footer properties such as the columns to display.
  */
 @Directive({
+  standalone: false,
   selector: '[matFooterRowDef]',
   providers: [{provide: CdkFooterRowDef, useExisting: MatFooterRowDef}],
   inputs: ['columns: matFooterRowDef', 'sticky: matFooterRowDefSticky'],
@@ -46,6 +48,7 @@ export class MatFooterRowDef extends CdkFooterRowDef {}
  * a when predicate that describes when this row should be used.
  */
 @Directive({
+  standalone: false,
   selector: '[matRowDef]',
   providers: [{provide: CdkRowDef, useExisting: MatRowDef}],
   inputs: ['columns: matRowDefColumns', 'when: matRowDefWhen'],
@@ -54,6 +57,7 @@ export class MatRowDef<T> extends CdkRowDef<T> {}
 
 /** Footer template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'mat-header-row, tr[mat-header-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -71,6 +75,7 @@ export class MatHeaderRow extends CdkHeaderRow {}
 
 /** Footer template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'mat-footer-row, tr[mat-footer-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -88,6 +93,7 @@ export class MatFooterRow extends CdkFooterRow {}
 
 /** Data row template container that contains the cell outlet. Adds the right class and role. */
 @Component({
+  standalone: false,
   selector: 'mat-row, tr[mat-row]',
   template: CDK_ROW_TEMPLATE,
   host: {
@@ -105,6 +111,7 @@ export class MatRow extends CdkRow {}
 
 /** Row that can be used to display a message when no data is shown in the table. */
 @Directive({
+  standalone: false,
   selector: 'ng-template[matNoDataRow]',
   providers: [{provide: CdkNoDataRow, useExisting: MatNoDataRow}],
 })

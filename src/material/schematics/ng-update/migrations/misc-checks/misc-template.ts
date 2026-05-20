@@ -12,7 +12,7 @@ import {
   Migration,
   ResolvedResource,
   TargetVersion,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 
 /**
  * Migration that walks through every inline or external template and reports if there

@@ -7,7 +7,7 @@
  */
 
 import {InjectionToken} from '@angular/core';
-import {ComponentType, Overlay, ScrollStrategy} from '@angular/cdk/overlay';
+import {ComponentType, Overlay, ScrollStrategy} from '@stagefright5/cdk/overlay';
 import {DialogRef} from './dialog-ref';
 import {CdkDialogContainer} from './dialog-container';
 import {DialogConfig} from './dialog-config';

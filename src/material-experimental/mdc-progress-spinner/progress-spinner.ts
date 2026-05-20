@@ -22,13 +22,13 @@ import {
   MDCCircularProgressAdapter,
   MDCCircularProgressFoundation,
 } from '@material/circular-progress';
-import {CanColor, mixinColor} from '@angular/material-experimental/mdc-core';
+import {CanColor, mixinColor} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS,
   MatProgressSpinnerDefaultOptions,
-} from '@angular/material/progress-spinner';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+} from '@stagefright5/material/progress-spinner';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 
 // Boilerplate for applying mixins to MatProgressBar.
 const _MatProgressSpinnerBase = mixinColor(
@@ -52,6 +52,7 @@ const BASE_SIZE = 100;
 const BASE_STROKE_WIDTH = 10;
 
 @Component({
+  standalone: false,
   selector: 'mat-progress-spinner, mat-spinner',
   exportAs: 'matProgressSpinner',
   host: {
@@ -70,7 +71,7 @@ const BASE_STROKE_WIDTH = 10;
   },
   inputs: ['color'],
   templateUrl: 'progress-spinner.html',
-  styleUrls: ['progress-spinner.css'],
+  styleUrls: ['progress-spinner.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })

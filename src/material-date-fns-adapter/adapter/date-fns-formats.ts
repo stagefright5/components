@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MatDateFormats} from '@angular/material/core';
+import {MatDateFormats} from '@stagefright5/material/core';
 
 export const MAT_DATE_FNS_FORMATS: MatDateFormats = {
   parse: {

@@ -12,7 +12,7 @@ import {
   coerceElement,
   BooleanInput,
   NumberInput,
-} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/coercion';
 import {
   AfterContentInit,
   Directive,
@@ -137,6 +137,7 @@ export class ContentObserver implements OnDestroy {
  * its associated element has changed.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkObserveContent]',
   exportAs: 'cdkObserveContent',
 })

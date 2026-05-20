@@ -4,10 +4,10 @@ This is a prototype of an alternate version of `MatChip` built on top of
 ## How to use
 Assuming your application is already up and running using Angular Material, you can add this component by following these steps:
 
-1. Install `@angular/material-experimental` and MDC Web:
+1. Install `@stagefright5/material-experimental` and MDC Web:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -29,7 +29,7 @@ Assuming your application is already up and running using Angular Material, you 
 3. Import the experimental `MatChipsModule` and add it to the module that declares your component:
 
    ```ts
-   import {MatChipsModule} from '@angular/material-experimental/mdc-chips';
+   import {MatChipsModule} from '@stagefright5/material-experimental/mdc-chips';
 
    @NgModule({
      declarations: [MyComponent],
@@ -50,8 +50,8 @@ Assuming your application is already up and running using Angular Material, you 
 5. Add the theme mixins to your Sass:
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $candy-app-primary: mat.define-palette(mat.$indigo-palette);
    $candy-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);

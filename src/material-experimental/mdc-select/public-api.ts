@@ -16,4 +16,4 @@ export {
   MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY,
   MAT_SELECT_TRIGGER,
   MatSelectConfig,
-} from '@angular/material/select';
+} from '@stagefright5/material/select';

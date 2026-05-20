@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
-import {ListRange} from '@angular/cdk/collections';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
+import {ListRange} from '@stagefright5/cdk/collections';
 import {
   CdkVirtualScrollViewport,
   VIRTUAL_SCROLL_STRATEGY,
   VirtualScrollStrategy,
-} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/scrolling';
 import {Directive, forwardRef, Input, OnChanges} from '@angular/core';
 import {Observable} from 'rxjs';
 
@@ -454,6 +454,7 @@ export function _autoSizeVirtualScrollStrategyFactory(autoSizeDir: CdkAutoSizeVi
 
 /** A virtual scroll strategy that supports unknown or dynamic size items. */
 @Directive({
+  standalone: false,
   selector: 'cdk-virtual-scroll-viewport[autosize]',
   providers: [
     {

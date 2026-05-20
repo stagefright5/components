@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ElementSelectorUpgradeData, TargetVersion, VersionChanges} from '@angular/cdk/schematics';
+import {ElementSelectorUpgradeData, TargetVersion, VersionChanges} from '@stagefright5/cdk/schematics';
 
 export const elementSelectors: VersionChanges<ElementSelectorUpgradeData> = {
   [TargetVersion.V6]: [

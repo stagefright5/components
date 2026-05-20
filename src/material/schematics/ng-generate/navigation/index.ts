@@ -11,7 +11,7 @@ import {
   addModuleImportToModule,
   buildComponent,
   findModuleFromOptions,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {Schema} from './schema';
 
 /**
@@ -39,11 +39,11 @@ export default function (options: Schema): Rule {
 function addNavModulesToModule(options: Schema) {
   return async (host: Tree) => {
     const modulePath = (await findModuleFromOptions(host, options))!;
-    addModuleImportToModule(host, modulePath, 'LayoutModule', '@angular/cdk/layout');
-    addModuleImportToModule(host, modulePath, 'MatToolbarModule', '@angular/material/toolbar');
-    addModuleImportToModule(host, modulePath, 'MatButtonModule', '@angular/material/button');
-    addModuleImportToModule(host, modulePath, 'MatSidenavModule', '@angular/material/sidenav');
-    addModuleImportToModule(host, modulePath, 'MatIconModule', '@angular/material/icon');
-    addModuleImportToModule(host, modulePath, 'MatListModule', '@angular/material/list');
+    addModuleImportToModule(host, modulePath, 'LayoutModule', '@stagefright5/cdk/layout');
+    addModuleImportToModule(host, modulePath, 'MatToolbarModule', '@stagefright5/material/toolbar');
+    addModuleImportToModule(host, modulePath, 'MatButtonModule', '@stagefright5/material/button');
+    addModuleImportToModule(host, modulePath, 'MatSidenavModule', '@stagefright5/material/sidenav');
+    addModuleImportToModule(host, modulePath, 'MatIconModule', '@stagefright5/material/icon');
+    addModuleImportToModule(host, modulePath, 'MatListModule', '@stagefright5/material/list');
   };
 }

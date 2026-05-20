@@ -15,7 +15,7 @@ import {
   QueryList,
   OnDestroy,
 } from '@angular/core';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {takeUntil} from 'rxjs/operators';
 import {CdkMenuItemSelectable} from './menu-item-selectable';
 import {CdkMenuItem} from './menu-item';
@@ -25,6 +25,7 @@ import {CdkMenuItem} from './menu-item';
  * `role="menuitemradio"`, similar to a `role="radiogroup"` element.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuGroup]',
   exportAs: 'cdkMenuGroup',
   host: {

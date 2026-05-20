@@ -7,10 +7,10 @@
  */
 
 import {ElementRef, NgZone} from '@angular/core';
-import {Direction} from '@angular/cdk/bidi';
-import {coerceElement} from '@angular/cdk/coercion';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {_getShadowRoot} from '@angular/cdk/platform';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {coerceElement} from '@stagefright5/cdk/coercion';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {_getShadowRoot} from '@stagefright5/cdk/platform';
 import {Subject, Subscription, interval, animationFrameScheduler} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {moveItemInArray} from './drag-utils';

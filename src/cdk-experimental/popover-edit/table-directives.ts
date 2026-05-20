@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FocusTrap} from '@angular/cdk/a11y';
-import {OverlayRef, PositionStrategy} from '@angular/cdk/overlay';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {FocusTrap} from '@stagefright5/cdk/a11y';
+import {OverlayRef, PositionStrategy} from '@stagefright5/cdk/overlay';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   AfterViewInit,
   Directive,
@@ -61,6 +61,7 @@ const MOUSE_MOVE_THROTTLE_TIME_MS = 10;
  * EditEventDispatcher service for use by the other edit directives.
  */
 @Directive({
+  standalone: false,
   selector: 'table[editable], cdk-table[editable], mat-table[editable]',
   providers: [EditEventDispatcher, EditServices],
 })
@@ -172,6 +173,7 @@ const POPOVER_EDIT_INPUTS = [
  * Makes the cell focusable.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkPopoverEdit]:not([cdkPopoverEditTabOut])',
   host: POPOVER_EDIT_HOST_BINDINGS,
   inputs: POPOVER_EDIT_INPUTS,
@@ -359,6 +361,7 @@ export class CdkPopoverEdit<C> implements AfterViewInit, OnDestroy {
  * Makes the cell focusable.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkPopoverEdit][cdkPopoverEditTabOut]',
   host: POPOVER_EDIT_HOST_BINDINGS,
   inputs: POPOVER_EDIT_INPUTS,
@@ -401,6 +404,7 @@ export class CdkPopoverEditTabOut<C> extends CdkPopoverEdit<C> {
  * it is hovered or when an element in the row has focus.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkRowHoverContent]',
 })
 export class CdkRowHoverContent implements AfterViewInit, OnDestroy {
@@ -494,6 +498,7 @@ export class CdkRowHoverContent implements AfterViewInit, OnDestroy {
  * element or an ancestor element.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkEditOpen]',
   host: {
     '(click)': 'openEdit($event)',

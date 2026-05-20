@@ -8,7 +8,7 @@
 
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatRippleModule, MatPseudoCheckboxModule} from '@angular/material/core';
+import {MatRippleModule, MatPseudoCheckboxModule} from '@stagefright5/material/core';
 import {MatOption} from './option';
 import {MatOptgroup} from './optgroup';
 
@@ -27,4 +27,4 @@ export {
   MAT_OPTION_PARENT_COMPONENT,
   _countGroupLabelsBeforeOption,
   _getOptionScrollPosition,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';

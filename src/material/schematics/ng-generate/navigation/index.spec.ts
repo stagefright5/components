@@ -1,5 +1,5 @@
 import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
-import {createTestApp, getFileContent} from '@angular/cdk/schematics/testing';
+import {createTestApp, getFileContent} from '@stagefright5/cdk/schematics/testing';
 import {COLLECTION_PATH} from '../../paths';
 
 import {Schema} from './schema';
@@ -24,15 +24,15 @@ describe('material-navigation-schematic', () => {
     expect(moduleContent).toMatch(/MatSidenavModule,\s+/);
     expect(moduleContent).toMatch(/MatIconModule,\s+/);
     expect(moduleContent).toMatch(/MatListModule\s+],/);
-    expect(moduleContent).toContain(`import { LayoutModule } from '@angular/cdk/layout';`);
-    expect(moduleContent).toContain(`import { MatButtonModule } from '@angular/material/button';`);
-    expect(moduleContent).toContain(`import { MatIconModule } from '@angular/material/icon';`);
-    expect(moduleContent).toContain(`import { MatListModule } from '@angular/material/list';`);
+    expect(moduleContent).toContain(`import { LayoutModule } from '@stagefright5/cdk/layout';`);
+    expect(moduleContent).toContain(`import { MatButtonModule } from '@stagefright5/material/button';`);
+    expect(moduleContent).toContain(`import { MatIconModule } from '@stagefright5/material/icon';`);
+    expect(moduleContent).toContain(`import { MatListModule } from '@stagefright5/material/list';`);
     expect(moduleContent).toContain(
-      `import { MatToolbarModule } from '@angular/material/toolbar';`,
+      `import { MatToolbarModule } from '@stagefright5/material/toolbar';`,
     );
     expect(moduleContent).toContain(
-      `import { MatSidenavModule } from '@angular/material/sidenav';`,
+      `import { MatSidenavModule } from '@stagefright5/material/sidenav';`,
     );
   }
 

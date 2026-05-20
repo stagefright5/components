@@ -7,7 +7,7 @@
  */
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MatCommonModule} from '@angular/material/core';
+import {MatCommonModule} from '@stagefright5/material/core';
 import {MatProgressSpinner} from './progress-spinner';
 
 @NgModule({

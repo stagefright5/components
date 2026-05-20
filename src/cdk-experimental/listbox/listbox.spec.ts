@@ -7,9 +7,9 @@ import {
   dispatchKeyboardEvent,
   dispatchMouseEvent,
 } from '../../cdk/testing/private';
-import {A, DOWN_ARROW, END, HOME, SPACE} from '@angular/cdk/keycodes';
+import {A, DOWN_ARROW, END, HOME, SPACE} from '@stagefright5/cdk/keycodes';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CdkCombobox, CdkComboboxModule, CdkComboboxPanel} from '@angular/cdk-experimental/combobox';
+import {CdkCombobox, CdkComboboxModule, CdkComboboxPanel} from '@stagefright5/cdk-experimental/combobox';
 
 describe('CdkOption and CdkListbox', () => {
   describe('selection state change', () => {
@@ -881,6 +881,7 @@ describe('CdkOption and CdkListbox', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div cdkListbox
          [disabled]="isListboxDisabled"
@@ -909,6 +910,7 @@ class ListboxWithOptions {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkListbox
          [multiple]="isMultiselectable"
@@ -929,6 +931,7 @@ class ListboxMultiselect {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkListbox
          [useActiveDescendant]="isActiveDescendant">
@@ -953,6 +956,7 @@ class ListboxActiveDescendant {
 }
 
 @Component({
+  standalone: false,
   template: `
     <select cdkListbox
          [disabled]="isDisabled"
@@ -980,6 +984,7 @@ class ListboxControlValueAccessor {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button cdkCombobox #toggleCombobox class="example-combobox"
             [cdkComboboxTriggerFor]="panel"

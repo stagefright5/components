@@ -27,10 +27,11 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
-import {ScrollDispatcher, CdkScrollable} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/coercion';
+import {ScrollDispatcher, CdkScrollable} from '@stagefright5/cdk/scrolling';
 
 @Component({
+  standalone: false,
   selector: 'mat-sidenav-content',
   template: '<ng-content></ng-content>',
   host: {
@@ -60,6 +61,7 @@ export class MatSidenavContent extends MatDrawerContent {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-sidenav',
   exportAs: 'matSidenav',
   templateUrl: 'drawer.html',
@@ -120,10 +122,11 @@ export class MatSidenav extends MatDrawer {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-sidenav-container',
   exportAs: 'matSidenavContainer',
   templateUrl: 'sidenav-container.html',
-  styleUrls: ['drawer.css'],
+  styleUrls: ['drawer.scss'],
   host: {
     'class': 'mat-drawer-container mat-sidenav-container',
     '[class.mat-drawer-container-explicit-backdrop]': '_backdropOverride',

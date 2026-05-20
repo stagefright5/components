@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {UpgradeData} from '@angular/cdk/schematics';
+import {UpgradeData} from '@stagefright5/cdk/schematics';
 import {
   attributeSelectors,
   classNames,

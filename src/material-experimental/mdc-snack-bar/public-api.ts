@@ -23,4 +23,4 @@ export {
   MatSnackBarVerticalPosition,
   TextOnlySnackBar,
   matSnackBarAnimations,
-} from '@angular/material/snack-bar';
+} from '@stagefright5/material/snack-bar';

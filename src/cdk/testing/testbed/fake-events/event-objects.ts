@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ModifierKeys} from '@angular/cdk/testing';
+import {ModifierKeys} from '@stagefright5/cdk/testing';
 
 /** Used to generate unique IDs for events. */
 let uniqueIds = 0;

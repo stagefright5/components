@@ -1,5 +1,5 @@
 import {HostBinding} from '@angular/core';
-import {MatFormFieldControl} from '@angular/material/form-field';
+import {MatFormFieldControl} from '@stagefright5/material/form-field';
 
 class WithoutLabelProp extends MatFormFieldControl<any> {
 }

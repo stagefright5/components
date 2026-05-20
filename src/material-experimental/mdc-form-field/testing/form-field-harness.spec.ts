@@ -1,16 +1,16 @@
-import {MatFormFieldModule} from '@angular/material-experimental/mdc-form-field';
-import {MatInputModule} from '@angular/material-experimental/mdc-input';
-import {MatAutocompleteModule} from '@angular/material-experimental/mdc-autocomplete';
-import {MatInputHarness} from '@angular/material-experimental/mdc-input/testing';
-import {MatSelectModule} from '@angular/material-experimental/mdc-select';
-import {MatSelectHarness} from '@angular/material-experimental/mdc-select/testing';
-import {runHarnessTests} from '@angular/material/form-field/testing/shared.spec';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material-experimental/mdc-core';
+import {MatFormFieldModule} from '@stagefright5/material-experimental/mdc-form-field';
+import {MatInputModule} from '@stagefright5/material-experimental/mdc-input';
+import {MatAutocompleteModule} from '@stagefright5/material-experimental/mdc-autocomplete';
+import {MatInputHarness} from '@stagefright5/material-experimental/mdc-input/testing';
+import {MatSelectModule} from '@stagefright5/material-experimental/mdc-select';
+import {MatSelectHarness} from '@stagefright5/material-experimental/mdc-select/testing';
+import {runHarnessTests} from '@stagefright5/material/form-field/testing/shared.spec';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
+import {MatNativeDateModule} from '@stagefright5/material-experimental/mdc-core';
 import {
   MatDatepickerInputHarness,
   MatDateRangeInputHarness,
-} from '@angular/material/datepicker/testing';
+} from '@stagefright5/material/datepicker/testing';
 import {MatFormFieldHarness} from './form-field-harness';
 
 describe('MDC-based MatFormFieldHarness', () => {

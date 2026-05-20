@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   CdkStep,
   CdkStepper,
   StepContentPositionState,
   STEPPER_GLOBAL_OPTIONS,
   StepperOptions,
-} from '@angular/cdk/stepper';
+} from '@stagefright5/cdk/stepper';
 import {AnimationEvent} from '@angular/animations';
 import {
   AfterContentInit,
@@ -40,8 +40,8 @@ import {
 } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm} from '@angular/forms';
 import {DOCUMENT} from '@angular/common';
-import {ErrorStateMatcher, ThemePalette} from '@angular/material/core';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {ErrorStateMatcher, ThemePalette} from '@stagefright5/material/core';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {Subject, Subscription} from 'rxjs';
 import {takeUntil, distinctUntilChanged, map, startWith, switchMap} from 'rxjs/operators';
 
@@ -52,6 +52,7 @@ import {MatStepperIcon, MatStepperIconContext} from './stepper-icon';
 import {MatStepContent} from './step-content';
 
 @Component({
+  standalone: false,
   selector: 'mat-step',
   templateUrl: 'step.html',
   providers: [
@@ -140,21 +141,22 @@ abstract class _MatProxyStepperBase extends CdkStepper {
  * @deprecated Use `MatStepper` instead.
  * @breaking-change 13.0.0
  */
-@Directive({selector: 'mat-horizontal-stepper'})
+@Directive({standalone: false, selector: 'mat-horizontal-stepper'})
 export class MatHorizontalStepper extends _MatProxyStepperBase {}
 
 /**
  * @deprecated Use `MatStepper` instead.
  * @breaking-change 13.0.0
  */
-@Directive({selector: 'mat-vertical-stepper'})
+@Directive({standalone: false, selector: 'mat-vertical-stepper'})
 export class MatVerticalStepper extends _MatProxyStepperBase {}
 
 @Component({
+  standalone: false,
   selector: 'mat-stepper, mat-vertical-stepper, mat-horizontal-stepper, [matStepper]',
   exportAs: 'matStepper, matVerticalStepper, matHorizontalStepper',
   templateUrl: 'stepper.html',
-  styleUrls: ['stepper.css'],
+  styleUrls: ['stepper.scss'],
   inputs: ['selectedIndex'],
   host: {
     '[class.mat-stepper-horizontal]': 'orientation === "horizontal"',

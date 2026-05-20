@@ -13,7 +13,7 @@ import {
   ColumnResizeNotifier,
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
-} from '@angular/cdk-experimental/column-resize';
+} from '@stagefright5/cdk-experimental/column-resize';
 
 import {
   TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER,

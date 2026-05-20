@@ -104,6 +104,7 @@ describe('MatToolbar', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-toolbar [color]="toolbarColor">
       <span>First Row</span>
@@ -115,6 +116,7 @@ class ToolbarSingleRow {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-toolbar>
       <mat-toolbar-row>First Row</mat-toolbar-row>
@@ -125,6 +127,7 @@ class ToolbarSingleRow {
 class ToolbarMultipleRows {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-toolbar>
       First Row
@@ -137,6 +140,7 @@ class ToolbarMixedRowModes {
 }
 
 @Component({
+  standalone: false,
   // The ng-container is there so we have a node with a directive between the toolbar and the rows.
   template: `
     <mat-toolbar>

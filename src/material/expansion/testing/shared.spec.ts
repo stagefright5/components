@@ -1,8 +1,8 @@
-import {ComponentHarness, HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {ComponentHarness, HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatAccordionTogglePosition, MatExpansionModule} from '@angular/material/expansion';
+import {MatAccordionTogglePosition, MatExpansionModule} from '@stagefright5/material/expansion';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatAccordionHarness} from './accordion-harness';
 import {MatExpansionPanelHarness} from './expansion-harness';
@@ -274,6 +274,7 @@ function getActiveElementTag() {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-accordion id="accordion1" [hideToggle]="hideToggleIndicators"
                    [togglePosition]="toggleIndicatorsPosition"

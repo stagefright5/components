@@ -7,9 +7,9 @@
  */
 
 import {NgModule} from '@angular/core';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {PortalModule} from '@angular/cdk/portal';
-import {A11yModule} from '@angular/cdk/a11y';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {PortalModule} from '@stagefright5/cdk/portal';
+import {A11yModule} from '@stagefright5/cdk/a11y';
 import {Dialog} from './dialog';
 import {CdkDialogContainer} from './dialog-container';
 import {DialogConfig} from './dialog-config';

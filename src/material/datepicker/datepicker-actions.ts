@@ -17,16 +17,17 @@ import {
   ViewContainerRef,
   ViewEncapsulation,
 } from '@angular/core';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {MatDatepickerBase, MatDatepickerControl} from './datepicker-base';
 
 /** Button that will close the datepicker and assign the current selection to the data model. */
 @Directive({
+  standalone: false,
   selector: '[matDatepickerApply], [matDateRangePickerApply]',
   host: {'(click)': '_applySelection()'},
 })
 export class MatDatepickerApply {
-  constructor(private _datepicker: MatDatepickerBase<MatDatepickerControl<unknown>, unknown>) {}
+  constructor(private _datepicker: MatDatepickerBase<MatDatepickerControl<any>, any>) {}
 
   _applySelection() {
     this._datepicker._applyPendingSelection();
@@ -36,11 +37,12 @@ export class MatDatepickerApply {
 
 /** Button that will close the datepicker and discard the current selection. */
 @Directive({
+  standalone: false,
   selector: '[matDatepickerCancel], [matDateRangePickerCancel]',
   host: {'(click)': '_datepicker.close()'},
 })
 export class MatDatepickerCancel {
-  constructor(public _datepicker: MatDatepickerBase<MatDatepickerControl<unknown>, unknown>) {}
+  constructor(public _datepicker: MatDatepickerBase<MatDatepickerControl<any>, any>) {}
 }
 
 /**
@@ -48,8 +50,9 @@ export class MatDatepickerCancel {
  * to the bottom of a datepicker or date range picker.
  */
 @Component({
+  standalone: false,
   selector: 'mat-datepicker-actions, mat-date-range-picker-actions',
-  styleUrls: ['datepicker-actions.css'],
+  styleUrls: ['datepicker-actions.scss'],
   template: `
     <ng-template>
       <div class="mat-datepicker-actions">
@@ -65,7 +68,7 @@ export class MatDatepickerActions implements AfterViewInit, OnDestroy {
   private _portal: TemplatePortal;
 
   constructor(
-    private _datepicker: MatDatepickerBase<MatDatepickerControl<unknown>, unknown>,
+    private _datepicker: MatDatepickerBase<MatDatepickerControl<any>, any>,
     private _viewContainerRef: ViewContainerRef,
   ) {}
 

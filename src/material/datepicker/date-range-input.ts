@@ -22,12 +22,12 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import {MatFormFieldControl, MatFormField, MAT_FORM_FIELD} from '@angular/material/form-field';
-import {ThemePalette, DateAdapter} from '@angular/material/core';
+import {MatFormFieldControl, MatFormField, MAT_FORM_FIELD} from '@stagefright5/material/form-field';
+import {ThemePalette, DateAdapter} from '@stagefright5/material/core';
 import {NgControl, ControlContainer} from '@angular/forms';
 import {Subject, merge, Subscription} from 'rxjs';
-import {FocusOrigin} from '@angular/cdk/a11y';
-import {coerceBooleanProperty, BooleanInput} from '@angular/cdk/coercion';
+import {FocusOrigin} from '@stagefright5/cdk/a11y';
+import {coerceBooleanProperty, BooleanInput} from '@stagefright5/cdk/coercion';
 import {
   MatStartDate,
   MatEndDate,
@@ -43,9 +43,10 @@ import {DateRange, MatDateSelectionModel} from './date-selection-model';
 let nextUniqueId = 0;
 
 @Component({
+  standalone: false,
   selector: 'mat-date-range-input',
   templateUrl: 'date-range-input.html',
-  styleUrls: ['date-range-input.css'],
+  styleUrls: ['date-range-input.scss'],
   exportAs: 'matDateRangeInput',
   host: {
     'class': 'mat-date-range-input',

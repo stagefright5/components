@@ -1,4 +1,4 @@
-import {MutationObserverFactory} from '@angular/cdk/observers';
+import {MutationObserverFactory} from '@stagefright5/cdk/observers';
 import {Component, Input} from '@angular/core';
 import {ComponentFixture, fakeAsync, flush, inject, TestBed, tick} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
@@ -340,7 +340,7 @@ function getLiveElement(): Element {
   return document.body.querySelector('.cdk-live-announcer-element')!;
 }
 
-@Component({template: `<button (click)="announceText('Test')">Announce</button>`})
+@Component({standalone: false, template: `<button (click)="announceText('Test')">Announce</button>`})
 class TestApp {
   constructor(public live: LiveAnnouncer) {}
 

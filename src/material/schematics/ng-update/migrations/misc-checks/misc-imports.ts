@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isMaterialImportDeclaration, Migration, TargetVersion} from '@angular/cdk/schematics';
+import {isMaterialImportDeclaration, Migration, TargetVersion} from '@stagefright5/cdk/schematics';
 import * as ts from 'typescript';
 
 /**

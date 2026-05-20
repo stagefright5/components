@@ -17,15 +17,15 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import {FocusTrapFactory, InteractivityChecker} from '@angular/cdk/a11y';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+import {FocusTrapFactory, InteractivityChecker} from '@stagefright5/cdk/a11y';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {
   BasePortalOutlet,
   CdkPortalOutlet,
   ComponentPortal,
   DomPortal,
   TemplatePortal,
-} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/portal';
 import {DOCUMENT} from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -54,9 +54,10 @@ export function throwDialogContentAlreadyAttachedError() {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'cdk-dialog-container',
   templateUrl: './dialog-container.html',
-  styleUrls: ['dialog-container.css'],
+  styleUrls: ['dialog-container.scss'],
   encapsulation: ViewEncapsulation.None,
   // Using OnPush for dialogs caused some G3 sync issues. Disabled until we can track them down.
   // tslint:disable-next-line:validate-decorators

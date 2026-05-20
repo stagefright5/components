@@ -148,6 +148,7 @@ describe('MapPolyline', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `<google-map>
                 <map-polyline [options]="options"

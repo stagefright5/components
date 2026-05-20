@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty} from '@angular/cdk/coercion';
-import {ComponentHarness, HarnessPredicate, parallel} from '@angular/cdk/testing';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
+import {ComponentHarness, HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
 import {SliderThumbHarnessFilters, ThumbPosition} from './slider-harness-filters';
 
 /** Harness for interacting with a thumb inside of a Material slider in tests. */

@@ -10,7 +10,7 @@ import {
   HarnessPredicate,
   ComponentHarnessConstructor,
   ContentContainerComponentHarness,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {CellHarnessFilters} from './table-harness-filters';
 
 /** Harness for interacting with a standard Angular Material table cell. */

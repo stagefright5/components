@@ -21,7 +21,7 @@ import {
   PostMigrationAction,
   ResolvedResource,
   TargetVersion,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {InsertChange} from '@schematics/angular/utility/change';
 import {readFileSync} from 'fs';
 import * as ts from 'typescript';
@@ -482,7 +482,7 @@ export class HammerGesturesMigration extends DevkitMigration<null> {
       if (
         importData &&
         importData.symbolName === GESTURE_CONFIG_CLASS_NAME &&
-        importData.moduleName.startsWith('@angular/material/')
+        importData.moduleName.startsWith('@stagefright5/material/')
       ) {
         this._gestureConfigReferences.push({
           node,

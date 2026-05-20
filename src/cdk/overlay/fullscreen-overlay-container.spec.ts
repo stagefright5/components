@@ -1,7 +1,7 @@
 import {DOCUMENT} from '@angular/common';
 import {waitForAsync, inject, TestBed} from '@angular/core/testing';
 import {Component, NgModule, ViewChild, ViewContainerRef} from '@angular/core';
-import {PortalModule, CdkPortal} from '@angular/cdk/portal';
+import {PortalModule, CdkPortal} from '@stagefright5/cdk/portal';
 import {Overlay, OverlayContainer, OverlayModule, FullscreenOverlayContainer} from './index';
 
 describe('FullscreenOverlayContainer', () => {
@@ -110,6 +110,7 @@ describe('FullscreenOverlayContainer', () => {
 
 /** Test-bed component that contains a TempatePortal and an ElementRef. */
 @Component({
+  standalone: false,
   template: `<ng-template cdk-portal>Cake</ng-template>`,
   providers: [Overlay],
 })

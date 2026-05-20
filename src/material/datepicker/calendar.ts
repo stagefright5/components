@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentPortal, ComponentType, Portal} from '@angular/cdk/portal';
+import {ComponentPortal, ComponentType, Portal} from '@stagefright5/cdk/portal';
 import {
   AfterContentInit,
   AfterViewChecked,
@@ -26,7 +26,7 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@stagefright5/material/core';
 import {Subject, Subscription} from 'rxjs';
 import {MatCalendarUserEvent, MatCalendarCellClassFunction} from './calendar-body';
 import {createMissingDateImplError} from './datepicker-errors';
@@ -52,6 +52,7 @@ let uniqueId = 0;
 
 /** Default header for MatCalendar */
 @Component({
+  standalone: false,
   selector: 'mat-calendar-header',
   templateUrl: 'calendar-header.html',
   exportAs: 'matCalendarHeader',
@@ -196,9 +197,10 @@ export class MatCalendarHeader<D> {
 
 /** A calendar that is used as part of the datepicker. */
 @Component({
+  standalone: false,
   selector: 'mat-calendar',
   templateUrl: 'calendar.html',
-  styleUrls: ['calendar.css'],
+  styleUrls: ['calendar.scss'],
   host: {
     'class': 'mat-calendar',
   },

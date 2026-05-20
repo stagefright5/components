@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkTableModule} from '@angular/cdk/table';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 

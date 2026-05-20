@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceArray} from '@angular/cdk/coercion';
+import {coerceArray} from '@stagefright5/cdk/coercion';
 import {Injectable, NgZone, OnDestroy} from '@angular/core';
 import {combineLatest, concat, Observable, Observer, Subject} from 'rxjs';
 import {debounceTime, map, skip, startWith, take, takeUntil} from 'rxjs/operators';

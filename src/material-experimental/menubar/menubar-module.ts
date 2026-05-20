@@ -7,7 +7,7 @@
  */
 
 import {NgModule} from '@angular/core';
-import {CdkMenuModule} from '@angular/cdk-experimental/menu';
+import {CdkMenuModule} from '@stagefright5/cdk-experimental/menu';
 import {MatMenuBar} from './menubar';
 import {MatMenuBarItem} from './menubar-item';
 

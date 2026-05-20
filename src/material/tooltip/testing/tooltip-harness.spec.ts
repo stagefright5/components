@@ -1,5 +1,5 @@
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {runHarnessTests} from '@angular/material/tooltip/testing/shared.spec';
+import {MatTooltipModule} from '@stagefright5/material/tooltip';
+import {runHarnessTests} from '@stagefright5/material/tooltip/testing/shared.spec';
 import {MatTooltipHarness} from './tooltip-harness';
 
 describe('Non-MDC-based MatTooltipHarness', () => {

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {MatBadgePosition, MatBadgeSize} from '@angular/material/badge';
+import {ComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {MatBadgePosition, MatBadgeSize} from '@stagefright5/material/badge';
 import {BadgeHarnessFilters} from './badge-harness-filters';
 
 /** Harness for interacting with a standard Material badge in tests. */

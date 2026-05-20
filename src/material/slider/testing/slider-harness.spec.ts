@@ -1,9 +1,9 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSliderHarness} from '@angular/material/slider/testing/slider-harness';
+import {MatSliderModule} from '@stagefright5/material/slider';
+import {MatSliderHarness} from '@stagefright5/material/slider/testing/slider-harness';
 
 describe('Non-MDC-based MatSliderHarness', () => {
   let fixture: ComponentFixture<SliderHarnessTest>;
@@ -164,6 +164,7 @@ describe('Non-MDC-based MatSliderHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-slider value="50" disabled></mat-slider>
     <div [dir]="dir">

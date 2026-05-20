@@ -1,4 +1,4 @@
-import {MatOptionModule, MatOption} from '@angular/material/core';
+import {MatOptionModule, MatOption} from '@stagefright5/material/core';
 import {runHarnessTests} from './option-shared.spec';
 import {MatOptionHarness} from './option-harness';
 

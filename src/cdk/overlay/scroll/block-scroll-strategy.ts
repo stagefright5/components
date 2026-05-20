@@ -7,9 +7,9 @@
  */
 
 import {ScrollStrategy} from './scroll-strategy';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {coerceCssPixelValue} from '@angular/cdk/coercion';
-import {supportsScrollBehavior} from '@angular/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {coerceCssPixelValue} from '@stagefright5/cdk/coercion';
+import {supportsScrollBehavior} from '@stagefright5/cdk/platform';
 
 const scrollBehaviorSupported = supportsScrollBehavior();
 

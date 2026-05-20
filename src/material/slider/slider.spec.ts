@@ -1,4 +1,4 @@
-import {BidiModule} from '@angular/cdk/bidi';
+import {BidiModule} from '@stagefright5/cdk/bidi';
 import {
   BACKSPACE,
   DOWN_ARROW,
@@ -10,7 +10,7 @@ import {
   RIGHT_ARROW,
   UP_ARROW,
   A,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   createMouseEvent,
   dispatchEvent,
@@ -19,7 +19,7 @@ import {
   dispatchMouseEvent,
   createKeyboardEvent,
   createTouchEvent,
-} from '@angular/cdk/testing/private';
+} from '@stagefright5/cdk/testing/private';
 import {Component, DebugElement, Type, ViewChild} from '@angular/core';
 import {ComponentFixture, fakeAsync, flush, TestBed} from '@angular/core/testing';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -1599,18 +1599,21 @@ const styles = `
 `;
 
 @Component({
+  standalone: false,
   template: `<mat-slider></mat-slider>`,
   styles: [styles],
 })
 class StandardSlider {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider disabled></mat-slider>`,
   styles: [styles],
 })
 class DisabledSlider {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider [min]="min" [max]="max" [step]="step" tickInterval="6"></mat-slider>`,
   styles: [styles],
 })
@@ -1621,12 +1624,14 @@ class SliderWithMinAndMax {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider value="26"></mat-slider>`,
   styles: [styles],
 })
 class SliderWithValue {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider [step]="step" [valueText]="valueText"></mat-slider>`,
   styles: [styles],
 })
@@ -1636,12 +1641,14 @@ class SliderWithStep {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider step="5" tickInterval="auto"></mat-slider>`,
   styles: [styles],
 })
 class SliderWithAutoTickInterval {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider step="3" [tickInterval]="tickInterval"></mat-slider>`,
   styles: [styles],
 })
@@ -1650,12 +1657,14 @@ class SliderWithSetTickInterval {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider thumbLabel></mat-slider>`,
   styles: [styles],
 })
 class SliderWithThumbLabel {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider min="1" max="100000" [displayWith]="displayWith" thumbLabel></mat-slider>`,
   styles: [styles],
 })
@@ -1670,6 +1679,7 @@ class SliderWithCustomThumbLabelFormatting {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider [value]="val"></mat-slider>`,
   styles: [styles],
 })
@@ -1678,6 +1688,7 @@ class SliderWithOneWayBinding {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider [formControl]="control"></mat-slider>`,
   styles: [styles],
 })
@@ -1686,6 +1697,7 @@ class SliderWithFormControl {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider [(ngModel)]="val"></mat-slider>`,
   styles: [styles],
 })
@@ -1695,18 +1707,21 @@ class SliderWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider value="3" min="4" max="6"></mat-slider>`,
   styles: [styles],
 })
 class SliderWithValueSmallerThanMin {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider value="7" min="4" max="6"></mat-slider>`,
   styles: [styles],
 })
 class SliderWithValueGreaterThanMax {}
 
 @Component({
+  standalone: false,
   template: `<mat-slider (change)="onChange($event)" (input)="onInput($event)"></mat-slider>`,
   styles: [styles],
 })
@@ -1718,6 +1733,7 @@ class SliderWithChangeHandler {
 }
 
 @Component({
+  standalone: false,
   template: `<div [dir]="dir"><mat-slider [invert]="invert" tickInterval="5"></mat-slider></div>`,
   styles: [styles],
 })
@@ -1727,6 +1743,7 @@ class SliderWithDirAndInvert {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider vertical [invert]="invert"></mat-slider>`,
   styles: [styles],
 })
@@ -1735,6 +1752,7 @@ class VerticalSlider {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider [tabIndex]="tabIndex"></mat-slider>`,
   styles: [styles],
 })
@@ -1743,6 +1761,7 @@ class SliderWithTabIndexBinding {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-slider tabindex="5"></mat-slider>`,
   styles: [styles],
 })
@@ -1751,6 +1770,7 @@ class SliderWithNativeTabindexAttr {
 }
 
 @Component({
+  standalone: false,
   template: '<mat-slider [(value)]="value"></mat-slider>',
   styles: [styles],
 })

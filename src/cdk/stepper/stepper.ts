@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption, FocusKeyManager} from '@angular/cdk/a11y';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {FocusableOption, FocusKeyManager} from '@stagefright5/cdk/a11y';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
-import {ENTER, hasModifierKey, SPACE} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/coercion';
+import {ENTER, hasModifierKey, SPACE} from '@stagefright5/cdk/keycodes';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -40,7 +40,7 @@ import {
   ViewEncapsulation,
   AfterContentInit,
 } from '@angular/core';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {Observable, of as observableOf, Subject} from 'rxjs';
 import {startWith, takeUntil} from 'rxjs/operators';
 
@@ -105,6 +105,7 @@ export interface StepperOptions {
 }
 
 @Component({
+  standalone: false,
   selector: 'cdk-step',
   exportAs: 'cdkStep',
   template: '<ng-template><ng-content></ng-content></ng-template>',
@@ -249,6 +250,7 @@ export class CdkStep implements OnChanges {
 }
 
 @Directive({
+  standalone: false,
   selector: '[cdkStepper]',
   exportAs: 'cdkStepper',
 })

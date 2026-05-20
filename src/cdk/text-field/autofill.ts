@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform, normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {Platform, normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {
   Directive,
   ElementRef,
@@ -17,7 +17,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import {coerceElement} from '@angular/cdk/coercion';
+import {coerceElement} from '@stagefright5/cdk/coercion';
 import {EMPTY, Observable, Subject} from 'rxjs';
 
 /** An event that is emitted when the autofill state of an input changes. */
@@ -142,6 +142,7 @@ export class AutofillMonitor implements OnDestroy {
 
 /** A directive that can be used to monitor the autofill state of an input. */
 @Directive({
+  standalone: false,
   selector: '[cdkAutofill]',
 })
 export class CdkAutofill implements OnDestroy, OnInit {

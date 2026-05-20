@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {BACKSPACE, hasModifierKey} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {BACKSPACE, hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   Directive,
@@ -20,7 +20,7 @@ import {
   Optional,
   Output,
 } from '@angular/core';
-import {MatFormField, MAT_FORM_FIELD} from '@angular/material-experimental/mdc-form-field';
+import {MatFormField, MAT_FORM_FIELD} from '@stagefright5/material-experimental/mdc-form-field';
 import {MatChipsDefaultOptions, MAT_CHIPS_DEFAULT_OPTIONS} from './chip-default-options';
 import {MatChipGrid} from './chip-grid';
 import {MatChipTextControl} from './chip-text-control';
@@ -52,6 +52,7 @@ let nextUniqueId = 0;
  * May be placed inside or outside of a `<mat-chip-grid>`.
  */
 @Directive({
+  standalone: false,
   selector: 'input[matChipInputFor]',
   exportAs: 'matChipInput, matChipInputFor',
   host: {

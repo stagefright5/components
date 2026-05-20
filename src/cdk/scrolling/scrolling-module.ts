@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BidiModule} from '@angular/cdk/bidi';
+import {BidiModule} from '@stagefright5/cdk/bidi';
 import {NgModule} from '@angular/core';
 import {CdkFixedSizeVirtualScroll} from './fixed-size-virtual-scroll';
 import {CdkScrollable} from './scrollable';

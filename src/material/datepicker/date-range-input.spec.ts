@@ -10,14 +10,14 @@ import {
   NgModel,
 } from '@angular/forms';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {OverlayContainer} from '@angular/cdk/overlay';
-import {ErrorStateMatcher, MatNativeDateModule} from '@angular/material/core';
+import {OverlayContainer} from '@stagefright5/cdk/overlay';
+import {ErrorStateMatcher, MatNativeDateModule} from '@stagefright5/material/core';
 import {MatDatepickerModule} from './datepicker-module';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
+import {MatInputModule} from '@stagefright5/material/input';
 import {dispatchFakeEvent, dispatchKeyboardEvent} from '../../cdk/testing/private';
-import {FocusMonitor} from '@angular/cdk/a11y';
-import {BACKSPACE} from '@angular/cdk/keycodes';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
+import {BACKSPACE} from '@stagefright5/cdk/keycodes';
 import {MatDateRangeInput} from './date-range-input';
 import {MatDateRangePicker} from './date-range-picker';
 import {MatStartDate, MatEndDate} from './date-range-input-parts';
@@ -960,6 +960,7 @@ describe('MatDateRangeInput', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field hintLabel="Pick between a start and an end">
       <mat-label>Enter a date</mat-label>
@@ -1006,6 +1007,7 @@ class StandardRangePicker {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker">
@@ -1019,6 +1021,7 @@ class StandardRangePicker {
 class RangePickerNoStart {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker">
@@ -1032,6 +1035,7 @@ class RangePickerNoStart {}
 class RangePickerNoEnd {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker">
@@ -1070,6 +1074,7 @@ class RangePickerNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker">
@@ -1087,6 +1092,7 @@ class RangePickerNoLabel {
 }
 
 @Directive({
+  standalone: false,
   selector: '[customValidator]',
   providers: [
     {
@@ -1101,6 +1107,7 @@ class CustomValidator implements Validator {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker" [min]="min" [max]="max">
@@ -1121,6 +1128,7 @@ class RangePickerWithCustomValidator {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-date-range-input [rangePicker]="rangePicker">

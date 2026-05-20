@@ -16,7 +16,7 @@ import {
   query,
   animateChild,
 } from '@angular/animations';
-import {AnimationCurves, AnimationDurations} from '@angular/material/core';
+import {AnimationCurves, AnimationDurations} from '@stagefright5/material/core';
 
 /** Animations used by the Material bottom sheet. */
 export const matBottomSheetAnimations: {

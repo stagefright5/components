@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstructorChecksUpgradeData, TargetVersion, VersionChanges} from '@angular/cdk/schematics';
+import {ConstructorChecksUpgradeData, TargetVersion, VersionChanges} from '@stagefright5/cdk/schematics';
 
 /**
  * List of class names for which the constructor signature has been changed. The new constructor

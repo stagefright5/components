@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   getRtlScrollAxisType,
   RtlScrollAxisType,
   supportsScrollBehavior,
-} from '@angular/cdk/platform';
+} from '@stagefright5/cdk/platform';
 import {Directive, ElementRef, NgZone, OnDestroy, OnInit, Optional} from '@angular/core';
 import {fromEvent, Observable, Subject, Observer} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
@@ -42,6 +42,7 @@ export type ExtendedScrollToOptions = _XAxis & _YAxis & ScrollOptions;
  * can be listened to through the service.
  */
 @Directive({
+  standalone: false,
   selector: '[cdk-scrollable], [cdkScrollable]',
 })
 export class CdkScrollable implements OnInit, OnDestroy {

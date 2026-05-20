@@ -13,6 +13,7 @@ import {Directive} from '@angular/core';
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-subheader], [matSubheader]',
   // TODO(mmalerba): MDC's subheader font looks identical to the list item font, figure out why and
   //  make a change in one of the repos to visually distinguish.

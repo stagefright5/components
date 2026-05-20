@@ -15,6 +15,7 @@ import {CdkMenuItem} from './menu-item';
  * conventional checkbox.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkMenuItemCheckbox]',
   exportAs: 'cdkMenuItemCheckbox',
   host: {

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentContainerComponentHarness, HarnessPredicate} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {ButtonHarnessFilters} from '@angular/material/button/testing';
+import {ContentContainerComponentHarness, HarnessPredicate} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {ButtonHarnessFilters} from '@stagefright5/material/button/testing';
 
 /** Harness for interacting with a MDC-based mat-button in tests. */
 export class MatButtonHarness extends ContentContainerComponentHarness {

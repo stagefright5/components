@@ -15,7 +15,7 @@ import {
   TestKey,
   TextOptions,
   EventData,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {browser, Button, by, ElementFinder, Key} from 'protractor';
 
 /** Maps the `TestKey` constants to Protractor's `Key` constants. */

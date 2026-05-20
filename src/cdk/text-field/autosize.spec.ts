@@ -389,6 +389,7 @@ const textareaStyleReset = `
     }`;
 
 @Component({
+  standalone: false,
   template: `
     <textarea cdkTextareaAutosize [cdkAutosizeMinRows]="minRows" [cdkAutosizeMaxRows]="maxRows"
         #autosize="cdkTextareaAutosize" [placeholder]="placeholder">{{content}}</textarea>`,
@@ -403,6 +404,7 @@ class AutosizeTextAreaWithContent {
 }
 
 @Component({
+  standalone: false,
   template: `<textarea cdkTextareaAutosize [value]="value"></textarea>`,
   styles: [textareaStyleReset],
 })
@@ -411,6 +413,7 @@ class AutosizeTextAreaWithValue {
 }
 
 @Component({
+  standalone: false,
   template: `<textarea cdkTextareaAutosize [(ngModel)]="model"></textarea>`,
   styles: [textareaStyleReset],
 })
@@ -419,6 +422,7 @@ class AutosizeTextareaWithNgModel {
 }
 
 @Component({
+  standalone: false,
   template: `<textarea [cdkTextareaAutosize]="false">{{content}}</textarea>`,
   styles: [textareaStyleReset],
 })

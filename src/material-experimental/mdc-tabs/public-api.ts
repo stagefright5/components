@@ -30,4 +30,4 @@ export {
   MAT_TAB_GROUP,
   MAT_TAB,
   ScrollDirection,
-} from '@angular/material/tabs';
+} from '@stagefright5/material/tabs';

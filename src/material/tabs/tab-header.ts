@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -28,10 +28,10 @@ import {
   Directive,
 } from '@angular/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {MatInkBar} from './ink-bar';
 import {MatTabLabelWrapper} from './tab-label-wrapper';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {MatPaginatedTabHeader} from './paginated-tab-header';
 
 /**
@@ -78,9 +78,10 @@ export abstract class _MatTabHeaderBase
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-header',
   templateUrl: 'tab-header.html',
-  styleUrls: ['tab-header.css'],
+  styleUrls: ['tab-header.scss'],
   inputs: ['selectedIndex'],
   outputs: ['selectFocusedIndex', 'indexFocused'],
   encapsulation: ViewEncapsulation.None,

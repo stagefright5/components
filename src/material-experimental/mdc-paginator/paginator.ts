@@ -15,8 +15,8 @@ import {
   Optional,
   ViewEncapsulation,
 } from '@angular/core';
-import {MatPaginatorIntl, _MatPaginatorBase} from '@angular/material/paginator';
-import {MatFormFieldAppearance} from '@angular/material-experimental/mdc-form-field';
+import {MatPaginatorIntl, _MatPaginatorBase} from '@stagefright5/material/paginator';
+import {MatFormFieldAppearance} from '@stagefright5/material-experimental/mdc-form-field';
 
 // Note that while `MatPaginatorDefaultOptions` and `MAT_PAGINATOR_DEFAULT_OPTIONS` are identical
 // between the MDC and non-MDC versions, we have to duplicate them, because the type of
@@ -53,10 +53,11 @@ let nextUniqueId = 0;
  * navigational button to go to the previous or next page.
  */
 @Component({
+  standalone: false,
   selector: 'mat-paginator',
   exportAs: 'matPaginator',
   templateUrl: 'paginator.html',
-  styleUrls: ['paginator.css'],
+  styleUrls: ['paginator.scss'],
   inputs: ['disabled'],
   host: {
     'class': 'mat-mdc-paginator',

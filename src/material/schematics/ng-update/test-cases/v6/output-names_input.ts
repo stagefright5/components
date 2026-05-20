@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
+  standalone: false,
   template: `
     <mat-select (change)="onChange($event)"></mat-select>
     <mat-select (onClose)="onClose($event)"></mat-select>
@@ -10,6 +11,7 @@ import {Component} from '@angular/core';
 class A {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-drawer (align-changed)="onAlignChanged()"></mat-drawer>
     <mat-drawer (close)="onClose()" (open)="onOpen()"></mat-drawer>
@@ -19,6 +21,7 @@ class A {}
 class B {}
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip (remove)="removeFromList()"></mat-chip>
     <mat-basic-chip (remove)="removeFromList()"></mat-basic-chip>

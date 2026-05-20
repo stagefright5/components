@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MatCellDef, MatColumnDef, MatHeaderCellDef, MatTable} from '@angular/material/table';
+import {MatCellDef, MatColumnDef, MatHeaderCellDef, MatTable} from '@stagefright5/material/table';
 import {
   Component,
   Input,
@@ -28,6 +28,7 @@ import {MatSelection} from './selection';
  * Must be used within a parent `MatSelection` directive.
  */
 @Component({
+  standalone: false,
   selector: 'mat-selection-column',
   template: `
     <ng-container matColumnDef>
@@ -46,7 +47,7 @@ import {MatSelection} from './selection';
     </ng-container>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['selection-column.css'],
+  styleUrls: ['selection-column.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class MatSelectionColumn<T> implements OnInit, OnDestroy {

@@ -12,7 +12,7 @@ export {
   TableHarnessFilters,
   MatRowHarnessColumnsText,
   MatTableHarnessColumnsText,
-} from '@angular/material/table/testing';
+} from '@stagefright5/material/table/testing';
 export * from './table-harness';
 export * from './row-harness';
 export * from './cell-harness';

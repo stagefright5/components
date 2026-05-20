@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ObserversModule} from '@angular/cdk/observers';
+import {ObserversModule} from '@stagefright5/cdk/observers';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material-experimental/mdc-core';
+import {MatCommonModule} from '@stagefright5/material-experimental/mdc-core';
 import {MatError} from './directives/error';
 import {MatFormFieldFloatingLabel} from './directives/floating-label';
 import {MatHint} from './directives/hint';

@@ -11,7 +11,7 @@ import {
   ComponentHarnessConstructor,
   HarnessPredicate,
   parallel,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {RowHarnessFilters, CellHarnessFilters} from './table-harness-filters';
 import {MatCellHarness, MatHeaderCellHarness, MatFooterCellHarness} from './cell-harness';
 

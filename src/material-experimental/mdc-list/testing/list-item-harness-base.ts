@@ -12,7 +12,7 @@ import {
   ContentContainerComponentHarness,
   HarnessPredicate,
   parallel,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {BaseListItemHarnessFilters, SubheaderHarnessFilters} from './list-harness-filters';
 
 const iconSelector = '.mat-mdc-list-item-icon';

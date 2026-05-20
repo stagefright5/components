@@ -12,14 +12,14 @@ import {
   ComponentHarness,
   BaseHarnessFilters,
   ComponentHarnessConstructor,
-} from '@angular/cdk/testing';
-import {MatFormFieldControlHarness} from '@angular/material/form-field/testing/control';
+} from '@stagefright5/cdk/testing';
+import {MatFormFieldControlHarness} from '@stagefright5/material/form-field/testing/control';
 import {
   MatOptionHarness,
   MatOptgroupHarness,
   OptionHarnessFilters,
   OptgroupHarnessFilters,
-} from '@angular/material/core/testing';
+} from '@stagefright5/material/core/testing';
 import {SelectHarnessFilters} from './select-harness-filters';
 
 export abstract class _MatSelectHarnessBase<

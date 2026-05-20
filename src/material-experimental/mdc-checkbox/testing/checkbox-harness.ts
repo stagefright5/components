@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {CheckboxHarnessFilters, _MatCheckboxHarnessBase} from '@angular/material/checkbox/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {CheckboxHarnessFilters, _MatCheckboxHarnessBase} from '@stagefright5/material/checkbox/testing';
 
 /** Harness for interacting with a MDC-based mat-checkbox in tests. */
 export class MatCheckboxHarness extends _MatCheckboxHarnessBase {

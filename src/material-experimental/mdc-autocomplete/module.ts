@@ -7,11 +7,11 @@
  */
 
 import {NgModule} from '@angular/core';
-import {MatCommonModule, MatOptionModule} from '@angular/material-experimental/mdc-core';
+import {MatCommonModule, MatOptionModule} from '@stagefright5/material-experimental/mdc-core';
 import {CommonModule} from '@angular/common';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {MAT_AUTOCOMPLETE_SCROLL_STRATEGY_FACTORY_PROVIDER} from '@angular/material/autocomplete';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {MAT_AUTOCOMPLETE_SCROLL_STRATEGY_FACTORY_PROVIDER} from '@stagefright5/material/autocomplete';
 import {MatAutocomplete} from './autocomplete';
 import {MatAutocompleteTrigger} from './autocomplete-trigger';
 import {MatAutocompleteOrigin} from './autocomplete-origin';

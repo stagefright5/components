@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -22,19 +22,20 @@ import {
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MatListBase, MatListItemBase} from './list-base';
 import {MatListItemLine, MatListItemMeta, MatListItemTitle} from './list-item-sections';
 
 @Component({
+  standalone: false,
   selector: 'mat-list',
   exportAs: 'matList',
   template: '<ng-content></ng-content>',
   host: {
     'class': 'mat-mdc-list mat-mdc-list-base mdc-list',
   },
-  styleUrls: ['list.css'],
+  styleUrls: ['list.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [{provide: MatListBase, useExisting: MatList}],
@@ -42,6 +43,7 @@ import {MatListItemLine, MatListItemMeta, MatListItemTitle} from './list-item-se
 export class MatList extends MatListBase {}
 
 @Component({
+  standalone: false,
   selector: 'mat-list-item, a[mat-list-item], button[mat-list-item]',
   exportAs: 'matListItem',
   host: {

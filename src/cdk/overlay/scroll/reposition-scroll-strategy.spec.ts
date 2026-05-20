@@ -1,7 +1,7 @@
 import {waitForAsync, inject, TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
 import {Subject} from 'rxjs';
-import {ComponentPortal, PortalModule} from '@angular/cdk/portal';
+import {ComponentPortal, PortalModule} from '@stagefright5/cdk/portal';
 import {
   Overlay,
   OverlayContainer,
@@ -116,5 +116,5 @@ describe('RepositionScrollStrategy', () => {
 });
 
 /** Simple component that we can attach to the overlay. */
-@Component({template: '<p>Pasta</p>'})
+@Component({standalone: false, template: '<p>Pasta</p>'})
 class PastaMsg {}

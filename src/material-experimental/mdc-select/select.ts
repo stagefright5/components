@@ -18,7 +18,7 @@ import {
   QueryList,
   ViewEncapsulation,
 } from '@angular/core';
-import {MAT_SELECT_TRIGGER, _MatSelectBase} from '@angular/material/select';
+import {MAT_SELECT_TRIGGER, _MatSelectBase} from '@stagefright5/material/select';
 import {
   MatOptgroup,
   MatOption,
@@ -26,9 +26,9 @@ import {
   MAT_OPTION_PARENT_COMPONENT,
   _countGroupLabelsBeforeOption,
   _getOptionScrollPosition,
-} from '@angular/material-experimental/mdc-core';
-import {CdkOverlayOrigin, ConnectedPosition} from '@angular/cdk/overlay';
-import {MatFormFieldControl} from '@angular/material/form-field';
+} from '@stagefright5/material-experimental/mdc-core';
+import {CdkOverlayOrigin, ConnectedPosition} from '@stagefright5/cdk/overlay';
+import {MatFormFieldControl} from '@stagefright5/material/form-field';
 import {takeUntil} from 'rxjs/operators';
 import {matSelectAnimations} from './select-animations';
 
@@ -46,16 +46,18 @@ export class MatSelectChange {
  * Allows the user to customize the trigger that is displayed when the select has a value.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-select-trigger',
   providers: [{provide: MAT_SELECT_TRIGGER, useExisting: MatSelectTrigger}],
 })
 export class MatSelectTrigger {}
 
 @Component({
+  standalone: false,
   selector: 'mat-select',
   exportAs: 'matSelect',
   templateUrl: 'select.html',
-  styleUrls: ['select.css'],
+  styleUrls: ['select.scss'],
   inputs: ['disabled', 'disableRipple', 'tabIndex'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

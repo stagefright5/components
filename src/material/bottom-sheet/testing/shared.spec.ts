@@ -1,12 +1,12 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {
   MatBottomSheet,
   MatBottomSheetConfig,
   MatBottomSheetModule,
-} from '@angular/material/bottom-sheet';
+} from '@stagefright5/material/bottom-sheet';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatBottomSheetHarness} from './bottom-sheet-harness';
 
@@ -54,6 +54,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <ng-template>
       Hello from the bottom sheet!

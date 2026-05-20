@@ -7,14 +7,15 @@
  */
 
 import {Directive} from '@angular/core';
-import {MatFormFieldControl} from '@angular/material/form-field';
-import {MatInput as BaseMatInput} from '@angular/material/input';
+import {MatFormFieldControl} from '@stagefright5/material/form-field';
+import {MatInput as BaseMatInput} from '@stagefright5/material/input';
 
 // workaround until we have feature targeting for MDC text-field. At that
 // point we can just use the actual "MatInput" class and apply the MDC text-field
 // styles appropriately.
 
 @Directive({
+  standalone: false,
   selector: `input[matInput], textarea[matInput], select[matNativeControl],
       input[matNativeControl], textarea[matNativeControl]`,
   exportAs: 'matInput',

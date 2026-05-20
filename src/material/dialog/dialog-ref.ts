@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusOrigin} from '@angular/cdk/a11y';
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
-import {GlobalPositionStrategy, OverlayRef} from '@angular/cdk/overlay';
+import {FocusOrigin} from '@stagefright5/cdk/a11y';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
+import {GlobalPositionStrategy, OverlayRef} from '@stagefright5/cdk/overlay';
 import {Observable, Subject} from 'rxjs';
 import {filter, take} from 'rxjs/operators';
 import {DialogPosition} from './dialog-config';

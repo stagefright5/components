@@ -17,6 +17,7 @@ import {Direction, Directionality, _resolveDirectionality} from './directionalit
  * Directionality to get the closest direction.
  */
 @Directive({
+  standalone: false,
   selector: '[dir]',
   providers: [{provide: Directionality, useExisting: Dir}],
   host: {'[attr.dir]': '_rawDir'},

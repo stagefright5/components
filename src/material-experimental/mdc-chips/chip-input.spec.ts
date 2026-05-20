@@ -1,10 +1,10 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {COMMA, ENTER, TAB} from '@angular/cdk/keycodes';
-import {PlatformModule} from '@angular/cdk/platform';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {COMMA, ENTER, TAB} from '@stagefright5/cdk/keycodes';
+import {PlatformModule} from '@stagefright5/cdk/platform';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {Component, DebugElement, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, fakeAsync, TestBed, flush} from '@angular/core/testing';
-import {MatFormFieldModule} from '@angular/material-experimental/mdc-form-field';
+import {MatFormFieldModule} from '@stagefright5/material-experimental/mdc-form-field';
 import {By} from '@angular/platform-browser';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {Subject} from 'rxjs';
@@ -250,6 +250,7 @@ describe('MDC-based MatChipInput', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-chip-grid #chipGrid [required]="required">

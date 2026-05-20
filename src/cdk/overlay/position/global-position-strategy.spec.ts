@@ -1,7 +1,7 @@
 import {NgZone, Component} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
 import {MockNgZone} from '../../testing/private';
-import {PortalModule, ComponentPortal} from '@angular/cdk/portal';
+import {PortalModule, ComponentPortal} from '@stagefright5/cdk/portal';
 import {OverlayModule, Overlay, OverlayConfig, OverlayRef} from '../index';
 
 describe('GlobalPositonStrategy', () => {
@@ -369,5 +369,5 @@ describe('GlobalPositonStrategy', () => {
   });
 });
 
-@Component({template: ''})
+@Component({standalone: false, template: ''})
 class BlankPortal {}

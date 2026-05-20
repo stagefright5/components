@@ -9,7 +9,7 @@
 // Re-export everything from the "form-field/testing/control" entry-point. To avoid
 // circular dependencies, harnesses for default form-field controls (i.e. input, select)
 // need to import the base form-field control harness through a separate entry-point.
-export * from '@angular/material/form-field/testing/control';
+export * from '@stagefright5/material/form-field/testing/control';
 
-export {FormFieldHarnessFilters} from '@angular/material/form-field/testing';
+export {FormFieldHarnessFilters} from '@stagefright5/material/form-field/testing';
 export * from './form-field-harness';

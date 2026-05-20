@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ObserversModule} from '@angular/cdk/observers';
+import {ObserversModule} from '@stagefright5/cdk/observers';
 import {NgModule} from '@angular/core';
-import {MatCommonModule, MatRippleModule} from '@angular/material/core';
+import {MatCommonModule, MatRippleModule} from '@stagefright5/material/core';
 import {MatSlideToggle} from './slide-toggle';
 import {MatSlideToggleRequiredValidator} from './slide-toggle-required-validator';
 

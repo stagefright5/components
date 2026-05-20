@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TextFieldModule} from '@angular/cdk/text-field';
+import {TextFieldModule} from '@stagefright5/cdk/text-field';
 import {NgModule} from '@angular/core';
-import {MatCommonModule} from '@angular/material-experimental/mdc-core';
-import {MatFormFieldModule} from '@angular/material-experimental/mdc-form-field';
+import {MatCommonModule} from '@stagefright5/material-experimental/mdc-core';
+import {MatFormFieldModule} from '@stagefright5/material-experimental/mdc-form-field';
 import {MatInput} from './input';
 
 @NgModule({

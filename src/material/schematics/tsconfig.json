@@ -23,7 +23,7 @@
     "types": ["jasmine", "node"],
     "baseUrl": ".",
     "paths": {
-      "@angular/cdk/schematics": ["../../cdk/schematics"]
+      "@stagefright5/cdk/schematics": ["../../cdk/schematics"]
     }
   },
   "exclude": [

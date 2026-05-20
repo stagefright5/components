@@ -61,4 +61,4 @@ export {
   // would generate a deep cross-package import that breaks in the NPM package output.
   _AbstractConstructor,
   _Constructor,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';

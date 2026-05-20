@@ -1,5 +1,5 @@
-import {Direction} from '@angular/cdk/bidi';
-import {CdkScrollable, ScrollingModule} from '@angular/cdk/scrolling';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {CdkScrollable, ScrollingModule} from '@stagefright5/cdk/scrolling';
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 
@@ -217,6 +217,7 @@ describe('CdkScrollable', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div #scrollContainer class="scroll-container" cdkScrollable [dir]="dir">
       <div class="row">

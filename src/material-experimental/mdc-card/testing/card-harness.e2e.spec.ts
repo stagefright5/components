@@ -1,6 +1,6 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {ProtractorHarnessEnvironment} from '@angular/cdk/testing/protractor';
-import {MatCardHarness} from '@angular/material-experimental/mdc-card/testing/card-harness';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {ProtractorHarnessEnvironment} from '@stagefright5/cdk/testing/protractor';
+import {MatCardHarness} from '@stagefright5/material-experimental/mdc-card/testing/card-harness';
 import {browser} from 'protractor';
 
 describe('card harness', () => {

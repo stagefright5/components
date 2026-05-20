@@ -7,10 +7,11 @@
  */
 
 import {Directive} from '@angular/core';
-import {_MatMenuContentBase, _MatMenuTriggerBase, MAT_MENU_CONTENT} from '@angular/material/menu';
+import {_MatMenuContentBase, _MatMenuTriggerBase, MAT_MENU_CONTENT} from '@stagefright5/material/menu';
 
 /** Directive applied to an element that should trigger a `mat-menu`. */
 @Directive({
+  standalone: false,
   selector: `[mat-menu-trigger-for], [matMenuTriggerFor]`,
   host: {
     'class': 'mat-mdc-menu-trigger',
@@ -21,6 +22,7 @@ export class MatMenuTrigger extends _MatMenuTriggerBase {}
 
 /** Menu content that will be rendered lazily once the menu is opened. */
 @Directive({
+  standalone: false,
   selector: 'ng-template[matMenuContent]',
   providers: [{provide: MAT_MENU_CONTENT, useExisting: MatMenuContent}],
 })

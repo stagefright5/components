@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, parallel, TestKey} from '@angular/cdk/testing';
+import {HarnessPredicate, parallel, TestKey} from '@stagefright5/cdk/testing';
 import {MatDatepickerInputHarnessBase, getInputPredicate} from './datepicker-input-harness-base';
 import {DatepickerTriggerHarnessBase} from './datepicker-trigger-harness-base';
 import {

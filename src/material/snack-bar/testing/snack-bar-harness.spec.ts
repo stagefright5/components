@@ -1,10 +1,10 @@
-import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@angular/material/snack-bar';
-import {runHarnessTests} from '@angular/material/snack-bar/testing/shared.spec';
+import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@stagefright5/material/snack-bar';
+import {runHarnessTests} from '@stagefright5/material/snack-bar/testing/shared.spec';
 import {MatSnackBarHarness} from './snack-bar-harness';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {HarnessLoader} from '@angular/cdk/testing';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 
 describe('Non-MDC-based MatSnackBarHarness', () => {
@@ -46,6 +46,7 @@ describe('Non-MDC-based MatSnackBarHarness (non-MDC only behavior)', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<ng-template>My custom snack-bar.</ng-template>`,
 })
 class SnackbarHarnessTest {

@@ -1,9 +1,9 @@
-import {ComponentHarness, HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {ComponentHarness, HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatCardModule} from '@angular/material/card';
-import {MatCardHarness, MatCardSection} from '@angular/material/card/testing/card-harness';
+import {MatCardModule} from '@stagefright5/material/card';
+import {MatCardHarness, MatCardSection} from '@stagefright5/material/card/testing/card-harness';
 
 /** Shared tests to run on both the original and MDC-based cards. */
 export function runHarnessTests(
@@ -104,6 +104,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
       <mat-card></mat-card>
       <mat-card>

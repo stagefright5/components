@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "zone.js"
+    ],
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": false,
+    "compilationMode": "partial"
+  }
+}

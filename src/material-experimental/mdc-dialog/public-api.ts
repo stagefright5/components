@@ -21,4 +21,4 @@ export {
   DialogRole,
   DialogPosition,
   MAT_DIALOG_SCROLL_STRATEGY_FACTORY,
-} from '@angular/material/dialog';
+} from '@stagefright5/material/dialog';

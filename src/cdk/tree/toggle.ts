@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {Directive, Input} from '@angular/core';
 
 import {CdkTree, CdkTreeNode} from './tree';
@@ -15,6 +15,7 @@ import {CdkTree, CdkTreeNode} from './tree';
  * Node toggle to expand/collapse the node.
  */
 @Directive({
+  standalone: false,
   selector: '[cdkTreeNodeToggle]',
   host: {
     '(click)': '_toggle($event)',

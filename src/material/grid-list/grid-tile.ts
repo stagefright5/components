@@ -19,11 +19,12 @@ import {
   ChangeDetectionStrategy,
   Inject,
 } from '@angular/core';
-import {MatLine, setLines} from '@angular/material/core';
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
+import {MatLine, setLines} from '@stagefright5/material/core';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
 import {MAT_GRID_LIST, MatGridListBase} from './grid-list-base';
 
 @Component({
+  standalone: false,
   selector: 'mat-grid-tile',
   exportAs: 'matGridTile',
   host: {
@@ -34,7 +35,7 @@ import {MAT_GRID_LIST, MatGridListBase} from './grid-list-base';
     '[attr.colspan]': 'colspan',
   },
   templateUrl: 'grid-tile.html',
-  styleUrls: ['grid-list.css'],
+  styleUrls: ['grid-list.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -75,6 +76,7 @@ export class MatGridTile {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-grid-tile-header, mat-grid-tile-footer',
   templateUrl: 'grid-tile-text.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -95,6 +97,7 @@ export class MatGridTileText implements AfterContentInit {
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: '[mat-grid-avatar], [matGridAvatar]',
   host: {'class': 'mat-grid-avatar'},
 })
@@ -105,6 +108,7 @@ export class MatGridAvatarCssMatStyler {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-grid-tile-header',
   host: {'class': 'mat-grid-tile-header'},
 })
@@ -115,6 +119,7 @@ export class MatGridTileHeaderCssMatStyler {}
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-grid-tile-footer',
   host: {'class': 'mat-grid-tile-footer'},
 })

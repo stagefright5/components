@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {Directive, ElementRef, NgZone, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {
   CanColor,
@@ -16,8 +16,8 @@ import {
   mixinColor,
   mixinDisabled,
   mixinDisableRipple,
-} from '@angular/material-experimental/mdc-core';
-import {FocusOrigin} from '@angular/cdk/a11y';
+} from '@stagefright5/material-experimental/mdc-core';
+import {FocusOrigin} from '@stagefright5/cdk/a11y';
 
 /** Inputs common to all buttons. */
 export const MAT_BUTTON_INPUTS = ['disabled', 'disableRipple', 'color'];

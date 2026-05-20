@@ -1,5 +1,5 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {
@@ -7,8 +7,8 @@ import {
   DateRange,
   MAT_DATE_RANGE_SELECTION_STRATEGY,
   DefaultMatCalendarRangeStrategy,
-} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
+} from '@stagefright5/material/datepicker';
+import {MatNativeDateModule} from '@stagefright5/material/core';
 import {MatCalendarHarness, CalendarView} from './calendar-harness';
 
 /** Date at which the calendars are set. */
@@ -313,6 +313,7 @@ export function runCalendarHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-calendar
       id="single"

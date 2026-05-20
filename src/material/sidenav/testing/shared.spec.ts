@@ -1,8 +1,8 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSidenavModule} from '@stagefright5/material/sidenav';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDrawerContainerHarness} from './drawer-container-harness';
 import {MatDrawerContentHarness} from './drawer-content-harness';
@@ -175,6 +175,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-drawer-container>
       <mat-drawer id="one" position="start">One</mat-drawer>
@@ -193,6 +194,7 @@ class DrawerHarnessTest {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-sidenav-container>
       <mat-sidenav id="one" position="start">One</mat-sidenav>

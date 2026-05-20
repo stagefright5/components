@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed, fakeAsync, flush} from '@angular/core/testing';
-import {dispatchKeyboardEvent, dispatchMouseEvent} from '@angular/cdk/testing/private';
+import {dispatchKeyboardEvent, dispatchMouseEvent} from '@stagefright5/cdk/testing/private';
 import {By} from '@angular/platform-browser';
-import {SPACE, ENTER} from '@angular/cdk/keycodes';
+import {SPACE, ENTER} from '@stagefright5/cdk/keycodes';
 import {MDCChipAnimation, MDCChipCssClasses} from '@material/chips/chip';
 import {MatChip, MatChipsModule} from './index';
 
@@ -133,6 +133,7 @@ describe('MDC-based Chip Remove', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-set>
       <mat-chip

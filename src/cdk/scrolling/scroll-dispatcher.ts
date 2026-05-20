@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceElement} from '@angular/cdk/coercion';
-import {Platform} from '@angular/cdk/platform';
+import {coerceElement} from '@stagefright5/cdk/coercion';
+import {Platform} from '@stagefright5/cdk/platform';
 import {ElementRef, Injectable, NgZone, OnDestroy, Optional, Inject} from '@angular/core';
 import {fromEvent, of as observableOf, Subject, Subscription, Observable, Observer} from 'rxjs';
 import {auditTime, filter} from 'rxjs/operators';

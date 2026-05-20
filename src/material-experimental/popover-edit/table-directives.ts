@@ -13,7 +13,7 @@ import {
   CdkPopoverEditTabOut,
   CdkRowHoverContent,
   CdkEditOpen,
-} from '@angular/cdk-experimental/popover-edit';
+} from '@stagefright5/cdk-experimental/popover-edit';
 
 const POPOVER_EDIT_HOST_BINDINGS = {
   '[attr.tabindex]': 'disabled ? null : 0',
@@ -41,6 +41,7 @@ const MAT_ROW_HOVER_CELL_CLASS = MAT_ROW_HOVER_CLASS + '-host-cell';
  * Makes the cell focusable.
  */
 @Directive({
+  standalone: false,
   selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
   host: POPOVER_EDIT_HOST_BINDINGS,
   inputs: POPOVER_EDIT_INPUTS,
@@ -57,6 +58,7 @@ export class MatPopoverEdit<C> extends CdkPopoverEdit<C> {
  * Makes the cell focusable.
  */
 @Directive({
+  standalone: false,
   selector: '[matPopoverEdit][matPopoverEditTabOut]',
   host: POPOVER_EDIT_HOST_BINDINGS,
   inputs: POPOVER_EDIT_INPUTS,
@@ -72,6 +74,7 @@ export class MatPopoverEditTabOut<C> extends CdkPopoverEditTabOut<C> {
  * it is hovered or when an element in the row has focus.
  */
 @Directive({
+  standalone: false,
   selector: '[matRowHoverContent]',
 })
 export class MatRowHoverContent extends CdkRowHoverContent {
@@ -109,6 +112,7 @@ export class MatRowHoverContent extends CdkRowHoverContent {
  * element or an ancestor element.
  */
 @Directive({
+  standalone: false,
   selector: '[matEditOpen]',
 })
 export class MatEditOpen extends CdkEditOpen {}

@@ -1,6 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {ComponentFixture, waitForAsync, TestBed} from '@angular/core/testing';
-import {CdkMenuItem, CdkMenuModule, CdkMenu} from '@angular/cdk-experimental/menu';
+import {CdkMenuItem, CdkMenuModule, CdkMenu} from '@stagefright5/cdk-experimental/menu';
 import {MatMenuBarItem} from './menubar-item';
 import {MatMenuBarModule} from './menubar-module';
 
@@ -61,6 +61,7 @@ describe('MatMenuBarItem', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-menubar>
       <mat-menubar-item [cdkMenuTriggerFor]="sub">File</mat-menubar-item>

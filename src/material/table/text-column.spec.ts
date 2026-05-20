@@ -37,6 +37,7 @@ interface TestData {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="data">
       <mat-text-column name="propertyA"></mat-text-column>

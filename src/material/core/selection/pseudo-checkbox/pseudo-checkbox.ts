@@ -36,10 +36,11 @@ export type MatPseudoCheckboxState = 'unchecked' | 'checked' | 'indeterminate';
  * @docs-private
  */
 @Component({
+  standalone: false,
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'mat-pseudo-checkbox',
-  styleUrls: ['pseudo-checkbox.css'],
+  styleUrls: ['pseudo-checkbox.scss'],
   template: '',
   host: {
     'class': 'mat-pseudo-checkbox',

@@ -393,6 +393,7 @@ function expectMessage(el: Element, message: string) {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div #element1></div>
     <div #element2></div>

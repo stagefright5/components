@@ -9,8 +9,8 @@ import {
   MatExpansionPanelHeader,
 } from './index';
 import {dispatchKeyboardEvent, createKeyboardEvent, dispatchEvent} from '../../cdk/testing/private';
-import {DOWN_ARROW, UP_ARROW, HOME, END} from '@angular/cdk/keycodes';
-import {FocusMonitor} from '@angular/cdk/a11y';
+import {DOWN_ARROW, UP_ARROW, HOME, END} from '@stagefright5/cdk/keycodes';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 
 describe('MatAccordion', () => {
   let focusMonitor: FocusMonitor;
@@ -301,6 +301,7 @@ describe('MatAccordion', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <mat-accordion [multi]="multi">
     <mat-expansion-panel *ngFor="let i of [0, 1, 2, 3]">
@@ -318,6 +319,7 @@ class SetOfItems {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-accordion>
     <mat-expansion-panel>
@@ -343,6 +345,7 @@ class NestedAccordions {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-accordion>
     <mat-expansion-panel #outerPanel="matExpansionPanel">
@@ -360,6 +363,7 @@ class NestedPanel {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-accordion [hideToggle]="hideToggle">
     <mat-expansion-panel>
@@ -373,6 +377,7 @@ class AccordionWithHideToggle {
 }
 
 @Component({
+  standalone: false,
   template: `
   <mat-accordion [togglePosition]="togglePosition">
     <mat-expansion-panel>

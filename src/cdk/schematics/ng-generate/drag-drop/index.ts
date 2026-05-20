@@ -30,6 +30,6 @@ export default function (options: Schema): Rule {
 function addDragDropModulesToModule(options: Schema) {
   return async (host: Tree) => {
     const modulePath = await findModuleFromOptions(host, options);
-    addModuleImportToModule(host, modulePath!, 'DragDropModule', '@angular/cdk/drag-drop');
+    addModuleImportToModule(host, modulePath!, 'DragDropModule', '@stagefright5/cdk/drag-drop');
   };
 }

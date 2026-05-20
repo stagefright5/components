@@ -3,7 +3,7 @@ import {ApplicationRef, Component} from '@angular/core';
 import {dispatchFakeEvent, dispatchMouseEvent} from '../../testing/private';
 import {OverlayModule, Overlay} from '../index';
 import {OverlayOutsideClickDispatcher} from './overlay-outside-click-dispatcher';
-import {ComponentPortal} from '@angular/cdk/portal';
+import {ComponentPortal} from '@stagefright5/cdk/portal';
 
 describe('OverlayOutsideClickDispatcher', () => {
   let appRef: ApplicationRef;
@@ -405,6 +405,7 @@ describe('OverlayOutsideClickDispatcher', () => {
 });
 
 @Component({
+  standalone: false,
   template: 'Hello',
 })
 class TestComponent {}

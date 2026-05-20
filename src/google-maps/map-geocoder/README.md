@@ -25,7 +25,7 @@ has billing enabled. See [here](https://developers.google.com/maps/documentation
 ```typescript
 // google-maps-demo.component.ts
 import {Component} from '@angular/core';
-import {MapGeocoder} from '@angular/google-maps';
+import {MapGeocoder} from '@stagefright5/google-maps';
 
 @Component({
   selector: 'google-map-demo',

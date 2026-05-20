@@ -1,5 +1,5 @@
-import {Directionality} from '@angular/cdk/bidi';
-import {BACKSPACE, DELETE, ENTER} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BACKSPACE, DELETE, ENTER} from '@stagefright5/cdk/keycodes';
 import {
   createKeyboardEvent,
   dispatchEvent,
@@ -325,6 +325,7 @@ describe('MDC-based Row Chips', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-grid #chipGrid>
       <div *ngIf="shouldShow">

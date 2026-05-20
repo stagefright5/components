@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ContentContainerComponentHarness, HarnessPredicate, TestKey} from '@angular/cdk/testing';
-import {DialogRole} from '@angular/material/dialog';
+import {ContentContainerComponentHarness, HarnessPredicate, TestKey} from '@stagefright5/cdk/testing';
+import {DialogRole} from '@stagefright5/material/dialog';
 import {DialogHarnessFilters} from './dialog-harness-filters';
 
 /** Selectors for different sections of the mat-dialog that can contain user content. */

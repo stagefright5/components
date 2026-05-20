@@ -16,8 +16,8 @@ import {
   Provider,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {OverlayContainer, Overlay} from '@angular/cdk/overlay';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
+import {OverlayContainer, Overlay} from '@stagefright5/cdk/overlay';
 import {
   ESCAPE,
   LEFT_ARROW,
@@ -27,9 +27,9 @@ import {
   HOME,
   END,
   ENTER,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {MatMenu, MatMenuModule, MatMenuItem} from './index';
-import {MatRipple} from '@angular/material-experimental/mdc-core';
+import {MatRipple} from '@stagefright5/material-experimental/mdc-core';
 import {
   dispatchKeyboardEvent,
   dispatchMouseEvent,
@@ -41,8 +41,8 @@ import {
   MockNgZone,
 } from '../../cdk/testing/private';
 import {Subject} from 'rxjs';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
-import {FocusMonitor} from '@angular/cdk/a11y';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 import {
   MAT_MENU_SCROLL_STRATEGY,
   MatMenuTrigger,
@@ -2679,6 +2679,7 @@ describe('MatMenu default overrides', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <button
       [matMenuTriggerFor]="menu"
@@ -2722,6 +2723,7 @@ class SimpleMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu" #triggerEl>Toggle menu</button>
     <mat-menu [xPosition]="xPosition" [yPosition]="yPosition" #menu="matMenu">
@@ -2741,6 +2743,7 @@ interface TestableMenu {
   triggerEl: ElementRef<HTMLElement>;
 }
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu" #triggerEl>Toggle menu</button>
     <mat-menu [overlapTrigger]="overlapTrigger" #menu="matMenu">
@@ -2755,6 +2758,7 @@ class OverlapMenu implements TestableMenu {
 }
 
 @Component({
+  standalone: false,
   selector: 'custom-menu',
   template: `
     <ng-template>
@@ -2779,6 +2783,7 @@ class CustomMenuPanel implements MatMenuPanel {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu">Toggle menu</button>
     <custom-menu #menu="matCustomMenu">
@@ -2791,6 +2796,7 @@ class CustomMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button
       [matMenuTriggerFor]="root"
@@ -2857,6 +2863,7 @@ class NestedMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="root" #rootTrigger="matMenuTrigger">Toggle menu</button>
 
@@ -2877,6 +2884,7 @@ class NestedMenuCustomElevation {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="root" #rootTriggerEl>Toggle menu</button>
     <mat-menu #root="matMenu">
@@ -2901,6 +2909,7 @@ class NestedMenuRepeater {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="root" #rootTriggerEl>Toggle menu</button>
 
@@ -2918,12 +2927,14 @@ class SubmenuDeclaredInsideParentMenu {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-icon',
   template: '<ng-content></ng-content>',
 })
 class FakeIcon {}
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu" #triggerEl>Toggle menu</button>
 
@@ -2942,6 +2953,7 @@ class SimpleLazyMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button
       [matMenuTriggerFor]="menu"
@@ -2966,6 +2978,7 @@ class LazyMenuWithContext {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="one">Toggle menu</button>
     <mat-menu #one="matMenu">
@@ -2984,6 +2997,7 @@ class DynamicPanelMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu">Toggle menu</button>
 
@@ -2998,6 +3012,7 @@ class MenuWithCheckboxItems {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu">Toggle menu</button>
     <mat-menu #menu="matMenu">
@@ -3019,6 +3034,7 @@ class SimpleMenuWithRepeater {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu">Toggle menu</button>
     <mat-menu #menu="matMenu">
@@ -3041,6 +3057,7 @@ class SimpleMenuWithRepeaterInLazyContent {
 }
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu" #triggerEl>Toggle menu</button>
 
@@ -3064,6 +3081,7 @@ class LazyMenuWithOnPush {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-menu #menu="matMenu">
       <button [matMenuTriggerFor]="menu"></button>
@@ -3073,21 +3091,25 @@ class LazyMenuWithOnPush {
 class InvalidRecursiveMenu {}
 
 @Component({
+  standalone: false,
   template: '<mat-menu aria-label="label"></mat-menu>',
 })
 class StaticAriaLabelMenu {}
 
 @Component({
+  standalone: false,
   template: '<mat-menu aria-labelledby="some-element"></mat-menu>',
 })
 class StaticAriaLabelledByMenu {}
 
 @Component({
+  standalone: false,
   template: '<mat-menu aria-describedby="some-element"></mat-menu>',
 })
 class StaticAriaDescribedbyMenu {}
 
 @Component({
+  standalone: false,
   template: `
     <button [matMenuTriggerFor]="menu" #triggerEl>Toggle menu</button>
     <mat-menu #menu="matMenu">

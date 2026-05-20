@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
-import {BACKSPACE, DELETE, ENTER} from '@angular/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BACKSPACE, DELETE, ENTER} from '@stagefright5/cdk/keycodes';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   AfterViewInit,
@@ -30,8 +30,8 @@ import {DOCUMENT} from '@angular/common';
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
-import {FocusMonitor} from '@angular/cdk/a11y';
+} from '@stagefright5/material-experimental/mdc-core';
+import {FocusMonitor} from '@stagefright5/cdk/a11y';
 import {MatChip, MatChipEvent} from './chip';
 import {MatChipEditInput} from './chip-edit-input';
 
@@ -46,9 +46,10 @@ export interface MatChipEditedEvent extends MatChipEvent {
  * the matChipInputFor directive.
  */
 @Component({
+  standalone: false,
   selector: 'mat-chip-row, mat-basic-chip-row',
   templateUrl: 'chip-row.html',
-  styleUrls: ['chip.css'],
+  styleUrls: ['chip.scss'],
   inputs: ['color', 'disableRipple', 'tabIndex'],
   host: {
     'class': 'mat-mdc-chip mat-mdc-chip-row mdc-evolution-chip',
@@ -70,8 +71,8 @@ export interface MatChipEditedEvent extends MatChipEvent {
     '(mousedown)': '_mousedown($event)',
     '(keydown)': '_keydown($event)',
     '(dblclick)': '_doubleclick()',
-    '(focusin)': '_focusin($event)',
-    '(focusout)': '_focusout($event)',
+    '(focusin)': '_focusin()',
+    '(focusout)': '_focusout()',
   },
   providers: [{provide: MatChip, useExisting: MatChipRow}],
   encapsulation: ViewEncapsulation.None,

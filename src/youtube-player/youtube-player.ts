@@ -97,6 +97,7 @@ interface PendingPlayerState {
  * @see https://developers.google.com/youtube/iframe_api_reference
  */
 @Component({
+  standalone: false,
   selector: 'youtube-player',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,

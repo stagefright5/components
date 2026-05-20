@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BaseHarnessFilters} from '@angular/cdk/testing';
+import {BaseHarnessFilters} from '@stagefright5/cdk/testing';
 
 /** Criteria that can be used to filter a list of `MatButtonToggleGroupHarness` instances. */
 export interface ButtonToggleGroupHarnessFilters extends BaseHarnessFilters {}

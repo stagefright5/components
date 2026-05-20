@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusableOption, FocusOrigin} from '@angular/cdk/a11y';
+import {FocusMonitor, FocusableOption, FocusOrigin} from '@stagefright5/cdk/a11y';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -28,7 +28,7 @@ import {
   mixinColor,
   mixinDisabled,
   mixinDisableRipple,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 
 /** Default color palette for round buttons (mat-fab and mat-mini-fab) */
@@ -63,6 +63,7 @@ const _MatButtonBase = mixinColor(
  * Material design button.
  */
 @Component({
+  standalone: false,
   selector: `button[mat-button], button[mat-raised-button], button[mat-icon-button],
              button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],
              button[mat-flat-button]`,
@@ -77,7 +78,7 @@ const _MatButtonBase = mixinColor(
     'class': 'mat-focus-indicator',
   },
   templateUrl: 'button.html',
-  styleUrls: ['button.css'],
+  styleUrls: ['button.scss'],
   inputs: ['disabled', 'disableRipple', 'color'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -155,6 +156,7 @@ export class MatButton
  * Material design anchor button.
  */
 @Component({
+  standalone: false,
   selector: `a[mat-button], a[mat-raised-button], a[mat-icon-button], a[mat-fab],
              a[mat-mini-fab], a[mat-stroked-button], a[mat-flat-button]`,
   exportAs: 'matButton, matAnchor',
@@ -171,7 +173,7 @@ export class MatButton
   },
   inputs: ['disabled', 'disableRipple', 'color'],
   templateUrl: 'button.html',
-  styleUrls: ['button.css'],
+  styleUrls: ['button.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

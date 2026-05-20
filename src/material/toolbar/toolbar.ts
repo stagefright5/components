@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -19,7 +19,7 @@ import {
   QueryList,
   ViewEncapsulation,
 } from '@angular/core';
-import {CanColor, mixinColor} from '@angular/material/core';
+import {CanColor, mixinColor} from '@stagefright5/material/core';
 
 // Boilerplate for applying mixins to MatToolbar.
 /** @docs-private */
@@ -30,6 +30,7 @@ const _MatToolbarBase = mixinColor(
 );
 
 @Directive({
+  standalone: false,
   selector: 'mat-toolbar-row',
   exportAs: 'matToolbarRow',
   host: {'class': 'mat-toolbar-row'},
@@ -37,10 +38,11 @@ const _MatToolbarBase = mixinColor(
 export class MatToolbarRow {}
 
 @Component({
+  standalone: false,
   selector: 'mat-toolbar',
   exportAs: 'matToolbar',
   templateUrl: 'toolbar.html',
-  styleUrls: ['toolbar.css'],
+  styleUrls: ['toolbar.scss'],
   inputs: ['color'],
   host: {
     'class': 'mat-toolbar',

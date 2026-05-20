@@ -1,4 +1,4 @@
-import {DataSource} from '@angular/cdk/collections';
+import {DataSource} from '@stagefright5/cdk/collections';
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {
   waitForAsync,
@@ -659,6 +659,7 @@ class FakeDataSource extends DataSource<TestData> {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -700,6 +701,7 @@ class MatTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -733,6 +735,7 @@ class NativeHtmlTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -781,6 +784,7 @@ class NestedHtmlTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -801,6 +805,7 @@ class StickyTableApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource" [multiTemplateDataRows]="multiTemplateDataRows">
       <ng-container matColumnDef="column_a">
@@ -829,6 +834,7 @@ class MatTableWithWhenRowApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="column_a">
@@ -887,6 +893,7 @@ class ArrayDataSourceMatTableApp implements AfterViewInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="column_a">
@@ -936,6 +943,7 @@ class MatTableWithSortApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">
@@ -987,6 +995,7 @@ class MatTableWithPaginatorApp implements OnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="column_a">

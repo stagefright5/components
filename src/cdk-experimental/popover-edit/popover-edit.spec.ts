@@ -1,12 +1,12 @@
-import {DataSource} from '@angular/cdk/collections';
-import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, TAB} from '@angular/cdk/keycodes';
-import {CdkTableModule} from '@angular/cdk/table';
+import {DataSource} from '@stagefright5/cdk/collections';
+import {LEFT_ARROW, UP_ARROW, RIGHT_ARROW, DOWN_ARROW, TAB} from '@stagefright5/cdk/keycodes';
+import {CdkTableModule} from '@stagefright5/cdk/table';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
 import {CommonModule} from '@angular/common';
 import {Component, Directive, ElementRef, ViewChild} from '@angular/core';
 import {ComponentFixture, fakeAsync, flush, TestBed, tick} from '@angular/core/testing';
 import {FormsModule, NgForm} from '@angular/forms';
-import {BidiModule, Direction} from '@angular/cdk/bidi';
+import {BidiModule, Direction} from '@stagefright5/cdk/bidi';
 import {BehaviorSubject} from 'rxjs';
 
 import {
@@ -184,6 +184,7 @@ abstract class BaseTestComponent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <table #table editable [dir]="direction">
     <ng-template #nameEdit let-element>
@@ -218,6 +219,7 @@ class VanillaTableOutOfCell extends BaseTestComponent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <table #table editable [dir]="direction">
     <tr *ngFor="let element of elements">
@@ -263,6 +265,7 @@ class ElementDataSource extends DataSource<PeriodicElement> {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div #table [dir]="direction">
     <cdk-table cdk-table editable [dataSource]="dataSource">
@@ -313,6 +316,7 @@ class CdkFlexTableInCell extends BaseTestComponent {
 }
 
 @Component({
+  standalone: false,
   template: `
   <div #table [dir]="direction">
     <table cdk-table editable [dataSource]="dataSource">

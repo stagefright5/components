@@ -74,13 +74,14 @@ export const MAT_OPTGROUP = new InjectionToken<MatOptgroup>('MatOptgroup');
  * Component that is used to group instances of `mat-option`.
  */
 @Component({
+  standalone: false,
   selector: 'mat-optgroup',
   exportAs: 'matOptgroup',
   templateUrl: 'optgroup.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   inputs: ['disabled'],
-  styleUrls: ['optgroup.css'],
+  styleUrls: ['optgroup.scss'],
   host: {
     'class': 'mat-optgroup',
     '[attr.role]': '_inert ? null : "group"',

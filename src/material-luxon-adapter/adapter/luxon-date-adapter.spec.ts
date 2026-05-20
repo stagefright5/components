@@ -8,7 +8,7 @@
 
 import {LOCALE_ID} from '@angular/core';
 import {TestBed, waitForAsync} from '@angular/core/testing';
-import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {DateTime} from 'luxon';
 import {LuxonDateModule} from './index';
 import {MAT_LUXON_DATE_ADAPTER_OPTIONS} from './luxon-date-adapter';

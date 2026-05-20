@@ -2,7 +2,7 @@ import {
   createTestCaseSetup,
   readFileContent,
   resolveBazelPath,
-} from '@angular/cdk/schematics/testing';
+} from '@stagefright5/cdk/schematics/testing';
 import {MIGRATION_PATH} from '../../../../paths';
 
 describe('v8 material imports', () => {
@@ -12,7 +12,7 @@ describe('v8 material imports', () => {
       MIGRATION_PATH,
       [resolveBazelPath(__dirname, './material-imports_input.ts')],
     );
-    const materialPath = '/node_modules/@angular/material';
+    const materialPath = '/node_modules/@stagefright5/material';
 
     writeFile(
       `${materialPath}/index.d.ts`,

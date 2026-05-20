@@ -1,10 +1,10 @@
 import {TestBed, inject} from '@angular/core/testing';
 import {dispatchKeyboardEvent} from '../../testing/private';
-import {ESCAPE} from '@angular/cdk/keycodes';
+import {ESCAPE} from '@stagefright5/cdk/keycodes';
 import {ApplicationRef, Component} from '@angular/core';
 import {OverlayModule, Overlay} from '../index';
 import {OverlayKeyboardDispatcher} from './overlay-keyboard-dispatcher';
-import {ComponentPortal} from '@angular/cdk/portal';
+import {ComponentPortal} from '@stagefright5/cdk/portal';
 
 describe('OverlayKeyboardDispatcher', () => {
   let appRef: ApplicationRef;
@@ -202,6 +202,7 @@ describe('OverlayKeyboardDispatcher', () => {
 });
 
 @Component({
+  standalone: false,
   template: 'Hello',
 })
 class TestComponent {}

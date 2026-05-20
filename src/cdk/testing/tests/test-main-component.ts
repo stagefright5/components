@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ENTER} from '@angular/cdk/keycodes';
-import {_supportsShadowDom} from '@angular/cdk/platform';
+import {ENTER} from '@stagefright5/cdk/keycodes';
+import {_supportsShadowDom} from '@stagefright5/cdk/platform';
 import {FormControl} from '@angular/forms';
 import {
   ChangeDetectionStrategy,
@@ -21,6 +21,7 @@ import {
 } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'test-main',
   templateUrl: 'test-main-component.html',
   encapsulation: ViewEncapsulation.None,

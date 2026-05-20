@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentHarness, LocatorFactory, parallel, TestElement} from '@angular/cdk/testing';
+import {ComponentHarness, LocatorFactory, parallel, TestElement} from '@stagefright5/cdk/testing';
 import {CalendarHarnessFilters} from './datepicker-harness-filters';
 import {MatCalendarHarness} from './calendar-harness';
 

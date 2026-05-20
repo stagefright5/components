@@ -13,7 +13,7 @@ import {
   CdkEditRevert,
   CdkEditClose,
   EditRef,
-} from '@angular/cdk-experimental/popover-edit';
+} from '@stagefright5/cdk-experimental/popover-edit';
 
 /**
  * A component that attaches to a form within the edit.
@@ -22,6 +22,7 @@ import {
  * out.
  */
 @Directive({
+  standalone: false,
   selector: 'form[matEditLens]',
   host: {
     'class': 'mat-edit-lens',
@@ -38,6 +39,7 @@ export class MatEditLens<FormValue> extends CdkEditControl<FormValue> {}
 
 /** Reverts the form to its initial or previously submitted state on click. */
 @Directive({
+  standalone: false,
   selector: 'button[matEditRevert]',
   host: {
     'type': 'button', // Prevents accidental form submits.
@@ -46,5 +48,5 @@ export class MatEditLens<FormValue> extends CdkEditControl<FormValue> {}
 export class MatEditRevert<FormValue> extends CdkEditRevert<FormValue> {}
 
 /** Closes the lens on click. */
-@Directive({selector: '[matEditClose]'})
+@Directive({standalone: false, selector: '[matEditClose]'})
 export class MatEditClose<FormValue> extends CdkEditClose<FormValue> {}

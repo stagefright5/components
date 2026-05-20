@@ -14,7 +14,6 @@ import {
   Inject,
   OnInit,
   Injector,
-  InjectFlags,
   DoCheck,
 } from '@angular/core';
 import {
@@ -35,8 +34,8 @@ import {
   DateAdapter,
   MatDateFormats,
   ErrorStateMatcher,
-} from '@angular/material/core';
-import {BACKSPACE} from '@angular/cdk/keycodes';
+} from '@stagefright5/material/core';
+import {BACKSPACE} from '@stagefright5/cdk/keycodes';
 import {MatDatepickerInputBase, DateFilterFn} from './datepicker-input-base';
 import {DateRange, DateSelectionModelChange} from './date-selection-model';
 
@@ -104,7 +103,7 @@ abstract class MatDateRangeInputPartBase<D>
     // validator. We work around it here by injecting the `NgControl` in `ngOnInit`, after
     // everything has been resolved.
     // tslint:disable-next-line:no-bitwise
-    const ngControl = this._injector.get(NgControl, null, InjectFlags.Self | InjectFlags.Optional);
+    const ngControl = this._injector.get(NgControl, null, {self: true, optional: true});
 
     if (ngControl) {
       this.ngControl = ngControl;
@@ -184,6 +183,7 @@ const _MatDateRangeInputBase = mixinErrorState(MatDateRangeInputPartBase);
 
 /** Input for entering the start date in a `mat-date-range-input`. */
 @Directive({
+  standalone: false,
   selector: 'input[matStartDate]',
   host: {
     'class': 'mat-start-date mat-date-range-input-inner',
@@ -285,6 +285,7 @@ export class MatStartDate<D> extends _MatDateRangeInputBase<D> implements CanUpd
 
 /** Input for entering the end date in a `mat-date-range-input`. */
 @Directive({
+  standalone: false,
   selector: 'input[matEndDate]',
   host: {
     'class': 'mat-end-date mat-date-range-input-inner',

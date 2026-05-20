@@ -1,10 +1,10 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatNativeDateModule} from '@stagefright5/material/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule} from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCalendarHarness} from './calendar-harness';
 import {
@@ -226,6 +226,7 @@ export function runDateRangeInputHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-date-range-input
       basic

@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {OverlayModule} from '@angular/cdk/overlay';
-import {PortalModule} from '@angular/cdk/portal';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {PortalModule} from '@stagefright5/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatButtonModule} from '@angular/material-experimental/mdc-button';
-import {MatCommonModule} from '@angular/material-experimental/mdc-core';
+import {MatButtonModule} from '@stagefright5/material-experimental/mdc-button';
+import {MatCommonModule} from '@stagefright5/material-experimental/mdc-core';
 
 import {SimpleSnackBar} from './simple-snack-bar';
 import {MatSnackBarContainer} from './snack-bar-container';

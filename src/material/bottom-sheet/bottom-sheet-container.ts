@@ -7,17 +7,17 @@
  */
 
 import {AnimationEvent} from '@angular/animations';
-import {FocusTrap, FocusTrapFactory, InteractivityChecker} from '@angular/cdk/a11y';
-import {coerceArray} from '@angular/cdk/coercion';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {_getFocusedElementPierceShadowDom} from '@angular/cdk/platform';
+import {FocusTrap, FocusTrapFactory, InteractivityChecker} from '@stagefright5/cdk/a11y';
+import {coerceArray} from '@stagefright5/cdk/coercion';
+import {BreakpointObserver, Breakpoints} from '@stagefright5/cdk/layout';
+import {_getFocusedElementPierceShadowDom} from '@stagefright5/cdk/platform';
 import {
   BasePortalOutlet,
   CdkPortalOutlet,
   ComponentPortal,
   DomPortal,
   TemplatePortal,
-} from '@angular/cdk/portal';
+} from '@stagefright5/cdk/portal';
 import {DOCUMENT} from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -45,9 +45,10 @@ import {MatBottomSheetConfig} from './bottom-sheet-config';
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-bottom-sheet-container',
   templateUrl: 'bottom-sheet-container.html',
-  styleUrls: ['bottom-sheet-container.css'],
+  styleUrls: ['bottom-sheet-container.scss'],
   // In Ivy embedded views will be change detected from their declaration place, rather than where
   // they were stamped out. This means that we can't have the bottom sheet container be OnPush,
   // because it might cause the sheets that were opened from a template not to be out of date.

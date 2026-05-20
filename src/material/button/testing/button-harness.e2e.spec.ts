@@ -1,5 +1,5 @@
-import {ProtractorHarnessEnvironment} from '@angular/cdk/testing/protractor';
-import {MatButtonHarness} from '@angular/material/button/testing';
+import {ProtractorHarnessEnvironment} from '@stagefright5/cdk/testing/protractor';
+import {MatButtonHarness} from '@stagefright5/material/button/testing';
 import {browser} from 'protractor';
 
 describe('button harness', () => {

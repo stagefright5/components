@@ -1,8 +1,8 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatTableModule} from '@angular/material/table';
+import {MatTableModule} from '@stagefright5/material/table';
 import {MatTableHarness} from './table-harness';
 
 /** Shared tests to run on both the original and MDC-based table. */
@@ -188,6 +188,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="position">

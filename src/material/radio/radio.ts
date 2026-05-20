@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty, coerceNumberProperty} from '@angular/cdk/coercion';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+import {FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty, coerceNumberProperty} from '@stagefright5/cdk/coercion';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {
   AfterContentInit,
   AfterViewInit,
@@ -40,7 +40,7 @@ import {
   mixinDisableRipple,
   mixinTabIndex,
   ThemePalette,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 
 export interface MatRadioDefaultOptions {
@@ -327,6 +327,7 @@ export abstract class _MatRadioGroupBase<T extends _MatRadioButtonBase>
  * A group of radio buttons. May contain one or more `<mat-radio-button>` elements.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-radio-group',
   exportAs: 'matRadioGroup',
   providers: [
@@ -671,9 +672,10 @@ export abstract class _MatRadioButtonBase
  * A Material design radio-button. Typically placed inside of `<mat-radio-group>` elements.
  */
 @Component({
+  standalone: false,
   selector: 'mat-radio-button',
   templateUrl: 'radio.html',
-  styleUrls: ['radio.css'],
+  styleUrls: ['radio.scss'],
   inputs: ['disableRipple', 'tabIndex'],
   encapsulation: ViewEncapsulation.None,
   exportAs: 'matRadioButton',

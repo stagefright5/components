@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -37,12 +37,13 @@ import {
  * "contained" but without elevation.
  */
 @Component({
+  standalone: false,
   selector: `
     button[mat-button], button[mat-raised-button], button[mat-flat-button],
     button[mat-stroked-button]
   `,
   templateUrl: 'button.html',
-  styleUrls: ['button.css', 'button-high-contrast.css'],
+  styleUrls: ['button.scss', 'button-high-contrast.scss'],
   inputs: MAT_BUTTON_INPUTS,
   host: MAT_BUTTON_HOST,
   exportAs: 'matButton',
@@ -71,12 +72,13 @@ export class MatButton extends MatButtonBase {
  * "contained" but without elevation.
  */
 @Component({
+  standalone: false,
   selector: `a[mat-button], a[mat-raised-button], a[mat-flat-button], a[mat-stroked-button]`,
   exportAs: 'matButton, matAnchor',
   host: MAT_ANCHOR_HOST,
   inputs: MAT_ANCHOR_INPUTS,
   templateUrl: 'button.html',
-  styleUrls: ['button.css', 'button-high-contrast.css'],
+  styleUrls: ['button.scss', 'button-high-contrast.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -5,16 +5,16 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AriaDescriber, FocusMonitor} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
+import {AriaDescriber, FocusMonitor} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
-import {BreakpointObserver, Breakpoints, BreakpointState} from '@angular/cdk/layout';
+} from '@stagefright5/cdk/coercion';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
+import {BreakpointObserver, Breakpoints, BreakpointState} from '@stagefright5/cdk/layout';
 import {
   FlexibleConnectedPositionStrategy,
   HorizontalConnectionPos,
@@ -26,10 +26,10 @@ import {
   VerticalConnectionPos,
   ConnectionPositionPair,
   ConnectedPosition,
-} from '@angular/cdk/overlay';
-import {Platform, normalizePassiveListenerOptions} from '@angular/cdk/platform';
-import {ComponentPortal, ComponentType} from '@angular/cdk/portal';
-import {ScrollDispatcher} from '@angular/cdk/scrolling';
+} from '@stagefright5/cdk/overlay';
+import {Platform, normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
+import {ComponentPortal, ComponentType} from '@stagefright5/cdk/portal';
+import {ScrollDispatcher} from '@stagefright5/cdk/scrolling';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -796,6 +796,7 @@ export abstract class _MatTooltipBase<T extends _TooltipComponentBase>
  * https://material.io/design/components/tooltips.html
  */
 @Directive({
+  standalone: false,
   selector: '[matTooltip]',
   exportAs: 'matTooltip',
   host: {
@@ -1023,9 +1024,10 @@ export abstract class _TooltipComponentBase implements OnDestroy {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tooltip-component',
   templateUrl: 'tooltip.html',
-  styleUrls: ['tooltip.css'],
+  styleUrls: ['tooltip.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

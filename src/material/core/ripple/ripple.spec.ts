@@ -1,6 +1,6 @@
 import {TestBed, ComponentFixture, fakeAsync, tick, inject} from '@angular/core/testing';
 import {Component, ViewChild} from '@angular/core';
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   dispatchEvent,
   createTouchEvent,
@@ -761,6 +761,7 @@ describe('MatRipple', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div id="container" #ripple="matRipple" matRipple
          style="position: relative; width:300px; height:200px;">
@@ -772,6 +773,7 @@ class BasicRippleContainer {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div id="container" style="position: relative; width:300px; height:200px;"
       matRipple
@@ -796,11 +798,13 @@ class RippleContainerWithInputBindings {
 }
 
 @Component({
+  standalone: false,
   template: `<div id="container" #ripple="matRipple" matRipple></div>`,
 })
 class RippleContainerWithoutBindings {}
 
 @Component({
+  standalone: false,
   template: `<div id="container" matRipple
                              *ngIf="!isDestroyed"></div>`,
 })

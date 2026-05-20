@@ -7,7 +7,7 @@
  */
 
 import {Inject, Injectable, Optional, InjectionToken} from '@angular/core';
-import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {
   DateTime as LuxonDateTime,
   Info as LuxonInfo,

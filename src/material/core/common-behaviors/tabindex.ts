@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty} from '@angular/cdk/coercion';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
 import {Constructor, AbstractConstructor} from './constructor';
 import {CanDisable} from './disabled';
 

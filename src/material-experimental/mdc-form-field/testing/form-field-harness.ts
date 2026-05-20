@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
 import {
   FormFieldHarnessFilters,
   _MatFormFieldHarnessBase,
-} from '@angular/material/form-field/testing';
-import {MatInputHarness} from '@angular/material-experimental/mdc-input/testing';
-import {MatSelectHarness} from '@angular/material-experimental/mdc-select/testing';
+} from '@stagefright5/material/form-field/testing';
+import {MatInputHarness} from '@stagefright5/material-experimental/mdc-input/testing';
+import {MatSelectHarness} from '@stagefright5/material-experimental/mdc-select/testing';
 import {
   MatDatepickerInputHarness,
   MatDateRangeInputHarness,
-} from '@angular/material/datepicker/testing';
+} from '@stagefright5/material/datepicker/testing';
 
 // TODO(devversion): support support chip list harness
 /** Possible harnesses of controls which can be bound to a form-field. */

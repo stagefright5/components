@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption, FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {ENTER, hasModifierKey, SPACE} from '@angular/cdk/keycodes';
+import {FocusableOption, FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {ENTER, hasModifierKey, SPACE} from '@stagefright5/cdk/keycodes';
 import {
   AfterViewInit,
   Attribute,
@@ -24,7 +24,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
-import {HasTabIndex, mixinTabIndex} from '@angular/material/core';
+import {HasTabIndex, mixinTabIndex} from '@stagefright5/material/core';
 import {EMPTY, merge, Subscription} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {MatAccordionTogglePosition} from './accordion-base';
@@ -46,8 +46,9 @@ const _MatExpansionPanelHeaderMixinBase = mixinTabIndex(MatExpansionPanelHeaderB
  * Header element of a `<mat-expansion-panel>`.
  */
 @Component({
+  standalone: false,
   selector: 'mat-expansion-panel-header',
-  styleUrls: ['expansion-panel-header.css'],
+  styleUrls: ['expansion-panel-header.scss'],
   templateUrl: 'expansion-panel-header.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -231,6 +232,7 @@ export class MatExpansionPanelHeader
  * Description element of a `<mat-expansion-panel-header>`.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-panel-description',
   host: {
     class: 'mat-expansion-panel-header-description',
@@ -242,6 +244,7 @@ export class MatExpansionPanelDescription {}
  * Title element of a `<mat-expansion-panel-header>`.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-panel-title',
   host: {
     class: 'mat-expansion-panel-header-title',

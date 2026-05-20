@@ -8,8 +8,8 @@
 
 import {Inject, Injectable, OnDestroy, Provider} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {coerceCssPixelValue} from '@angular/cdk/coercion';
-import {CdkTable, _CoalescedStyleScheduler, _COALESCED_STYLE_SCHEDULER} from '@angular/cdk/table';
+import {coerceCssPixelValue} from '@stagefright5/cdk/coercion';
+import {CdkTable, _CoalescedStyleScheduler, _COALESCED_STYLE_SCHEDULER} from '@stagefright5/cdk/table';
 
 import {ColumnResize} from './column-resize';
 

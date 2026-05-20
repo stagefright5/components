@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import {InjectionToken} from '@angular/core';
-import {ThemePalette} from '@angular/material/core';
+import {ThemePalette} from '@stagefright5/material/core';
 
 /** Default `mat-checkbox` options that can be overridden. */
 export interface MatCheckboxDefaultOptions {

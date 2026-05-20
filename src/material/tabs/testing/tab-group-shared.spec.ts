@@ -1,8 +1,8 @@
-import {ComponentHarness, HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {ComponentHarness, HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatTabsModule} from '@stagefright5/material/tabs';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabGroupHarness} from './tab-group-harness';
 
@@ -154,6 +154,7 @@ export function runTabGroupHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tab-group>
       <mat-tab label="First" aria-label="First tab">

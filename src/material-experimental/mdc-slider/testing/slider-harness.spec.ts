@@ -8,9 +8,9 @@
 
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
-import {MatSliderModule} from '@angular/material-experimental/mdc-slider';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
+import {MatSliderModule} from '@stagefright5/material-experimental/mdc-slider';
 import {MatSliderHarness} from './slider-harness';
 import {MatSliderThumbHarness} from './slider-thumb-harness';
 import {ThumbPosition} from './slider-harness-filters';
@@ -174,6 +174,7 @@ describe('MDC-based MatSliderHarness', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-slider id="single" [displayWith]="displayFn" [disabled]="singleSliderDisabled">
       <input

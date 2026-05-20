@@ -17,7 +17,7 @@ import {
   RIGHT_ARROW,
   UP_ARROW,
   SPACE,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -32,8 +32,8 @@ import {
   ViewEncapsulation,
   OnDestroy,
 } from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@angular/material/core';
-import {Directionality} from '@angular/cdk/bidi';
+import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@stagefright5/material/core';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   MatCalendarBody,
   MatCalendarCell,
@@ -50,6 +50,7 @@ import {DateRange} from './date-selection-model';
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-year-view',
   templateUrl: 'year-view.html',
   exportAs: 'matYearView',

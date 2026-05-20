@@ -8,7 +8,7 @@
 
 import {Injectable, NgZone, OnDestroy, Inject} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
-import {normalizePassiveListenerOptions} from '@angular/cdk/platform';
+import {normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {merge, Observable, Observer, Subject} from 'rxjs';
 
 /** Event options that can be used to bind an active, capturing event. */

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {BaseHarnessFilters} from '@angular/cdk/testing';
+import {BaseHarnessFilters} from '@stagefright5/cdk/testing';
 
 /** Possible orientations for a stepper. */
 export const enum StepperOrientation {

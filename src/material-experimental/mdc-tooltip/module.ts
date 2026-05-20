@@ -8,11 +8,11 @@
 
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {A11yModule} from '@angular/cdk/a11y';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
-import {MatCommonModule} from '@angular/material-experimental/mdc-core';
-import {MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER} from '@angular/material/tooltip';
+import {A11yModule} from '@stagefright5/cdk/a11y';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
+import {MatCommonModule} from '@stagefright5/material-experimental/mdc-core';
+import {MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER} from '@stagefright5/material/tooltip';
 import {MatTooltip, TooltipComponent} from './tooltip';
 
 @NgModule({

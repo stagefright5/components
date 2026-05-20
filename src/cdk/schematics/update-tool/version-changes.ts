@@ -43,7 +43,7 @@ export function getChangesForTarget<T>(target: TargetVersion, data: VersionChang
  * upgrade data is separated for each target version.
  */
 export function getAllChanges<T>(data: VersionChanges<T>): T[] {
-  return Object.keys(data)
+  return Object.keys(data as any)
     .map(targetVersion => getChangesForTarget(targetVersion as TargetVersion, data))
     .reduce((result, versionData) => result.concat(versionData), []);
 }

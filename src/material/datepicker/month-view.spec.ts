@@ -1,4 +1,4 @@
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   DOWN_ARROW,
   END,
@@ -11,7 +11,7 @@ import {
   SPACE,
   UP_ARROW,
   ESCAPE,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
@@ -21,7 +21,7 @@ import {
 } from '../../cdk/testing/private';
 import {Component} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MAT_DATE_FORMATS, MatNativeDateModule} from '@angular/material/core';
+import {MAT_DATE_FORMATS, MatNativeDateModule} from '@stagefright5/material/core';
 import {DEC, FEB, JAN, MAR, NOV} from '../testing';
 import {By} from '@angular/platform-browser';
 import {MatCalendarBody} from './calendar-body';
@@ -641,6 +641,7 @@ describe('MatMonthView', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-month-view
       [(activeDate)]="date"
@@ -656,6 +657,7 @@ class StandardMonthView {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-month-view
       [activeDate]="activeDate"
@@ -673,6 +675,7 @@ class MonthViewWithDateFilter {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-month-view [activeDate]="activeDate" [dateClass]="dateClass"></mat-month-view>`,
 })
 class MonthViewWithDateClass {

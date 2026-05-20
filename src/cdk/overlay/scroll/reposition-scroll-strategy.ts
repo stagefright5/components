@@ -10,7 +10,7 @@ import {NgZone} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {ScrollStrategy, getMatScrollStrategyAlreadyAttachedError} from './scroll-strategy';
 import {OverlayReference} from '../overlay-reference';
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {isElementScrolledOutsideView} from '../position/scroll-clip';
 
 /**

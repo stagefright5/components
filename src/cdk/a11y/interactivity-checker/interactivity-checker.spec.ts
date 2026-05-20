@@ -1,4 +1,4 @@
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {PLATFORM_ID} from '@angular/core';
 import {inject} from '@angular/core/testing';
 import {InteractivityChecker, IsFocusableConfig} from './interactivity-checker';

@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Overlay, OverlayConfig, OverlayRef} from '@angular/cdk/overlay';
-import {ComponentPortal, ComponentType, TemplatePortal} from '@angular/cdk/portal';
+import {LiveAnnouncer} from '@stagefright5/cdk/a11y';
+import {BreakpointObserver, Breakpoints} from '@stagefright5/cdk/layout';
+import {Overlay, OverlayConfig, OverlayRef} from '@stagefright5/cdk/overlay';
+import {ComponentPortal, ComponentType, TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   ComponentRef,
   EmbeddedViewRef,

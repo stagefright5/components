@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {ENTER, SPACE, hasModifierKey} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {ENTER, SPACE, hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {
   AfterViewChecked,
   ChangeDetectionStrategy,
@@ -24,7 +24,7 @@ import {
   ViewEncapsulation,
   Directive,
 } from '@angular/core';
-import {FocusOptions, FocusableOption, FocusOrigin} from '@angular/cdk/a11y';
+import {FocusOptions, FocusableOption, FocusOrigin} from '@stagefright5/cdk/a11y';
 import {Subject} from 'rxjs';
 import {MatOptgroup, _MatOptgroupBase, MAT_OPTGROUP} from './optgroup';
 import {MatOptionParentComponent, MAT_OPTION_PARENT_COMPONENT} from './option-parent';
@@ -245,6 +245,7 @@ export class _MatOptionBase<T = any> implements FocusableOption, AfterViewChecke
  * Single option inside of a `<mat-select>` element.
  */
 @Component({
+  standalone: false,
   selector: 'mat-option',
   exportAs: 'matOption',
   host: {
@@ -261,7 +262,7 @@ export class _MatOptionBase<T = any> implements FocusableOption, AfterViewChecke
     '(keydown)': '_handleKeydown($event)',
     'class': 'mat-option mat-focus-indicator',
   },
-  styleUrls: ['option.css'],
+  styleUrls: ['option.scss'],
   templateUrl: 'option.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,

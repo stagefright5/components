@@ -1,7 +1,7 @@
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {Component, DebugElement, ViewChild} from '@angular/core';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatRipple} from '@angular/material-experimental/mdc-core';
+import {MatRipple} from '@stagefright5/material-experimental/mdc-core';
 import {By} from '@angular/platform-browser';
 import {Subject} from 'rxjs';
 import {MatChip, MatChipEvent, MatChipSet, MatChipsModule} from './index';
@@ -189,6 +189,7 @@ describe('MDC-based MatChip', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-set>
       <div *ngIf="shouldShow">
@@ -217,16 +218,19 @@ class SingleChip {
 }
 
 @Component({
+  standalone: false,
   template: `<mat-basic-chip>Hello</mat-basic-chip>`,
 })
 class BasicChip {}
 
 @Component({
+  standalone: false,
   template: `<mat-basic-chip role="button" tabindex="3">Hello</mat-basic-chip>`,
 })
 class BasicChipWithStaticTabindex {}
 
 @Component({
+  standalone: false,
   template: `<mat-basic-chip role="button" [tabIndex]="tabindex">Hello</mat-basic-chip>`,
 })
 class BasicChipWithBoundTabindex {

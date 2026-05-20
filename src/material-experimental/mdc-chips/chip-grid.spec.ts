@@ -1,5 +1,5 @@
 import {animate, style, transition, trigger} from '@angular/animations';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   A,
   BACKSPACE,
@@ -11,13 +11,13 @@ import {
   RIGHT_ARROW,
   SPACE,
   TAB,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
   MockNgZone,
   typeInElement,
-} from '@angular/cdk/testing/private';
+} from '@stagefright5/cdk/testing/private';
 import {
   Component,
   DebugElement,
@@ -30,8 +30,8 @@ import {
 } from '@angular/core';
 import {ComponentFixture, fakeAsync, flush, TestBed, tick} from '@angular/core/testing';
 import {FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material-experimental/mdc-form-field';
-import {MatInputModule} from '@angular/material-experimental/mdc-input';
+import {MatFormFieldModule} from '@stagefright5/material-experimental/mdc-form-field';
+import {MatInputModule} from '@stagefright5/material-experimental/mdc-input';
 import {By} from '@angular/platform-browser';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MDCChipAnimation} from '@material/chips';
@@ -1042,6 +1042,7 @@ describe('MDC-based MatChipGrid', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-grid [tabIndex]="tabIndex" #chipGrid>
       <mat-chip-row *ngFor="let i of chips"
@@ -1059,6 +1060,7 @@ class StandardChipGrid {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-label>Add a chip</mat-label>
@@ -1082,6 +1084,7 @@ class FormFieldChipGrid {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-label>New food...</mat-label>
@@ -1142,6 +1145,7 @@ class InputChipGrid {
 }
 
 @Component({
+  standalone: false,
   template: `
 <form #form="ngForm" novalidate>
   <mat-form-field>
@@ -1170,6 +1174,7 @@ class ChipGridWithFormErrorMessages {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip-grid #chipGrid>
       <mat-chip-row *ngFor="let i of numbers" (removed)="remove(i)">{{i}}</mat-chip-row>
@@ -1196,6 +1201,7 @@ class StandardChipGridWithAnimations {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-chip-grid #chipGrid>

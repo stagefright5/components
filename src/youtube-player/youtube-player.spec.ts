@@ -493,6 +493,7 @@ describe('YoutubePlayer', () => {
 
 /** Test component that contains a YouTubePlayer. */
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <youtube-player #player [videoId]="videoId" *ngIf="visible" [width]="width" [height]="height"
@@ -526,6 +527,7 @@ class TestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <youtube-player [videoId]="videoId" [startSeconds]="42" [endSeconds]="1337"></youtube-player>
   `,
@@ -535,6 +537,7 @@ class StaticStartEndSecondsApp {
 }
 
 @Component({
+  standalone: false,
   template: `<youtube-player [videoId]="videoId"></youtube-player>`,
 })
 class NoEventsApp {

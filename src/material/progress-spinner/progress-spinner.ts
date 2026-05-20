@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceNumberProperty, NumberInput} from '@angular/cdk/coercion';
-import {Platform, _getShadowRoot} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {coerceNumberProperty, NumberInput} from '@stagefright5/cdk/coercion';
+import {Platform, _getShadowRoot} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -24,7 +24,7 @@ import {
   OnDestroy,
   NgZone,
 } from '@angular/core';
-import {CanColor, mixinColor} from '@angular/material/core';
+import {CanColor, mixinColor} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {Subscription} from 'rxjs';
 
@@ -109,6 +109,7 @@ const INDETERMINATE_ANIMATION_TEMPLATE = `
  * `<mat-progress-spinner>` component.
  */
 @Component({
+  standalone: false,
   selector: 'mat-progress-spinner, mat-spinner',
   exportAs: 'matProgressSpinner',
   host: {
@@ -128,7 +129,7 @@ const INDETERMINATE_ANIMATION_TEMPLATE = `
   },
   inputs: ['color'],
   templateUrl: 'progress-spinner.html',
-  styleUrls: ['progress-spinner.css'],
+  styleUrls: ['progress-spinner.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })

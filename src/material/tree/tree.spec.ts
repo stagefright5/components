@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FlatTreeControl, NestedTreeControl, TreeControl} from '@angular/cdk/tree';
+import {FlatTreeControl, NestedTreeControl, TreeControl} from '@stagefright5/cdk/tree';
 import {Component, ViewChild, Type} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {BehaviorSubject, Observable} from 'rxjs';
@@ -764,6 +764,7 @@ function expectNestedTreeToMatch(treeElement: Element, ...expectedTree: any[]) {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-tree-node *matTreeNodeDef="let node" class="customNodeClass"
@@ -842,6 +843,7 @@ const TREE_DATA: FoodNode[] = [
 ];
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-tree-node *matTreeNodeDef="let node" class="customNodeClass"
@@ -878,6 +880,7 @@ class MatTreeWithNullOrUndefinedChild {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-nested-tree-node *matTreeNodeDef="let node" class="customNodeClass">
@@ -901,6 +904,7 @@ class MatNestedTreeWithNullOrUndefinedChild {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-nested-tree-node *matTreeNodeDef="let node" class="customNodeClass">
@@ -928,6 +932,7 @@ class NestedMatTreeApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-nested-tree-node *matTreeNodeDef="let node">
@@ -964,6 +969,7 @@ class WhenNodeNestedMatTreeApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-tree-node *matTreeNodeDef="let node" class="customNodeClass"
@@ -1007,6 +1013,7 @@ class MatTreeAppWithToggle {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-nested-tree-node *matTreeNodeDef="let node" class="customNodeClass"
@@ -1038,6 +1045,7 @@ class NestedMatTreeAppWithToggle {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
       <mat-tree-node *matTreeNodeDef="let node" class="customNodeClass"

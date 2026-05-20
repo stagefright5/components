@@ -1,4 +1,4 @@
-import {FloatPlaceholderType, PlaceholderOptions, MAT_PLACEHOLDER_GLOBAL_OPTIONS} from '@angular/material';
+import {FloatPlaceholderType, PlaceholderOptions, MAT_PLACEHOLDER_GLOBAL_OPTIONS} from '@stagefright5/material';
 
 const a: FloatPlaceholderType = 'test';
 const b: PlaceholderOptions = 'opt2';

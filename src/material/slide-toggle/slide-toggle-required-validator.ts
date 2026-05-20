@@ -24,6 +24,7 @@ export const MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR: Provider = {
  * Required slide-toggle form controls are valid when checked.
  */
 @Directive({
+  standalone: false,
   selector: `mat-slide-toggle[required][formControlName],
              mat-slide-toggle[required][formControl], mat-slide-toggle[required][ngModel]`,
   providers: [MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR],

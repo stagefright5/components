@@ -7,15 +7,15 @@
  */
 
 import {EmbeddedViewRef, ElementRef, NgZone, ViewContainerRef, TemplateRef} from '@angular/core';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {Direction} from '@angular/cdk/bidi';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {Direction} from '@stagefright5/cdk/bidi';
 import {
   normalizePassiveListenerOptions,
   _getEventTarget,
   _getShadowRoot,
-} from '@angular/cdk/platform';
-import {coerceBooleanProperty, coerceElement} from '@angular/cdk/coercion';
-import {isFakeMousedownFromScreenReader, isFakeTouchstartFromScreenReader} from '@angular/cdk/a11y';
+} from '@stagefright5/cdk/platform';
+import {coerceBooleanProperty, coerceElement} from '@stagefright5/cdk/coercion';
+import {isFakeMousedownFromScreenReader, isFakeTouchstartFromScreenReader} from '@stagefright5/cdk/a11y';
 import {Subscription, Subject, Observable} from 'rxjs';
 import {DropListRefInternal as DropListRef} from './drop-list-ref';
 import {DragDropRegistry} from './drag-drop-registry';

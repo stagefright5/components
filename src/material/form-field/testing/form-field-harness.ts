@@ -14,14 +14,14 @@ import {
   HarnessQuery,
   parallel,
   TestElement,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {
   MatDatepickerInputHarness,
   MatDateRangeInputHarness,
-} from '@angular/material/datepicker/testing';
-import {MatFormFieldControlHarness} from '@angular/material/form-field/testing/control';
-import {MatInputHarness} from '@angular/material/input/testing';
-import {MatSelectHarness} from '@angular/material/select/testing';
+} from '@stagefright5/material/datepicker/testing';
+import {MatFormFieldControlHarness} from '@stagefright5/material/form-field/testing/control';
+import {MatInputHarness} from '@stagefright5/material/input/testing';
+import {MatSelectHarness} from '@stagefright5/material/select/testing';
 import {FormFieldHarnessFilters} from './form-field-harness-filters';
 
 // TODO(devversion): support support chip list harness

@@ -21,7 +21,7 @@ import {
   hasModifierKey,
   HOME,
   END,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {debounceTime, filter, map, tap} from 'rxjs/operators';
 
 /** This interface is for items that can be passed to a ListKeyManager. */

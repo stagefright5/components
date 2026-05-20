@@ -1,8 +1,8 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
 import {
   SeleniumWebDriverHarnessEnvironment,
   waitForAngularReady,
-} from '@angular/cdk/testing/selenium-webdriver';
+} from '@stagefright5/cdk/testing/selenium-webdriver';
 import {runfiles} from '@bazel/runfiles';
 import * as webdriver from 'selenium-webdriver';
 import {crossEnvironmentSpecs} from './cross-environment.spec';

@@ -8,6 +8,7 @@ import {PendingCopy} from './pending-copy';
 const COPY_CONTENT = 'copy content';
 
 @Component({
+  standalone: false,
   selector: 'copy-to-clipboard-host',
   template: `
     <button

@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusKeyManager} from '@angular/cdk/a11y';
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
+import {FocusKeyManager} from '@stagefright5/cdk/a11y';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -35,8 +35,8 @@ import {
   NgForm,
   Validators,
 } from '@angular/forms';
-import {CanUpdateErrorState, ErrorStateMatcher, mixinErrorState} from '@angular/material/core';
-import {MatFormFieldControl} from '@angular/material/form-field';
+import {CanUpdateErrorState, ErrorStateMatcher, mixinErrorState} from '@stagefright5/material/core';
+import {MatFormFieldControl} from '@stagefright5/material/form-field';
 import {merge, Observable, Subject, Subscription} from 'rxjs';
 import {startWith, takeUntil} from 'rxjs/operators';
 import {MatChip, MatChipEvent, MatChipSelectionChange} from './chip';
@@ -73,6 +73,7 @@ export class MatChipListChange {
  * A material design chips component (named ChipList for its similarity to the List component).
  */
 @Component({
+  standalone: false,
   selector: 'mat-chip-list',
   template: `<div class="mat-chip-list-wrapper"><ng-content></ng-content></div>`,
   exportAs: 'matChipList',
@@ -95,7 +96,7 @@ export class MatChipListChange {
     '[id]': '_uid',
   },
   providers: [{provide: MatFormFieldControl, useExisting: MatChipList}],
-  styleUrls: ['chips.css'],
+  styleUrls: ['chips.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

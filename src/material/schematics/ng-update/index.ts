@@ -11,7 +11,7 @@ import {
   createMigrationSchematicRule,
   NullableDevkitMigration,
   TargetVersion,
-} from '@angular/cdk/schematics';
+} from '@stagefright5/cdk/schematics';
 import {HammerGesturesMigration} from './migrations/hammer-gestures-v9/hammer-gestures-migration';
 import {MiscClassInheritanceMigration} from './migrations/misc-checks/misc-class-inheritance';
 import {MiscClassNamesMigration} from './migrations/misc-checks/misc-class-names';

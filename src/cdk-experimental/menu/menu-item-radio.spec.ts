@@ -1,7 +1,7 @@
 import {Component, ElementRef} from '@angular/core';
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
 import {CdkMenuModule} from './menu-module';
 import {CdkMenuItemRadio} from './menu-item-radio';
 import {CDK_MENU} from './menu-interface';
@@ -110,6 +110,7 @@ describe('MenuItemRadio', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<button cdkMenuItemRadio>Click me!</button>`,
 })
 class SimpleRadioButton {}

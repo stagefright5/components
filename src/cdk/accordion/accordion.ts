@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {Directive, InjectionToken, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subject} from 'rxjs';
 
@@ -24,6 +24,7 @@ export const CDK_ACCORDION = new InjectionToken<CdkAccordion>('CdkAccordion');
  * Directive whose purpose is to manage the expanded state of CdkAccordionItem children.
  */
 @Directive({
+  standalone: false,
   selector: 'cdk-accordion, [cdkAccordion]',
   exportAs: 'cdkAccordion',
   providers: [{provide: CDK_ACCORDION, useExisting: CdkAccordion}],

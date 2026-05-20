@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkSelectAll} from '@angular/cdk-experimental/selection';
+import {CdkSelectAll} from '@stagefright5/cdk-experimental/selection';
 import {Directive} from '@angular/core';
 
 /**
@@ -20,6 +20,7 @@ import {Directive} from '@angular/core';
  * and `toggle()` to change the selection state.
  */
 @Directive({
+  standalone: false,
   selector: '[matSelectAll]',
   exportAs: 'matSelectAll',
   providers: [{provide: CdkSelectAll, useExisting: MatSelectAll}],

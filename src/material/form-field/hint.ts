@@ -22,6 +22,7 @@ export const _MAT_HINT = new InjectionToken<MatHint>('MatHint');
 
 /** Hint text to be shown underneath the form field control. */
 @Directive({
+  standalone: false,
   selector: 'mat-hint',
   host: {
     'class': 'mat-hint',

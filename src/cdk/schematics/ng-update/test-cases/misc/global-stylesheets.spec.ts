@@ -1,4 +1,4 @@
-import {resolveBazelPath} from '@angular/cdk/schematics/testing';
+import {resolveBazelPath} from '@stagefright5/cdk/schematics/testing';
 import {readFileSync} from 'fs';
 import {MIGRATION_PATH} from '../../../paths';
 import {createTestCaseSetup} from '../../../testing';

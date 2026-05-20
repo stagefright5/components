@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AfterContentInit,
   Attribute,
@@ -22,21 +22,23 @@ import {
   ViewEncapsulation,
   ViewChild,
 } from '@angular/core';
-import {MatButton} from '@angular/material/button';
+import {MatButton} from '@stagefright5/material/button';
 import {merge, Observable, of as observableOf, Subscription} from 'rxjs';
 import {MatDatepickerIntl} from './datepicker-intl';
 import {MatDatepickerControl, MatDatepickerPanel} from './datepicker-base';
 
 /** Can be used to override the icon of a `matDatepickerToggle`. */
 @Directive({
+  standalone: false,
   selector: '[matDatepickerToggleIcon]',
 })
 export class MatDatepickerToggleIcon {}
 
 @Component({
+  standalone: false,
   selector: 'mat-datepicker-toggle',
   templateUrl: 'datepicker-toggle.html',
-  styleUrls: ['datepicker-toggle.css'],
+  styleUrls: ['datepicker-toggle.scss'],
   host: {
     'class': 'mat-datepicker-toggle',
     '[attr.tabindex]': 'null',

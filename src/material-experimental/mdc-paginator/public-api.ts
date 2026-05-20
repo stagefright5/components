@@ -13,4 +13,4 @@ export {
   MAT_PAGINATOR_INTL_PROVIDER_FACTORY,
   MAT_PAGINATOR_INTL_PROVIDER,
   PageEvent,
-} from '@angular/material/paginator';
+} from '@stagefright5/material/paginator';

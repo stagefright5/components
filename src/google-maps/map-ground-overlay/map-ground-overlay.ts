@@ -22,6 +22,7 @@ import {MapEventManager} from '../map-event-manager';
  * See developers.google.com/maps/documentation/javascript/reference/image-overlay#GroundOverlay
  */
 @Directive({
+  standalone: false,
   selector: 'map-ground-overlay',
   exportAs: 'mapGroundOverlay',
 })

@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getExportDeclaration, getImportDeclaration} from '@angular/cdk/schematics';
+import {getExportDeclaration, getImportDeclaration} from '@stagefright5/cdk/schematics';
 import * as ts from 'typescript';
 
 /** Name of the Angular Material module specifier. */
-export const materialModuleSpecifier = '@angular/material';
+export const materialModuleSpecifier = '@stagefright5/material';
 
 /** Name of the Angular CDK module specifier. */
-export const cdkModuleSpecifier = '@angular/cdk';
+export const cdkModuleSpecifier = '@stagefright5/cdk';
 
 /** Whether the specified node is part of an Angular Material or CDK import declaration. */
 export function isMaterialImportDeclaration(node: ts.Node) {

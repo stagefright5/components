@@ -1,0 +1,64 @@
+<main>
+  <section>
+    <button mat-raised-button color="primary" type="button" (click)="openDialog()">Open dialog</button>
+    <mat-checkbox checked>Checkbox</mat-checkbox>
+  </section>
+
+  <section>
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </section>
+
+  <section>
+    <table mat-table [dataSource]="rows">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="value">
+        <th mat-header-cell *matHeaderCellDef>Value</th>
+        <td mat-cell *matCellDef="let row">{{ row.value }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns"></tr>
+    </table>
+  </section>
+
+  <section>
+    <button
+      cdkOverlayOrigin
+      #origin="cdkOverlayOrigin"
+      mat-stroked-button
+      type="button">
+      Overlay origin
+    </button>
+    <ng-template
+      cdkConnectedOverlay
+      [cdkConnectedOverlayOrigin]="origin"
+      [cdkConnectedOverlayOpen]="false">
+      <div class="overlay-panel">Overlay content</div>
+    </ng-template>
+  </section>
+
+  <section>
+    <cdk-virtual-scroll-viewport itemSize="24" class="viewport">
+      <div *cdkVirtualFor="let item of items">{{ item }}</div>
+    </cdk-virtual-scroll-viewport>
+  </section>
+
+  <section>
+    <google-map height="160px" width="100%" [center]="center" [zoom]="12"></google-map>
+    <youtube-player videoId="M7lc1UVf-VE" suggestedQuality="small"></youtube-player>
+  </section>
+</main>
+
+<ng-template #dialogTemplate>
+  <h2 mat-dialog-title>Smoke dialog</h2>
+  <mat-dialog-content>Dialog package import compiled.</mat-dialog-content>
+</ng-template>

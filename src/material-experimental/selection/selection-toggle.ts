@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkSelectionToggle} from '@angular/cdk-experimental/selection';
+import {CdkSelectionToggle} from '@stagefright5/cdk-experimental/selection';
 import {Directive, Input} from '@angular/core';
 
 /**
@@ -20,6 +20,7 @@ import {Directive, Input} from '@angular/core';
  * state.
  */
 @Directive({
+  standalone: false,
   selector: '[matSelectionToggle]',
   exportAs: 'matSelectionToggle',
   inputs: ['index: matSelectionToggleIndex'],

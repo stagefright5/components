@@ -102,6 +102,7 @@ function createComponent<T>(
 }
 
 @Component({
+  standalone: false,
   template: `
     <div #focusTrapElement>
       <input>

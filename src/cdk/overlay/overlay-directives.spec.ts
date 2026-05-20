@@ -8,9 +8,9 @@ import {
   fakeAsync,
   tick,
 } from '@angular/core/testing';
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {dispatchKeyboardEvent, createKeyboardEvent, dispatchEvent} from '../testing/private';
-import {ESCAPE, A} from '@angular/cdk/keycodes';
+import {ESCAPE, A} from '@stagefright5/cdk/keycodes';
 import {
   Overlay,
   CdkConnectedOverlay,
@@ -690,6 +690,7 @@ describe('Overlay directives', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
   <button cdk-overlay-origin id="trigger" #trigger="cdkOverlayOrigin">Toggle menu</button>
   <button cdk-overlay-origin id="otherTrigger" #otherTrigger="cdkOverlayOrigin">Toggle menu</button>
@@ -760,6 +761,7 @@ class ConnectedOverlayDirectiveTest {
 }
 
 @Component({
+  standalone: false,
   template: `
   <button cdk-overlay-origin #trigger="cdkOverlayOrigin">Toggle menu</button>
   <ng-template cdk-connected-overlay>Menu content</ng-template>`,

@@ -1,8 +1,8 @@
-import {HarnessLoader} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatDividerModule} from '@angular/material/divider';
+import {MatDividerModule} from '@stagefright5/material/divider';
 import {MatDividerHarness} from './divider-harness';
 
 /** Shared tests to run on both the original and MDC-based dividers. */
@@ -43,6 +43,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-divider></mat-divider>
     <mat-divider inset vertical></mat-divider>

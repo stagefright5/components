@@ -10,7 +10,7 @@ component by following these steps:
 1. Install Angular Material Experimental & MDC WEB:
 
    ```bash
-   npm i material-components-web @angular/material-experimental
+   npm i material-components-web @stagefright5/material-experimental
    ```
 
 2. In your `angular.json`, make sure `node_modules/` is listed as a Sass include path. This is
@@ -33,7 +33,7 @@ component by following these steps:
    component:
 
    ```ts
-   import {MatSelectModule} from '@angular/material-experimental/mdc-select';
+   import {MatSelectModule} from '@stagefright5/material-experimental/mdc-select';
 
    @NgModule({
      declarations: [MyComponent],
@@ -61,8 +61,8 @@ component by following these steps:
    the experimental `<mat-select>`):
 
    ```scss
-   @use '@angular/material' as mat;
-   @use '@angular/material-experimental' as mat-experimental;
+   @use '@stagefright5/material' as mat;
+   @use '@stagefright5/material-experimental' as mat-experimental;
 
    $my-primary: mat.define-palette(mat.$indigo-palette);
    $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
@@ -80,8 +80,8 @@ component by following these steps:
 ## API differences
 The experimental select API closely matches the
 [API of the standard select](https://material.angular.io/components/select/api).
-`@angular/material-experimental/mdc-select` exports symbols with the same name and public interface
-as all of the symbols found under `@angular/material/select`, except for the following
+`@stagefright5/material-experimental/mdc-select` exports symbols with the same name and public interface
+as all of the symbols found under `@stagefright5/material/select`, except for the following
 differences:
 
 * The experimental `MatSelect` doesn't implement the logic from the standard select where it
@@ -96,7 +96,7 @@ following string replace across your TypeScript files:
 
 ```bash
 grep -lr --include="*.ts" --exclude-dir="node_modules" \
-  --exclude="*.d.ts" "['\"]@angular/material/select['\"]" | xargs sed -i \
+  --exclude="*.d.ts" "['\"]@stagefright5/material/select['\"]" | xargs sed -i \
   "s/['\"]@angular\/material\/select['\"]/'@angular\/material-experimental\/mdc-select'/g"
 ```
 

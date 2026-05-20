@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ScrollDispatcher, ViewportRuler} from '@angular/cdk/scrolling';
+import {ScrollDispatcher, ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {DOCUMENT} from '@angular/common';
 import {Inject, Injectable, NgZone} from '@angular/core';
 import {BlockScrollStrategy} from './block-scroll-strategy';

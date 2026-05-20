@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {OverlayRef, GlobalPositionStrategy, OverlaySizeConfig} from '@angular/cdk/overlay';
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
+import {OverlayRef, GlobalPositionStrategy, OverlaySizeConfig} from '@stagefright5/cdk/overlay';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
 import {Observable} from 'rxjs';
 import {map, filter} from 'rxjs/operators';
 import {DialogPosition} from './dialog-config';

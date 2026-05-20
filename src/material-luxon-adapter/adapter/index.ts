@@ -7,7 +7,7 @@
  */
 
 import {NgModule} from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@stagefright5/material/core';
 import {MAT_LUXON_DATE_ADAPTER_OPTIONS, LuxonDateAdapter} from './luxon-date-adapter';
 import {MAT_LUXON_DATE_FORMATS} from './luxon-date-formats';
 

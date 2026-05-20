@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import {ViewContainerRef} from '@angular/core';
-import {Direction} from '@angular/cdk/bidi';
-import {ComponentType} from '@angular/cdk/overlay';
+import {Direction} from '@stagefright5/cdk/bidi';
+import {ComponentType} from '@stagefright5/cdk/overlay';
 import {CdkDialogContainer} from './dialog-container';
 
 /** Options for where to set focus to automatically on dialog open */

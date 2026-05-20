@@ -1,4 +1,4 @@
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@stagefright5/material/datepicker';
 import {
   MatDateRangeInputHarness,
   MatStartDateHarness,

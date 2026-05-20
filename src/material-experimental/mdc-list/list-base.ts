@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty, coerceNumberProperty} from '@angular/cdk/coercion';
-import {Platform} from '@angular/cdk/platform';
+import {BooleanInput, coerceBooleanProperty, coerceNumberProperty} from '@stagefright5/cdk/coercion';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   AfterViewInit,
   ContentChildren,
@@ -26,7 +26,7 @@ import {
   RippleGlobalOptions,
   RippleRenderer,
   RippleTarget,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {Subscription, merge} from 'rxjs';
 import {
@@ -37,6 +37,7 @@ import {
 } from './list-item-sections';
 
 @Directive({
+  standalone: false,
   host: {
     '[class.mdc-list-item--disabled]': 'disabled',
     '[attr.aria-disabled]': 'disabled',
@@ -284,6 +285,7 @@ export abstract class MatListItemBase implements AfterViewInit, OnDestroy, Rippl
 }
 
 @Directive({
+  standalone: false,
   host: {
     '[class.mat-mdc-list-non-interactive]': '_isNonInteractive',
     '[attr.aria-disabled]': 'disabled',

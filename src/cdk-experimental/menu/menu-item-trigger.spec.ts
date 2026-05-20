@@ -2,7 +2,7 @@ import {Component, ViewChildren, QueryList, ElementRef, ViewChild, Type} from '@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {dispatchKeyboardEvent} from '../../cdk/testing/private';
-import {TAB, SPACE} from '@angular/cdk/keycodes';
+import {TAB, SPACE} from '@stagefright5/cdk/keycodes';
 import {CdkMenuModule} from './menu-module';
 import {CdkMenuItem} from './menu-item';
 import {CdkMenu} from './menu';
@@ -434,6 +434,7 @@ describe('MenuItemTrigger', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar><button cdkMenuItem [cdkMenuTriggerFor]="noop">Click me!</button></div>
     <ng-template cdkMenuPanel #noop="cdkMenuPanel"><div cdkMenu></div></ng-template>
@@ -442,6 +443,7 @@ describe('MenuItemTrigger', () => {
 class TriggerForEmptyMenu {}
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="sub1">First</button>
@@ -471,6 +473,7 @@ class MenuBarWithNestedSubMenus {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="menu">First</button>
@@ -489,6 +492,7 @@ class MenuBarWithNestedSubMenus {
 class TriggersWithSameMenuDifferentMenuBars {}
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="menu">First</button>
@@ -506,7 +510,7 @@ class TriggersWithSameMenuSameMenuBar {}
 
 // TODO uncomment once we figure out why this is failing in Ivy
 // @Component({
-//   template: `
+  standalone: false,//   template: `
 //     <div cdkMenuBar>
 //       <button cdkMenuItem [cdkMenuTriggerFor]="menu"></button>
 //     </div>

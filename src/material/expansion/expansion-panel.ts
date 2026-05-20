@@ -7,10 +7,10 @@
  */
 
 import {AnimationEvent} from '@angular/animations';
-import {CdkAccordionItem} from '@angular/cdk/accordion';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {CdkAccordionItem} from '@stagefright5/cdk/accordion';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {UniqueSelectionDispatcher} from '@stagefright5/cdk/collections';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterContentInit,
@@ -74,7 +74,8 @@ export const MAT_EXPANSION_PANEL_DEFAULT_OPTIONS =
  * multiple children of an element with the MatAccordion directive attached.
  */
 @Component({
-  styleUrls: ['expansion-panel.css'],
+  standalone: false,
+  styleUrls: ['expansion-panel.scss'],
   selector: 'mat-expansion-panel',
   exportAs: 'matExpansionPanel',
   templateUrl: 'expansion-panel.html',
@@ -255,6 +256,7 @@ export class MatExpansionPanel
  * Actions of a `<mat-expansion-panel>`.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-action-row',
   host: {
     class: 'mat-action-row',

@@ -8,9 +8,9 @@
 
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {MatOptionModule, MatCommonModule} from '@angular/material/core';
-import {CdkScrollableModule} from '@angular/cdk/scrolling';
+import {OverlayModule} from '@stagefright5/cdk/overlay';
+import {MatOptionModule, MatCommonModule} from '@stagefright5/material/core';
+import {CdkScrollableModule} from '@stagefright5/cdk/scrolling';
 import {MatAutocomplete} from './autocomplete';
 import {
   MatAutocompleteTrigger,

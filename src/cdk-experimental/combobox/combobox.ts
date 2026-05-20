@@ -21,22 +21,23 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import {CdkComboboxPanel, AriaHasPopupValue} from './combobox-panel';
-import {TemplatePortal} from '@angular/cdk/portal';
+import {TemplatePortal} from '@stagefright5/cdk/portal';
 import {
   ConnectedPosition,
   FlexibleConnectedPositionStrategy,
   Overlay,
   OverlayConfig,
   OverlayRef,
-} from '@angular/cdk/overlay';
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty, coerceArray} from '@angular/cdk/coercion';
-import {_getEventTarget} from '@angular/cdk/platform';
-import {DOWN_ARROW, ENTER, ESCAPE, TAB} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/overlay';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty, coerceArray} from '@stagefright5/cdk/coercion';
+import {_getEventTarget} from '@stagefright5/cdk/platform';
+import {DOWN_ARROW, ENTER, ESCAPE, TAB} from '@stagefright5/cdk/keycodes';
 
 const allowedOpenActions = ['focus', 'click', 'downKey', 'toggle'];
 
 @Directive({
+  standalone: false,
   selector: '[cdkCombobox]',
   exportAs: 'cdkCombobox',
   host: {

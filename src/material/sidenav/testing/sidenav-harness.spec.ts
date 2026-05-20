@@ -1,5 +1,5 @@
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {runHarnessTests} from '@angular/material/sidenav/testing/shared.spec';
+import {MatSidenavModule} from '@stagefright5/material/sidenav';
+import {runHarnessTests} from '@stagefright5/material/sidenav/testing/shared.spec';
 import {MatDrawerContainerHarness} from './drawer-container-harness';
 import {MatDrawerContentHarness} from './drawer-content-harness';
 import {MatDrawerHarness} from './drawer-harness';

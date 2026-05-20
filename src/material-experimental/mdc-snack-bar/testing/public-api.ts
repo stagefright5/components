@@ -7,4 +7,4 @@
  */
 
 export * from './snack-bar-harness';
-export {SnackBarHarnessFilters} from '@angular/material/snack-bar/testing';
+export {SnackBarHarnessFilters} from '@stagefright5/material/snack-bar/testing';

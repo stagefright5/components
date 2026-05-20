@@ -1,10 +1,10 @@
 import {Component, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {ComponentFixture, TestBed, fakeAsync, tick, waitForAsync} from '@angular/core/testing';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {Direction, Directionality} from '@stagefright5/cdk/bidi';
 import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {MatTabLink, MatTabNav} from './tab-nav-bar';
 import {
   dispatchFakeEvent,
@@ -16,7 +16,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {By} from '@angular/platform-browser';
 import {MAT_TABS_CONFIG} from '../index';
 import {MatTabsModule} from '../module';
-import {SPACE} from '@angular/cdk/keycodes';
+import {SPACE} from '@stagefright5/cdk/keycodes';
 import {Subject} from 'rxjs';
 
 describe('MDC-based MatTabNavBar', () => {
@@ -583,6 +583,7 @@ describe('MatTabNavBar with a default config', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <nav mat-tab-nav-bar
@@ -614,6 +615,7 @@ class SimpleTabNavBarTestApp {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngIf="!isDestroyed">Link</a>
@@ -625,6 +627,7 @@ class TabLinkWithNgIf {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link [tabIndex]="tabIndex">TabIndex Link</a>
@@ -636,6 +639,7 @@ class TabLinkWithTabIndexBinding {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link tabindex="5">Link</a>
@@ -645,6 +649,7 @@ class TabLinkWithTabIndexBinding {
 class TabLinkWithNativeTabindexAttr {}
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar>
       <a mat-tab-link *ngFor="let tab of tabs" [active]="false">Tab link {{label}}</a>
@@ -656,6 +661,7 @@ class TabBarWithInactiveTabsOnInit {
 }
 
 @Component({
+  standalone: false,
   template: `
     <nav mat-tab-nav-bar [tabPanel]="tabPanel">
       <a mat-tab-link

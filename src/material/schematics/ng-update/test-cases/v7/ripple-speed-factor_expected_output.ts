@@ -21,11 +21,13 @@ const myConstant = 1;
 b.animation = /** TODO: Cleanup duration calculation. */ {enterDuration: 450 / (0.5 + myConstant)};
 
 @Component({
+  standalone: false,
   template: `<div matRipple [matRippleAnimation]="{enterDuration: 900}"></div>`
 })
 class C {}
 
 @Component({
+  standalone: false,
   template: `<div matRipple [matRippleAnimation]="{enterDuration: (450 / (myValue))}"></div>`
 })
 class D {

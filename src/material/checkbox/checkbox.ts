@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FocusableOption, FocusMonitor, FocusOrigin} from '@angular/cdk/a11y';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
+import {FocusableOption, FocusMonitor, FocusOrigin} from '@stagefright5/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {
   AfterViewChecked,
   Attribute,
@@ -38,7 +38,7 @@ import {
   mixinDisabled,
   mixinDisableRipple,
   mixinTabIndex,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {
   MAT_CHECKBOX_DEFAULT_OPTIONS,
@@ -109,9 +109,10 @@ const _MatCheckboxBase = mixinTabIndex(
  * See: https://material.io/design/components/selection-controls.html
  */
 @Component({
+  standalone: false,
   selector: 'mat-checkbox',
   templateUrl: 'checkbox.html',
-  styleUrls: ['checkbox.css'],
+  styleUrls: ['checkbox.scss'],
   exportAs: 'matCheckbox',
   host: {
     'class': 'mat-checkbox',

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate} from '@angular/cdk/testing';
-import {_MatTooltipHarnessBase, TooltipHarnessFilters} from '@angular/material/tooltip/testing';
+import {HarnessPredicate} from '@stagefright5/cdk/testing';
+import {_MatTooltipHarnessBase, TooltipHarnessFilters} from '@stagefright5/material/tooltip/testing';
 
 /** Harness for interacting with a standard mat-tooltip in tests. */
 export class MatTooltipHarness extends _MatTooltipHarnessBase {

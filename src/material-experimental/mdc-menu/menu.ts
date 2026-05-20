@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Overlay, ScrollStrategy} from '@angular/cdk/overlay';
+import {Overlay, ScrollStrategy} from '@stagefright5/cdk/overlay';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -24,7 +24,7 @@ import {
   _MatMenuBase,
   matMenuAnimations,
   MatMenuDefaultOptions,
-} from '@angular/material/menu';
+} from '@stagefright5/material/menu';
 
 /** @docs-private */
 export function MAT_MENU_SCROLL_STRATEGY_FACTORY(overlay: Overlay): () => ScrollStrategy {
@@ -39,9 +39,10 @@ export const MAT_MENU_SCROLL_STRATEGY_FACTORY_PROVIDER: Provider = {
 };
 
 @Component({
+  standalone: false,
   selector: 'mat-menu',
   templateUrl: 'menu.html',
-  styleUrls: ['menu.css'],
+  styleUrls: ['menu.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   exportAs: 'matMenu',

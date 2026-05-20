@@ -10,9 +10,9 @@ import {
   ComponentHarnessConstructor,
   ContentContainerComponentHarness,
   HarnessPredicate,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {TreeNodeHarnessFilters} from './tree-harness-filters';
-import {coerceBooleanProperty, coerceNumberProperty} from '@angular/cdk/coercion';
+import {coerceBooleanProperty, coerceNumberProperty} from '@stagefright5/cdk/coercion';
 
 /** Harness for interacting with a standard Angular Material tree node. */
 export class MatTreeNodeHarness extends ContentContainerComponentHarness<string> {

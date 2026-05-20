@@ -14,9 +14,9 @@ import {
   AfterContentInit,
   OnDestroy,
 } from '@angular/core';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {CdkAccordion} from '@angular/cdk/accordion';
-import {FocusKeyManager} from '@angular/cdk/a11y';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {CdkAccordion} from '@stagefright5/cdk/accordion';
+import {FocusKeyManager} from '@stagefright5/cdk/a11y';
 import {startWith} from 'rxjs/operators';
 import {
   MAT_ACCORDION,
@@ -30,6 +30,7 @@ import {MatExpansionPanelHeader} from './expansion-panel-header';
  * Directive for a Material Design Accordion.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-accordion',
   exportAs: 'matAccordion',
   inputs: ['multi'],

@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {waitForAsync, inject, TestBed} from '@angular/core/testing';
-import {ComponentPortal, PortalModule} from '@angular/cdk/portal';
-import {Platform} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {ComponentPortal, PortalModule} from '@stagefright5/cdk/portal';
+import {Platform} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {Overlay, OverlayContainer, OverlayModule, OverlayRef, OverlayConfig} from '../index';
 
 describe('BlockScrollStrategy', () => {
@@ -214,5 +214,5 @@ describe('BlockScrollStrategy', () => {
 });
 
 /** Simple component that we can attach to the overlay. */
-@Component({template: '<p>Focaccia</p>'})
+@Component({standalone: false, template: '<p>Focaccia</p>'})
 class FocacciaMsg {}

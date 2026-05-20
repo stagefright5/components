@@ -163,7 +163,7 @@ _src/material/schematics/ng-update/test-cases/v7/property-names_input.ts_
 ...
 
 /**
- * Mock definitions. This test case does not have access to @angular/material.
+ * Mock definitions. This test case does not have access to @stagefright5/material.
  */
 class MatRipple {
   color: string;
@@ -186,7 +186,7 @@ _src/material/schematics/ng-update/test-cases/v7/property-names_expected_output.
 ...
 
 /**
- * Mock definitions. This test case does not have access to @angular/material.
+ * Mock definitions. This test case does not have access to @stagefright5/material.
  */
 class MatRipple {
   color: string;

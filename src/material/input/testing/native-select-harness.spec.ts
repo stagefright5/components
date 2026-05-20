@@ -1,4 +1,4 @@
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule} from '@stagefright5/material/input';
 import {MatNativeSelectHarness} from './native-select-harness';
 import {runNativeSelectHarnessTests} from './shared-native-select.spec';
 

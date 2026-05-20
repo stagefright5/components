@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import * as keyCodes from '@angular/cdk/keycodes';
+import * as keyCodes from '@stagefright5/cdk/keycodes';
 import {
   _getTextWithExcludedElements,
   ElementDimensions,
@@ -15,7 +15,7 @@ import {
   TestKey,
   TextOptions,
   EventData,
-} from '@angular/cdk/testing';
+} from '@stagefright5/cdk/testing';
 import {
   clearElement,
   createFakeEvent,

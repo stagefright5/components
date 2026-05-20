@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {_MatTableDataSource, MatTableDataSourcePaginator} from '@angular/material/table';
+import {_MatTableDataSource, MatTableDataSourcePaginator} from '@stagefright5/material/table';
 
 /**
  * Data source that accepts a client-side data array and includes native support of filtering,

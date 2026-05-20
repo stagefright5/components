@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkTextColumn} from '@angular/cdk/table';
+import {CdkTextColumn} from '@stagefright5/cdk/table';
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 
 /**
@@ -19,6 +19,7 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
  * input.
  */
 @Component({
+  standalone: false,
   selector: 'mat-text-column',
   template: `
     <ng-container matColumnDef>

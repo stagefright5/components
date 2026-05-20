@@ -15,8 +15,8 @@ import {
   HarnessPredicate,
   TestElement,
   TestKey,
-} from '@angular/cdk/testing';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
+} from '@stagefright5/cdk/testing';
+import {coerceBooleanProperty} from '@stagefright5/cdk/coercion';
 import {MenuHarnessFilters, MenuItemHarnessFilters} from './menu-harness-filters';
 
 export abstract class _MatMenuHarnessBase<

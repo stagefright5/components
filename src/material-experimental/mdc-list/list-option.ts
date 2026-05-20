@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {SelectionModel} from '@angular/cdk/collections';
-import {Platform} from '@angular/cdk/platform';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {SelectionModel} from '@stagefright5/cdk/collections';
+import {Platform} from '@stagefright5/cdk/platform';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -32,7 +32,7 @@ import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
   ThemePalette,
-} from '@angular/material-experimental/mdc-core';
+} from '@stagefright5/material-experimental/mdc-core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MatListBase, MatListItemBase} from './list-base';
 import {LIST_OPTION, ListOption, MatListOptionCheckboxPosition} from './list-option-types';
@@ -61,9 +61,10 @@ export interface SelectionList extends MatListBase {
 }
 
 @Component({
+  standalone: false,
   selector: 'mat-list-option',
   exportAs: 'matListOption',
-  styleUrls: ['list-option.css'],
+  styleUrls: ['list-option.scss'],
   host: {
     'class': 'mat-mdc-list-item mat-mdc-list-option mdc-list-item',
     'role': 'option',

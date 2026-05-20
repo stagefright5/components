@@ -22,6 +22,7 @@ import {MapEventManager} from '../map-event-manager';
  * See developers.google.com/maps/documentation/javascript/reference/polygon#Polygon
  */
 @Directive({
+  standalone: false,
   selector: 'map-polygon',
   exportAs: 'mapPolygon',
 })

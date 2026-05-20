@@ -7,4 +7,4 @@
  */
 
 export * from './button-harness';
-export {ButtonHarnessFilters} from '@angular/material/button/testing';
+export {ButtonHarnessFilters} from '@stagefright5/material/button/testing';

@@ -35,9 +35,10 @@ export const MAT_CARD_CONFIG = new InjectionToken<MatCardConfig>('MAT_CARD_CONFI
  * MatCard provides no behaviors, instead serving as a purely visual treatment.
  */
 @Component({
+  standalone: false,
   selector: 'mat-card',
   templateUrl: 'card.html',
-  styleUrls: ['card.css'],
+  styleUrls: ['card.scss'],
   host: {
     'class': 'mat-mdc-card mdc-card',
     '[class.mdc-card--outlined]': 'appearance == "outlined"',
@@ -64,6 +65,7 @@ export class MatCard {
  * MatCardTitle provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: `mat-card-title, [mat-card-title], [matCardTitle]`,
   host: {'class': 'mat-mdc-card-title'},
 })
@@ -75,6 +77,7 @@ export class MatCardTitle {}
  * (e.g. `<img matCardLgImage>`).
  */
 @Component({
+  standalone: false,
   selector: 'mat-card-title-group',
   templateUrl: 'card-title-group.html',
   encapsulation: ViewEncapsulation.None,
@@ -91,6 +94,7 @@ export class MatCardTitleGroup {}
  * MatCardContent provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-content',
   host: {'class': 'mat-mdc-card-content'},
 })
@@ -104,6 +108,7 @@ export class MatCardContent {}
  * MatCardSubtitle provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: `mat-card-subtitle, [mat-card-subtitle], [matCardSubtitle]`,
   host: {'class': 'mat-mdc-card-subtitle'},
 })
@@ -117,6 +122,7 @@ export class MatCardSubtitle {}
  * MatCardActions provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-actions',
   exportAs: 'matCardActions',
   host: {
@@ -149,6 +155,7 @@ export class MatCardActions {
  * MatCardHeader provides no behaviors, instead serving as a purely visual treatment.
  */
 @Component({
+  standalone: false,
   selector: 'mat-card-header',
   templateUrl: 'card-header.html',
   encapsulation: ViewEncapsulation.None,
@@ -165,6 +172,7 @@ export class MatCardHeader {}
  * MatCardFooter provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: 'mat-card-footer',
   host: {'class': 'mat-mdc-card-footer'},
 })
@@ -184,6 +192,7 @@ export class MatCardFooter {}
  * MatCardImage provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-image], [matCardImage]',
   host: {'class': 'mat-mdc-card-image mdc-card__media'},
 })
@@ -193,6 +202,7 @@ export class MatCardImage {
 
 /** Same as `MatCardImage`, but small. */
 @Directive({
+  standalone: false,
   selector: '[mat-card-sm-image], [matCardImageSmall]',
   host: {'class': 'mat-mdc-card-sm-image mdc-card__media'},
 })
@@ -200,6 +210,7 @@ export class MatCardSmImage {}
 
 /** Same as `MatCardImage`, but medium. */
 @Directive({
+  standalone: false,
   selector: '[mat-card-md-image], [matCardImageMedium]',
   host: {'class': 'mat-mdc-card-md-image mdc-card__media'},
 })
@@ -207,6 +218,7 @@ export class MatCardMdImage {}
 
 /** Same as `MatCardImage`, but large. */
 @Directive({
+  standalone: false,
   selector: '[mat-card-lg-image], [matCardImageLarge]',
   host: {'class': 'mat-mdc-card-lg-image mdc-card__media'},
 })
@@ -214,6 +226,7 @@ export class MatCardLgImage {}
 
 /** Same as `MatCardImage`, but extra-large. */
 @Directive({
+  standalone: false,
   selector: '[mat-card-xl-image], [matCardImageXLarge]',
   host: {'class': 'mat-mdc-card-xl-image mdc-card__media'},
 })
@@ -229,6 +242,7 @@ export class MatCardXlImage {}
  * MatCardAvatar provides no behaviors, instead serving as a purely visual treatment.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-card-avatar], [matCardAvatar]',
   host: {'class': 'mat-mdc-card-avatar'},
 })

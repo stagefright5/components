@@ -1,8 +1,8 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {MatGridListModule} from '@angular/material/grid-list';
+import {MatGridListModule} from '@stagefright5/material/grid-list';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatGridListHarness} from './grid-list-harness';
 import {MatGridTileHarness} from './grid-tile-harness';
@@ -152,6 +152,7 @@ export function runHarnessTests(
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-grid-list [cols]="columns">
       <mat-grid-tile>

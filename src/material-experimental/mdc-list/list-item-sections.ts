@@ -16,6 +16,7 @@ import {LIST_OPTION, ListOption} from './list-option-types';
  * Text content for the title never wraps. There can only be a single title per list item.
  */
 @Directive({
+  standalone: false,
   selector: '[matListItemTitle]',
   host: {'class': 'mat-mdc-list-item-title mdc-list-item__primary-text'},
 })
@@ -30,6 +31,7 @@ export class MatListItemTitle {
  * Text content inside a line never wraps. There can be at maximum two lines per list item.
  */
 @Directive({
+  standalone: false,
   selector: '[matListItemLine]',
   host: {'class': 'mat-mdc-list-item-line mdc-list-item__secondary-text'},
 })
@@ -44,6 +46,7 @@ export class MatListItemLine {
  * button or additional text content.
  */
 @Directive({
+  standalone: false,
   selector: '[matListItemMeta]',
   host: {'class': 'mat-mdc-list-item-meta mdc-list-item__end'},
 })
@@ -58,6 +61,7 @@ export class MatListItemMeta {}
  * correct MDC class to position the icon/avatar on the opposite side.
  */
 @Directive({
+  standalone: false,
   host: {
     // MDC uses intuitively named classes `.mdc-list-item__start` and `.mat-list-item__end`
     // to position content such as icons or checkboxes that comes either before or after the text
@@ -83,6 +87,7 @@ export class _MatListItemGraphicBase {
  * List items can reserve space at the beginning of an item to display an avatar.
  */
 @Directive({
+  standalone: false,
   selector: '[matListItemAvatar]',
   host: {'class': 'mat-mdc-list-item-avatar'},
 })
@@ -94,6 +99,7 @@ export class MatListItemAvatar extends _MatListItemGraphicBase {}
  * List items can reserve space at the beginning of an item to display an icon.
  */
 @Directive({
+  standalone: false,
   selector: '[matListItemIcon]',
   host: {'class': 'mat-mdc-list-item-icon'},
 })

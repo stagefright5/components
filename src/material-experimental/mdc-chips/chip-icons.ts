@@ -22,6 +22,7 @@ export const MAT_CHIP_AVATAR = new InjectionToken<MatChipAvatar>('MatChipAvatar'
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-chip-avatar, [matChipAvatar]',
   host: {
     'class': 'mat-mdc-chip-avatar mdc-evolution-chip__icon mdc-evolution-chip__icon--primary',
@@ -45,6 +46,7 @@ export const MAT_CHIP_TRAILING_ICON = new InjectionToken<MatChipTrailingIcon>(
  * @docs-private
  */
 @Directive({
+  standalone: false,
   selector: 'mat-chip-trailing-icon, [matChipTrailingIcon]',
   host: {
     'class':
@@ -89,6 +91,7 @@ export const MAT_CHIP_REMOVE = new InjectionToken<MatChipRemove>('MatChipRemove'
  */
 
 @Directive({
+  standalone: false,
   selector: '[matChipRemove]',
   host: {
     'class':

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {TAB} from '@angular/cdk/keycodes';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {TAB} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -55,13 +55,14 @@ export const MAT_CHIP_LISTBOX_CONTROL_VALUE_ACCESSOR: any = {
  * Used with MatChipOption chips.
  */
 @Component({
+  standalone: false,
   selector: 'mat-chip-listbox',
   template: `
     <span class="mdc-evolution-chip-set__chips" role="presentation">
       <ng-content></ng-content>
     </span>
   `,
-  styleUrls: ['chip-set.css'],
+  styleUrls: ['chip-set.scss'],
   inputs: ['tabIndex'],
   host: {
     'class': 'mdc-evolution-chip-set mat-mdc-chip-listbox',
@@ -87,6 +88,9 @@ export class MatChipListbox
   extends MatChipSet
   implements AfterContentInit, OnDestroy, ControlValueAccessor
 {
+  /** Value for aria-describedby property. */
+  _ariaDescribedby?: string;
+
   /**
    * Function when touched. Set as part of ControlValueAccessor implementation.
    * @docs-private

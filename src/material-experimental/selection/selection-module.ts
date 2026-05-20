@@ -10,8 +10,8 @@
 // behaviors once we move it out of experiemental.
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTableModule} from '@stagefright5/material/table';
+import {MatCheckboxModule} from '@stagefright5/material/checkbox';
 import {MatSelectAll} from './select-all';
 import {MatSelection} from './selection';
 import {MatSelectionToggle} from './selection-toggle';

@@ -22,7 +22,7 @@ import {
   ESCAPE,
   S,
   H,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   dispatchKeyboardEvent,
   createKeyboardEvent,
@@ -1150,6 +1150,7 @@ describe('MenuBar', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <ul cdkMenuBar>
       <li role="none">
@@ -1168,6 +1169,7 @@ describe('MenuBar', () => {
 class MenuBarRadioGroup {}
 
 @Component({
+  standalone: false,
   template: `
     <div>
       <div cdkMenuBar id="menu_bar">
@@ -1209,6 +1211,7 @@ class MultiMenuWithSubmenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div>
       <div cdkMenuBar id="menu_bar">
@@ -1235,6 +1238,7 @@ class MenuWithCheckboxes {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div>
       <div cdkMenuBar id="menu_bar">
@@ -1261,6 +1265,7 @@ class MenuWithRadioButtons {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div id="container">
       <div cdkMenuBar>

@@ -1,4 +1,4 @@
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonToggleModule} from '@stagefright5/material/button-toggle';
 import {runHarnessTests} from './button-toggle-shared.spec';
 import {MatButtonToggleHarness} from './button-toggle-harness';
 

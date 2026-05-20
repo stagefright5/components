@@ -14,7 +14,7 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import {CdkPortal} from '@angular/cdk/portal';
+import {CdkPortal} from '@stagefright5/cdk/portal';
 
 /**
  * Injection token that can be used to reference instances of `MatTabLabel`. It serves as
@@ -31,6 +31,7 @@ export const MAT_TAB = new InjectionToken<any>('MAT_TAB');
 
 /** Used to flag tab labels for use with the portal directive */
 @Directive({
+  standalone: false,
   selector: '[mat-tab-label], [matTabLabel]',
   providers: [{provide: MAT_TAB_LABEL, useExisting: MatTabLabel}],
 })

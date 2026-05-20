@@ -20,10 +20,10 @@ import {
   NgZone,
   Inject,
 } from '@angular/core';
-import {_MatTabHeaderBase} from '@angular/material/tabs';
-import {ViewportRuler} from '@angular/cdk/scrolling';
-import {Platform} from '@angular/cdk/platform';
-import {Directionality} from '@angular/cdk/bidi';
+import {_MatTabHeaderBase} from '@stagefright5/material/tabs';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
+import {Platform} from '@stagefright5/cdk/platform';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {MatTabLabelWrapper} from './tab-label-wrapper';
 import {MatInkBar} from './ink-bar';
@@ -36,9 +36,10 @@ import {MatInkBar} from './ink-bar';
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-header',
   templateUrl: 'tab-header.html',
-  styleUrls: ['tab-header.css'],
+  styleUrls: ['tab-header.scss'],
   inputs: ['selectedIndex'],
   outputs: ['selectFocusedIndex', 'indexFocused'],
   encapsulation: ViewEncapsulation.None,

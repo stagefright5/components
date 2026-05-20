@@ -142,6 +142,7 @@ describe('MenuGroup', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>
@@ -172,6 +173,7 @@ class CheckboxMenu {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>
@@ -216,6 +218,7 @@ class MenuWithMultipleRadioGroups {
 }
 
 @Component({
+  standalone: false,
   template: `
     <div cdkMenuBar>
       <button cdkMenuItem [cdkMenuTriggerFor]="panel"></button>

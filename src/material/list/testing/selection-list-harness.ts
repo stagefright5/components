@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HarnessPredicate, parallel} from '@angular/cdk/testing';
-import {MatListOptionCheckboxPosition} from '@angular/material/list';
+import {HarnessPredicate, parallel} from '@stagefright5/cdk/testing';
+import {MatListOptionCheckboxPosition} from '@stagefright5/material/list';
 import {MatListHarnessBase} from './list-harness-base';
 import {
   ListItemHarnessFilters,

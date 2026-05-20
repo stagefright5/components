@@ -72,16 +72,16 @@ connect process.
 #### Scrolling over fixed size items
 When all items are the same fixed size, you can use the `FixedSizeVirtualScrollStrategy`. This can
 be easily added to your viewport using the `itemSize` directive. The advantage of this constraint is
-that it allows for better performance, since items do not need to be measured as they are rendered. 
+that it allows for better performance, since items do not need to be measured as they are rendered.
 
 The fixed size strategy also supports setting a couple of buffer parameters that determine how much
 extra content is rendered beyond what is visible in the viewport. The first of these parameters is
 `minBufferPx`. The `minBufferPx` is the minimum amount of content buffer (in pixels) that the
 viewport must render. If the viewport ever detects that there is less buffered content it will
-immediately render more. The second buffer parameter is `maxBufferPx`. This tells the viewport how 
+immediately render more. The second buffer parameter is `maxBufferPx`. This tells the viewport how
 much buffer space to render back up to when it detects that more buffer is required.
 
-The interaction of these two buffer parameters can be best illustrated with an example. Supposed 
+The interaction of these two buffer parameters can be best illustrated with an example. Supposed
 that we have the following parameters: `itemSize = 50`, `minBufferPx = 100`, `maxBufferPx = 250`. As
 the user is scrolling through the content the viewport detects that there is only `90px` of buffer
 remaining. Since this is below `minBufferPx` the viewport must render more buffer. It must render at
@@ -92,7 +92,7 @@ least enough buffer to get back to `maxBufferPx`. In this case, it renders 4 ite
 
 Other virtual scrolling strategies can be implemented by extending `VirtualScrollStrategy`. An
 autosize strategy that works on elements of differing sizes is currently being developed in
-`@angular/cdk-experimental`, but it is not ready for production use yet. 
+`@stagefright5/cdk-experimental`, but it is not ready for production use yet.
 
 ### Viewport orientation
 The virtual-scroll viewport defaults to a vertical orientation, but can also be set to
@@ -116,7 +116,7 @@ interfere with the scrolling.
 In order to determine how large the overall content is and what portion of it actually needs to be
 rendered at any given time the viewport relies on a `VirtualScrollStrategy` being provided. The
 simplest way to provide it is to use the `itemSize` directive on the viewport
-(e.g. `<cdk-virtual-scroll-viewport itemSize="50">`). However it is also possible to provide a 
+(e.g. `<cdk-virtual-scroll-viewport itemSize="50">`). However it is also possible to provide a
 custom strategy by creating a class that implements the `VirtualScrollStrategy` interface and
 providing it as the `VIRTUAL_SCROLL_STRATEGY` on the component containing your viewport.
 

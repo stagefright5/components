@@ -9,6 +9,7 @@
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'test-shadow-boundary',
   template: `
     <div class="in-the-shadows">Shadow 1</div>
@@ -21,6 +22,7 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
 export class TestShadowBoundary {}
 
 @Component({
+  standalone: false,
   selector: 'test-sub-shadow-boundary',
   template: '<div class="in-the-shadows">Shadow 2</div>',
   changeDetection: ChangeDetectionStrategy.OnPush,

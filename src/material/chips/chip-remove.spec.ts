@@ -2,7 +2,7 @@ import {Component, DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {waitForAsync, ComponentFixture, TestBed} from '@angular/core/testing';
 import {MatChip, MatChipsModule} from './index';
-import {dispatchMouseEvent} from '@angular/cdk/testing/private';
+import {dispatchMouseEvent} from '@stagefright5/cdk/testing/private';
 
 describe('Chip Remove', () => {
   let fixture: ComponentFixture<TestChip>;
@@ -87,6 +87,7 @@ describe('Chip Remove', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-chip
       [removable]="removable"

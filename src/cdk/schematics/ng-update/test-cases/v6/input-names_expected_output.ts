@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
+  standalone: false,
   template: `
     <ng-template cdkConnectedOverlay
                  [cdkConnectedOverlayOrigin]="myOrigin"

@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Migration, TargetVersion} from '@angular/cdk/schematics';
+import {Migration, TargetVersion} from '@stagefright5/cdk/schematics';
 import * as ts from 'typescript';
 import {materialModuleSpecifier} from '../../../ng-update/typescript/module-specifiers';
 
 const ONLY_SUBPACKAGE_FAILURE_STR =
-  `Importing from "@angular/material" is deprecated. ` +
+  `Importing from "@stagefright5/material" is deprecated. ` +
   `Instead import from the entry-point the symbol belongs to.`;
 
 const NO_IMPORT_NAMED_SYMBOLS_FAILURE_STR =
@@ -32,7 +32,7 @@ const ENTRY_POINT_MAPPINGS: {[name: string]: string} = require('./material-symbo
 
 /**
  * Migration that updates imports which refer to the primary Angular Material
- * entry-point to use the appropriate secondary entry points (e.g. @angular/material/button).
+ * entry-point to use the appropriate secondary entry points (e.g. @stagefright5/material/button).
  */
 export class SecondaryEntryPointsMigration extends Migration<null> {
   printer = ts.createPrinter();
@@ -51,7 +51,7 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
     }
 
     const importLocation = declaration.moduleSpecifier.text;
-    // If the import module is not @angular/material, skip the check.
+    // If the import module is not @stagefright5/material, skip the check.
     if (importLocation !== materialModuleSpecifier) {
       return;
     }
@@ -91,7 +91,7 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
       // Try to resolve the module name via the type checker, and if it fails, fall back to
       // resolving it from our list of symbol to entry point mappings. Using the type checker is
       // more accurate and doesn't require us to keep a list of symbols, but it won't work if
-      // the symbols don't exist anymore (e.g. after we remove the top-level @angular/material).
+      // the symbols don't exist anymore (e.g. after we remove the top-level @stagefright5/material).
       const moduleName =
         resolveModuleName(elementName, this.typeChecker) ||
         ENTRY_POINT_MAPPINGS[elementName.text] ||
@@ -116,8 +116,8 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
 
     // Transforms the import declaration into multiple import declarations that import
     // the given symbols from the individual secondary entry-points. For example:
-    // import {MatCardModule, MatCardTitle} from '@angular/material/card';
-    // import {MatRadioModule} from '@angular/material/radio';
+    // import {MatCardModule, MatCardTitle} from '@stagefright5/material/card';
+    // import {MatRadioModule} from '@stagefright5/material/radio';
     const newImportStatements = Array.from(importMap.entries())
       .sort()
       .map(([name, elements]) => {
@@ -137,7 +137,7 @@ export class SecondaryEntryPointsMigration extends Migration<null> {
 
     // Without any import statements that were generated, we can assume that this was an empty
     // import declaration. We still want to add a failure in order to make developers aware that
-    // importing from "@angular/material" is deprecated.
+    // importing from "@stagefright5/material" is deprecated.
     if (!newImportStatements) {
       this.createFailureAtNode(declaration.moduleSpecifier, ONLY_SUBPACKAGE_FAILURE_STR);
       return;
@@ -207,7 +207,7 @@ function resolveModuleName(node: ts.Identifier, typeChecker: ts.TypeChecker): st
   const sourceFile = resolvedNode.getSourceFile().fileName;
 
   // File the module the symbol belongs to from a regex match of the
-  // filename. This will always match since only "@angular/material"
+  // filename. This will always match since only "@stagefright5/material"
   // elements are analyzed.
   const matches = sourceFile.match(ANGULAR_MATERIAL_FILEPATH_REGEX);
   return matches ? matches[1] : null;

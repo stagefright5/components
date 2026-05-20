@@ -6,7 +6,7 @@ File any bugs against the [angular/components repo](https://github.com/angular/c
 
 ## Installation
 
-To install, run `npm install @angular/google-maps`.
+To install, run `npm install @stagefright5/google-maps`.
 
 ## Loading the API
 
@@ -41,7 +41,7 @@ method to make sure that the component doesn't load until after the API has load
 // google-maps-demo.module.ts
 
 import { NgModule } from '@angular/core';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsModule } from '@stagefright5/google-maps';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 

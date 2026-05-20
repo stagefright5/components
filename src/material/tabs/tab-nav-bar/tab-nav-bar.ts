@@ -5,12 +5,12 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FocusableOption, FocusMonitor} from '@angular/cdk/a11y';
-import {SPACE} from '@angular/cdk/keycodes';
-import {Directionality} from '@angular/cdk/bidi';
-import {BooleanInput, coerceBooleanProperty} from '@angular/cdk/coercion';
-import {Platform} from '@angular/cdk/platform';
-import {ViewportRuler} from '@angular/cdk/scrolling';
+import {FocusableOption, FocusMonitor} from '@stagefright5/cdk/a11y';
+import {SPACE} from '@stagefright5/cdk/keycodes';
+import {Directionality} from '@stagefright5/cdk/bidi';
+import {BooleanInput, coerceBooleanProperty} from '@stagefright5/cdk/coercion';
+import {Platform} from '@stagefright5/cdk/platform';
+import {ViewportRuler} from '@stagefright5/cdk/scrolling';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -45,7 +45,7 @@ import {
   RippleRenderer,
   RippleTarget,
   ThemePalette,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {startWith, takeUntil} from 'rxjs/operators';
 import {MatInkBar} from '../ink-bar';
@@ -165,11 +165,12 @@ export abstract class _MatTabNavBase
  * Provides anchored navigation with animated ink bar.
  */
 @Component({
+  standalone: false,
   selector: '[mat-tab-nav-bar]',
   exportAs: 'matTabNavBar, matTabNav',
   inputs: ['color'],
   templateUrl: 'tab-nav-bar.html',
-  styleUrls: ['tab-nav-bar.css'],
+  styleUrls: ['tab-nav-bar.scss'],
   host: {
     '[attr.role]': '_getRole()',
     'class': 'mat-tab-nav-bar mat-tab-header',
@@ -340,6 +341,7 @@ export class _MatTabLinkBase
  * Link inside of a `mat-tab-nav-bar`.
  */
 @Directive({
+  standalone: false,
   selector: '[mat-tab-link], [matTabLink]',
   exportAs: 'matTabLink',
   inputs: ['disabled', 'disableRipple', 'tabIndex'],
@@ -387,6 +389,7 @@ export class MatTabLink extends _MatTabLinkBase implements OnDestroy {
  * Tab panel component associated with MatTabNav.
  */
 @Component({
+  standalone: false,
   selector: 'mat-tab-nav-panel',
   exportAs: 'matTabNavPanel',
   template: '<ng-content></ng-content>',

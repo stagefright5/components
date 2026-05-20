@@ -7,9 +7,10 @@
  */
 
 import {Directive, ElementRef} from '@angular/core';
-import {FocusableOption} from '@angular/cdk/a11y';
+import {FocusableOption} from '@stagefright5/cdk/a11y';
 
 @Directive({
+  standalone: false,
   selector: '[cdkStepHeader]',
   host: {
     'role': 'tab',

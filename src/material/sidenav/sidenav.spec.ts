@@ -84,6 +84,7 @@ describe('MatSidenav', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-sidenav-container>
       <mat-sidenav
@@ -105,6 +106,7 @@ class SidenavWithFixedPosition {
 }
 
 @Component({
+  standalone: false,
   // Note that we need the `ng-container` with the `ngSwitch` so that
   // there's a directive between the container and the sidenav.
   template: `
@@ -121,6 +123,7 @@ class IndirectDescendantSidenav {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-sidenav-container #outerContainer>
       <mat-sidenav #outerSidenav>Sidenav</mat-sidenav>

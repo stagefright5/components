@@ -1,5 +1,5 @@
-import {HarnessLoader, parallel} from '@angular/cdk/testing';
-import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
+import {HarnessLoader, parallel} from '@stagefright5/cdk/testing';
+import {TestbedHarnessEnvironment} from '@stagefright5/cdk/testing/testbed';
 import {Component, ViewChildren, QueryList} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {
@@ -7,7 +7,7 @@ import {
   MatOptionModule,
   MAT_OPTION_PARENT_COMPONENT,
   MatOptionParentComponent,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {MatOptionHarness} from './option-harness';
 
 /** Shared tests to run on both the original and MDC-based options. */

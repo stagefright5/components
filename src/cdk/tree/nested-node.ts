@@ -30,6 +30,7 @@ import {getTreeControlFunctionsMissingError} from './tree-errors';
  * The children of node will be automatically added to `cdkTreeNodeOutlet`.
  */
 @Directive({
+  standalone: false,
   selector: 'cdk-nested-tree-node',
   exportAs: 'cdkNestedTreeNode',
   inputs: ['role', 'disabled', 'tabIndex'],

@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directionality} from '@angular/cdk/bidi';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty,
   NumberInput,
-} from '@angular/cdk/coercion';
-import {Platform, normalizePassiveListenerOptions} from '@angular/cdk/platform';
+} from '@stagefright5/cdk/coercion';
+import {Platform, normalizePassiveListenerOptions} from '@stagefright5/cdk/platform';
 import {DOCUMENT} from '@angular/common';
 import {
   AfterViewInit,
@@ -48,7 +48,7 @@ import {
   RippleGlobalOptions,
   RippleRef,
   RippleState,
-} from '@angular/material/core';
+} from '@stagefright5/material/core';
 import {ANIMATION_MODULE_TYPE} from '@angular/platform-browser/animations';
 import {SpecificEventListener, EventType} from '@material/base';
 import {MDCSliderAdapter, MDCSliderFoundation, Thumb, TickMark} from '@material/slider';
@@ -78,9 +78,10 @@ export interface MatSliderDragEvent {
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-slider-visual-thumb',
   templateUrl: './slider-thumb.html',
-  styleUrls: ['slider-thumb.css'],
+  styleUrls: ['slider-thumb.scss'],
   host: {
     'class': 'mdc-slider__thumb mat-mdc-slider-visual-thumb',
 
@@ -287,6 +288,7 @@ export class MatSliderVisualThumb implements AfterViewInit, OnDestroy {
  * used, and the outcome will be a range slider with two slider thumbs.
  */
 @Directive({
+  standalone: false,
   selector: 'input[matSliderThumb], input[matSliderStartThumb], input[matSliderEndThumb]',
   exportAs: 'matSliderThumb',
   host: {
@@ -556,9 +558,10 @@ const _MatSliderMixinBase = mixinColor(
  * behavior to the native `<input type="range">` element.
  */
 @Component({
+  standalone: false,
   selector: 'mat-slider',
   templateUrl: 'slider.html',
-  styleUrls: ['slider.css'],
+  styleUrls: ['slider.scss'],
   host: {
     'class': 'mat-mdc-slider mdc-slider',
     '[class.mdc-slider--range]': '_isRange()',

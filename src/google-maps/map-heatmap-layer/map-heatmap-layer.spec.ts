@@ -154,6 +154,7 @@ describe('MapHeatmapLayer', () => {
 });
 
 @Component({
+  standalone: false,
   selector: 'test-app',
   template: `
     <google-map>

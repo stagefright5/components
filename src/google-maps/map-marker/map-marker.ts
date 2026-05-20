@@ -39,6 +39,7 @@ export const DEFAULT_MARKER_OPTIONS = {
  * See developers.google.com/maps/documentation/javascript/reference/marker
  */
 @Directive({
+  standalone: false,
   selector: 'map-marker',
   exportAs: 'mapMarker',
 })
@@ -377,7 +378,7 @@ export class MapMarker implements OnInit, OnChanges, OnDestroy, MapAnchorPoint {
    */
   getLabel(): google.maps.MarkerLabel | null {
     this._assertInitialized();
-    return this.marker.getLabel() || null;
+    return (this.marker.getLabel() || null) as google.maps.MarkerLabel | null;
   }
 
   /**

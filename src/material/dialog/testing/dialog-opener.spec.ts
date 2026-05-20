@@ -1,7 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {fakeAsync, flush, TestBed} from '@angular/core/testing';
-import {MatTestDialogOpenerModule, MatTestDialogOpener} from '@angular/material/dialog/testing';
-import {MAT_DIALOG_DATA, MatDialogRef, MatDialogState} from '@angular/material/dialog';
+import {MatTestDialogOpenerModule, MatTestDialogOpener} from '@stagefright5/material/dialog/testing';
+import {MAT_DIALOG_DATA, MatDialogRef, MatDialogState} from '@stagefright5/material/dialog';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('MDC-based MatTestDialogOpener', () => {
@@ -57,6 +57,7 @@ interface ExampleDialogResult {
 
 /** Simple component for testing MatTestDialogOpener. */
 @Component({
+  standalone: false,
   template: `
     Data: {{data}}
     <button id="close-btn" (click)="close()">Close</button>

@@ -7,7 +7,7 @@
  */
 
 import {InjectionToken} from '@angular/core';
-import {CdkAccordion} from '@angular/cdk/accordion';
+import {CdkAccordion} from '@stagefright5/cdk/accordion';
 
 /** MatAccordion's display modes. */
 export type MatAccordionDisplayMode = 'default' | 'flat';

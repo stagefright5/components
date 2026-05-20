@@ -7,7 +7,7 @@ import {
   createKeyboardEvent,
   dispatchEvent,
 } from '../../../cdk/testing/private';
-import {SPACE, ENTER} from '@angular/cdk/keycodes';
+import {SPACE, ENTER} from '@stagefright5/cdk/keycodes';
 import {MatOption, MatOptionModule, MAT_OPTION_PARENT_COMPONENT} from './index';
 
 describe('MatOption component', () => {
@@ -239,6 +239,7 @@ describe('MatOption component', () => {
 });
 
 @Component({
+  standalone: false,
   template: `<mat-option [id]="id" [disabled]="disabled"></mat-option>`,
 })
 class BasicOption {
@@ -247,6 +248,7 @@ class BasicOption {
 }
 
 @Component({
+  standalone: false,
   template: `
     <mat-optgroup label="Group">
       <mat-option>Option</mat-option>

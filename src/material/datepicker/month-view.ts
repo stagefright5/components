@@ -19,7 +19,7 @@ import {
   SPACE,
   ESCAPE,
   hasModifierKey,
-} from '@angular/cdk/keycodes';
+} from '@stagefright5/cdk/keycodes';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -36,8 +36,8 @@ import {
   SimpleChanges,
   OnChanges,
 } from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@angular/material/core';
-import {Directionality} from '@angular/cdk/bidi';
+import {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from '@stagefright5/material/core';
+import {Directionality} from '@stagefright5/cdk/bidi';
 import {
   MatCalendarBody,
   MatCalendarCell,
@@ -60,6 +60,7 @@ const DAYS_PER_WEEK = 7;
  * @docs-private
  */
 @Component({
+  standalone: false,
   selector: 'mat-month-view',
   templateUrl: 'month-view.html',
   exportAs: 'matMonthView',

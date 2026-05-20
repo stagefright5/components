@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Platform} from '@angular/cdk/platform';
+import {Platform} from '@stagefright5/cdk/platform';
 import {Injectable, NgZone, OnDestroy, Optional, Inject} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {auditTime} from 'rxjs/operators';

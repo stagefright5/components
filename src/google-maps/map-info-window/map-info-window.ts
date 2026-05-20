@@ -23,6 +23,7 @@ import {MapAnchorPoint} from '../map-anchor-point';
  * See developers.google.com/maps/documentation/javascript/reference/info-window
  */
 @Directive({
+  standalone: false,
   selector: 'map-info-window',
   exportAs: 'mapInfoWindow',
   host: {'style': 'display: none'},

@@ -22,7 +22,7 @@ describe('CDK ng-add', () => {
     const packageJson = JSON.parse(getFileContent(tree, '/package.json')) as PackageJson;
     const dependencies = packageJson.dependencies;
 
-    expect(dependencies['@angular/cdk']).toBe('~0.0.0-PLACEHOLDER');
+    expect(dependencies['@stagefright5/cdk']).toBe('~0.0.0-stagefright5');
     expect(Object.keys(dependencies))
       .withContext('Expected the modified "dependencies" to be sorted alphabetically.')
       .toEqual(Object.keys(dependencies).sort());
@@ -34,13 +34,13 @@ describe('CDK ng-add', () => {
   it('should respect version range from CLI ng-add command', async () => {
     // Simulates the behavior of the CLI `ng add` command. The command inserts the
     // requested package version into the `package.json` before the actual schematic runs.
-    addPackageToPackageJson(appTree, '@angular/cdk', '^9.0.0');
+    addPackageToPackageJson(appTree, '@stagefright5/cdk', '^9.0.0');
 
     const tree = await runner.runSchematicAsync('ng-add', {}, appTree).toPromise();
     const packageJson = JSON.parse(getFileContent(tree, '/package.json')) as PackageJson;
     const dependencies = packageJson.dependencies;
 
-    expect(dependencies['@angular/cdk']).toBe('^9.0.0');
+    expect(dependencies['@stagefright5/cdk']).toBe('^9.0.0');
     expect(runner.tasks.some(task => task.name === 'node-package'))
       .withContext(
         'Expected the package manager to not run since the CDK version ' + 'was already inserted.',

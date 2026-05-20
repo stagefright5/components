@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FocusableOption} from '@angular/cdk/a11y';
-import {CollectionViewer, DataSource, isDataSource} from '@angular/cdk/collections';
+import {FocusableOption} from '@stagefright5/cdk/a11y';
+import {CollectionViewer, DataSource, isDataSource} from '@stagefright5/cdk/collections';
 import {
   AfterContentChecked,
   ChangeDetectionStrategy,
@@ -46,13 +46,14 @@ import {
   getTreeMultipleDefaultNodeDefsError,
   getTreeNoValidDataSourceError,
 } from './tree-errors';
-import {coerceNumberProperty} from '@angular/cdk/coercion';
+import {coerceNumberProperty} from '@stagefright5/cdk/coercion';
 
 /**
  * CDK tree component that connects with a data source to retrieve data of type `T` and renders
  * dataNodes with hierarchy. Updates the dataNodes when new data is provided by the data source.
  */
 @Component({
+  standalone: false,
   selector: 'cdk-tree',
   exportAs: 'cdkTree',
   template: `<ng-container cdkTreeNodeOutlet></ng-container>`,
@@ -313,6 +314,7 @@ export class CdkTree<T, K = T> implements AfterContentChecked, CollectionViewer,
  * Tree node for CdkTree. It contains the data in the tree node.
  */
 @Directive({
+  standalone: false,
   selector: 'cdk-tree-node',
   exportAs: 'cdkTreeNode',
   host: {

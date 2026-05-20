@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-moment-adapter",
-  "version": "0.0.0-PLACEHOLDER",
+  "name": "@stagefright5/material-moment-adapter",
+  "version": "0.0.0-stagefright5",
   "description": "Angular Material Moment Adapter",
   "repository": {
     "type": "git",
@@ -12,19 +12,22 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/material": "0.0.0-PLACEHOLDER",
-    "@angular/core": "0.0.0-NG",
+    "@stagefright5/material": "0.0.0-stagefright5",
+    "@angular/core": "^21.0.0",
     "moment": "^2.18.1"
   },
   "dependencies": {
-    "tslib": "0.0.0-TSLIB"
+    "tslib": "^2.3.0"
   },
   "ng-update": {
     "packageGroup": [
-      "@angular/material",
-      "@angular/cdk",
-      "@angular/material-moment-adapter"
+      "@stagefright5/material",
+      "@stagefright5/cdk",
+      "@stagefright5/material-moment-adapter"
     ]
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "@stagefright5/material": "workspace:*"
+  }
 }

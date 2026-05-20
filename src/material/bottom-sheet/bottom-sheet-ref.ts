@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ESCAPE, hasModifierKey} from '@angular/cdk/keycodes';
-import {OverlayRef} from '@angular/cdk/overlay';
+import {ESCAPE, hasModifierKey} from '@stagefright5/cdk/keycodes';
+import {OverlayRef} from '@stagefright5/cdk/overlay';
 import {merge, Observable, Subject} from 'rxjs';
 import {filter, take} from 'rxjs/operators';
 import {MatBottomSheetContainer} from './bottom-sheet-container';

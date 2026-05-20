@@ -2,9 +2,9 @@ import {Component, ElementRef, Type, ViewChild} from '@angular/core';
 import {ComponentFixture, TestBed, flush, fakeAsync, tick} from '@angular/core/testing';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@stagefright5/material/core';
+import {MatFormFieldModule} from '@stagefright5/material/form-field';
+import {MatInputModule} from '@stagefright5/material/input';
 import {CommonModule} from '@angular/common';
 import {MatDatepickerModule} from './datepicker-module';
 import {MatDatepicker} from './datepicker';
@@ -260,6 +260,7 @@ describe('MatDatepickerActions', () => {
 });
 
 @Component({
+  standalone: false,
   template: `
     <mat-form-field>
       <mat-label>Pick a date</mat-label>
